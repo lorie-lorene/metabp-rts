@@ -45,3 +45,50 @@ traffic_generation:
     - "pay_ticket"
     - "query_order"
     - "cancel_order"
+# system_config.yaml
+# ==================
+# BLOC      : Configuration globale
+# ROLE      : Paramètres centraux lus par tous les modules Phase 1
+# ENTREES   : (manuel — édité par le chercheur)
+# SORTIES   : Paramètres consommés au démarrage de chaque module
+# LIBRAIRIES: pyyaml
+
+jaeger:
+  base_url: "http://localhost:16686"
+  api_version: "api"
+  default_service: "ts-gateway-service"
+  lookback: "1h"             # fenêtre temporelle de collecte
+  limit: 5000                # nombre max de traces à récupérer
+
+train_ticket:
+  api_gateway_url: "http://localhost:8080"
+  compose_file: "../train-ticket/docker-compose.yml"
+
+weights:
+  alpha: 0.5                 # poids de rate_ij
+  beta: 0.3                  # poids de lat_norm
+  gamma: 0.2                 # poids de err_ij
+
+echo_dormant:
+  tau_dormant: 0.40          # seuil de classification Écho-Dormant
+  omega_C: 0.357             # poids renormalisé centralité
+  omega_P: 0.357             # poids renormalisé propagation
+  omega_F: 0.286             # poids renormalisé fragilité opérationnelle
+
+paths:
+  raw_traces: "data/raw/traces_raw.json"
+  service_graph: "data/outputs/service_graph.json"
+  service_scores: "data/outputs/service_scores.json"
+  test_suite: "data/outputs/test_suite_T.json"
+  mr_catalog: "data/outputs/mr_catalog.yaml"
+
+traffic_generation:
+  num_requests: 500
+  delay_between_requests_ms: 100
+  scenarios:
+    - "login"
+    - "search_ticket"
+    - "book_ticket"
+    - "pay_ticket"
+    - "query_order"
+    - "cancel_order"

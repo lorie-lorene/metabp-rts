@@ -50,3 +50,56 @@ services:
   ts-account-service: 14706
   ts-verification-code-service: 15678
   ts-ticket-info-service: 12580
+
+# services_map.yaml
+# =================
+# BLOC      : Configuration Bloc C
+# ROLE      : Mapping service_name -> port pour accès aux endpoints
+#             OpenAPI (/v2/api-docs) de chaque service Train-Ticket déployé.
+# ENTREES   : (manuel — dérivé du docker-compose.yml de Train-Ticket)
+# SORTIES   : Dict consommé par openapi_reader.py
+# LIBRAIRIES: pyyaml
+
+# Format : service_name: port
+services:
+  ts-gateway-service: 18888
+  ts-auth-service: 12340
+  ts-user-service: 12342
+  ts-order-service: 12031
+  ts-order-other-service: 12032
+  ts-travel-service: 12346
+  ts-travel2-service: 16346
+  ts-preserve-service: 14568
+  ts-payment-service: 19001
+  ts-inside-payment-service: 18673
+  ts-execute-service: 12386
+  ts-cancel-service: 18885
+  ts-route-service: 11178
+  ts-train-service: 14567
+  ts-station-service: 12345
+  ts-seat-service: 18898
+  ts-price-service: 16579
+  ts-security-service: 11188
+  ts-notification-service: 17853
+  ts-food-service: 18856
+  ts-food-map-service: 18857
+  ts-contacts-service: 12347
+  ts-config-service: 15679
+  ts-voucher-service: 16101
+  ts-ticket-office-service: 16108
+  ts-news-service: 12862
+  ts-admin-basic-info-service: 18767
+  ts-admin-order-service: 16112
+  ts-admin-route-service: 16113
+  ts-admin-travel-service: 16114
+  ts-admin-user-service: 16115
+  ts-assurance-service: 18888
+  ts-rebook-service: 18886
+  ts-consign-service: 16111
+  ts-consign-price-service: 16110
+  ts-delivery-service: 18808
+  ts-wait-order-service: 16109
+  ts-avatar-service: 17001
+  ts-account-service: 14706
+  ts-verification-code-service: 15678
+  ts-ticket-info-service: 12580
