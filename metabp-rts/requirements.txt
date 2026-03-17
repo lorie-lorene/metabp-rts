@@ -1,0 +1,15 @@
+# Core
+networkx==3.1
+numpy==1.24.0
+pandas==2.0.0
+
+# Jaeger / HTTP
+requests==2.31.0
+
+# OpenAPI
+openapi-spec-validator==0.7.1
+pyyaml==6.0.1
+
+# Tests
+pytest==7.4.0
+pytest-cov==4.1.0
