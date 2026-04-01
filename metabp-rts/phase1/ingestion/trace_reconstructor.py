@@ -17,32 +17,6 @@ SORTIES   : (test_suite T, edge_list)
 LIBRAIRIES: collections.defaultdict, typing
 """
 
-# TODO: implémenter TraceReconstructor
-# Méthodes attendues :
-#   - group_by_trace(spans) -> Dict[str, List[SpanRecord]]
-#   - build_test_path(trace_id, spans) -> TestPath
-#   - build_edge_list(spans) -> List[tuple]
-#   - run(spans) -> Tuple[List[TestPath], List[tuple]]
-
-"""
-trace_reconstructor.py
-======================
-BLOC      : Bloc A — Ingestion
-ROLE      : Groupe les spans par traceID pour reconstruire :
-            (1) La suite de tests T : chaque traceID → un TestPath
-                (chaîne d'invocations représentant un cas de test)
-            (2) L'edge_list : liste de (si, sj, duration, error)
-                pour la construction du graphe G
-ATTENTION : Deux usages distincts des spans :
-            - parentSpanID → arcs du graphe G
-            - traceID      → cas de test de T
-ENTREES   : Liste de SpanRecord (sortie de span_parser.py)
-SORTIES   : (test_suite T, edge_list)
-            - T        : List[TestPath]
-            - edge_list: List[Tuple[str, str, int, bool]]
-LIBRAIRIES: collections.defaultdict, typing
-"""
-
 import logging
 from collections import defaultdict
 from typing import List, Dict, Tuple
@@ -80,12 +54,10 @@ class TraceReconstructor:
         edge_list: List[Tuple[str, str, int, bool]] = []
 
         for trace_id, trace_spans in grouped.items():
-            # Construire le TestPath pour cette trace
             test_path = self._build_test_path(trace_id, trace_spans)
             if test_path is not None:
                 test_suite.append(test_path)
 
-            # Construire les arcs pour le graphe G
             edges = self._build_edges(trace_spans, span_map)
             edge_list.extend(edges)
 
@@ -130,25 +102,14 @@ class TraceReconstructor:
         La chaîne d'invocations est dédupliquée et ordonnée
         par start_time_us pour respecter l'ordre chronologique.
         """
-        # Trier par ordre chronologique
         sorted_spans = sorted(trace_spans, key=lambda s: s.start_time_us)
-
-        # Extraire les arcs uniques dans l'ordre d'apparition
+        span_lookup = {s.span_id: s for s in trace_spans}
         seen = set()
         chain: List[Tuple[str, str]] = []
-        for span in sorted_spans:
-            if span.parent_span_id:
-                edge = (span.service_name, span.service_name)
-                # L'arc est (parent_service, current_service)
-                # Le parent_service sera résolu via span_map dans _build_edges
-                # Ici on stocke juste (source, target) pour le TestPath
-        
-        # Reconstruction correcte via les relations parent→enfant
-        span_lookup = {s.span_id: s for s in trace_spans}
+
         for span in sorted_spans:
             if span.parent_span_id and span.parent_span_id in span_lookup:
                 parent = span_lookup[span.parent_span_id]
-                # Éviter les auto-boucles (même service appelant lui-même)
                 if parent.service_name != span.service_name:
                     arc = (parent.service_name, span.service_name)
                     if arc not in seen:
@@ -174,7 +135,6 @@ class TraceReconstructor:
         for span in trace_spans:
             if span.parent_span_id and span.parent_span_id in span_map:
                 parent = span_map[span.parent_span_id]
-                # Ignorer les arcs intra-service
                 if parent.service_name != span.service_name:
                     edges.append((
                         parent.service_name,

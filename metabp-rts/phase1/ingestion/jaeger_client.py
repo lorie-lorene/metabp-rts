@@ -3,31 +3,22 @@ jaeger_client.py
 ================
 BLOC      : Bloc A — Ingestion
 ROLE      : Communique avec l'API REST de Jaeger pour récupérer
-            les traces brutes d'un service sur une fenêtre temporelle.
-ENTREES   : - URL Jaeger (ex: http://localhost:16686)
-            - Nom du service cible (ex: ts-gateway-service)
-            - Fenêtre temporelle (lookback) et limite de traces
-SORTIES   : Liste brute de traces JSON [{traceID, spans[]}]
-            Persistée dans data/raw/traces_raw.json
-LIBRAIRIES: requests, json
-"""
+            les traces brutes de TOUS les services sur une fenêtre
+            temporelle, afin de construire le graphe global du système.
 
-# TODO: implémenter JaegerClient
-# Méthodes attendues :
-#   - __init__(base_url, config)
-#   - get_services() -> List[str]
-#   - get_traces(service, lookback, limit) -> List[dict]
-#   - save_raw(traces, output_path) -> None
-"""
-jaeger_client.py
-================
-BLOC      : Bloc A — Ingestion
-ROLE      : Communique avec l'API REST de Jaeger pour récupérer
-            les traces brutes d'un service sur une fenêtre temporelle.
+            Stratégie d'ingestion :
+              1. get_services()     → liste tous les services connus de Jaeger
+              2. get_all_traces()   → pour chaque service, récupère ses traces
+              3. merge_traces()     → déduplique par traceID (une trace peut
+                                     apparaître dans plusieurs services)
+              4. save_raw()         → persiste le résultat consolidé
+
+            Le graphe G est ensuite construit depuis les relations
+            parentSpanID → spanID inter-services observées dans les traces.
+
 ENTREES   : - URL Jaeger (ex: http://localhost:16686)
-            - Nom du service cible (ex: ts-gateway-service)
-            - Fenêtre temporelle (lookback) et limite de traces
-SORTIES   : Liste brute de traces JSON [{traceID, spans[]}]
+            - Fenêtre temporelle (lookback) et limite de traces par service
+SORTIES   : Liste consolidée de traces JSON [{traceID, spans[]}]
             Persistée dans data/raw/traces_raw.json
 LIBRAIRIES: requests, json
 """
@@ -35,11 +26,14 @@ LIBRAIRIES: requests, json
 import json
 import logging
 from pathlib import Path
-from typing import List
+from typing import List, Dict
 
 import requests
 
 logger = logging.getLogger(__name__)
+
+# Services internes Jaeger à exclure
+_JAEGER_INTERNAL = {"jaeger-all-in-one", "jaeger-query", "jaeger-collector"}
 
 
 class JaegerClient:
@@ -49,31 +43,31 @@ class JaegerClient:
     """
 
     def __init__(self, base_url: str, api_version: str = "api"):
-        # Supprime le slash final pour éviter les doubles slashes
-        self.base_url = base_url.rstrip("/")
+        self.base_url    = base_url.rstrip("/")
         self.api_version = api_version
-        self._session = requests.Session()
+        self._session    = requests.Session()
         self._session.headers.update({"Accept": "application/json"})
 
     # ── Méthodes publiques ────────────────────────────────
 
     def get_services(self) -> List[str]:
         """
-        Retourne la liste des services connus de Jaeger.
-        Utile pour vérifier que Train-Ticket est bien tracé.
+        Retourne la liste des services applicatifs connus de Jaeger.
+        Exclut les services internes Jaeger.
         """
-        url = f"{self.base_url}/{self.api_version}/services"
+        url      = f"{self.base_url}/{self.api_version}/services"
         response = self._get(url)
-        return response.get("data", [])
+        all_svcs = response.get("data", [])
+        return [s for s in all_svcs if s not in _JAEGER_INTERNAL]
 
     def get_traces(
         self,
         service: str,
         lookback: str = "1h",
-        limit: int = 5000,
+        limit: int    = 5000,
     ) -> List[dict]:
         """
-        Récupère les traces brutes d'un service.
+        Récupère les traces brutes d'un service donné.
 
         Paramètres
         ----------
@@ -90,19 +84,97 @@ class JaegerClient:
             "processes": {...}
           }
         """
-        url = f"{self.base_url}/{self.api_version}/traces"
-        params = {
-            "service": service,
-            "lookback": lookback,
-            "limit": limit,
-        }
+        url    = f"{self.base_url}/{self.api_version}/traces"
+        params = {"service": service, "lookback": lookback, "limit": limit}
         response = self._get(url, params=params)
-        traces = response.get("data", [])
+        traces   = response.get("data", [])
         logger.info(
             "Jaeger → service=%s | lookback=%s | traces récupérées=%d",
             service, lookback, len(traces),
         )
         return traces
+
+    def get_all_traces(
+        self,
+        lookback: str = "1h",
+        limit: int    = 5000,
+    ) -> List[dict]:
+        """
+        Récupère et consolide les traces de TOUS les services Jaeger.
+
+        Stratégie
+        ---------
+        - Itère sur chaque service retourné par get_services()
+        - Récupère jusqu'à `limit` traces par service
+        - Déduplique par traceID : si une trace apparaît dans plusieurs
+          services (ce qui est normal en microservices), elle n'est
+          comptée qu'une seule fois mais ses spans sont fusionnés
+        - Retourne la liste consolidée
+
+        Cette approche garantit que le graphe G reflète TOUTES les
+        interactions inter-services observées dans le système.
+
+        Paramètres
+        ----------
+        lookback : fenêtre temporelle commune à tous les services
+        limit    : limite de traces PAR SERVICE
+
+        Retourne
+        --------
+        Liste consolidée de traces dédupliquées
+        """
+        services = self.get_services()
+        logger.info(
+            "Ingestion globale → %d services détectés : %s",
+            len(services), services,
+        )
+
+        # Index global : traceID → trace consolidée
+        trace_index: Dict[str, dict] = {}
+        # Index des spans déjà vus : traceID → set(spanID)
+        span_index:  Dict[str, set]  = {}
+
+        for svc in services:
+            try:
+                traces = self.get_traces(svc, lookback=lookback, limit=limit)
+            except Exception as e:
+                logger.warning("Impossible de récupérer les traces de %s : %s", svc, e)
+                continue
+
+            for trace in traces:
+                tid = trace.get("traceID")
+                if not tid:
+                    continue
+
+                if tid not in trace_index:
+                    # Première fois qu'on voit cette trace
+                    trace_index[tid] = trace
+                    span_index[tid]  = {s["spanID"] for s in trace.get("spans", [])}
+                else:
+                    # Trace déjà connue — fusionner les spans manquants
+                    existing    = trace_index[tid]
+                    known_spans = span_index[tid]
+
+                    for span in trace.get("spans", []):
+                        if span["spanID"] not in known_spans:
+                            existing["spans"].append(span)
+                            known_spans.add(span["spanID"])
+
+                    # Fusionner les processus (processes map)
+                    existing_procs = existing.get("processes", {})
+                    for pid, proc in trace.get("processes", {}).items():
+                        if pid not in existing_procs:
+                            existing_procs[pid] = proc
+                    existing["processes"] = existing_procs
+
+        consolidated = list(trace_index.values())
+        total_spans  = sum(len(t.get("spans", [])) for t in consolidated)
+
+        logger.info(
+            "Ingestion globale terminée → %d traces consolidées | %d spans totaux",
+            len(consolidated), total_spans,
+        )
+        return consolidated
 
     def save_raw(self, traces: List[dict], output_path: str) -> None:
         """
@@ -113,7 +185,9 @@ class JaegerClient:
         path.parent.mkdir(parents=True, exist_ok=True)
         with open(path, "w", encoding="utf-8") as f:
             json.dump(traces, f, indent=2, ensure_ascii=False)
-        logger.info("Traces brutes sauvegardées → %s (%d traces)", path, len(traces))
+        logger.info(
+            "Traces brutes sauvegardées → %s (%d traces)", path, len(traces)
+        )
 
     def load_raw(self, input_path: str) -> List[dict]:
         """
@@ -122,7 +196,9 @@ class JaegerClient:
         """
         with open(input_path, "r", encoding="utf-8") as f:
             traces = json.load(f)
-        logger.info("Traces chargées depuis %s (%d traces)", input_path, len(traces))
+        logger.info(
+            "Traces chargées depuis %s (%d traces)", input_path, len(traces)
+        )
         return traces
 
     # ── Méthode privée ────────────────────────────────────
@@ -141,6 +217,10 @@ class JaegerClient:
                 "Vérifiez que Jaeger est démarré (docker-compose up)."
             )
         except requests.exceptions.Timeout:
-            raise TimeoutError(f"Jaeger n'a pas répondu dans les 30s : {url}")
+            raise TimeoutError(
+                f"Jaeger n'a pas répondu dans les 30s : {url}"
+            )
         except requests.exceptions.HTTPError as e:
-            raise RuntimeError(f"Erreur HTTP Jaeger {e.response.status_code} : {url}")
+            raise RuntimeError(
+                f"Erreur HTTP Jaeger {e.response.status_code} : {url}"
+            )

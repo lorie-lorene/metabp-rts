@@ -19,32 +19,6 @@ SORTIES   : List[MRInstance]  (partiel — source = "jaeger_fallback")
 LIBRAIRIES: re, collections
 """
 
-# TODO: implémenter JaegerFallbackMR
-# Méthodes attendues :
-#   - infer(spans) -> List[MRInstance]
-#   - _extract_operations(spans) -> Dict[str, List[str]]
-#   - _apply_rules(service, operation) -> Optional[MRInstance]
-"""
-jaeger_fallback_mr.py
-=====================
-BLOC      : Bloc C — Catalogue MR
-ROLE      : Fallback activé quand les specs OpenAPI ne sont pas
-            accessibles (ex: z-Shop / Zheng de Chen et al. 2023).
-            Infère des MR partiels depuis les operationName des spans
-            Jaeger en appliquant des règles sur la méthode HTTP et
-            le pattern d'URL.
-            Règles d'inférence depuis operationName :
-              "POST /.*/payment.*"  → MR Idempotence (candidat)
-              "GET .*\?.*&.*"       → MR Permutation
-              "GET .*\?.*filter.*"  → MR Sous-ensemble
-              "GET .*\?.*sort.*"    → MR Ordonnancement
-              "GET .*\?.*limit.*"   → MR Cardinalité
-            Limitation : pas d'info sur les schémas de réponse.
-ENTREES   : List[SpanRecord]  (champ operationName utilisé)
-SORTIES   : List[MRInstance]  (partiel — source = "jaeger_fallback")
-LIBRAIRIES: re, collections
-"""
-
 import logging
 import re
 from collections import defaultdict
@@ -54,51 +28,137 @@ from models.models import MRInstance, SpanRecord
 
 logger = logging.getLogger(__name__)
 
-# Règles d'inférence : (pattern_regex, mr_type, phi_template, rho_template)
-_RULES = [
+# ── Règles sur les operationName HTTP (format "METHOD /path") ─────────────
+# Couvrent les spans gateway-service et services métier
+_HTTP_RULES = [
+    # Paiement → Idempotence forte (double débit interdit)
     (
-        r"^POST\s+.*payment.*",
+        r"^POST\s+.*(pay|payment|inside_pay).*",
         "Idempotence",
-        "Même body avec même paymentId envoyé 2 fois",
-        "total_charged == montant_unique (pas de double débit)",
+        "Même orderId envoyé deux fois à POST {endpoint}",
+        "Le montant débité est identique à une seule exécution — pas de double débit",
     ),
+    # Remboursement → Idempotence
     (
-        r"^POST\s+.*",
+        r"^POST\s+.*refund.*",
         "Idempotence",
-        "Même body avec même id unique envoyé 2 fois",
-        "Résultat identique à la première invocation",
+        "Même orderId envoyé deux fois à POST {endpoint}",
+        "Le remboursement n'est effectué qu'une seule fois",
     ),
+    # Création de ressource → Idempotence
     (
-        r"^GET\s+.*\?.*&.*",
+        r"^POST\s+.*(create|preserve|reserve).*",
+        "Idempotence",
+        "Même body avec même identifiant unique envoyé deux fois à POST {endpoint}",
+        "La ressource n'est créée qu'une seule fois — pas de doublon",
+    ),
+    # Login → Idempotence (token identique pour mêmes credentials)
+    (
+        r"^POST\s+.*login.*",
+        "Idempotence",
+        "Mêmes credentials envoyés deux fois à POST {endpoint}",
+        "Un token valide est retourné à chaque appel — pas de duplication de session",
+    ),
+    # Annulation → Idempotence
+    (
+        r"^GET\s+.*cancel.*",
+        "Idempotence",
+        "Même orderId annulé deux fois via GET {endpoint}",
+        "L'état final est 'annulé' quelle que soit la multiplicité de l'appel",
+    ),
+    # Recherche de trajets → Permutation des paramètres
+    (
+        r"^GET\s+.*(travel|travels|query).*",
         "Permutation",
-        "Permutation de l'ordre des query parameters",
-        "Résultat identique quelle que soit l'ordre des paramètres",
+        "Permutation des paramètres from/to/date dans GET {endpoint}",
+        "Le résultat est identique quelle que soit l'ordre des query parameters",
     ),
+    # Consultation des commandes → Sous-ensemble
     (
-        r"^GET\s+.*[?&]filter",
+        r"^GET\s+.*orders.*",
         "Sous-ensemble",
-        "Ajout d'un filtre supplémentaire",
+        "GET {endpoint} avec filtre status=paid vs sans filtre",
         "résultats_filtrés ⊆ résultats_sans_filtre",
     ),
+    # Disponibilité des places → Monotonie
     (
-        r"^GET\s+.*[?&](sort|order)",
-        "Ordonnancement",
-        "Requête avec sort=asc puis sort=desc",
-        "Listes retournées sont inverses l'une de l'autre",
-    ),
-    (
-        r"^GET\s+.*[?&](limit|page|size)",
-        "Cardinalité",
-        "Requête avec limit=N",
-        "len(résultats) <= N",
-    ),
-    (
-        r"^GET\s+.*(stock|inventory|count)",
+        r"^GET\s+.*seats.*",
         "Monotonie",
-        "Achat d'une unité puis requête du stock",
-        "stock_après <= stock_avant",
+        "GET {endpoint} avant et après une réservation",
+        "seats_disponibles_après <= seats_disponibles_avant",
     ),
 ]
+
+# ── Règles sur les spans internes (opérations sans "METHOD /path") ─────────
+# Couvrent les spans de traitement interne (verify-credentials, charge-account…)
+_INTERNAL_RULES = [
+    # Vérification de solde → Monotonie
+    (
+        r"verify.balance",
+        "Monotonie",
+        "Vérification du solde avant et après un débit",
+        "solde_après <= solde_avant",
+    ),
+    # Débit → Idempotence
+    (
+        r"charge.account",
+        "Idempotence",
+        "Même transaction envoyée deux fois à charge-account",
+        "Le solde est débité une seule fois",
+    ),
+    # Vérification credentials → Idempotence
+    (
+        r"verify.credentials",
+        "Idempotence",
+        "Mêmes credentials vérifiés deux fois",
+        "Le résultat d'authentification est identique",
+    ),
+    # Génération token → Idempotence
+    (
+        r"generate.token",
+        "Idempotence",
+        "Génération de token pour les mêmes credentials",
+        "Le token est valide et unique à chaque appel",
+    ),
+    # Réservation de siège → Monotonie
+    (
+        r"lock.seat|reserve.seat",
+        "Monotonie",
+        "Réservation d'un siège puis consultation de disponibilité",
+        "seats_disponibles_après < seats_disponibles_avant",
+    ),
+    # Calcul de remboursement → Monotonie
+    (
+        r"calculate.refund",
+        "Monotonie",
+        "Calcul du remboursement en fonction du délai d'annulation",
+        "refund_amount <= prix_original",
+    ),
+    # Recherche DB → Sous-ensemble
+    (
+        r"search.travel|query.*db|search.*db",
+        "Sous-ensemble",
+        "Requête avec filtre supplémentaire (date/trajet)",
+        "résultats_filtrés ⊆ résultats_sans_filtre",
+    ),
+    # Sauvegarde → Idempotence
+    (
+        r"save.*db|update.*status",
+        "Idempotence",
+        "Même opération de sauvegarde exécutée deux fois",
+        "L'état final est identique — pas de duplication en base",
+    ),
+    # Notification → Idempotence
+    (
+        r"send.*confirm|notify",
+        "Idempotence",
+        "Même notification envoyée deux fois",
+        "L'utilisateur reçoit une seule notification",
+    ),
+]
+
+# Combinaison des deux ensembles de règles
+_RULES = _HTTP_RULES + _INTERNAL_RULES
 
 
 class JaegerFallbackMR:
@@ -160,14 +220,23 @@ class JaegerFallbackMR:
         Applique la première règle qui correspond à l'operation.
         Retourne None si aucune règle ne correspond.
         """
-        for pattern, mr_type, phi, rho in _RULES:
+        # Extraire méthode HTTP et endpoint
+        parts = operation.split(" ", 1)
+        if len(parts) == 2:
+            http_method = parts[0].upper()
+            endpoint = parts[1]
+        else:
+            # Span interne sans méthode HTTP
+            http_method = "INTERNAL"
+            endpoint = operation
+
+        for pattern, mr_type, phi_tpl, rho in _RULES:
             if re.search(pattern, operation, re.IGNORECASE):
                 counters[mr_type] += 1
                 mr_id = f"MR-FB-{mr_type[:3].upper()}-{counters[mr_type]:02d}"
-                # Extraire méthode HTTP et endpoint depuis operation
-                parts = operation.split(" ", 1)
-                http_method = parts[0] if len(parts) == 2 else "GET"
-                endpoint = parts[1] if len(parts) == 2 else operation
+
+                # Instancier le template phi avec l'endpoint réel
+                phi = phi_tpl.format(endpoint=endpoint)
 
                 return MRInstance(
                     mr_id=mr_id,

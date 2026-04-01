@@ -1,0 +1,384 @@
+mr_catalog:
+- id: MR-S-PER-01
+  type: Permutation
+  service: ts-station-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-S-PER-02
+  type: Permutation
+  service: ts-station-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-T-PER-01
+  type: Permutation
+  service: ts-train-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-T-PER-02
+  type: Permutation
+  service: ts-train-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-R-PER-01
+  type: Permutation
+  service: ts-route-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-R-PER-02
+  type: Permutation
+  service: ts-route-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-S-MON-01
+  type: Monotonie
+  service: ts-security-service
+  endpoint: /api/v1/securityservice/securityConfigs/{accountId}
+  http_method: GET
+  phi: Requête GET /api/v1/securityservice/securityConfigs/{accountId} avant et après
+    une opération de réduction
+  rho: valeur_après <= valeur_avant
+  source: openapi
+- id: MR-S-PER-01
+  type: Permutation
+  service: ts-security-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-S-PER-02
+  type: Permutation
+  service: ts-security-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-O-MON-01
+  type: Monotonie
+  service: ts-order-service
+  endpoint: /api/v1/orderservice/order/security/{checkDate}/{accountId}
+  http_method: GET
+  phi: Requête GET /api/v1/orderservice/order/security/{checkDate}/{accountId} avant
+    et après une opération de réduction
+  rho: valeur_après <= valeur_avant
+  source: openapi
+- id: MR-O-PER-01
+  type: Permutation
+  service: ts-order-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-O-PER-02
+  type: Permutation
+  service: ts-order-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-OO-MON-01
+  type: Monotonie
+  service: ts-order-other-service
+  endpoint: /api/v1/orderOtherService/orderOther/security/{checkDate}/{accountId}
+  http_method: GET
+  phi: Requête GET /api/v1/orderOtherService/orderOther/security/{checkDate}/{accountId}
+    avant et après une opération de réduction
+  rho: valeur_après <= valeur_avant
+  source: openapi
+- id: MR-OO-PER-01
+  type: Permutation
+  service: ts-order-other-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-OO-PER-02
+  type: Permutation
+  service: ts-order-other-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-T-PER-01
+  type: Permutation
+  service: ts-travel-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-T-PER-02
+  type: Permutation
+  service: ts-travel-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-T-PER-01
+  type: Permutation
+  service: ts-travel2-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-T-PER-02
+  type: Permutation
+  service: ts-travel2-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-C-MON-01
+  type: Monotonie
+  service: ts-contacts-service
+  endpoint: /api/v1/contactservice/contacts/account/{accountId}
+  http_method: GET
+  phi: Requête GET /api/v1/contactservice/contacts/account/{accountId} avant et après
+    une opération de réduction
+  rho: valeur_après <= valeur_avant
+  source: openapi
+- id: MR-C-PER-01
+  type: Permutation
+  service: ts-contacts-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-C-PER-02
+  type: Permutation
+  service: ts-contacts-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-A-PER-01
+  type: Permutation
+  service: ts-assurance-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-A-PER-02
+  type: Permutation
+  service: ts-assurance-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-ABI-PER-01
+  type: Permutation
+  service: ts-admin-basic-info-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-ABI-PER-02
+  type: Permutation
+  service: ts-admin-basic-info-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-C-PER-01
+  type: Permutation
+  service: ts-config-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-C-PER-02
+  type: Permutation
+  service: ts-config-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-P-PER-01
+  type: Permutation
+  service: ts-price-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-P-PER-02
+  type: Permutation
+  service: ts-price-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-C-PER-01
+  type: Permutation
+  service: ts-cancel-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-C-PER-02
+  type: Permutation
+  service: ts-cancel-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-P-PER-01
+  type: Permutation
+  service: ts-preserve-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-P-PER-02
+  type: Permutation
+  service: ts-preserve-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-IP-MON-01
+  type: Monotonie
+  service: ts-inside-payment-service
+  endpoint: /api/v1/inside_pay_service/inside_payment/account
+  http_method: GET
+  phi: Requête GET /api/v1/inside_pay_service/inside_payment/account avant et après
+    une opération de réduction
+  rho: valeur_après <= valeur_avant
+  source: openapi
+- id: MR-IP-MON-02
+  type: Monotonie
+  service: ts-inside-payment-service
+  endpoint: /api/v1/inside_pay_service/inside_payment/account
+  http_method: POST
+  phi: Requête POST /api/v1/inside_pay_service/inside_payment/account avant et après
+    une opération de réduction
+  rho: valeur_après <= valeur_avant
+  source: openapi
+- id: MR-IP-PER-01
+  type: Permutation
+  service: ts-inside-payment-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-IP-PER-02
+  type: Permutation
+  service: ts-inside-payment-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-P-PER-01
+  type: Permutation
+  service: ts-payment-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-P-PER-02
+  type: Permutation
+  service: ts-payment-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-S-PER-01
+  type: Permutation
+  service: ts-seat-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-S-PER-02
+  type: Permutation
+  service: ts-seat-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-F-PER-01
+  type: Permutation
+  service: ts-food-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-F-PER-02
+  type: Permutation
+  service: ts-food-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-C-MON-01
+  type: Monotonie
+  service: ts-consign-service
+  endpoint: /api/v1/consignservice/consigns/account/{id}
+  http_method: GET
+  phi: Requête GET /api/v1/consignservice/consigns/account/{id} avant et après une
+    opération de réduction
+  rho: valeur_après <= valeur_avant
+  source: openapi
+- id: MR-C-PER-01
+  type: Permutation
+  service: ts-consign-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-C-PER-02
+  type: Permutation
+  service: ts-consign-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
