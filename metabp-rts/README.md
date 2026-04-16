@@ -137,14 +137,13 @@ ls ~/metabp-rts/
 
 ### 2.3 Organisation finale des répertoires
 
-```
-~/
+
 ├── train-ticket/          ← dépôt Train-Ticket
 │   └── docker-compose.yml
 └── metabp-rts/            ← projet MetaBP-RTS
     ├── phase1/
     └── requirements.txt
-```
+
 
 ---
 
@@ -209,7 +208,7 @@ docker compose up -d \
   ts-inside-payment-service \
   jaeger \
   rabbitmq \
-  mysql
+  mysql ou mongoDb
 ```
 
 > **Note** : Le démarrage minimal produit un graphe G moins dense,
@@ -249,8 +248,6 @@ Vérifier que la page s'affiche correctement et que le menu déroulant
 # Lister les services connus de Jaeger
 curl -s "http://localhost:16686/api/services" | python3 -m json.tool
 
-# Attendu : {"data": ["ts-gateway-service", "ts-auth-service", ...], "total": N}
-```
 
 Si Jaeger ne liste aucun service, les conteneurs n'ont pas encore
 généré de trafic. Passer à la Section 8 pour générer du trafic,
@@ -308,66 +305,64 @@ Dépendances installées :
 
 ### 5.3 Vérifier l'installation
 
-```bash
 python3 -c "import networkx, numpy, requests, yaml; print('OK')"
-# Attendu : OK
-```
+
 
 ---
 
 ## 6. Structure du projet Phase 1
 
-```
+
 metabp-rts/
 ├── requirements.txt
 ├── README.md
 └── phase1/
-    ├── pytest.ini                    ← configuration pytest
+    ├── pytest.ini                    --> configuration pytest
     │
     ├── config/
-    │   ├── system_config.yaml        ← paramètres globaux (Jaeger, poids, seuils)
-    │   └── services_map.yaml         ← mapping service → port (OpenAPI)
+    │   ├── system_config.yaml        --> paramètres globaux (Jaeger, poids, seuils)
+    │   └── services_map.yaml         --> mapping service → port (OpenAPI)
     │
     ├── models/
-    │   └── models.py                 ← dataclasses partagées (SpanRecord, etc.)
+    │   └── models.py                 --> dataclasses partagées (SpanRecord, etc.)
     │
-    ├── ingestion/                    ← BLOC A
-    │   ├── jaeger_client.py          ← récupération traces Jaeger
-    │   ├── span_parser.py            ← parsing des spans bruts
-    │   └── trace_reconstructor.py   ← reconstruction T et edge_list
+    ├── ingestion/                    --> BLOC A
+    │   ├── jaeger_client.py          --> récupération traces Jaeger
+    │   ├── span_parser.py            --> parsing des spans bruts
+    │   └── trace_reconstructor.py   --> reconstruction T et edge_list
     │
-    ├── graph/                        ← BLOC B
-    │   ├── weight_calculator.py      ← calcul des poids w_ij
-    │   ├── graph_builder.py          ← construction du graphe G
-    │   ├── centrality.py             ← calcul C(si)
-    │   ├── propagation_coeff.py      ← calcul P(si)
-    │   ├── fragility.py              ← calcul F(si)
-    │   └── echo_dormant.py           ← classification Écho-Dormant
+    ├── graph/                        --> BLOC B
+    │   ├── weight_calculator.py      --> calcul des poids w_ij
+    │   ├── graph_builder.py          --> construction du graphe G
+    │   ├── centrality.py             --> calcul C(si)
+    │   ├── propagation_coeff.py      --> calcul P(si)
+    │   ├── fragility.py              --> calcul F(si)
+    │   └── echo_dormant.py           --> classification Écho-Dormant
     │
-    ├── mr_catalog/                   ← BLOC C
-    │   ├── openapi_reader.py         ← lecture specs OpenAPI
-    │   ├── jaeger_fallback_mr.py     ← inférence MR sans OpenAPI
-    │   ├── mr_inferrer.py            ← application des 6 règles MR
-    │   └── mr_catalog_writer.py      ← écriture mr_catalog.yaml
+    ├── mr_catalog/                   --> BLOC C
+    │   ├── openapi_reader.py         --> lecture specs OpenAPI
+    │   ├── jaeger_fallback_mr.py     --> inférence MR sans OpenAPI
+    │   ├── mr_inferrer.py            --> application des 6 règles MR
+    │   └── mr_catalog_writer.py      --> écriture mr_catalog.yaml
     │
     ├── scripts/
-    │   ├── generate_traffic.py       ← génération trafic Train-Ticket
-    │   └── run_phase1.py             ← orchestrateur principal
+    │   ├── generate_traffic.py       --> génération trafic Train-Ticket
+    │   └── run_phase1.py             --> orchestrateur principal
     │
     ├── tests/
-    │   ├── test_span_parser.py       ← tests Bloc A (10 tests)
-    │   ├── test_graph_builder.py     ← tests Bloc B (15 tests)
-    │   └── test_echo_dormant.py      ← tests Écho-Dormant + Théorème (10 tests)
+    │   ├── test_span_parser.py       --> tests Bloc A (10 tests)
+    │   ├── test_graph_builder.py     --> tests Bloc B (15 tests)
+    │   └── test_echo_dormant.py      --> tests Écho-Dormant + Théorème (10 tests)
     │
     └── data/
         ├── raw/
-        │   └── traces_raw.json       ← traces brutes (créé à l'exécution)
+        │   └── traces_raw.json       --> traces brutes (créé à l'exécution)
         └── outputs/
-            ├── service_graph.json    ← ARTEFACT : Graphe G
-            ├── service_scores.json   ← ARTEFACT : Scores C, P, F, Θ
-            ├── test_suite_T.json     ← ARTEFACT : Suite de tests T
-            └── mr_catalog.yaml       ← ARTEFACT : Catalogue MR
-```
+            ├── service_graph.json    --> ARTEFACT : Graphe G
+            ├── service_scores.json   --> ARTEFACT : Scores C, P, F, Θ
+            ├── test_suite_T.json     --> ARTEFACT : Suite de tests T
+            └── mr_catalog.yaml       --> ARTEFACT : Catalogue MR
+
 
 ---
 
@@ -537,7 +532,7 @@ python run_phase1.py --config ../config/system_config.yaml
 10:25:05 [INFO] run_phase1 — ── Étape 8/12 : Calcul fragilité F(si)
 10:25:05 [INFO] run_phase1 — ── Étape 9/12 : Classification Écho-Dormant
 10:25:05 [INFO] echo_dormant — EchoDormantClassifier → 23 services | 8 Écho-Dormants | 15 Non-Dormants
-10:25:05 [INFO] echo_dormant — Théorème de Sécurité d'Exclusion : OK ✓
+10:25:05 [INFO] echo_dormant — Théorème de Sécurité d'Exclusion : OK 
 10:25:05 [INFO] run_phase1 — ── Étape 10/12 : Lecture specs OpenAPI
 10:25:12 [INFO] openapi_reader — OpenAPIReader → 21/40 services avec spec OpenAPI accessible
 10:25:12 [INFO] run_phase1 — ── Étape 11/12 : Inférence MR
@@ -589,14 +584,6 @@ dans `system_config.yaml`.
 ls -lh ~/metabp-rts/phase1/data/outputs/
 ```
 
-Attendu :
-
-```
--rw-r--r-- service_graph.json    ← Graphe G (NetworkX node-link JSON)
--rw-r--r-- service_scores.json   ← Scores C, P, F, Θ_dormant
--rw-r--r-- test_suite_T.json     ← Suite de tests T
--rw-r--r-- mr_catalog.yaml       ← Catalogue MR
-```
 
 ### 10.2 Vérifier service_graph.json
 
@@ -614,11 +601,6 @@ print(f'Exemple arc : {sample[\"source\"]} → {sample[\"target\"]} | w_ij={samp
 "
 ```
 
-Attendu :
-```
-Graphe G : 23 noeuds, 47 arcs
-Exemple arc : ts-gateway-service → ts-order-service | w_ij=0.523
-```
 
 ### 10.3 Vérifier service_scores.json
 
@@ -716,7 +698,7 @@ tests/test_echo_dormant.py::test_classification_below_threshold PASSED
 tests/test_echo_dormant.py::test_boundary_case_at_threshold PASSED
 tests/test_echo_dormant.py::test_dormant_set_membership PASSED
 tests/test_echo_dormant.py::test_scores_sorted_descending PASSED
-tests/test_echo_dormant.py::test_safety_theorem_holds PASSED       ← propriété formelle
+tests/test_echo_dormant.py::test_safety_theorem_holds PASSED       
 tests/test_echo_dormant.py::test_safety_theorem_non_dormant_constraint PASSED
 tests/test_echo_dormant.py::test_omega_normalization PASSED
 tests/test_echo_dormant.py::test_invalid_omega_raises PASSED

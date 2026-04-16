@@ -1,41 +1,15 @@
 """
-graph_builder.py
-================
-BLOC      : Bloc B — Construction G
-ROLE      : Construit le graphe orienté pondéré G = (V, E) à partir
-            des arcs et poids calculés. Chaque noeud = un service,
-            chaque arc = une dépendance observée avec son poids w_ij.
+Construit le graphe orienté pondéré G = (V, E) à partir
+des arcs et poids calculés. Chaque noeud = un service,
+chaque arc = une dépendance observée avec son poids w_ij.
 ENTREES   : Dict {(si,sj): EdgeWeight} (sortie de weight_calculator.py)
 SORTIES   : NetworkX DiGraph avec attributs :
             - noeud : service_name
             - arc   : w_ij, rate_ij, lat_norm, err_ij, freq
             Sérialisable en JSON via networkx.node_link_data()
             Persisté dans data/outputs/service_graph.json
-LIBRAIRIES: networkx, json
 """
 
-# TODO: implémenter GraphBuilder
-# Méthodes attendues :
-#   - build(edge_weights) -> nx.DiGraph
-#   - save(graph, output_path) -> None
-#   - load(input_path) -> nx.DiGraph
-#   - summary(graph) -> dict   (nb noeuds, arcs, densité)
-
-"""
-graph_builder.py
-================
-BLOC      : Bloc B — Construction G
-ROLE      : Construit le graphe orienté pondéré G = (V, E) à partir
-            des arcs et poids calculés. Chaque noeud = un service,
-            chaque arc = une dépendance observée avec son poids w_ij.
-ENTREES   : Dict {(si,sj): EdgeWeight} (sortie de weight_calculator.py)
-SORTIES   : NetworkX DiGraph avec attributs :
-            - noeud : service_name
-            - arc   : w_ij, rate_ij, lat_norm, err_ij, freq
-            Sérialisable en JSON via networkx.node_link_data()
-            Persisté dans data/outputs/service_graph.json
-LIBRAIRIES: networkx, json
-"""
 
 import json
 import logging
@@ -52,19 +26,7 @@ Edge = Tuple[str, str]
 
 
 class GraphBuilder:
-    """
-    Construit le graphe orienté pondéré G = (V, E) depuis les EdgeWeight.
-    Chaque noeud = un service microservice.
-    Chaque arc   = une dépendance observée avec ses métriques.
-    """
-
     def build(self, edge_weights: Dict[Edge, EdgeWeight]) -> nx.DiGraph:
-        """
-        Construit et retourne le DiGraph NetworkX.
-
-        Attributs des arcs :
-            w_ij, rate_ij, lat_norm, err_ij, freq
-        """
         G = nx.DiGraph()
 
         for (source, target), ew in edge_weights.items():
@@ -84,12 +46,9 @@ class GraphBuilder:
             G.number_of_nodes(), G.number_of_edges(),
         )
         return G
-
+#Sérialise G en JSON (format node-link de NetworkX).
     def save(self, graph: nx.DiGraph, output_path: str) -> None:
-        """
-        Sérialise G en JSON (format node-link de NetworkX).
-        Crée les répertoires parents si nécessaire.
-        """
+
         path = Path(output_path)
         path.parent.mkdir(parents=True, exist_ok=True)
         data = nx.node_link_data(graph)
@@ -111,10 +70,7 @@ class GraphBuilder:
         return graph
 
     def summary(self, graph: nx.DiGraph) -> dict:
-        """
-        Retourne un résumé statistique du graphe.
-        Utile pour vérifier la cohérence avant de passer au Bloc B.
-        """
+
         return {
             "nodes": graph.number_of_nodes(),
             "edges": graph.number_of_edges(),

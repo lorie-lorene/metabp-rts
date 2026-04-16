@@ -1,69 +1,13 @@
-"""
-test_graph_builder.py
-=====================
-BLOC      : Tests Phase 1
-ROLE      : Tests unitaires du graphe G et de ses métriques :
-            poids w_ij, centralité C, propagation P, fragilité F.
-            Cas testés :
-              - Construction G avec edge_list synthétique (5 services)
-              - Vérification que w_ij ∈ [0, 1]
-              - Vérification que α+β+γ = 1 (conservation des poids)
-              - C(si) croissant avec le fan-in
-              - P(si) = 0 pour un service sans successeurs
-              - F(si) = 0 pour un service sans erreurs sortantes
-              - F(si) = 1 pour le service avec le plus d'erreurs
-ENTREES   : edge_list synthétique définie dans les fixtures
-SORTIES   : Rapport pytest (pass/fail)
-LIBRAIRIES: pytest, networkx
-"""
 
-# TODO: écrire les fixtures et les fonctions de test
-# Structure attendue :
-#   - FIXTURE_EDGE_LIST      : List[tuple]  (5 services, 7 arcs)
-#   - FIXTURE_EDGE_WITH_ERRORS: List[tuple] (avec erreurs simulées)
-#   - test_graph_construction()
-#   - test_weight_bounds()
-#   - test_centrality_ordering()
-#   - test_propagation_leaf_node()
-#   - test_fragility_no_errors()
-#   - test_fragility_normalization()
-
-"""
-test_graph_builder.py
-=====================
-BLOC      : Tests Phase 1
-ROLE      : Tests unitaires du graphe G et de ses métriques :
-            poids w_ij, centralité C, propagation P, fragilité F.
-            Cas testés :
-              - Construction G avec edge_list synthétique (5 services)
-              - Vérification que w_ij ∈ [0, 1]
-              - Vérification que α+β+γ = 1 (conservation des poids)
-              - C(si) croissant avec le fan-in
-              - P(si) = 0 pour un service sans successeurs
-              - F(si) = 0 pour un service sans erreurs sortantes
-              - F(si) = 1 pour le service avec le plus d'erreurs
-ENTREES   : edge_list synthétique définie dans les fixtures
-SORTIES   : Rapport pytest (pass/fail)
-LIBRAIRIES: pytest, networkx
-"""
-
-"""
-Tests unitaires : weight_calculator, graph_builder, centrality,
-                  propagation_coeff, fragility
-"""
 import sys
 from pathlib import Path
-
 sys.path.insert(0, str(Path(__file__).parent.parent))
-
 from graph.weight_calculator import WeightCalculator
 from graph.graph_builder import GraphBuilder
 from graph.centrality import CentralityCalculator
 from graph.propagation_coeff import PropagationCalculator
 from graph.fragility import FragilityCalculator
 
-# ── Fixtures ──────────────────────────────────────────────
-# (source, target, duration_us, error)
 
 FIXTURE_EDGE_LIST = [
     ("gateway", "order",   1200, False),
@@ -86,7 +30,6 @@ FIXTURE_NO_ERRORS = [
     ("svcX", "svcZ", 2000, False),
 ]
 
-# ── Tests WeightCalculator ────────────────────────────────
 
 def test_weight_bounds():
     """Tous les w_ij doivent être dans [0, 1]."""
@@ -120,7 +63,6 @@ def test_weight_empty_edge_list():
     wc = WeightCalculator()
     assert wc.compute([]) == {}
 
-# ── Tests GraphBuilder ────────────────────────────────────
 
 def test_graph_construction():
     """Le graphe doit avoir les bons noeuds et arcs."""
@@ -141,7 +83,6 @@ def test_graph_arc_has_w_ij():
     for u, v, data in G.edges(data=True):
         assert "w_ij" in data, f"Arc {u}→{v} sans w_ij"
 
-# ── Tests CentralityCalculator ────────────────────────────
 
 def test_centrality_scores_in_bounds():
     """Tous les scores C doivent être dans [0, 1]."""
@@ -159,8 +100,6 @@ def test_centrality_most_connected_node():
     # order a fan-in=1, fan-out=3 → parmi les plus hauts
     assert scores.get("order", 0) > scores.get("notify", 0)
 
-# ── Tests PropagationCalculator ───────────────────────────
-
 def test_propagation_leaf_is_zero():
     """Un service sans successeurs (feuille) doit avoir P=0."""
     wc = WeightCalculator()
@@ -177,7 +116,6 @@ def test_propagation_scores_in_bounds():
     for svc, p in scores.items():
         assert 0.0 <= p <= 1.0, f"P hors bornes pour {svc} : {p}"
 
-# ── Tests FragilityCalculator ─────────────────────────────
 
 def test_fragility_no_errors():
     """Sans aucune erreur, tous les scores F doivent être 0."""

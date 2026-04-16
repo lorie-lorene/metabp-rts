@@ -1,52 +1,25 @@
 """
-trace_reconstructor.py
-======================
-BLOC      : Bloc A — Ingestion
-ROLE      : Groupe les spans par traceID pour reconstruire :
-            (1) La suite de tests T : chaque traceID → un TestPath
-                (chaîne d'invocations représentant un cas de test)
-            (2) L'edge_list : liste de (si, sj, duration, error)
-                pour la construction du graphe G
-ATTENTION : Deux usages distincts des spans :
-            - parentSpanID → arcs du graphe G
-            - traceID      → cas de test de T
+Groupe les spans par traceID pour reconstruire :
+            * La suite de tests T : chaque traceID → un TestPath (chaîne d'invocations représentant un cas de test)
+            * L'edge_list : liste de (si, sj, duration, error)pour la construction du graphe G
 ENTREES   : Liste de SpanRecord (sortie de span_parser.py)
 SORTIES   : (test_suite T, edge_list)
-            - T        : List[TestPath]
-            - edge_list: List[Tuple[str, str, int, bool]]
-LIBRAIRIES: collections.defaultdict, typing
 """
 
 import logging
 from collections import defaultdict
 from typing import List, Dict, Tuple
-
 from models.models import SpanRecord, TestPath
 
 logger = logging.getLogger(__name__)
 
 
 class TraceReconstructor:
-    """
-    Reconstruit les deux artefacts clés depuis la liste de SpanRecord :
-
-    1. Suite de tests T (List[TestPath])
-       Groupement par trace_id → chaque trace = un cas de test.
-       La chaîne d'invocations est ordonnée par start_time_us.
-
-    2. edge_list (List[Tuple[str, str, int, bool]])
-       Chaque tuple = (service_source, service_cible, duration_us, error)
-       Construit via la relation parent_span_id → span_id.
-    """
 
     def run(
         self,
         spans: List[SpanRecord],
     ) -> Tuple[List[TestPath], List[Tuple[str, str, int, bool]]]:
-        """
-        Point d'entrée principal.
-        Retourne (test_suite_T, edge_list).
-        """
         grouped = self._group_by_trace(spans)
         span_map = self._build_span_map(spans)
 
@@ -67,16 +40,12 @@ class TraceReconstructor:
         )
         return test_suite, edge_list
 
-    # ── Méthodes privées ──────────────────────────────────
-
     def _group_by_trace(
         self,
         spans: List[SpanRecord],
     ) -> Dict[str, List[SpanRecord]]:
-        """
-        Groupe les spans par trace_id.
-        Chaque groupe représente une requête utilisateur complète.
-        """
+
+        #Groupe les spans par trace_id rt chaque groupe représente une requête utilisateur complète
         grouped: Dict[str, List[SpanRecord]] = defaultdict(list)
         for span in spans:
             grouped[span.trace_id].append(span)
@@ -86,10 +55,7 @@ class TraceReconstructor:
         self,
         spans: List[SpanRecord],
     ) -> Dict[str, SpanRecord]:
-        """
-        Construit le mapping span_id → SpanRecord.
-        Nécessaire pour retrouver le service_name du span parent.
-        """
+
         return {span.span_id: span for span in spans}
 
     def _build_test_path(
@@ -97,11 +63,9 @@ class TraceReconstructor:
         trace_id: str,
         trace_spans: List[SpanRecord],
     ) -> TestPath | None:
-        """
-        Construit un TestPath depuis les spans d'une trace.
-        La chaîne d'invocations est dédupliquée et ordonnée
-        par start_time_us pour respecter l'ordre chronologique.
-        """
+        #Construit un TestPath depuis les spans d'une trace.
+        #La chaîne d'invocations est dédupliquée et ordonnée par start_time_us pour respecter l'ordre chronologique
+      
         sorted_spans = sorted(trace_spans, key=lambda s: s.start_time_us)
         span_lookup = {s.span_id: s for s in trace_spans}
         seen = set()
@@ -126,11 +90,6 @@ class TraceReconstructor:
         trace_spans: List[SpanRecord],
         span_map: Dict[str, SpanRecord],
     ) -> List[Tuple[str, str, int, bool]]:
-        """
-        Construit la liste d'arcs depuis les spans d'une trace.
-        Chaque arc = (service_source, service_cible, duration_us, error).
-        Les arcs intra-service (si→si) sont ignorés.
-        """
         edges = []
         for span in trace_spans:
             if span.parent_span_id and span.parent_span_id in span_map:

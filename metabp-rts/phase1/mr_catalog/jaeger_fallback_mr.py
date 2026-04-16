@@ -1,22 +1,7 @@
 """
-jaeger_fallback_mr.py
-=====================
-BLOC      : Bloc C — Catalogue MR
-ROLE      : Fallback activé quand les specs OpenAPI ne sont pas
-            accessibles (ex: z-Shop / Zheng de Chen et al. 2023).
-            Infère des MR partiels depuis les operationName des spans
-            Jaeger en appliquant des règles sur la méthode HTTP et
-            le pattern d'URL.
-            Règles d'inférence depuis operationName :
-              "POST /.*/payment.*"  → MR Idempotence (candidat)
-              "GET .*\?.*&.*"       → MR Permutation
-              "GET .*\?.*filter.*"  → MR Sous-ensemble
-              "GET .*\?.*sort.*"    → MR Ordonnancement
-              "GET .*\?.*limit.*"   → MR Cardinalité
-            Limitation : pas d'info sur les schémas de réponse.
-ENTREES   : List[SpanRecord]  (champ operationName utilisé)
-SORTIES   : List[MRInstance]  (partiel — source = "jaeger_fallback")
-LIBRAIRIES: re, collections
+Fallback activé quand les specs OpenAPI ne sont pas accessibles 
+-Infère des MR partiels depuis les operationName des spans
+-Jaeger en appliquant des règles sur la méthode HTTP et le pattern d'url
 """
 
 import logging
@@ -28,59 +13,57 @@ from models.models import MRInstance, SpanRecord
 
 logger = logging.getLogger(__name__)
 
-# ── Règles sur les operationName HTTP (format "METHOD /path") ─────────────
 # Couvrent les spans gateway-service et services métier
 _HTTP_RULES = [
-    # Paiement → Idempotence forte (double débit interdit)
     (
         r"^POST\s+.*(pay|payment|inside_pay).*",
         "Idempotence",
         "Même orderId envoyé deux fois à POST {endpoint}",
         "Le montant débité est identique à une seule exécution — pas de double débit",
     ),
-    # Remboursement → Idempotence
+   
     (
         r"^POST\s+.*refund.*",
         "Idempotence",
         "Même orderId envoyé deux fois à POST {endpoint}",
         "Le remboursement n'est effectué qu'une seule fois",
     ),
-    # Création de ressource → Idempotence
+    
     (
         r"^POST\s+.*(create|preserve|reserve).*",
         "Idempotence",
         "Même body avec même identifiant unique envoyé deux fois à POST {endpoint}",
         "La ressource n'est créée qu'une seule fois — pas de doublon",
     ),
-    # Login → Idempotence (token identique pour mêmes credentials)
+    
     (
         r"^POST\s+.*login.*",
         "Idempotence",
         "Mêmes credentials envoyés deux fois à POST {endpoint}",
         "Un token valide est retourné à chaque appel — pas de duplication de session",
     ),
-    # Annulation → Idempotence
+   
     (
         r"^GET\s+.*cancel.*",
         "Idempotence",
         "Même orderId annulé deux fois via GET {endpoint}",
         "L'état final est 'annulé' quelle que soit la multiplicité de l'appel",
     ),
-    # Recherche de trajets → Permutation des paramètres
+    
     (
         r"^GET\s+.*(travel|travels|query).*",
         "Permutation",
         "Permutation des paramètres from/to/date dans GET {endpoint}",
         "Le résultat est identique quelle que soit l'ordre des query parameters",
     ),
-    # Consultation des commandes → Sous-ensemble
+    
     (
         r"^GET\s+.*orders.*",
         "Sous-ensemble",
         "GET {endpoint} avec filtre status=paid vs sans filtre",
         "résultats_filtrés ⊆ résultats_sans_filtre",
     ),
-    # Disponibilité des places → Monotonie
+  
     (
         r"^GET\s+.*seats.*",
         "Monotonie",
@@ -89,66 +72,64 @@ _HTTP_RULES = [
     ),
 ]
 
-# ── Règles sur les spans internes (opérations sans "METHOD /path") ─────────
-# Couvrent les spans de traitement interne (verify-credentials, charge-account…)
 _INTERNAL_RULES = [
-    # Vérification de solde → Monotonie
+    #  Monotonie
     (
         r"verify.balance",
         "Monotonie",
         "Vérification du solde avant et après un débit",
         "solde_après <= solde_avant",
     ),
-    # Débit → Idempotence
+    # Idempotence
     (
         r"charge.account",
         "Idempotence",
         "Même transaction envoyée deux fois à charge-account",
         "Le solde est débité une seule fois",
     ),
-    # Vérification credentials → Idempotence
+    #Idempotence
     (
         r"verify.credentials",
         "Idempotence",
         "Mêmes credentials vérifiés deux fois",
         "Le résultat d'authentification est identique",
     ),
-    # Génération token → Idempotence
+    #  Idempotence
     (
         r"generate.token",
         "Idempotence",
         "Génération de token pour les mêmes credentials",
         "Le token est valide et unique à chaque appel",
     ),
-    # Réservation de siège → Monotonie
+    #  Monotonie
     (
         r"lock.seat|reserve.seat",
         "Monotonie",
         "Réservation d'un siège puis consultation de disponibilité",
         "seats_disponibles_après < seats_disponibles_avant",
     ),
-    # Calcul de remboursement → Monotonie
+    #  Monotonie
     (
         r"calculate.refund",
         "Monotonie",
         "Calcul du remboursement en fonction du délai d'annulation",
         "refund_amount <= prix_original",
     ),
-    # Recherche DB → Sous-ensemble
+    # Sous-ensemble
     (
         r"search.travel|query.*db|search.*db",
         "Sous-ensemble",
         "Requête avec filtre supplémentaire (date/trajet)",
         "résultats_filtrés ⊆ résultats_sans_filtre",
     ),
-    # Sauvegarde → Idempotence
+    # Idempotence
     (
         r"save.*db|update.*status",
         "Idempotence",
         "Même opération de sauvegarde exécutée deux fois",
         "L'état final est identique — pas de duplication en base",
     ),
-    # Notification → Idempotence
+    #  Idempotence
     (
         r"send.*confirm|notify",
         "Idempotence",
@@ -162,23 +143,9 @@ _RULES = _HTTP_RULES + _INTERNAL_RULES
 
 
 class JaegerFallbackMR:
-    """
-    Infère des MR partielles depuis les operationName des spans Jaeger.
-    Activé quand les specs OpenAPI ne sont pas accessibles.
-
-    Limitation connue : pas d'information sur les schémas de réponse.
-    Les MR produites sont de type "jaeger_fallback" dans le catalogue.
-    """
 
     def infer(self, spans: List[SpanRecord]) -> List[MRInstance]:
-        """
-        Parcourt les operationName uniques de chaque service et
-        applique les règles d'inférence.
 
-        Retourne
-        --------
-        List[MRInstance] — source = "jaeger_fallback"
-        """
         operations = self._extract_operations(spans)
         instances: List[MRInstance] = []
         counters: Dict[str, int] = defaultdict(int)
@@ -195,15 +162,10 @@ class JaegerFallbackMR:
         )
         return instances
 
-    # ── Méthodes privées ──────────────────────────────────
-
     def _extract_operations(
         self,
         spans: List[SpanRecord],
     ) -> Dict[str, List[str]]:
-        """
-        Extrait les operationName uniques par service.
-        """
         ops: Dict[str, set] = defaultdict(set)
         for span in spans:
             if span.operation_name:
@@ -216,10 +178,7 @@ class JaegerFallbackMR:
         operation: str,
         counters: Dict[str, int],
     ) -> Optional[MRInstance]:
-        """
-        Applique la première règle qui correspond à l'operation.
-        Retourne None si aucune règle ne correspond.
-        """
+
         # Extraire méthode HTTP et endpoint
         parts = operation.split(" ", 1)
         if len(parts) == 2:

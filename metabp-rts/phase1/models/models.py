@@ -1,13 +1,4 @@
-"""
-models.py
-=========
-BLOC      : Partagé — tous les blocs Phase 1
-ROLE      : Définit les dataclasses partagées entre tous les modules :
-            SpanRecord, TestPath, EdgeWeight, MRInstance, ServiceScore.
-ENTREES   : (aucune entrée — définitions uniquement)
-SORTIES   : Classes importables par tous les modules Phase 1
-LIBRAIRIES: dataclasses, typing
-"""
+
 
 from dataclasses import dataclass, field
 from typing import List, Optional, Tuple, Dict
@@ -15,7 +6,7 @@ from typing import List, Optional, Tuple, Dict
 
 @dataclass
 class SpanRecord:
-    """Représente un span Jaeger parsé."""
+
     trace_id: str
     span_id: str
     parent_span_id: Optional[str]
@@ -28,14 +19,14 @@ class SpanRecord:
 
 @dataclass
 class TestPath:
-    """Un cas de test = une chaîne d'invocation reconstituée depuis un traceID."""
+   #Un cas de test = une chaîne d'invocation reconstituée depuis un traceID
     trace_id: str
-    invocation_chain: List[Tuple[str, str]]   # [(si, sj), ...]
+    invocation_chain: List[Tuple[str, str]]  
 
 
 @dataclass
 class EdgeWeight:
-    """Poids complet d'un arc (si → sj) du graphe G."""
+
     source: str
     target: str
     freq: int               # nombre d'occurrences
@@ -47,23 +38,22 @@ class EdgeWeight:
 
 @dataclass
 class ServiceScore:
-    """Scores structurels d'un service pour le calcul de Θ_dormant."""
+   #Scores structurels d'un service pour le calcul de Θ_dormant
     service_name: str
-    C: float = 0.0          # Centralité structurelle
-    P: float = 0.0          # Coefficient de propagation
-    F: float = 0.0          # Fragilité opérationnelle (remplace SIL)
+    C: float = 0.0          
+    P: float = 0.0          
+    F: float = 0.0         
     theta_dormant: float = 0.0
     is_dormant: bool = False
 
 
 @dataclass
 class MRInstance:
-    """Une instance de relation métamorphique pour un endpoint donné."""
-    mr_id: str              # ex: MR-PAY-01
-    mr_type: str            # Idempotence | Permutation | Monotonie | ...
+    mr_id: str              
+    mr_type: str           
     service: str
     endpoint: str
     http_method: str
-    phi: str                # transformation d'entrée (description)
-    rho: str                # relation de sortie attendue (description)
-    source: str             # "openapi" | "jaeger_fallback"
+    phi: str              
+    rho: str                
+    source: str             

@@ -1,19 +1,3 @@
-"""
-visualize_graph.py
-==================
-BLOC      : Post-traitement Phase 1
-ROLE      : Lit service_graph.json et service_scores.json et génère
-            une page HTML avec :
-              - Graphe G STATIQUE hiérarchique parent→enfant (style article)
-              - Tableau de statistiques complet par service
-              - Tableau récapitulatif des arcs avec poids w_ij
-ENTREES   : data/outputs/service_graph.json
-            data/outputs/service_scores.json
-SORTIES   : data/outputs/graph_visualization.html
-LIBRAIRIES: json, pathlib
-USAGE     : python visualize_graph.py --base-dir ..
-            (appelé automatiquement par run_phase1.py)
-"""
 
 import json
 import argparse

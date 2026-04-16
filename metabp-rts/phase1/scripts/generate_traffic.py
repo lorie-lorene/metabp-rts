@@ -1,66 +1,14 @@
 """
-generate_traffic.py
-===================
-BLOC      : Prérequis — Génération trafic (Section 0.2)
-ROLE      : Génère le trafic applicatif sur Train-Ticket pour alimenter
-            Jaeger en traces distribuées avant l'ingestion (Bloc A).
-            Exécute des scénarios HTTP scénarisés vers l'API Gateway :
-              1. login          → POST /api/v1/users/login
-              2. search_ticket  → GET  /api/v1/travel/query
-              3. book_ticket    → POST /api/v1/preserve
-              4. pay_ticket     → POST /api/v1/inside_pay/pay
-              5. query_order    → GET  /api/v1/order
-              6. cancel_order   → GET  /api/v1/cancel/refound/{orderId}
-            Chaque scénario est exécuté N fois (configurable) avec
-            un délai entre les requêtes pour éviter la saturation.
-ENTREES   : - URL API Gateway (system_config.yaml)
-            - Nombre de requêtes par scénario
-            - Délai entre requêtes (ms)
-SORTIES   : Traces créées dans Jaeger — log du nombre de requêtes
-            envoyées par scénario
-LIBRAIRIES: requests, time, random, logging, argparse
-USAGE     : python generate_traffic.py --config ../config/system_config.yaml
+Génère le trafic applicatif sur Train-Ticket pour alimenter Jaeger en traces distribuées avant l'ingestion en attendant le nettoyage du code query de train ticket
+    Exécute des scénarios HTTP scénarisés vers l'API Gateway :
+        1. login          -> POST /api/v1/users/login
+        2. search_ticket  -> GET  /api/v1/travel/query
+        3. book_ticket    -> POST /api/v1/preserve
+        4. pay_ticket     -> POST /api/v1/inside_pay/pay
+        5. query_order    -> GET  /api/v1/order
+        6. cancel_order   -> GET  /api/v1/cancel/refound/{orderId}
 """
 
-# TODO: implémenter TrafficGenerator
-# Méthodes attendues :
-#   - __init__(gateway_url, config)
-#   - run_all_scenarios(n_requests, delay_ms) -> Dict[str, int]
-#   - scenario_login() -> bool
-#   - scenario_search(from_station, to_station, date) -> bool
-#   - scenario_book(trip_id, contact_id) -> bool
-#   - scenario_pay(order_id) -> bool
-#   - scenario_query_order(user_id) -> bool
-#   - scenario_cancel(order_id) -> bool
-#   - _post(endpoint, body) -> Optional[dict]
-#   - _get(endpoint, params) -> Optional[dict]
-"""
-generate_traffic.py
-===================
-BLOC      : Prérequis — Génération trafic (Section 0.2)
-ROLE      : Génère le trafic applicatif sur Train-Ticket pour alimenter
-            Jaeger en traces distribuées avant l'ingestion (Bloc A).
-            Exécute des scénarios HTTP scénarisés vers l'API Gateway :
-              1. login          → POST /api/v1/users/login
-              2. search_ticket  → GET  /api/v1/travel/query
-              3. book_ticket    → POST /api/v1/preserve
-              4. pay_ticket     → POST /api/v1/inside_pay/pay
-              5. query_order    → GET  /api/v1/order
-              6. cancel_order   → GET  /api/v1/cancel/refound/{orderId}
-            Chaque scénario est exécuté N fois (configurable) avec
-            un délai entre les requêtes pour éviter la saturation.
-ENTREES   : - URL API Gateway (system_config.yaml)
-            - Nombre de requêtes par scénario
-            - Délai entre requêtes (ms)
-SORTIES   : Traces créées dans Jaeger — log du nombre de requêtes
-            envoyées par scénario
-LIBRAIRIES: requests, time, random, logging, argparse
-USAGE     : python generate_traffic.py --config ../config/system_config.yaml
-"""
-
-"""
-generate_traffic.py — Prérequis Phase 1 : génération de trafic
-"""
 import argparse
 import logging
 import random
@@ -81,13 +29,6 @@ logger = logging.getLogger("generate_traffic")
 
 
 class TrafficGenerator:
-    """
-    Envoie des requêtes HTTP scénarisées vers l'API Gateway de Train-Ticket
-    pour alimenter Jaeger en traces distribuées.
-
-    Les scénarios reproduisent des comportements utilisateurs réels :
-    login → recherche → réservation → paiement → consultation → annulation.
-    """
 
     def __init__(self, gateway_url: str, timeout: int = 10):
         self.gateway_url = gateway_url.rstrip("/")
@@ -101,17 +42,10 @@ class TrafficGenerator:
         n_requests: int = 100,
         delay_ms: int = 100,
     ) -> Dict[str, int]:
-        """
-        Exécute tous les scénarios N fois chacun.
 
-        Retourne
-        --------
-        Dict {scenario_name: nb_succès}
-        """
         results: Dict[str, int] = {}
         delay_s = delay_ms / 1000.0
 
-        # Scénario login d'abord pour récupérer le token
         logger.info("Scénario : login (%d fois)", n_requests)
         login_ok = 0
         for _ in range(n_requests):
@@ -143,8 +77,6 @@ class TrafficGenerator:
         total = sum(results.values())
         logger.info("Trafic généré : %d requêtes réussies au total", total)
         return results
-
-    # ── Scénarios ─────────────────────────────────────────
 
     def _scenario_login(self) -> bool:
         """POST /api/v1/users/login"""
@@ -217,8 +149,6 @@ class TrafficGenerator:
         order_id = "5ad7750b-a68b-49c0-a8c0-32776c067703"
         resp = self._get(f"/api/v1/cancel/refound/{order_id}", {})
         return resp is not None
-
-    # ── Helpers HTTP ──────────────────────────────────────
 
     def _post(self, endpoint: str, body: dict) -> Optional[dict]:
         try:

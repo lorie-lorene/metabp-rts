@@ -1,51 +1,3 @@
-"""
-mr_inferrer.py
-==============
-BLOC      : Bloc C — Catalogue MR
-ROLE      : Applique les 6 règles d'inférence sur les specs OpenAPI
-            pour dériver automatiquement les instances MR par service.
-            Règles d'inférence :
-              1. Idempotence  : POST + champ id unique dans le body
-              2. Permutation  : GET + 2+ query parameters
-              3. Monotonie    : endpoint contenant stock/inventory/count
-              4. Sous-ensemble: GET + paramètre "filter" ou "query"
-              5. Ordonnancement: GET + paramètre "sort" ou "order"
-              6. Cardinalité  : GET + paramètre "limit" ou "page" ou "size"
-            Chaque règle produit une MRInstance avec phi et rho décrits.
-ENTREES   : Dict {service_name: openapi_spec_dict}
-SORTIES   : List[MRInstance]  (source = "openapi")
-LIBRAIRIES: openapi-spec-validator, pyyaml, re
-"""
-
-# TODO: implémenter MRInferrer
-# Méthodes attendues :
-#   - infer_all(specs) -> List[MRInstance]
-#   - infer_service(service_name, spec) -> List[MRInstance]
-#   - _apply_rule_idempotence(service, path, method, op) -> Optional[MRInstance]
-#   - _apply_rule_permutation(service, path, method, op) -> Optional[MRInstance]
-#   - _apply_rule_monotonie(service, path, method, op) -> Optional[MRInstance]
-#   - _apply_rule_sous_ensemble(service, path, method, op) -> Optional[MRInstance]
-#   - _apply_rule_ordonnancement(service, path, method, op) -> Optional[MRInstance]
-#   - _apply_rule_cardinalite(service, path, method, op) -> Optional[MRInstance]
-#   - _generate_mr_id(service, rule_type, index) -> str
-"""
-mr_inferrer.py
-==============
-BLOC      : Bloc C — Catalogue MR
-ROLE      : Applique les 6 règles d'inférence sur les specs OpenAPI
-            pour dériver automatiquement les instances MR par service.
-            Règles d'inférence :
-              1. Idempotence  : POST + champ id unique dans le body
-              2. Permutation  : GET + 2+ query parameters
-              3. Monotonie    : endpoint contenant stock/inventory/count
-              4. Sous-ensemble: GET + paramètre "filter" ou "query"
-              5. Ordonnancement: GET + paramètre "sort" ou "order"
-              6. Cardinalité  : GET + paramètre "limit" ou "page" ou "size"
-            Chaque règle produit une MRInstance avec phi et rho décrits.
-ENTREES   : Dict {service_name: openapi_spec_dict}
-SORTIES   : List[MRInstance]  (source = "openapi")
-LIBRAIRIES: openapi-spec-validator, pyyaml, re
-"""
 
 import logging
 from collections import defaultdict
@@ -57,29 +9,9 @@ logger = logging.getLogger(__name__)
 
 
 class MRInferrer:
-    """
-    Applique les 6 règles d'inférence sur les specs OpenAPI pour
-    dériver automatiquement les instances MR par service.
-
-    Les 6 types MR (taxonomie MROP, Segura et al. 2018) :
-        1. Idempotence    : POST avec id unique dans le body
-        2. Permutation    : GET avec 2+ query parameters
-        3. Monotonie      : endpoint de stock/inventory/count
-        4. Sous-ensemble  : GET avec paramètre filter/query/search
-        5. Ordonnancement : GET avec paramètre sort/order/orderBy
-        6. Cardinalité    : GET avec paramètre limit/page/size/per_page
-    """
 
     def infer_all(self, specs: Dict[str, Optional[dict]]) -> List[MRInstance]:
-        """
-        Infère les MR pour tous les services.
-        Les services avec spec=None sont ignorés silencieusement
-        (le fallback Jaeger les a déjà traités en amont).
 
-        Retourne
-        --------
-        List[MRInstance] — source = "openapi"
-        """
         instances: List[MRInstance] = []
         for service_name, spec in specs.items():
             if spec is None:
@@ -98,9 +30,7 @@ class MRInferrer:
         service_name: str,
         spec: dict,
     ) -> List[MRInstance]:
-        """
-        Infère les MR pour un service donné depuis sa spec OpenAPI.
-        """
+
         instances: List[MRInstance] = []
         counters: Dict[str, int] = defaultdict(int)
         paths = spec.get("paths", {})
@@ -124,12 +54,9 @@ class MRInferrer:
 
         return instances
 
-    # ── Règles d'inférence ────────────────────────────────
-
     def _rule_idempotence(
         self, service, path, method, op, counters
     ) -> Optional[MRInstance]:
-        """POST avec un champ id unique dans le body → Idempotence."""
         if method != "POST":
             return None
         body = op.get("requestBody", op.get("parameters", []))
@@ -145,7 +72,6 @@ class MRInferrer:
     def _rule_permutation(
         self, service, path, method, op, counters
     ) -> Optional[MRInstance]:
-        """GET avec 2+ query parameters → Permutation."""
         if method != "GET":
             return None
         query_params = self._get_query_params(op)
@@ -160,7 +86,6 @@ class MRInferrer:
     def _rule_monotonie(
         self, service, path, method, op, counters
     ) -> Optional[MRInstance]:
-        """Endpoint contenant stock/inventory/count → Monotonie."""
         keywords = ("stock", "inventory", "count", "quantity", "available")
         if not any(kw in path.lower() for kw in keywords):
             return None
@@ -173,7 +98,6 @@ class MRInferrer:
     def _rule_sous_ensemble(
         self, service, path, method, op, counters
     ) -> Optional[MRInstance]:
-        """GET avec paramètre filter/query/search → Sous-ensemble."""
         if method != "GET":
             return None
         filter_params = ("filter", "query", "search", "q", "keyword")
@@ -189,7 +113,6 @@ class MRInferrer:
     def _rule_ordonnancement(
         self, service, path, method, op, counters
     ) -> Optional[MRInstance]:
-        """GET avec paramètre sort/order → Ordonnancement."""
         if method != "GET":
             return None
         sort_params = ("sort", "order", "orderby", "order_by", "sortby")
@@ -205,7 +128,6 @@ class MRInferrer:
     def _rule_cardinalite(
         self, service, path, method, op, counters
     ) -> Optional[MRInstance]:
-        """GET avec paramètre limit/page/size → Cardinalité."""
         if method != "GET":
             return None
         page_params = ("limit", "page", "size", "per_page", "pagesize", "count")
@@ -218,7 +140,6 @@ class MRInferrer:
             rho="len(résultats) <= N",
         )
 
-    # ── Utilitaires ───────────────────────────────────────
 
     def _make(
         self,
@@ -246,7 +167,7 @@ class MRInferrer:
         )
 
     def _get_query_params(self, operation: dict) -> List[str]:
-        """Extrait les noms des query parameters d'une opération OpenAPI."""
+        #Extrait les noms des query parameters d'une opération OpenAPI
         params = operation.get("parameters", [])
         return [
             p.get("name", "")
@@ -255,11 +176,8 @@ class MRInferrer:
         ]
 
     def _body_has_id_field(self, body, operation: dict) -> bool:
-        """
-        Vérifie si le requestBody contient un champ nommé *id*.
-        Compatible OpenAPI v2 (parameters) et v3 (requestBody).
-        """
-        # OpenAPI v3 : requestBody → content → schema → properties
+
+        # OpenAPI v2 : requestBody → content → schema → properties
         if "requestBody" in operation:
             try:
                 content = operation["requestBody"].get("content", {})
@@ -270,7 +188,6 @@ class MRInferrer:
             except (AttributeError, KeyError):
                 pass
 
-        # OpenAPI v2 : parameters avec in=body
         for param in operation.get("parameters", []):
             if param.get("in") == "body":
                 props = param.get("schema", {}).get("properties", {})
