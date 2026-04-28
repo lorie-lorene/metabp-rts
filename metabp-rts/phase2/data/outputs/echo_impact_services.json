@@ -1,0 +1,59 @@
+{
+  "delta_s": [
+    "ts-admin-basic-info-service"
+  ],
+  "tau_impact": 0.3,
+  "omega_B": 0.3,
+  "s_echo": [
+    "ts-cancel-service",
+    "ts-ticketinfo-service",
+    "ts-travel-service",
+    "ts-travel2-service"
+  ],
+  "echo_impact_services": [
+    {
+      "service_name": "ts-cancel-service",
+      "cit_score": 0.567072,
+      "theta_phase1": 0.567072,
+      "theta_complet": 0.737194,
+      "was_dormant": true,
+      "resonance": true
+    },
+    {
+      "service_name": "ts-ticketinfo-service",
+      "cit_score": 0.5355,
+      "theta_phase1": 0.5355,
+      "theta_complet": 0.69615,
+      "was_dormant": true,
+      "resonance": true
+    },
+    {
+      "service_name": "ts-travel-service",
+      "cit_score": 0.412111,
+      "theta_phase1": 0.301516,
+      "theta_complet": 0.425149,
+      "was_dormant": false,
+      "resonance": false
+    },
+    {
+      "service_name": "ts-travel2-service",
+      "cit_score": 0.351577,
+      "theta_phase1": 0.26116,
+      "theta_complet": 0.366633,
+      "was_dormant": false,
+      "resonance": false
+    }
+  ],
+  "stats": {
+    "n_services_total": 14,
+    "n_modified": 1,
+    "n_echo_impact": 4,
+    "n_resonant": 2,
+    "resonance_rate": 0.5,
+    "max_cit": 1.0,
+    "avg_cit_all": 0.2047,
+    "avg_cit_echo_impact": 0.4666,
+    "avg_theta_complet": 0.298,
+    "omega_B": 0.3
+  }
+}

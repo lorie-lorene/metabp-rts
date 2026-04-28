@@ -1,0 +1,144 @@
+{
+  "nodes": [
+    "ts-basic-service",
+    "ts-station-service",
+    "ts-travel-service",
+    "ts-ticketinfo-service",
+    "ts-travel2-service",
+    "ts-auth-service",
+    "ts-verification-code-service",
+    "ts-admin-basic-info-service",
+    "ts-contacts-service",
+    "ts-cancel-service",
+    "ts-order-service",
+    "ts-config-service",
+    "ts-train-service",
+    "ts-price-service"
+  ],
+  "edges": [
+    {
+      "source": "ts-station-service",
+      "target": "ts-basic-service",
+      "w_ij": 0.619868
+    },
+    {
+      "source": "ts-ticketinfo-service",
+      "target": "ts-travel-service",
+      "w_ij": 0.769582
+    },
+    {
+      "source": "ts-basic-service",
+      "target": "ts-ticketinfo-service",
+      "w_ij": 0.8
+    },
+    {
+      "source": "ts-ticketinfo-service",
+      "target": "ts-travel2-service",
+      "w_ij": 0.65654
+    },
+    {
+      "source": "ts-verification-code-service",
+      "target": "ts-auth-service",
+      "w_ij": 0.544269
+    },
+    {
+      "source": "ts-contacts-service",
+      "target": "ts-admin-basic-info-service",
+      "w_ij": 0.09602
+    },
+    {
+      "source": "ts-station-service",
+      "target": "ts-admin-basic-info-service",
+      "w_ij": 0.172236
+    },
+    {
+      "source": "ts-config-service",
+      "target": "ts-admin-basic-info-service",
+      "w_ij": 0.096652
+    },
+    {
+      "source": "ts-train-service",
+      "target": "ts-admin-basic-info-service",
+      "w_ij": 0.097453
+    },
+    {
+      "source": "ts-price-service",
+      "target": "ts-admin-basic-info-service",
+      "w_ij": 0.096704
+    },
+    {
+      "source": "ts-order-service",
+      "target": "ts-cancel-service",
+      "w_ij": 0.712317
+    }
+  ],
+  "adjacency": {
+    "ts-basic-service": [
+      {
+        "neighbor": "ts-ticketinfo-service",
+        "w_ij": 0.8
+      }
+    ],
+    "ts-station-service": [
+      {
+        "neighbor": "ts-basic-service",
+        "w_ij": 0.619868
+      },
+      {
+        "neighbor": "ts-admin-basic-info-service",
+        "w_ij": 0.172236
+      }
+    ],
+    "ts-travel-service": [],
+    "ts-ticketinfo-service": [
+      {
+        "neighbor": "ts-travel-service",
+        "w_ij": 0.769582
+      },
+      {
+        "neighbor": "ts-travel2-service",
+        "w_ij": 0.65654
+      }
+    ],
+    "ts-travel2-service": [],
+    "ts-auth-service": [],
+    "ts-verification-code-service": [
+      {
+        "neighbor": "ts-auth-service",
+        "w_ij": 0.544269
+      }
+    ],
+    "ts-admin-basic-info-service": [],
+    "ts-contacts-service": [
+      {
+        "neighbor": "ts-admin-basic-info-service",
+        "w_ij": 0.09602
+      }
+    ],
+    "ts-cancel-service": [],
+    "ts-order-service": [
+      {
+        "neighbor": "ts-cancel-service",
+        "w_ij": 0.712317
+      }
+    ],
+    "ts-config-service": [
+      {
+        "neighbor": "ts-admin-basic-info-service",
+        "w_ij": 0.096652
+      }
+    ],
+    "ts-train-service": [
+      {
+        "neighbor": "ts-admin-basic-info-service",
+        "w_ij": 0.097453
+      }
+    ],
+    "ts-price-service": [
+      {
+        "neighbor": "ts-admin-basic-info-service",
+        "w_ij": 0.096704
+      }
+    ]
+  }
+}
