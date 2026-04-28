@@ -21,7 +21,8 @@ Usage :
                          --delta-s ts-cancel-service
 
     # Forcer un mode spécifique (surcharge la config)
-    python run_phase2.py --delta-s ts-cancel-service --mode max_product
+    python run_phase2.py --delta-s ts-cancel-service --mode max_pr
+    oduct
 
     # Lancer la comparaison (surcharge compare: false dans la config)
     python run_phase2.py --delta-s ts-cancel-service --compare
