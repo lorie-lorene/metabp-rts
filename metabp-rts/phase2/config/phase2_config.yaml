@@ -1,0 +1,57 @@
+#configurations de la phase 2 de MetaBP-RTS/ experimentation 
+phase1_outputs:
+  service_graph:   "../phase1/data/outputs/service_graph.json"
+  service_scores:  "../phase1/data/outputs/service_scores.json"
+  test_suite:      "../phase1/data/outputs/test_suite_T.json"
+
+outputs:
+  dg_graph:              "data/outputs/dg_graph.json"
+  change_impact_table:   "data/outputs/change_impact_table.json"
+  echo_impact_services:  "data/outputs/echo_impact_services.json"
+  theta_complet:         "data/outputs/theta_complet.json"
+  test_scores:           "data/outputs/test_scores.json"
+  selected_tests:        "data/outputs/selected_tests.json"
+  tier1_tests:           "data/outputs/tier1_tests.json"
+  tier2_tests:           "data/outputs/tier2_tests.json"
+  # Sorties comparaison ( si compare: true)
+  comparison_report:     "data/outputs/bp_mode_comparison.json"
+
+belief_propagation:
+  max_iterations: 100
+  convergence_threshold: 1.0e-6
+  tau_impact: 0.30
+  omega_B: 0.30
+
+  # ── Mode de propagation
+
+  # "noisy_or"   : Modèle Noisy-OR (Lyu et al. 2020)
+  #                P(si=affecté) = 1 - ∏(1 - w_ki × p_t(sk))
+  #                Capture l'impact cumulatif de plusieurs parents
+  #                Recommandé quand plusieurs services modifient ΔS
+  #
+  # "max_product" : Algorithme Max-Product (Chen et al. 2023)
+  #                p_{t+1} = max(p_t, max_j m_ji)
+  #                Retient uniquement l'impact du parent le plus fort
+  mode: "noisy_or"
+  # ── Mode comparaison 
+  # Si true : lance les DEUX modes sur le même DG et p0, et produit
+  # un rapport de comparaison dans outputs.comparison_report.
+  compare: false
+
+initializer:
+  # true  → initialisation enrichie MetaBP-RTS : ψ(si) = Θ(si) si Écho-Dormant
+  # false → initialisation binaire Chen et al. : ψ(si) ∈ {0, 1}
+  use_phase1_scores: true
+
+  # Si true ET compare: true dans belief_propagation --> compare aussi
+  # les deux modes d'initialisation
+  compare_init: false
+
+selection:
+  # Stratégie de sélection des tests
+  # "existent"   : ∃s ∈ S_tp : CIT(s) >= p  → Recall=100% 
+  # "complete"   : ∀s ∈ S_tp : CIT(s) >= p  → réduction maximale
+  # "k_existent" : |{s : CIT(s)>=p}| >= k   → compromis
+  strategy: "existent"
+  k: 2
+  threshold_p: null  

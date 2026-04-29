@@ -1,0 +1,23 @@
+services:
+  ts-station-service: 12345
+  ts-train-service: 14567
+  ts-route-service: 11178
+  ts-security-service: 11188
+  ts-auth-service: 12340
+  ts-user-service: 12342
+  ts-order-service: 12031
+  ts-order-other-service: 12032
+  ts-travel-service: 12346
+  ts-travel2-service: 16346
+  ts-contacts-service: 12347
+  ts-assurance-service: 18888
+  ts-admin-basic-info-service: 18767
+  ts-config-service: 15679
+  ts-price-service: 16579
+  ts-cancel-service: 18885
+  ts-preserve-service: 14568
+  ts-inside-payment-service: 18673
+  ts-payment-service: 19001
+  ts-seat-service: 18898
+  ts-food-service: 18856
+  ts-consign-service: 16111

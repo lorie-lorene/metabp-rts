@@ -1,0 +1,39 @@
+jaeger:
+  base_url: "http://localhost:16686"
+  api_version: "api"
+  default_service: "ts-station-service"
+  lookback: "1h"
+  limit: 50000
+
+train_ticket:
+  api_gateway_url: "http://localhost:8080"
+  compose_file: "../train-ticket-master/docker-compose.yml"
+
+weights:
+  alpha: 0.5
+  beta: 0.3
+  gamma: 0.2
+
+echo_dormant:
+  tau_dormant: 0.40
+  omega_C: 0.357
+  omega_P: 0.357
+  omega_F: 0.286
+
+paths:
+  raw_traces: "data/raw/traces_raw.json"
+  service_graph: "data/outputs/service_graph.json"
+  service_scores: "data/outputs/service_scores.json"
+  test_suite: "data/outputs/test_suite_T.json"
+  mr_catalog: "data/outputs/mr_catalog.yaml"
+
+traffic_generation:
+  num_requests: 500
+  delay_between_requests_ms: 100
+  scenarios:
+    - "login"
+    - "search_ticket"
+    - "book_ticket"
+    - "pay_ticket"
+    - "query_order"
+    - "cancel_order"
