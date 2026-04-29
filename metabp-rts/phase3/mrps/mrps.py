@@ -67,7 +67,10 @@ class MRPS:
 
         service_to_mrs: Dict[str, List[str]] = defaultdict(list)
 
-        relations = catalog.get("relations", catalog.get("mr", []))
+        relations = (catalog.get("relations")
+              or catalog.get("mr")
+              or catalog.get("mr_catalog")
+              or [])
         for mr in relations:
             svc = mr.get("service", mr.get("service_name", ""))
             mr_id = mr.get("id", mr.get("mr_id", str(mr)))
