@@ -1,0 +1,65 @@
+
+# Entrées depuis Phase 2
+phase2_outputs:
+  tier1_tests:          "../phase2/data/outputs/tier1_tests.json"
+  tier2_tests:          "../phase2/data/outputs/tier2_tests.json"
+  change_impact_table:  "../phase2/data/outputs/change_impact_table.json"
+  echo_impact_services: "../phase2/data/outputs/echo_impact_services.json"
+
+# Entrées depuis Phase 1
+phase1_outputs:
+  mr_catalog:           "../phase1/data/outputs/mr_catalog.yaml"
+  test_suite:           "../phase1/data/outputs/test_suite_T.json"
+
+# Sorties Phase 3
+outputs:
+  mrps_groups:          "data/outputs/mrps_groups.json"
+  tier2_deduplicated:   "data/outputs/tier2_deduplicated.json"
+  pso_history:          "data/outputs/pso_history.json"
+  tier2_selected:       "data/outputs/tier2_selected.json"
+  t_sel:                "data/outputs/T_sel.json"
+  report:               "data/outputs/phase3_report.json"
+
+# ── MRPS — Metamorphic Relation Path Signature 
+mrps:
+  # Mode de calcul de la signature
+  # "structural" : sig(t) = frozenset(services traversés)
+  # "enriched"   : sig(t) = (frozenset(services), frozenset(MR_associées))
+  mode: "enriched"
+
+  # Critère de sélection du représentant par groupe
+  # "cit"   : représentant = chemin avec score CIT maximal (recommandé)
+  # "first" : représentant = premier chemin du groupe (déterministe)
+  representative: "cit"
+
+# ── Binary PSO 
+pso:
+  # Taille du swarm 
+  n_particles: 30
+
+  # Nombre maximum d'itérations
+  max_iterations: 100
+
+  # Critère de convergence
+  # Arrêt si gbest ne s'améliore pas pendant patience itérations
+  patience: 20
+
+  # Coefficients PSO
+  w:  0.7    # inertie
+  c1: 1.5    # attraction vers pbest (cognitif)
+  c2: 1.5    # attraction vers gbest (social)
+
+  # Fitness function — pondération des objectifs
+  # fitness = w_coverage × couverture - w_size × taille + w_cit × somme_cit
+  w_coverage: 0.6    # poids couverture des services
+  w_size:     0.3    # poids réduction du nombre de chemins
+  w_cit:      0.1    # poids scores CIT des services couverts
+
+  # Seuil de probabilité sigmoid pour binarisation
+  # P(xi=1) = sigmoid(vi) > threshold → xi = 1
+  threshold: 0.5
+
+  # Initialisation
+  # "random"  : positions initiales aléatoires
+  # "greedy"  : initialisation par couverture gloutonne (meilleure convergence)
+  init_strategy: "greedy"
