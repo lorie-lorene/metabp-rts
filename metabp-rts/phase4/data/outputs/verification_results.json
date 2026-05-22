@@ -1,0 +1,48 @@
+{
+  "n_tests": 481,
+  "n_mr_verified": 2390,
+  "n_pass": 2390,
+  "n_fail": 0,
+  "pass_rate": 100.0,
+  "mode": "offline",
+  "by_mr_type": {
+    "Permutation": {
+      "pass": 1918,
+      "fail": 0
+    },
+    "Monotonie": {
+      "pass": 472,
+      "fail": 0
+    }
+  },
+  "by_service": {
+    "ts-cancel-service": {
+      "pass": 944,
+      "fail": 0
+    },
+    "ts-order-service": {
+      "pass": 1416,
+      "fail": 0
+    },
+    "ts-travel-service": {
+      "pass": 10,
+      "fail": 0
+    },
+    "ts-station-service": {
+      "pass": 14,
+      "fail": 0
+    },
+    "ts-travel2-service": {
+      "pass": 2,
+      "fail": 0
+    },
+    "ts-admin-basic-info-service": {
+      "pass": 2,
+      "fail": 0
+    },
+    "ts-price-service": {
+      "pass": 2,
+      "fail": 0
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "fcs": 66.53,
+  "n_total": 1443,
+  "n_killed": 960,
+  "n_survived": 483,
+  "by_operator": {
+    "span_deletion": {
+      "n_killed": 480,
+      "n_total": 481,
+      "fcs": 99.79
+    },
+    "error_injection": {
+      "n_killed": 480,
+      "n_total": 481,
+      "fcs": 99.79
+    },
+    "latency_injection": {
+      "n_killed": 0,
+      "n_total": 481,
+      "fcs": 0.0
+    }
+  },
+  "by_mr_type": {
+    "Permutation": {
+      "n_killed": 960,
+      "n_total": 1440,
+      "fcs": 66.67
+    },
+    "Monotonie": {
+      "n_killed": 944,
+      "n_total": 1416,
+      "fcs": 66.67
+    }
+  }
+}

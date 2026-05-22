@@ -1,0 +1,67 @@
+# =============================================================================
+# MetaBP-RTS — Phase 4 Configuration
+# 4A : Mutation de traces  +  4B : Vérification métamorphique
+# =============================================================================
+
+# Entrées depuis Phase 3
+phase3_outputs:
+  t_sel:          "../phase3/data/outputs/T_sel.json"
+  phase3_report:  "../phase3/data/outputs/phase3_report.json"
+
+# Entrées depuis Phase 1
+phase1_outputs:
+  mr_catalog:     "../phase1/data/outputs/mr_catalog.yaml"
+  test_suite:     "../phase1/data/outputs/test_suite_T.json"
+
+# Entrées depuis Phase 2
+phase2_outputs:
+  echo_impact:    "../phase2/data/outputs/echo_impact_services.json"
+  theta_complet:  "../phase2/data/outputs/theta_complet.json"
+
+# Sorties Phase 4
+outputs:
+  # 4A
+  mutants:              "data/outputs/mutants.json"
+  mutation_results:     "data/outputs/mutation_results.json"
+  fcs_report:           "data/outputs/fcs_report.json"
+  # 4B
+  mr_pairs:             "data/outputs/mr_pairs.json"
+  verification_results: "data/outputs/verification_results.json"
+  # Rapport final
+  phase4_report:        "data/outputs/phase4_report.json"
+
+# ── Sous-phase 4A — Mutation de traces ──────────────────────────────────────
+mutation:
+  # Opérateurs de mutation à appliquer
+  operators:
+    - "span_deletion"      # supprimer un span (service qui disparaît)
+    - "error_injection"    # injecter error=true sur un span
+    - "latency_injection"  # augmenter la durée d'un span
+
+  # Latence injectée (ms) pour l'opérateur latency_injection
+  latency_ms: 5000
+
+  # Nombre max de mutants par chemin (pour éviter explosion combinatoire)
+  # None = appliquer tous les opérateurs sur tous les spans
+  max_mutants_per_path: 3
+
+# ── Sous-phase 4B — Vérification métamorphique ──────────────────────────────
+metamorphic:
+  # URL du SUT (System Under Test)
+  sut_url: "http://localhost:8080"
+
+  # Timeout des requêtes HTTP (secondes)
+  timeout: 10
+
+  # Types de MR à vérifier
+  # Tous les types du catalogue sont supportés
+  mr_types:
+    - "Permutation"
+    - "Idempotence"
+    - "Monotonie"
+    - "Equivalence"
+
+  # Mode d'exécution
+  # "online"  : exécuter les requêtes sur Train-Ticket réel
+  # "offline" : simuler les exécutions depuis les traces existantes
+  mode: "offline"
