@@ -65,6 +65,7 @@ DETECTION_TABLE = {
     ("latency_injection","Permutation"):  False,
     ("latency_injection","Monotonie"):    False,
     ("latency_injection","Equivalence"):  False,
+    ("latency_injection","Latence"):       True,
 }
 
 

@@ -1,8 +1,8 @@
 {
-  "fcs": 66.53,
+  "fcs": 99.72,
   "n_total": 1443,
-  "n_killed": 960,
-  "n_survived": 483,
+  "n_killed": 1439,
+  "n_survived": 4,
   "by_operator": {
     "span_deletion": {
       "n_killed": 480,
@@ -15,20 +15,25 @@
       "fcs": 99.79
     },
     "latency_injection": {
-      "n_killed": 0,
+      "n_killed": 479,
       "n_total": 481,
-      "fcs": 0.0
+      "fcs": 99.58
     }
   },
   "by_mr_type": {
-    "Permutation": {
-      "n_killed": 960,
-      "n_total": 1440,
-      "fcs": 66.67
+    "Latence": {
+      "n_killed": 479,
+      "n_total": 1437,
+      "fcs": 33.33
     },
     "Monotonie": {
       "n_killed": 944,
       "n_total": 1416,
+      "fcs": 66.67
+    },
+    "Permutation": {
+      "n_killed": 960,
+      "n_total": 1440,
       "fcs": 66.67
     }
   }
