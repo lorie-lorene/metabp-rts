@@ -26,7 +26,7 @@ import json
 import logging
 import sys
 from pathlib import Path
-
+import time
 import yaml
 
 # Ajout du répertoire parent au path pour les imports relatifs
@@ -74,6 +74,7 @@ def run_pipeline(config: dict, services_map: dict, base_dir: Path) -> None:
 
     # Résoudre les chemins relatifs depuis base_dir
     def resolve(p): return base_dir / p
+    _t_start = time.perf_counter()
 
     # ── Étape 1 : Récupération traces Jaeger ─────────────
     logger.info("── Étape 1/12 : Récupération traces Jaeger")
@@ -99,8 +100,9 @@ def run_pipeline(config: dict, services_map: dict, base_dir: Path) -> None:
     t_path.parent.mkdir(parents=True, exist_ok=True)
     with open(t_path, "w", encoding="utf-8") as f:
         json.dump(
-            [{"trace_id": tp.trace_id,
-              "invocation_chain": tp.invocation_chain}
+           [{"trace_id": tp.trace_id,
+              "invocation_chain": tp.invocation_chain,
+              "duration_us": tp.duration_us}
              for tp in test_suite],
             f, indent=2,
         )
@@ -194,6 +196,12 @@ def run_pipeline(config: dict, services_map: dict, base_dir: Path) -> None:
     logger.info("=" * 55)
 
     # ── Visualisation automatique du graphe G ─────────────
+    # ── Chronométrage TS (pour ET en Phase 3) ─────────────
+    _elapsed = time.perf_counter() - _t_start
+    timing_path = resolve("data/outputs/timing_phase1.json")
+    with open(timing_path, "w", encoding="utf-8") as f:
+        json.dump({"phase": 1, "seconds": round(_elapsed, 4)}, f, indent=2)
+    logger.info("Temps Phase 1 : %.2fs → %s", _elapsed, timing_path)
     try:
         from visualize_graph import generate as generate_viz
         viz_path = generate_viz(base_dir)

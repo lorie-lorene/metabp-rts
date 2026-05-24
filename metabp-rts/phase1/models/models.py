@@ -22,6 +22,7 @@ class TestPath:
    #Un cas de test = une chaîne d'invocation reconstituée depuis un traceID
     trace_id: str
     invocation_chain: List[Tuple[str, str]]  
+    duration_us: int = 0 
 
 
 @dataclass

@@ -7,7 +7,8 @@ Orchestrateur Phase 3 MetaBP-RTS.
   1. MRPS — déduplication de Tier 2 par signature enrichie
   2. Binary PSO — sélection optimale sur Tier2_dédupliqué
   3. Assemblage T_sel = Tier1 ∪ Tier2_sel
-  4. Rapport de réduction global
+  4. Calcul ET (Testing time cost saving rate) — agrège TS des Phases 1+2+3
+  5. Rapport de réduction global
 
 Usage :
     python run_phase3.py --config ../config/phase3_config.yaml
@@ -17,14 +18,16 @@ import argparse
 import json
 import logging
 import sys
+import time
 from pathlib import Path
 
 import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from mrps.mrps     import MRPS
-from pso.binary_pso import BinaryPSO
+from mrps.mrps          import MRPS
+from pso.binary_pso     import BinaryPSO
+from metrics.et_calculator import ETCalculator
 
 logging.basicConfig(
     level=logging.INFO,
@@ -49,6 +52,16 @@ def write_json(path_str: str, data) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
+
+
+def read_timing(path: Path) -> float:
+    """Lit un fichier timing_phaseN.json et retourne les secondes, ou 0.0 si absent."""
+    try:
+        with open(path, encoding="utf-8") as f:
+            return float(json.load(f).get("seconds", 0.0))
+    except (FileNotFoundError, ValueError, KeyError):
+        logger.warning("Timing introuvable ou invalide : %s (TS partiel)", path)
+        return 0.0
 
 
 def extract_tier2_paths(tier2_data) -> list:
@@ -85,6 +98,18 @@ def collect_all_services(tier2_paths: list, cit: dict) -> list:
     return sorted(services)
 
 
+def load_t_original(base_dir: Path, p1_test_suite: str) -> list:
+    """
+    Charge T original (test_suite_T.json) pour le calcul de TO dans ET.
+    Contient les durées duration_us si Phase 1 a été ré-exécutée.
+    """
+    try:
+        return load_json(str(base_dir / p1_test_suite))
+    except FileNotFoundError:
+        logger.warning("test_suite_T.json introuvable — TO non calculable")
+        return []
+
+
 def main():
     parser = argparse.ArgumentParser(description="MetaBP-RTS Phase 3")
     parser.add_argument(
@@ -92,6 +117,9 @@ def main():
         help="Chemin vers phase3_config.yaml",
     )
     args = parser.parse_args()
+
+    # ── Chronométrage TS Phase 3 ──
+    _t_start = time.perf_counter()
 
     config   = load_config(args.config)
     base_dir = Path(args.config).resolve().parent.parent
@@ -104,7 +132,7 @@ def main():
 
     logger.info("MetaBP-RTS Phase 3 — démarrage")
 
-    # ── Chargement des entrées ───────────────────────────────────────────────
+    # ── Chargement des entrées ──
     tier1_data  = load_json(str(base_dir / p2_cfg["tier1_tests"]))
     tier2_data  = load_json(str(base_dir / p2_cfg["tier2_tests"]))
     cit         = load_json(str(base_dir / p2_cfg["change_impact_table"]))
@@ -122,7 +150,6 @@ def main():
         len(tier1_paths), len(tier2_paths), len(s_echo), len(cit),
     )
 
-    # Services à couvrir par le PSO
     all_services = collect_all_services(tier2_paths, cit)
     logger.info("Services à couvrir par PSO : %d", len(all_services))
 
@@ -197,6 +224,30 @@ def main():
     n_t_sel    = len(t_sel)
     reduction_globale = round(1 - n_t_sel / max(n_original, 1), 4)
 
+    # ── Étape 4 : Calcul ET (Testing time cost saving rate) ──
+    logger.info("── Calcul ET : agrégation TS Phase 1+2+3")
+
+    _elapsed_p3 = time.perf_counter() - _t_start
+
+    ts_p1 = read_timing(base_dir / "data/outputs/timing_phase1.json")
+    ts_p2 = read_timing(base_dir / "data/outputs/timing_phase2.json")
+    ts_p3 = round(_elapsed_p3, 4)
+    ts_total = round(ts_p1 + ts_p2 + ts_p3, 4)
+
+    # T original avec durées (pour TO) et T_sel (pour TR)
+    t_original = load_t_original(base_dir, p1_cfg["test_suite"])
+
+    et_calc = ETCalculator()
+    et_result = et_calc.compute(
+        t_original=t_original,
+        t_sel=t_sel,
+        ts_seconds=ts_total,
+        ts_breakdown={"phase1": ts_p1, "phase2": ts_p2, "phase3": ts_p3},
+    )
+    et_calc.save(et_result, str(base_dir / out_cfg.get(
+        "et_report", "data/outputs/et_report.json"
+    )))
+
     report = {
         "input": {
             "n_tier1":         len(tier1_paths),
@@ -207,6 +258,7 @@ def main():
         },
         "mrps": mrps_result["stats"],
         "pso":  pso_result["stats"],
+        "et":   et_result,
         "output": {
             "n_tier1_conserved": len(tier1_paths),
             "n_tier2_selected":  len(tier2_sel),
@@ -218,7 +270,6 @@ def main():
 
     write_json(str(base_dir / out_cfg["report"]), report)
 
-    # ── Résumé 
     logger.info("=======================================================")
     logger.info("Phase 3 terminée :")
     logger.info("  T original     : %d chemins", n_original)
@@ -233,10 +284,20 @@ def main():
     logger.info("  T_sel final    : %d chemins", n_t_sel)
     logger.info("  Réduction glob : %s", report["output"]["reduction_pct"])
     logger.info("  Couverture     : %s services", pso_result["stats"]["coverage_pct"])
+    logger.info("  ── Métrique ET ─────────────────────────────")
+    logger.info("  TO (tous tests): %.3fs", et_result["TO_s"])
+    logger.info("  TR (T_sel)     : %.3fs", et_result["TR_s"])
+    logger.info("  TS (pipeline)  : %.3fs  [P1=%.2f P2=%.2f P3=%.2f]",
+                et_result["TS_s"], ts_p1, ts_p2, ts_p3)
+    logger.info("  EN (nombre)    : %.1f%%", et_result["EN"])
+    logger.info("  ET (temps)     : %.1f%%", et_result["ET"])
+    if not et_result["coverage_duration"]:
+        logger.warning("  ⚠ Durées absentes — re-tourner Phase 1 pour ET fiable")
     logger.info("=======================================================")
     logger.info("Artefacts → Phase 4 :")
     logger.info("  T_sel.json      : suite de test optimisée")
-    logger.info("  phase3_report   : métriques complètes")
+    logger.info("  phase3_report   : métriques complètes (avec ET)")
+    logger.info("  et_report.json  : détail de la métrique ET")
 
 
 if __name__ == "__main__":

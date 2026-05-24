@@ -58,6 +58,23 @@ class TraceReconstructor:
 
         return {span.span_id: span for span in spans}
 
+    def _compute_trace_duration(
+        self,
+        trace_spans: List[SpanRecord],
+    ) -> int:
+        """
+        Durée totale d'exécution de la trace = durée du span racine.
+        Le span racine (sans parent dans la trace) englobe toute la requête.
+        """
+        span_ids = {s.span_id for s in trace_spans}
+        roots = [
+            s for s in trace_spans
+            if not s.parent_span_id or s.parent_span_id not in span_ids
+        ]
+        if roots:
+            return max(s.duration_us for s in roots)
+        return max((s.duration_us for s in trace_spans), default=0)
+    
     def _build_test_path(
         self,
         trace_id: str,
@@ -82,8 +99,11 @@ class TraceReconstructor:
 
         if not chain:
             return None
-
-        return TestPath(trace_id=trace_id, invocation_chain=chain)
+        duration_us = self._compute_trace_duration(trace_spans)
+        
+        return TestPath(trace_id=trace_id,
+            invocation_chain=chain,
+            duration_us=duration_us,)
 
     def _build_edges(
         self,

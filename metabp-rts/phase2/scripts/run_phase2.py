@@ -19,19 +19,13 @@ Etapes :
 Usage :
     python run_phase2.py --config ../config/phase2_config.yaml \\
                          --delta-s ts-cancel-service
-
-    # Forcer un mode spécifique (surcharge la config)
-    python run_phase2.py --delta-s ts-cancel-service --mode max_pr
-    oduct
-
-    # Lancer la comparaison (surcharge compare: false dans la config)
-    python run_phase2.py --delta-s ts-cancel-service --compare
 """
 
 import argparse
 import json
 import logging
 import sys
+import time
 from pathlib import Path
 
 import yaml
@@ -154,10 +148,6 @@ def build_comparison_report(
     }
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# Main
-# ─────────────────────────────────────────────────────────────────────────────
-
 def main():
     parser = argparse.ArgumentParser(description="MetaBP-RTS Phase 2")
     parser.add_argument(
@@ -182,9 +172,12 @@ def main():
     )
     args = parser.parse_args()
 
-    # ── Chargement config ───────────────────────────────────────────────────
+    # ── Chronométrage TS (pour ET en Phase 3) ──
+    _t_start = time.perf_counter()
+
+    # ── Chargement config ──
     config   = load_config(args.config)
-    base_dir = Path(args.config).parent.parent
+    base_dir = Path(args.config).resolve().parent.parent
 
     p1_cfg  = config["phase1_outputs"]
     out_cfg = config["outputs"]
@@ -192,10 +185,7 @@ def main():
     sel_cfg = config["selection"]
     init_cfg = config["initializer"]
 
-    # Le mode vient de la config, sauf si --mode est passé en argument
     bp_mode = args.mode if args.mode else bp_cfg.get("mode", "noisy_or")
-
-    # compare vient de la config, sauf si --compare est passé en argument
     do_compare = True if args.compare else bp_cfg.get("compare", False)
 
     delta_s = args.delta_s
@@ -225,7 +215,6 @@ def main():
         [s for s, v in p0.items() if 0 < v < 1.0],
     )
 
-    # Comparaison des modes d'initialisation si demandé
     if do_compare and init_cfg.get("compare_init", False):
         comp_init = initializer.compare_modes(dg["nodes"], delta_s, scores)
         logger.info(
@@ -234,7 +223,6 @@ def main():
             list(comp_init["differences"].keys()),
         )
 
-
     logger.info("── Étape 3/5 : Propagation BP")
     propagator = BPPropagator(
         max_iterations=bp_cfg.get("max_iterations", 100),
@@ -242,18 +230,15 @@ def main():
         mode=bp_mode,
     )
 
-    # Mode principal
     p_final, n_iter, converged, history = run_bp(
         propagator, dg, p0, bp_mode, keep_history=args.history
     )
 
-    # Mode comparaison (si activé) → lance aussi l'autre mode
     if do_compare:
         other_mode = "max_product" if bp_mode == "noisy_or" else "noisy_or"
         logger.info("── Comparaison avec mode=%s", other_mode)
         p_other, n_other, conv_other, _ = run_bp(propagator, dg, p0, other_mode)
 
-        # Identifier les modes correctement
         if bp_mode == "noisy_or":
             p_nor, n_nor, conv_nor = p_final, n_iter, converged
             p_mp,  n_mp,  conv_mp  = p_other, n_other, conv_other
@@ -270,9 +255,7 @@ def main():
         ))
         write_json(comp_path, comparison)
 
-        logger.info(
-            "Rapport comparaison sauvegardé → %s", comp_path
-        )
+        logger.info("Rapport comparaison sauvegardé → %s", comp_path)
         logger.info(
             "Résumé comparaison : %d services différents | "
             "Noisy-OR plus élevé sur %d | Max-Product plus élevé sur %d",
@@ -282,7 +265,6 @@ def main():
         )
         logger.info("Interprétation : %s", comparison["summary"]["interpretation"])
 
-    # Sauvegarder l'historique BP si demandé
     if args.history and history:
         hist_path = str(base_dir / "data/outputs/bp_history.json")
         write_json(hist_path, history)
@@ -331,6 +313,11 @@ def main():
     sc = cit_result["stats"]
     ss = sel_result["stats"]
 
+    # ── Chronométrage TS ──
+    _elapsed = time.perf_counter() - _t_start
+    timing_path = base_dir / "data/outputs/timing_phase2.json"
+    write_json(str(timing_path), {"phase": 2, "seconds": round(_elapsed, 4)})
+
     logger.info("=======================================================")
     logger.info("Phase 2 terminée :")
     logger.info("  ΔS                    : %s", delta_s)
@@ -346,6 +333,7 @@ def main():
                 ss["n_tier2"], ss["tier2_pct"])
     logger.info("  Sélection totale      : %d/%d (%s)",
                 ss["n_selected"], ss["n_total"], ss["reduction_pct"])
+    logger.info("  Temps Phase 2 (TS)    : %.2fs", _elapsed)
     logger.info("=======================================================")
 
     if cit_result["echo_impact_services"]:

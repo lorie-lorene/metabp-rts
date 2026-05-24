@@ -19,6 +19,7 @@ outputs:
   tier2_selected:       "data/outputs/tier2_selected.json"
   t_sel:                "data/outputs/T_sel.json"
   report:               "data/outputs/phase3_report.json"
+  et_report:            "data/outputs/et_report.json"
 
 # ── MRPS — Metamorphic Relation Path Signature 
 mrps:
