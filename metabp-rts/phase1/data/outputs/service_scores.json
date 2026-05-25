@@ -1,42 +1,26 @@
 [
   {
-    "service_name": "ts-cancel-service",
-    "C": 0.075,
-    "P": 0.712317,
-    "F": 1.0,
-    "theta_dormant": 0.567072,
-    "is_dormant": true
-  },
-  {
-    "service_name": "ts-ticketinfo-service",
-    "C": 0.7,
+    "service_name": "ts-admin-basic-info-service",
+    "C": 0.375,
     "P": 0.8,
     "F": 0.0,
-    "theta_dormant": 0.5355,
+    "theta_dormant": 0.419475,
     "is_dormant": true
   },
   {
-    "service_name": "ts-basic-service",
-    "C": 0.3875,
-    "P": 0.619868,
+    "service_name": "ts-auth-service",
+    "C": 0.375,
+    "P": 0.543085,
     "F": 0.0,
-    "theta_dormant": 0.35963,
+    "theta_dormant": 0.327756,
     "is_dormant": false
   },
   {
-    "service_name": "ts-travel-service",
-    "C": 0.075,
-    "P": 0.769582,
+    "service_name": "ts-verification-code-service",
+    "C": 0.625,
+    "P": 0.0,
     "F": 0.0,
-    "theta_dormant": 0.301516,
-    "is_dormant": false
-  },
-  {
-    "service_name": "ts-travel2-service",
-    "C": 0.075,
-    "P": 0.65654,
-    "F": 0.0,
-    "theta_dormant": 0.26116,
+    "theta_dormant": 0.223125,
     "is_dormant": false
   },
   {
@@ -45,70 +29,6 @@
     "P": 0.0,
     "F": 0.0,
     "theta_dormant": 0.223125,
-    "is_dormant": false
-  },
-  {
-    "service_name": "ts-auth-service",
-    "C": 0.075,
-    "P": 0.544269,
-    "F": 0.0,
-    "theta_dormant": 0.221079,
-    "is_dormant": false
-  },
-  {
-    "service_name": "ts-admin-basic-info-service",
-    "C": 0.375,
-    "P": 0.111813,
-    "F": 0.0,
-    "theta_dormant": 0.173792,
-    "is_dormant": false
-  },
-  {
-    "service_name": "ts-order-service",
-    "C": 0.3125,
-    "P": 0.0,
-    "F": 0.0,
-    "theta_dormant": 0.111562,
-    "is_dormant": false
-  },
-  {
-    "service_name": "ts-price-service",
-    "C": 0.3125,
-    "P": 0.0,
-    "F": 0.0,
-    "theta_dormant": 0.111562,
-    "is_dormant": false
-  },
-  {
-    "service_name": "ts-verification-code-service",
-    "C": 0.3125,
-    "P": 0.0,
-    "F": 0.0,
-    "theta_dormant": 0.111562,
-    "is_dormant": false
-  },
-  {
-    "service_name": "ts-config-service",
-    "C": 0.3125,
-    "P": 0.0,
-    "F": 0.0,
-    "theta_dormant": 0.111562,
-    "is_dormant": false
-  },
-  {
-    "service_name": "ts-contacts-service",
-    "C": 0.3125,
-    "P": 0.0,
-    "F": 0.0,
-    "theta_dormant": 0.111562,
-    "is_dormant": false
-  },
-  {
-    "service_name": "ts-train-service",
-    "C": 0.3125,
-    "P": 0.0,
-    "F": 0.0,
-    "theta_dormant": 0.111562,
     "is_dormant": false
   }
 ]

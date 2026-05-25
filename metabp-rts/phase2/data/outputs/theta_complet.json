@@ -1,16 +1,6 @@
 {
-  "ts-basic-service": 0.35963,
+  "ts-admin-basic-info-service": 0.719475,
   "ts-station-service": 0.223125,
-  "ts-travel-service": 0.425149,
-  "ts-ticketinfo-service": 0.69615,
-  "ts-travel2-service": 0.366633,
-  "ts-auth-service": 0.221079,
-  "ts-verification-code-service": 0.111562,
-  "ts-admin-basic-info-service": 0.473792,
-  "ts-contacts-service": 0.111562,
-  "ts-cancel-service": 0.737194,
-  "ts-order-service": 0.111562,
-  "ts-config-service": 0.111562,
-  "ts-train-service": 0.111562,
-  "ts-price-service": 0.111562
+  "ts-auth-service": 0.333649,
+  "ts-verification-code-service": 0.223125
 }
