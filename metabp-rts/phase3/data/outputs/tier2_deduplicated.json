@@ -1,58 +1,6 @@
 [
   {
-    "test_id": "0037ed56c51c95aa",
-    "services": [
-      "ts-admin-basic-info-service",
-      "ts-train-service"
-    ],
-    "score": 1.0,
-    "score_avg": 0.5,
-    "n_above_p": 1,
-    "n_services": 2,
-    "tier": 2,
-    "in_s_echo": false
-  },
-  {
-    "test_id": "003cc2df5081dd8e",
-    "services": [
-      "ts-admin-basic-info-service",
-      "ts-contacts-service"
-    ],
-    "score": 1.0,
-    "score_avg": 0.5,
-    "n_above_p": 1,
-    "n_services": 2,
-    "tier": 2,
-    "in_s_echo": false
-  },
-  {
-    "test_id": "0050f6671e444637",
-    "services": [
-      "ts-admin-basic-info-service",
-      "ts-price-service"
-    ],
-    "score": 1.0,
-    "score_avg": 0.5,
-    "n_above_p": 1,
-    "n_services": 2,
-    "tier": 2,
-    "in_s_echo": false
-  },
-  {
-    "test_id": "0094d5ef4515b9e8",
-    "services": [
-      "ts-admin-basic-info-service",
-      "ts-config-service"
-    ],
-    "score": 1.0,
-    "score_avg": 0.5,
-    "n_above_p": 1,
-    "n_services": 2,
-    "tier": 2,
-    "in_s_echo": false
-  },
-  {
-    "test_id": "0099a6a1aaf59230",
+    "test_id": "693130b83fcf90e9",
     "services": [
       "ts-admin-basic-info-service",
       "ts-station-service"
@@ -62,10 +10,11 @@
     "n_above_p": 1,
     "n_services": 2,
     "tier": 2,
-    "in_s_echo": false
+    "in_s_echo": false,
+    "duration_us": 487803
   },
   {
-    "test_id": "1f18971d97d2dfcb",
+    "test_id": "00329f8a6e26f102",
     "services": [
       "ts-auth-service",
       "ts-verification-code-service"
@@ -75,6 +24,21 @@
     "n_above_p": 0,
     "n_services": 2,
     "tier": 2,
-    "in_s_echo": false
+    "in_s_echo": false,
+    "duration_us": 8749
+  },
+  {
+    "test_id": "007d2c8d895ed7d9",
+    "services": [
+      "ts-order-other-service",
+      "ts-station-service"
+    ],
+    "score": 0.0,
+    "score_avg": 0.0,
+    "n_above_p": 0,
+    "n_services": 2,
+    "tier": 2,
+    "in_s_echo": false,
+    "duration_us": 43022
   }
 ]

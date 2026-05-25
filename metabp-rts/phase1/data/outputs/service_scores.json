@@ -1,27 +1,27 @@
 [
   {
-    "service_name": "ts-admin-basic-info-service",
-    "C": 0.375,
-    "P": 0.8,
+    "service_name": "ts-order-service",
+    "C": 0.25,
+    "P": 0.500693,
     "F": 0.0,
-    "theta_dormant": 0.419475,
+    "theta_dormant": 0.267997,
     "is_dormant": true
   },
   {
-    "service_name": "ts-auth-service",
-    "C": 0.375,
-    "P": 0.543085,
+    "service_name": "ts-ticketinfo-service",
+    "C": 0.25,
+    "P": 0.500462,
     "F": 0.0,
-    "theta_dormant": 0.327756,
-    "is_dormant": false
+    "theta_dormant": 0.267915,
+    "is_dormant": true
   },
   {
-    "service_name": "ts-verification-code-service",
-    "C": 0.625,
-    "P": 0.0,
+    "service_name": "ts-basic-service",
+    "C": 0.25,
+    "P": 0.500153,
     "F": 0.0,
-    "theta_dormant": 0.223125,
-    "is_dormant": false
+    "theta_dormant": 0.267805,
+    "is_dormant": true
   },
   {
     "service_name": "ts-station-service",
@@ -29,6 +29,78 @@
     "P": 0.0,
     "F": 0.0,
     "theta_dormant": 0.223125,
+    "is_dormant": false
+  },
+  {
+    "service_name": "ts-travel2-service",
+    "C": 0.09375,
+    "P": 0.500827,
+    "F": 0.0,
+    "theta_dormant": 0.212264,
+    "is_dormant": false
+  },
+  {
+    "service_name": "ts-order-other-service",
+    "C": 0.09375,
+    "P": 0.500695,
+    "F": 0.0,
+    "theta_dormant": 0.212217,
+    "is_dormant": false
+  },
+  {
+    "service_name": "ts-admin-basic-info-service",
+    "C": 0.09375,
+    "P": 0.500387,
+    "F": 0.0,
+    "theta_dormant": 0.212107,
+    "is_dormant": false
+  },
+  {
+    "service_name": "ts-auth-service",
+    "C": 0.09375,
+    "P": 0.500056,
+    "F": 0.0,
+    "theta_dormant": 0.211989,
+    "is_dormant": false
+  },
+  {
+    "service_name": "ts-cancel-service",
+    "C": 0.375,
+    "P": 0.200524,
+    "F": 0.0,
+    "theta_dormant": 0.205462,
+    "is_dormant": false
+  },
+  {
+    "service_name": "ts-inside-payment-service",
+    "C": 0.15625,
+    "P": 0.0,
+    "F": 0.0,
+    "theta_dormant": 0.055781,
+    "is_dormant": false
+  },
+  {
+    "service_name": "ts-user-service",
+    "C": 0.15625,
+    "P": 0.0,
+    "F": 0.0,
+    "theta_dormant": 0.055781,
+    "is_dormant": false
+  },
+  {
+    "service_name": "ts-notification-service",
+    "C": 0.15625,
+    "P": 0.0,
+    "F": 0.0,
+    "theta_dormant": 0.055781,
+    "is_dormant": false
+  },
+  {
+    "service_name": "ts-verification-code-service",
+    "C": 0.15625,
+    "P": 0.0,
+    "F": 0.0,
+    "theta_dormant": 0.055781,
     "is_dormant": false
   }
 ]

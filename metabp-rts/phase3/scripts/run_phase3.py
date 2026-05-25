@@ -229,8 +229,8 @@ def main():
 
     _elapsed_p3 = time.perf_counter() - _t_start
 
-    ts_p1 = read_timing(base_dir / "data/outputs/timing_phase1.json")
-    ts_p2 = read_timing(base_dir / "data/outputs/timing_phase2.json")
+    ts_p1 = read_timing(base_dir / "../phase1/data/outputs/timing_phase1.json")
+    ts_p2 = read_timing(base_dir / "../phase2/data/outputs/timing_phase2.json")
     ts_p3 = round(_elapsed_p3, 4)
     ts_total = round(ts_p1 + ts_p2 + ts_p3, 4)
 

@@ -1,39 +1,60 @@
 {
   "input": {
-    "n_tier1": 479,
-    "n_tier2": 2951,
-    "n_total": 3430,
-    "n_s_echo": 4,
-    "n_services_cit": 14
+    "n_tier1": 405,
+    "n_tier2": 3061,
+    "n_total": 3466,
+    "n_s_echo": 3,
+    "n_services_cit": 13
   },
   "mrps": {
-    "n_input": 2951,
-    "n_groups": 6,
-    "dedup_rate": 0.998,
-    "dedup_pct": "99.8%",
-    "avg_group_size": 491.83,
-    "max_group_size": 964,
+    "n_input": 3061,
+    "n_groups": 3,
+    "dedup_rate": 0.999,
+    "dedup_pct": "99.9%",
+    "avg_group_size": 1020.33,
+    "max_group_size": 2885,
     "singletons": 0,
     "singleton_pct": "0.0%"
   },
   "pso": {
-    "n_input": 6,
-    "n_selected": 2,
+    "n_input": 3,
+    "n_selected": 1,
     "reduction_rate": 0.6667,
     "reduction_pct": "66.7%",
-    "n_services_total": 14,
-    "n_services_covered": 4,
-    "coverage_rate": 0.2857,
-    "coverage_pct": "28.6%",
-    "gbest_fitness": 0.106317,
+    "n_services_total": 13,
+    "n_services_covered": 2,
+    "coverage_rate": 0.1538,
+    "coverage_pct": "15.4%",
+    "gbest_fitness": 0.042518,
     "n_iterations": 20,
     "converged": true
   },
+  "et": {
+    "TO_us": 214225954,
+    "TR_us": 186200853,
+    "TS_us": 7102700,
+    "TO_s": 214.226,
+    "TR_s": 186.2009,
+    "TS_s": 7.1027,
+    "ET": 9.77,
+    "EN": 88.29,
+    "n_original": 3466,
+    "n_sel": 406,
+    "n_with_duration": 3466,
+    "coverage_duration": true,
+    "note": "TS mesuré directement (Phase 1+2+3) ; TO/TR estimés via latences Jaeger (duration_us du span racine). Mode online = raffinement futur.",
+    "TS_breakdown_s": {
+      "phase1": 6.7754,
+      "phase2": 0.2103,
+      "phase3": 0.117
+    },
+    "note_breakdown": "Phase 1 est un coût amortissable (indépendant de ΔS, calculé une fois et réutilisé). Phase 2+3 se relancent à chaque cycle de régression."
+  },
   "output": {
-    "n_tier1_conserved": 479,
-    "n_tier2_selected": 2,
-    "n_t_sel": 481,
-    "reduction_globale": 0.8598,
-    "reduction_pct": "86.0%"
+    "n_tier1_conserved": 405,
+    "n_tier2_selected": 1,
+    "n_t_sel": 406,
+    "reduction_globale": 0.8829,
+    "reduction_pct": "88.3%"
   }
 }

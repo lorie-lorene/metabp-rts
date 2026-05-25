@@ -1,6 +1,15 @@
 {
-  "ts-admin-basic-info-service": 1.0,
+  "ts-cancel-service": 0.053711,
+  "ts-user-service": 0.0,
+  "ts-inside-payment-service": 0.0,
+  "ts-order-service": 0.267997,
+  "ts-notification-service": 0.0,
   "ts-station-service": 0.0,
+  "ts-order-other-service": 0.0,
+  "ts-travel2-service": 0.134179,
+  "ts-ticketinfo-service": 0.267915,
+  "ts-basic-service": 0.267805,
   "ts-auth-service": 0.0,
-  "ts-verification-code-service": 0.0
+  "ts-verification-code-service": 0.0,
+  "ts-admin-basic-info-service": 1.0
 }

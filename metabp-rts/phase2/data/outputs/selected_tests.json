@@ -10,6 +10,6063 @@
     "n_above_p": 1,
     "n_services": 2,
     "tier": 2,
-    "in_s_echo": false
+    "in_s_echo": false,
+    "duration_us": 487803
+  },
+  {
+    "test_id": "b1730828b6c0f808",
+    "services": [
+      "ts-admin-basic-info-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.5,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 2,
+    "in_s_echo": false,
+    "duration_us": 36090
+  },
+  {
+    "test_id": "00b6a20f5089f295",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 41248
+  },
+  {
+    "test_id": "00c06188add8cadc",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 22289
+  },
+  {
+    "test_id": "012b15f1500a92ca",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 96858
+  },
+  {
+    "test_id": "047068c2a7d96994",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 31685
+  },
+  {
+    "test_id": "052f32824213647a",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 32184
+  },
+  {
+    "test_id": "05a346b29abf9edb",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 30045
+  },
+  {
+    "test_id": "065f2cad806ca0bc",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 39081
+  },
+  {
+    "test_id": "0c73d0eb5f946504",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 37971
+  },
+  {
+    "test_id": "0e0d01f6d43ae6c5",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 32848
+  },
+  {
+    "test_id": "10c900575b36b15c",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 28022
+  },
+  {
+    "test_id": "1186c27f775e421c",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 42106
+  },
+  {
+    "test_id": "11eed98e64975d6c",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 31510
+  },
+  {
+    "test_id": "12fa72f6a65ce21e",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 41959
+  },
+  {
+    "test_id": "1302119731afbe63",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 31656
+  },
+  {
+    "test_id": "135b80ea4a3194a0",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 25115
+  },
+  {
+    "test_id": "1394acdf4389d91f",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 19309
+  },
+  {
+    "test_id": "1425ab9d9b804d1f",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 23371
+  },
+  {
+    "test_id": "1438885b34b82193",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 29477
+  },
+  {
+    "test_id": "16c26139bab6fabb",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 69974
+  },
+  {
+    "test_id": "18650a5da979cc36",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 36821
+  },
+  {
+    "test_id": "1adbadbc6267d11a",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 46699
+  },
+  {
+    "test_id": "1b7a2fbdaad30339",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 36498
+  },
+  {
+    "test_id": "1c47f447f5b974e6",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 41345
+  },
+  {
+    "test_id": "1c562724871a255e",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 38896
+  },
+  {
+    "test_id": "1ce6c3a49e74e91d",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 31348
+  },
+  {
+    "test_id": "1d0da6880cc47193",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 33772
+  },
+  {
+    "test_id": "1f625e0f4095bc15",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 34200
+  },
+  {
+    "test_id": "20492949ab36bd15",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 39088
+  },
+  {
+    "test_id": "218c29cb13f4eca2",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 41119
+  },
+  {
+    "test_id": "22cf3c8bbc8af4b2",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 28820
+  },
+  {
+    "test_id": "23283072dc735c4e",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 33869
+  },
+  {
+    "test_id": "236e7ac354732d07",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 107049
+  },
+  {
+    "test_id": "23db132e224bf70f",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 39744
+  },
+  {
+    "test_id": "2550ab118bf5a3fe",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 28734
+  },
+  {
+    "test_id": "262fe34801541d76",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 63118
+  },
+  {
+    "test_id": "272586999a66f67e",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 43043
+  },
+  {
+    "test_id": "27b630696f252b16",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 38762
+  },
+  {
+    "test_id": "29ce3096f0e20ead",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 39543
+  },
+  {
+    "test_id": "2f4c23ef263d8a99",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 45081
+  },
+  {
+    "test_id": "31af070ef1b0a357",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 36913
+  },
+  {
+    "test_id": "31cbb2cc92467b1c",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 45136
+  },
+  {
+    "test_id": "32ec48d8542b9fed",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 47484
+  },
+  {
+    "test_id": "35037836c12512eb",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 32036
+  },
+  {
+    "test_id": "36cb513b548e2d65",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 28860
+  },
+  {
+    "test_id": "378406df1bb21aea",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 35060
+  },
+  {
+    "test_id": "38b011c430a3f502",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 42337
+  },
+  {
+    "test_id": "3c885ec0404108f5",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 31774
+  },
+  {
+    "test_id": "3e567145233a8adb",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 36561
+  },
+  {
+    "test_id": "3f8b4d5d12591729",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 30547
+  },
+  {
+    "test_id": "4102c7ed33aa3bef",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 62438
+  },
+  {
+    "test_id": "410537b4865652d9",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 33024
+  },
+  {
+    "test_id": "439e6bd174d80e55",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 25937
+  },
+  {
+    "test_id": "441208c5d4a38f93",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 50919
+  },
+  {
+    "test_id": "45aed0ebf35df3f0",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 26804
+  },
+  {
+    "test_id": "45ee4c9b270e5e03",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 40875
+  },
+  {
+    "test_id": "48132eabcfbbd180",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 59672
+  },
+  {
+    "test_id": "48c3a92e4ed4c117",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 34249
+  },
+  {
+    "test_id": "4910422e8be92fcd",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 45671
+  },
+  {
+    "test_id": "4be397df87d015ee",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 84337
+  },
+  {
+    "test_id": "4d4705f370beeb5f",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 36041
+  },
+  {
+    "test_id": "4e59584c73b49fa4",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 33389
+  },
+  {
+    "test_id": "4fe4e387247f39fb",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 28933
+  },
+  {
+    "test_id": "500081a6bd6c961b",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 36334
+  },
+  {
+    "test_id": "5159682cc24b29c0",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 28343
+  },
+  {
+    "test_id": "53738dfb11ce53a1",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 64985
+  },
+  {
+    "test_id": "53a73cf4f72c0790",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 35300
+  },
+  {
+    "test_id": "546cdecdee862cfd",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 36265
+  },
+  {
+    "test_id": "5483649415eaf476",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 29497
+  },
+  {
+    "test_id": "55c8c2e5c0c49f84",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 30013
+  },
+  {
+    "test_id": "57a225c4324da705",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 35360
+  },
+  {
+    "test_id": "585a62f5e992311a",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 51446
+  },
+  {
+    "test_id": "59e3eed18c405034",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 45865
+  },
+  {
+    "test_id": "5a2b27446a5abba5",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 31618
+  },
+  {
+    "test_id": "5a4216fcfbe59722",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 29830
+  },
+  {
+    "test_id": "5a7dd8909270f638",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 32751
+  },
+  {
+    "test_id": "5bbfa596c023af5c",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 104005
+  },
+  {
+    "test_id": "5eade9cf66eaec9c",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 35456
+  },
+  {
+    "test_id": "5f0e2018c9dedc16",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 30620
+  },
+  {
+    "test_id": "5f278642996f85ef",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 32250
+  },
+  {
+    "test_id": "5f36f61c25249fac",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 35302
+  },
+  {
+    "test_id": "5fd975f95b5a759b",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 37892
+  },
+  {
+    "test_id": "62b6b97f08bbfd04",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 77793
+  },
+  {
+    "test_id": "62dfa33682839038",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 51305
+  },
+  {
+    "test_id": "62f48d5d4dcc8eb0",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 29784
+  },
+  {
+    "test_id": "64478b1b91e4f1b3",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 58848
+  },
+  {
+    "test_id": "656312c5cca25343",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 43269
+  },
+  {
+    "test_id": "65fd1bdf2534a6c6",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 70161
+  },
+  {
+    "test_id": "6696b6a641aaf003",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 38953
+  },
+  {
+    "test_id": "6711d479977f6da0",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 39878
+  },
+  {
+    "test_id": "67e9201e87de819a",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 36940
+  },
+  {
+    "test_id": "69317caf7078385f",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 24952
+  },
+  {
+    "test_id": "6c15a8176545fa74",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 30331
+  },
+  {
+    "test_id": "723d7074c2b5248e",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 45525
+  },
+  {
+    "test_id": "72857ad9d404ba7b",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 30409
+  },
+  {
+    "test_id": "733503e805c518a1",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 36738
+  },
+  {
+    "test_id": "7388f8d4089740a0",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 41294
+  },
+  {
+    "test_id": "73fcf4636d4da37e",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 21824
+  },
+  {
+    "test_id": "7411d237b022b29a",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 28577
+  },
+  {
+    "test_id": "76ad54132b4518c0",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 27911
+  },
+  {
+    "test_id": "7806609c4723c1d8",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 40921
+  },
+  {
+    "test_id": "78a9ef90f9cc4c37",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 47158
+  },
+  {
+    "test_id": "7a99707f9929ef63",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 33890
+  },
+  {
+    "test_id": "7c5ed215200e863a",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 311256
+  },
+  {
+    "test_id": "7cf5547926d6a71d",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 74319
+  },
+  {
+    "test_id": "7d1c0c74614f092b",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 28213
+  },
+  {
+    "test_id": "7eae8c10ced15e4f",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 27843
+  },
+  {
+    "test_id": "7eb1b590a3c1adce",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 34344
+  },
+  {
+    "test_id": "7f82ca63641d0303",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 40835
+  },
+  {
+    "test_id": "7f92374a522d53dc",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 26740
+  },
+  {
+    "test_id": "7ffeca93d157d3f3",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 25893
+  },
+  {
+    "test_id": "813fa1ea60069f60",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 41841
+  },
+  {
+    "test_id": "83ffa94e84f3cded",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 25463
+  },
+  {
+    "test_id": "867d670d6042f83b",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 73037
+  },
+  {
+    "test_id": "88b153b87bb72c18",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 29723
+  },
+  {
+    "test_id": "88fa4fa83f4930e1",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 54475
+  },
+  {
+    "test_id": "8a035b5651ad8d35",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 34415
+  },
+  {
+    "test_id": "8aa0df491d97fa4e",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 41302
+  },
+  {
+    "test_id": "8b4afeac81f6411e",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 19708
+  },
+  {
+    "test_id": "8b4dbc78a4df47b3",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 50528
+  },
+  {
+    "test_id": "8c451999da1662f8",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 26018
+  },
+  {
+    "test_id": "8c74a5cd4d1dabc2",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 35369
+  },
+  {
+    "test_id": "8d211c9f969f8048",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 30295
+  },
+  {
+    "test_id": "8e198f658490d6db",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 22478
+  },
+  {
+    "test_id": "8eac5af5ff5fb4db",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 47930
+  },
+  {
+    "test_id": "936dd5651e4fe065",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 30070
+  },
+  {
+    "test_id": "93b66db1f15759e4",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 36072
+  },
+  {
+    "test_id": "959de355948c5317",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 52328
+  },
+  {
+    "test_id": "978af00f68c4d762",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 27036
+  },
+  {
+    "test_id": "9790a28dd450e61b",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 25589
+  },
+  {
+    "test_id": "98576b9e9a5b79ce",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 26308
+  },
+  {
+    "test_id": "996ed62937c85475",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 51537
+  },
+  {
+    "test_id": "9995cb7d08aa66c8",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 32587
+  },
+  {
+    "test_id": "9acb3e8f000e0728",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 28780
+  },
+  {
+    "test_id": "9afeb0f1265797cd",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 54280
+  },
+  {
+    "test_id": "9c468c5997e89e3d",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 46865
+  },
+  {
+    "test_id": "9cb9d216745cddd9",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 34542
+  },
+  {
+    "test_id": "9e422df0c60d125f",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 34890
+  },
+  {
+    "test_id": "9eeaf1412c65f55d",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 30103
+  },
+  {
+    "test_id": "9f4f13ebd0dae8ce",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 48891
+  },
+  {
+    "test_id": "a03219833c979a8f",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 33721
+  },
+  {
+    "test_id": "a11e84cbf56af90a",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 29383
+  },
+  {
+    "test_id": "a1f8ae99b28b1349",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 41629
+  },
+  {
+    "test_id": "a20d7c9cdefbac63",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 38906
+  },
+  {
+    "test_id": "a2a195f946b30de2",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 32889
+  },
+  {
+    "test_id": "a44747bb8fa7fc18",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 29035
+  },
+  {
+    "test_id": "a6f080fd3b4560fb",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 26040
+  },
+  {
+    "test_id": "a7d1298667f4128b",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 45216
+  },
+  {
+    "test_id": "aa5b9b02784b80c4",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 23275
+  },
+  {
+    "test_id": "ab6682249be33423",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 40389
+  },
+  {
+    "test_id": "abf4e9bc75c6929b",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 28636
+  },
+  {
+    "test_id": "ac884fa608a3287d",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 26479
+  },
+  {
+    "test_id": "ad3ddd4020807dc0",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 33162
+  },
+  {
+    "test_id": "ae2c1823d09f29d9",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 30145
+  },
+  {
+    "test_id": "af937ec37e960d04",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 49330
+  },
+  {
+    "test_id": "aff5eccb5ced0b54",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 40286
+  },
+  {
+    "test_id": "b2b78595f45ea7ed",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 22793
+  },
+  {
+    "test_id": "b93702b536d07f99",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 30268
+  },
+  {
+    "test_id": "b939d57c308c80db",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 38991
+  },
+  {
+    "test_id": "bae96689bceefc79",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 48890
+  },
+  {
+    "test_id": "bbb8a9fa7a7e2105",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 37458
+  },
+  {
+    "test_id": "bde4af2348b984e1",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 31900
+  },
+  {
+    "test_id": "bfc56ceefa479df3",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 39561
+  },
+  {
+    "test_id": "c210ea1d43c669e1",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 62112
+  },
+  {
+    "test_id": "c2bb5fe5a3bbbf78",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 39750
+  },
+  {
+    "test_id": "c321cae30e01d4c4",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 25815
+  },
+  {
+    "test_id": "c5ccde3fc8855561",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 34989
+  },
+  {
+    "test_id": "c9974c42991936a0",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 28486
+  },
+  {
+    "test_id": "ca325ce2018f2d44",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 45177
+  },
+  {
+    "test_id": "cac2ea0d9a9d6c2f",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 35080
+  },
+  {
+    "test_id": "cb3403731558409c",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 19694
+  },
+  {
+    "test_id": "cb6b17de5cb6c552",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 24053
+  },
+  {
+    "test_id": "cba893d9477de3dc",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 50151
+  },
+  {
+    "test_id": "cbad712a29dd913b",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 32462
+  },
+  {
+    "test_id": "cc5586214029524f",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 33635
+  },
+  {
+    "test_id": "cc5d4904f2778d07",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 31026
+  },
+  {
+    "test_id": "cd2c7a693b8b8dcb",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 35973
+  },
+  {
+    "test_id": "ce3e085ab7dd15c4",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 50522
+  },
+  {
+    "test_id": "cef9afbfb839198c",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 25984
+  },
+  {
+    "test_id": "cf7031b7a42cb538",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 30583
+  },
+  {
+    "test_id": "cfe40cba0c8be066",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 35567
+  },
+  {
+    "test_id": "cfee183d5fa8f451",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 20750
+  },
+  {
+    "test_id": "cffbd9764a2780ab",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 51824
+  },
+  {
+    "test_id": "d0755182c16ebce6",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 20719
+  },
+  {
+    "test_id": "d30ea2804d310e5c",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 31730
+  },
+  {
+    "test_id": "d358f21f20c714f8",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 35684
+  },
+  {
+    "test_id": "d398094328f7a048",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 28351
+  },
+  {
+    "test_id": "d3b2539342f7e5c4",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 32741
+  },
+  {
+    "test_id": "d4ba24c561d4387a",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 51359
+  },
+  {
+    "test_id": "d60f80abba345186",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 50141
+  },
+  {
+    "test_id": "d61a89b2b49b0cc2",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 49238
+  },
+  {
+    "test_id": "d6768a9b76665606",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 30988
+  },
+  {
+    "test_id": "d78a74459259526f",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 56120
+  },
+  {
+    "test_id": "d79614c1ba8ce717",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 27784
+  },
+  {
+    "test_id": "d7e5e268bbe5bbf2",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 33765
+  },
+  {
+    "test_id": "d815733d39c46802",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 24123
+  },
+  {
+    "test_id": "d859e2d417f29e21",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 52704
+  },
+  {
+    "test_id": "d871dddc1188d1f0",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 45894
+  },
+  {
+    "test_id": "d97b905b7b2da212",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 49367
+  },
+  {
+    "test_id": "da8b8985dab623c1",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 121996
+  },
+  {
+    "test_id": "db3ac52e2b51cf81",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 38503
+  },
+  {
+    "test_id": "dca14ddc7d329f33",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 27767
+  },
+  {
+    "test_id": "dd17077b3f8886bc",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 31936
+  },
+  {
+    "test_id": "debcfa73d09363ec",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 40169
+  },
+  {
+    "test_id": "df8c182a2de55cfd",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 28004
+  },
+  {
+    "test_id": "e28f355644bdc578",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 42819
+  },
+  {
+    "test_id": "e2d673f75f67f6d6",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 22715
+  },
+  {
+    "test_id": "e41441792184fb76",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 49064
+  },
+  {
+    "test_id": "e5bb9cdc2f53ecaa",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 51089
+  },
+  {
+    "test_id": "eaa27c8f747fd81f",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 85950
+  },
+  {
+    "test_id": "eae1d354fe20a06b",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 35456
+  },
+  {
+    "test_id": "eb7bf77952b4f5ce",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 35095
+  },
+  {
+    "test_id": "edc09ffeaa979ad4",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 48368
+  },
+  {
+    "test_id": "ee0ff92722c2e11c",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 23588
+  },
+  {
+    "test_id": "ee3d1531eaaca3ca",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 44059
+  },
+  {
+    "test_id": "f14ecc2f5fbbcac8",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 37386
+  },
+  {
+    "test_id": "f4d95f27366fa5d7",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 29643
+  },
+  {
+    "test_id": "f5f665f76c460349",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 42153
+  },
+  {
+    "test_id": "f7bd4a68f912b70a",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 43850
+  },
+  {
+    "test_id": "f7d11569e15cad04",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 28114
+  },
+  {
+    "test_id": "f91ab3d5047f30e6",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 21939
+  },
+  {
+    "test_id": "fb34fe98383dbcbb",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 62625
+  },
+  {
+    "test_id": "fdc1cef1ace2cb3f",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 29613
+  },
+  {
+    "test_id": "feca1d7734bbe925",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 29351
+  },
+  {
+    "test_id": "ff192618ed3aab73",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 26032
+  },
+  {
+    "test_id": "ff9d1e984fee439a",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 26713
+  },
+  {
+    "test_id": "ffe392c5f105b253",
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.133998,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 38865
+  },
+  {
+    "test_id": "2e51c2a8937090dc",
+    "services": [
+      "ts-cancel-service",
+      "ts-order-service",
+      "ts-inside-payment-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.064342,
+    "n_above_p": 2,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 10868354
+  },
+  {
+    "test_id": "39ea88721a0504b2",
+    "services": [
+      "ts-cancel-service",
+      "ts-order-service",
+      "ts-inside-payment-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.064342,
+    "n_above_p": 2,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 11875406
+  },
+  {
+    "test_id": "41af9c011024919e",
+    "services": [
+      "ts-cancel-service",
+      "ts-order-service",
+      "ts-inside-payment-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.064342,
+    "n_above_p": 2,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 7223209
+  },
+  {
+    "test_id": "5415b403e3cb792a",
+    "services": [
+      "ts-cancel-service",
+      "ts-order-service",
+      "ts-inside-payment-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.064342,
+    "n_above_p": 2,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 6630729
+  },
+  {
+    "test_id": "732c9b1529f4ba07",
+    "services": [
+      "ts-cancel-service",
+      "ts-order-service",
+      "ts-inside-payment-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.064342,
+    "n_above_p": 2,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 13587452
+  },
+  {
+    "test_id": "82fadd9e0a21c456",
+    "services": [
+      "ts-cancel-service",
+      "ts-order-service",
+      "ts-inside-payment-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.064342,
+    "n_above_p": 2,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 11298517
+  },
+  {
+    "test_id": "83e7f98376a4698a",
+    "services": [
+      "ts-cancel-service",
+      "ts-order-service",
+      "ts-inside-payment-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.064342,
+    "n_above_p": 2,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 8030707
+  },
+  {
+    "test_id": "a3e5405a65fbc7ab",
+    "services": [
+      "ts-cancel-service",
+      "ts-order-service",
+      "ts-inside-payment-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.064342,
+    "n_above_p": 2,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 42933910
+  },
+  {
+    "test_id": "bda236cd409e8cad",
+    "services": [
+      "ts-cancel-service",
+      "ts-order-service",
+      "ts-inside-payment-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.064342,
+    "n_above_p": 2,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 6464920
+  },
+  {
+    "test_id": "d1306a4ab4d29e54",
+    "services": [
+      "ts-cancel-service",
+      "ts-order-service",
+      "ts-inside-payment-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.064342,
+    "n_above_p": 2,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 4490506
+  },
+  {
+    "test_id": "d189b295c95af175",
+    "services": [
+      "ts-cancel-service",
+      "ts-order-service",
+      "ts-inside-payment-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.064342,
+    "n_above_p": 2,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 9460992
+  },
+  {
+    "test_id": "f0d348d6781e404b",
+    "services": [
+      "ts-cancel-service",
+      "ts-order-service",
+      "ts-inside-payment-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.064342,
+    "n_above_p": 2,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 16143446
+  },
+  {
+    "test_id": "fe56d21d81ae0500",
+    "services": [
+      "ts-cancel-service",
+      "ts-order-service",
+      "ts-inside-payment-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.064342,
+    "n_above_p": 2,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 6666704
+  },
+  {
+    "test_id": "ffe30560b5e964d3",
+    "services": [
+      "ts-cancel-service",
+      "ts-order-service",
+      "ts-inside-payment-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 0.267997,
+    "score_avg": 0.064342,
+    "n_above_p": 2,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 7010943
+  },
+  {
+    "test_id": "005279cc8caf41cc",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 56452
+  },
+  {
+    "test_id": "01a9e023b33df9a1",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 79907
+  },
+  {
+    "test_id": "04d54fad6e2919f4",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 98657
+  },
+  {
+    "test_id": "0709b16cfa35a6ef",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 55235
+  },
+  {
+    "test_id": "0927747f33cc6dc4",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 42615
+  },
+  {
+    "test_id": "0a5e7af4a424e6ca",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 34499
+  },
+  {
+    "test_id": "0cc40033bd800330",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 56747
+  },
+  {
+    "test_id": "0e42bb8b06d780da",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 63379
+  },
+  {
+    "test_id": "0f868c7c6adbd600",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 61379
+  },
+  {
+    "test_id": "0fa069f2baaf2c7f",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 54779
+  },
+  {
+    "test_id": "1039c4fce29eae32",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 54369
+  },
+  {
+    "test_id": "14ef1382c54f8442",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 66540
+  },
+  {
+    "test_id": "151ed713702e3d87",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 63048
+  },
+  {
+    "test_id": "181800e555ec42f1",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 52692
+  },
+  {
+    "test_id": "189bf2dee73cb931",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 123098
+  },
+  {
+    "test_id": "190a2da598db2a6c",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 41212
+  },
+  {
+    "test_id": "1d266a10e93b8bfa",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 53844
+  },
+  {
+    "test_id": "1fcb228dece6e2fd",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 56956
+  },
+  {
+    "test_id": "22d421b3601d6ac9",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 59105
+  },
+  {
+    "test_id": "246342c80a09b76c",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 47002
+  },
+  {
+    "test_id": "25cd2b14e6f73ea3",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 66678
+  },
+  {
+    "test_id": "2832ee712287714b",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 52450
+  },
+  {
+    "test_id": "2b5246c281310125",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 57069
+  },
+  {
+    "test_id": "2ca83613db856faf",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 115027
+  },
+  {
+    "test_id": "2dcd70d1823019e3",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 50408
+  },
+  {
+    "test_id": "2de3186ef018c50c",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 52199
+  },
+  {
+    "test_id": "2e74105113fb297e",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 58613
+  },
+  {
+    "test_id": "2ee3e5b6a4387cee",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 133419
+  },
+  {
+    "test_id": "2f2a40994a162674",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 98423
+  },
+  {
+    "test_id": "34a6a8ea7b296e5b",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 71006
+  },
+  {
+    "test_id": "34d7c8466245a87e",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 66486
+  },
+  {
+    "test_id": "353463ed004febcf",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 47472
+  },
+  {
+    "test_id": "35b3dbd03f42adba",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 71365
+  },
+  {
+    "test_id": "35b7c4b0b1d46bd7",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 142233
+  },
+  {
+    "test_id": "36aed26928b0029c",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 49956
+  },
+  {
+    "test_id": "3a1ef51cae934896",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 63981
+  },
+  {
+    "test_id": "3b923053f2b53c14",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 39155
+  },
+  {
+    "test_id": "3c3967a93a61248e",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 73876
+  },
+  {
+    "test_id": "3d8c4ff304ea40cd",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 68928
+  },
+  {
+    "test_id": "3f1986149ece3b9c",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 43997
+  },
+  {
+    "test_id": "403310361b81b825",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 80969
+  },
+  {
+    "test_id": "41195783cb579b77",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 73137
+  },
+  {
+    "test_id": "41ceaea0e73ed6fc",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 50889
+  },
+  {
+    "test_id": "4235676fc06295a3",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 85862
+  },
+  {
+    "test_id": "44a6c1ed9a9d1bb8",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 68789
+  },
+  {
+    "test_id": "47536fac96c111e8",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 57267
+  },
+  {
+    "test_id": "485ef33ea49746af",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 69020
+  },
+  {
+    "test_id": "486169bb4835a338",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 74129
+  },
+  {
+    "test_id": "4b239c0d58ff973e",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 40697
+  },
+  {
+    "test_id": "4e69471008c47ac8",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 55953
+  },
+  {
+    "test_id": "4ec9ddbeb14af119",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 58444
+  },
+  {
+    "test_id": "4edda3aa16b2f402",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 55733
+  },
+  {
+    "test_id": "50b4218268aa7df1",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 39451
+  },
+  {
+    "test_id": "52d2d57acb93c885",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 74648
+  },
+  {
+    "test_id": "55368a281d25929c",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 74922
+  },
+  {
+    "test_id": "591a97711968faa9",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 58048
+  },
+  {
+    "test_id": "604b583fc4f9b7e6",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 60941
+  },
+  {
+    "test_id": "6654e0a3a7c5e348",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 111636
+  },
+  {
+    "test_id": "6679eef312000b5a",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 97733
+  },
+  {
+    "test_id": "6701781de0865383",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 40708
+  },
+  {
+    "test_id": "671215715cfba95f",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 43941
+  },
+  {
+    "test_id": "6973e87a2283b612",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 66907
+  },
+  {
+    "test_id": "6be464c2ac651f34",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 41778
+  },
+  {
+    "test_id": "6e626bc038158067",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 59558
+  },
+  {
+    "test_id": "6f54890ab3971b27",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 48202
+  },
+  {
+    "test_id": "703d273693de7478",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 38834
+  },
+  {
+    "test_id": "70c5cece04f259d1",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 69244
+  },
+  {
+    "test_id": "71336541ec691338",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 140228
+  },
+  {
+    "test_id": "71cc1d65a14d9765",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 66036
+  },
+  {
+    "test_id": "71d8659253165c10",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 38947
+  },
+  {
+    "test_id": "74b4331ad2149e9e",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 65465
+  },
+  {
+    "test_id": "7b31882ef4138527",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 66362
+  },
+  {
+    "test_id": "7bbe751c1a33f1ee",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 58341
+  },
+  {
+    "test_id": "7cca0fcbc96bd639",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 38672
+  },
+  {
+    "test_id": "7d405ac9e720650c",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 77580
+  },
+  {
+    "test_id": "8077090880be67e3",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 42001
+  },
+  {
+    "test_id": "80c3787afa4e14f5",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 4105584
+  },
+  {
+    "test_id": "81024b2866909fed",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 59819
+  },
+  {
+    "test_id": "84170c13ab10b4ec",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 47072
+  },
+  {
+    "test_id": "85a89a48ec4dd350",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 47198
+  },
+  {
+    "test_id": "85c89f56df32d3ec",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 48170
+  },
+  {
+    "test_id": "8653b0256346701e",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 53143
+  },
+  {
+    "test_id": "8805fe6576bb6f1b",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 62261
+  },
+  {
+    "test_id": "89e6eb8a8c3d0717",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 55201
+  },
+  {
+    "test_id": "8bcc38044b7ac33a",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 69212
+  },
+  {
+    "test_id": "9223ac5a1cb8fc4a",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 58183
+  },
+  {
+    "test_id": "9497b7a2255db480",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 36423
+  },
+  {
+    "test_id": "94f8a7f745a22f71",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 74170
+  },
+  {
+    "test_id": "990ece79925c238a",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 49872
+  },
+  {
+    "test_id": "9a9600c8871a52d3",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 43408
+  },
+  {
+    "test_id": "9baa9893dfc6167b",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 59883
+  },
+  {
+    "test_id": "9c9ea315b9e65ffb",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 62398
+  },
+  {
+    "test_id": "9cc6bbcbc246adf4",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 40022
+  },
+  {
+    "test_id": "9d2f069357b29a04",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 55893
+  },
+  {
+    "test_id": "9e54e30f3feafef6",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 44014
+  },
+  {
+    "test_id": "9ebb9ba9e2cdf77f",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 37901
+  },
+  {
+    "test_id": "9ee9ffd00680d7df",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 55957
+  },
+  {
+    "test_id": "a00a4ac34783cdc2",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 88966
+  },
+  {
+    "test_id": "a05e06b3efb7c76a",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 42024
+  },
+  {
+    "test_id": "a18e230136ecb1d6",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 57072
+  },
+  {
+    "test_id": "a21659f93af590cd",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 66899
+  },
+  {
+    "test_id": "a289cad650dab239",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 60850
+  },
+  {
+    "test_id": "a3fb7b7a60d2d454",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 71694
+  },
+  {
+    "test_id": "a5128ae6d430fcc2",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 40605
+  },
+  {
+    "test_id": "a55ea04dfd8dd7ec",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 56129
+  },
+  {
+    "test_id": "a6a2edfe74fde166",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 37753
+  },
+  {
+    "test_id": "a6c83cc0c4baddff",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 38325
+  },
+  {
+    "test_id": "a894ffa990dff762",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 49777
+  },
+  {
+    "test_id": "a8a23e0ef19ac765",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 47987
+  },
+  {
+    "test_id": "ab2f61bdbb3094d1",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 41464
+  },
+  {
+    "test_id": "ad515f2ba4a94578",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 61235
+  },
+  {
+    "test_id": "ada2f1eb0fbd666d",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 52644
+  },
+  {
+    "test_id": "adeb970960b41bff",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 39013
+  },
+  {
+    "test_id": "b3f97f8bc99518b5",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 42981
+  },
+  {
+    "test_id": "b760559b416f0f58",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 57185
+  },
+  {
+    "test_id": "b8301cb28f2bcb74",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 51732
+  },
+  {
+    "test_id": "b8af94a42817354d",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 59816
+  },
+  {
+    "test_id": "b9d1b0ce8bf67965",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 42655
+  },
+  {
+    "test_id": "bcd0e95f64c1b143",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 70691
+  },
+  {
+    "test_id": "bd4dd63b4ccbd292",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 63874
+  },
+  {
+    "test_id": "bd711ab260848bb3",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 68114
+  },
+  {
+    "test_id": "bdf792f586269d22",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 48293
+  },
+  {
+    "test_id": "be75e4b7ed9621f4",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 57067
+  },
+  {
+    "test_id": "bf11e12f238e969b",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 40213
+  },
+  {
+    "test_id": "bfcf166294e97714",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 68509
+  },
+  {
+    "test_id": "c00a91e6622f0805",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 40198
+  },
+  {
+    "test_id": "c1fdd3b49b5377d2",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 57955
+  },
+  {
+    "test_id": "c20374e0a435c293",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 76511
+  },
+  {
+    "test_id": "c2b795161810209b",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 42124
+  },
+  {
+    "test_id": "c4016f9c1e619f8e",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 49262
+  },
+  {
+    "test_id": "c42633d62db7f289",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 72430
+  },
+  {
+    "test_id": "c52a4b269f549ede",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 90023
+  },
+  {
+    "test_id": "c82a2c87bb0129c6",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 59845
+  },
+  {
+    "test_id": "c84f4daba3c94832",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 58762
+  },
+  {
+    "test_id": "c8848a54746c9d09",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 92104
+  },
+  {
+    "test_id": "c98032c9931d7af9",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 47985
+  },
+  {
+    "test_id": "c99261b59b856a93",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 35613
+  },
+  {
+    "test_id": "cdce7da1528051bc",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 64012
+  },
+  {
+    "test_id": "d200f7ffc532247a",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 55269
+  },
+  {
+    "test_id": "d24b2881a8cfdc05",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 35876
+  },
+  {
+    "test_id": "d267bce53c22ede9",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 46886
+  },
+  {
+    "test_id": "d8ca62c8d0241395",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 43623
+  },
+  {
+    "test_id": "d93f4b55256bee2d",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 93072
+  },
+  {
+    "test_id": "da89f5c5ce57a61c",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 39532
+  },
+  {
+    "test_id": "daf2a8118c765d71",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 50814
+  },
+  {
+    "test_id": "dec64977f18cf7b2",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 41246
+  },
+  {
+    "test_id": "df62ad22b3dddabe",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 52730
+  },
+  {
+    "test_id": "dfcdc49810e4aae7",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 69592
+  },
+  {
+    "test_id": "e1d1bceea9771369",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 47787
+  },
+  {
+    "test_id": "e628285cd61c71a7",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 68820
+  },
+  {
+    "test_id": "e8fcb11f9aa2c3d9",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 59635
+  },
+  {
+    "test_id": "ed0be3e10e781a0a",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 59348
+  },
+  {
+    "test_id": "f0c8f0136822d9ad",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 63549
+  },
+  {
+    "test_id": "f2b64eddcfe20613",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 43450
+  },
+  {
+    "test_id": "f30e19bedbdfc010",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 36170
+  },
+  {
+    "test_id": "f364d4ae23345764",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 49685
+  },
+  {
+    "test_id": "f5d4fc6487f19ba6",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 63827
+  },
+  {
+    "test_id": "f706a53a4a653aa9",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 65882
+  },
+  {
+    "test_id": "f789b0ea75c6bf80",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 65253
+  },
+  {
+    "test_id": "f970f79493edd65e",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 43170
+  },
+  {
+    "test_id": "f9f23db891686a0c",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 81404
+  },
+  {
+    "test_id": "fbb6b6eb6edd7e63",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 44760
+  },
+  {
+    "test_id": "fbd7d26aa3106af3",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 169658
+  },
+  {
+    "test_id": "fc7332713070957d",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 42458
+  },
+  {
+    "test_id": "fd7df789b28ac38d",
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 0.267915,
+    "score_avg": 0.167475,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "duration_us": 41921
   }
 ]

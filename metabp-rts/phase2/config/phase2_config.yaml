@@ -19,7 +19,7 @@ outputs:
 belief_propagation:
   max_iterations: 100
   convergence_threshold: 1.0e-6
-  tau_impact: 0.30
+  tau_impact: 0.25
   omega_B: 0.30
 
   # ── Mode de propagation

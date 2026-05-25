@@ -93,6 +93,7 @@ class TestScorer:
                 "n_services": len(services),
                 "tier":       tier,
                 "in_s_echo":  in_s_echo,
+                "duration_us": tp.get("duration_us", 0),
             })
 
         # Tri stable : score desc, score_avg desc, test_id asc

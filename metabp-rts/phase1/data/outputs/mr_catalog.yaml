@@ -382,3 +382,21 @@ mr_catalog:
   phi: Permutation de l'ordre des paramètres ['principal', 'after']
   rho: Résultat identique quelle que soit l'ordre des paramètres
   source: openapi
+- id: MR-LAT-01
+  type: Latence
+  service: ts-order-service
+  phi: Appel nominal avec durée <= 2000ms
+  rho: Tout appel identique doit répondre en <= 2000ms
+  source: performance
+- id: MR-LAT-02
+  type: Latence
+  service: ts-ticketinfo-service
+  phi: Appel nominal avec durée <= 2000ms
+  rho: Tout appel identique doit répondre en <= 2000ms
+  source: performance
+- id: MR-LAT-03
+  type: Latence
+  service: ts-basic-service
+  phi: Appel nominal avec durée <= 2000ms
+  rho: Tout appel identique doit répondre en <= 2000ms
+  source: performance
