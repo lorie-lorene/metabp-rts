@@ -143,6 +143,8 @@ def run_pipeline(config: dict, services_map: dict, base_dir: Path) -> None:
     )
     scores = classifier.classify(C_scores, P_scores, F_scores)
     classifier.save(scores, resolve(paths["service_scores"]))
+    # Sauvegarder les poids EWM-CRITIC calculés
+    classifier.save_weights(resolve("data/outputs/ewm_critic_weights_phase1.json"))
 
     # Vérification du théorème de sécurité
     ok, violators = classifier.verify_safety_theorem(scores)

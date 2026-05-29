@@ -15,7 +15,7 @@ weights:
   gamma: 0.2
 
 echo_dormant:
-  tau_dormant: 0.25
+  tau_dormant: 0.35
   omega_C: 0.357
   omega_P: 0.357
   omega_F: 0.286

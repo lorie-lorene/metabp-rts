@@ -286,6 +286,8 @@ def main():
             "theta_complet", "data/outputs/theta_complet.json"
         )),
     )
+    # Sauvegarder les poids EWM-CRITIC Phase 2
+    cit_builder.save_weights(str(base_dir / "data/outputs/ewm_critic_weights_phase2.json"))
 
     logger.info("── Étape 5/5 : Tiering + Scoring des tests")
     scorer = TestScorer(

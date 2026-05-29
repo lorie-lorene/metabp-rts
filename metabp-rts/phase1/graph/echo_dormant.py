@@ -8,6 +8,21 @@ ROLE      : Calcule Θ_dormant(si) et classifie chaque service comme
 FORMULE :
     Θ_dormant(si) = ω_C × C(si) + ω_P × P(si) + ω_F × F(si)
 
+PONDÉRATION (MetaBP-RTS) :
+    Les poids ω_C, ω_P, ω_F sont dérivés OBJECTIVEMENT des données
+    observées par la méthode combinée EWM-CRITIC :
+
+    EWM  (Shannon, 1948)      : poids proportionnel à la dispersion
+    CRITIC (Diakoulaki, 1995) : pénalise les critères corrélés
+
+    Fusion : ω_j = ω_EWM(j) × ω_CRITIC(j) / Σ[ω_EWM(k) × ω_CRITIC(k)]
+
+    Un critère obtient un poids élevé seulement s'il est à la fois
+    très dispersé ET peu corrélé aux autres. Les poids sont recalculés
+    à chaque ingestion de traces — la pondération est adaptative.
+
+    Référence : Shannon (1948), Diakoulaki et al. (1995), Ma et al. (1999)
+
 CLASSIFICATION :
     Θ_dormant(si) >= τ_dormant  →  Service Écho-Dormant
     Θ_dormant(si) <  τ_dormant  →  Service Non-Dormant
@@ -23,38 +38,24 @@ SÉMANTIQUE DU SERVICE ÉCHO-DORMANT (MetaBP-RTS) :
 PRINCIPE DE RÉSONANCE DIFFÉRÉE :
     Écho-Dormant (Phase 1) + ΔS  →  Écho-Impact (Phase 2)
 
-    Après un changement ΔS, la Belief Propagation (Phase 2) calcule
-    b_i(x_i=1) pour chaque service. Un service Écho-Dormant :
-      - reçoit davantage de messages BP (forte centralité C)
-      - amplifie ces messages (fort potentiel local ψ_i ∝ Θ(si))
-    → sa probabilité d'impact est systématiquement plus élevée
-      qu'un service Non-Dormant, à ΔS équivalent.
-    → il "s'active" et devient un Service Écho-Impact.
-    → tous les chemins de test qui le traversent deviennent urgents.
-
-THÉORÈME DE RÉSONANCE (vérifié en Phase 1) :
-    Pour tout graphe G et seuil τ_dormant calibré, les services
-    Écho-Dormants ont un Θ(si) supérieur à celui de tous les
-    Non-Dormants. 
-
-NOTE : Un service Non-Dormant peut aussi être affecté par ΔS
-    (notamment s'il est voisin direct du service modifié), mais
-    sa probabilité d'impact sera toujours inférieure à celle d'un
-    service Écho-Dormant du fait de sa faible centralité et fragilité.
-
 ENTREES   : - Dict C : {service_name: float}
             - Dict P : {service_name: float}
             - Dict F : {service_name: float}
-            - config  : {tau_dormant, omega_C, omega_P, omega_F}
+            - config  : {tau_dormant}
 SORTIES   : - List[ServiceScore] avec theta_dormant et is_dormant
-            - S_dormant : List[str]  (noms des services Écho-Dormants)
+            - S_dormant : List[str]
+            - weights_report : poids EWM-CRITIC calculés
 """
 
 import json
 import logging
 from pathlib import Path
 from typing import Dict, List, Tuple
+
+import numpy as np
+
 from models.models import ServiceScore
+from graph.ewm_critic import EWMCRITICWeightCalculator
 
 logger = logging.getLogger(__name__)
 
@@ -63,17 +64,51 @@ class EchoDormantClassifier:
     def __init__(
         self,
         tau_dormant: float = 0.40,
+        # Poids fixes gardés uniquement comme fallback
         omega_C: float = 0.357,
         omega_P: float = 0.357,
         omega_F: float = 0.286,
+        weighting_method: str = "ewm_critic",
     ):
-        assert abs(omega_C + omega_P + omega_F - 1.0) < 1e-3, (
-            f"ω_C + ω_P + ω_F doit valoir 1.0, obtenu {omega_C+omega_P+omega_F:.6f}"
-        )
-        self.tau_dormant = tau_dormant
+        """
+        Parameters
+        ----------
+        tau_dormant : seuil de classification Écho-Dormant
+        omega_C, omega_P, omega_F : poids fixes (fallback si weighting_method="fixed")
+        weighting_method : "ewm_critic" (défaut, objectif) ou "fixed" (legacy)
+        """
+        self.tau_dormant      = tau_dormant
+        self.omega_C_fixed    = omega_C
+        self.omega_P_fixed    = omega_P
+        self.omega_F_fixed    = omega_F
+        self.weighting_method = weighting_method
+
+        # Poids calculés (remplis par classify si ewm_critic)
         self.omega_C = omega_C
         self.omega_P = omega_P
         self.omega_F = omega_F
+        self.weights_details = None
+
+    def _compute_ewm_critic_weights(
+        self,
+        C_scores: Dict[str, float],
+        P_scores: Dict[str, float],
+        F_scores: Dict[str, float],
+        all_services: list,
+    ) -> Tuple[float, float, float, Dict]:
+        """
+        Calcule ω_C, ω_P, ω_F par la méthode combinée EWM-CRITIC.
+        """
+        matrix = np.array([
+            [C_scores.get(s, 0.0), P_scores.get(s, 0.0), F_scores.get(s, 0.0)]
+            for s in all_services
+        ])
+        criteria = ["C", "P", "F"]
+
+        calc = EWMCRITICWeightCalculator()
+        weights, details = calc.compute_combined_weights(matrix, criteria)
+
+        return float(weights[0]), float(weights[1]), float(weights[2]), details
 
     def classify(
         self,
@@ -81,8 +116,32 @@ class EchoDormantClassifier:
         P_scores: Dict[str, float],
         F_scores: Dict[str, float],
     ) -> List[ServiceScore]:
-  
-        all_services = set(C_scores) | set(P_scores) | set(F_scores)
+
+        all_services = sorted(set(C_scores) | set(P_scores) | set(F_scores))
+
+        # Calcul des poids selon la méthode choisie
+        if self.weighting_method == "ewm_critic":
+            self.omega_C, self.omega_P, self.omega_F, self.weights_details = \
+                self._compute_ewm_critic_weights(C_scores, P_scores, F_scores, all_services)
+            logger.info(
+                "EWM-CRITIC → ω_C=%.4f  ω_P=%.4f  ω_F=%.4f",
+                self.omega_C, self.omega_P, self.omega_F,
+            )
+        else:
+            self.omega_C = self.omega_C_fixed
+            self.omega_P = self.omega_P_fixed
+            self.omega_F = self.omega_F_fixed
+            self.weights_details = {
+                "method": "fixed",
+                "weights_combined": {
+                    "C": self.omega_C, "P": self.omega_P, "F": self.omega_F
+                },
+            }
+            logger.info(
+                "Poids fixes → ω_C=%.4f  ω_P=%.4f  ω_F=%.4f",
+                self.omega_C, self.omega_P, self.omega_F,
+            )
+
         scores: List[ServiceScore] = []
 
         for service in all_services:
@@ -136,14 +195,28 @@ class EchoDormantClassifier:
             json.dump(data, f, indent=2, ensure_ascii=False)
         logger.info("Scores sauvegardés → %s (%d services)", path, len(scores))
 
+    def save_weights(self, output_path: str) -> None:
+        """Sauvegarde les poids EWM-CRITIC calculés pour documentation."""
+        if self.weights_details:
+            path = Path(output_path)
+            path.parent.mkdir(parents=True, exist_ok=True)
+            report = {
+                "weighting_method": self.weighting_method,
+                "tau_dormant": self.tau_dormant,
+                "weights_applied": {
+                    "omega_C": round(self.omega_C, 6),
+                    "omega_P": round(self.omega_P, 6),
+                    "omega_F": round(self.omega_F, 6),
+                },
+                "details": self.weights_details,
+            }
+            with open(path, "w", encoding="utf-8") as f:
+                json.dump(report, f, indent=2, ensure_ascii=False)
+            logger.info("Poids EWM-CRITIC Phase 1 → %s", path)
+
     def verify_safety_theorem(
         self, scores: List[ServiceScore]
     ) -> Tuple[bool, List[str]]:
-        """
-        La séparation entre Écho-Dormants et Non-Dormants doit être nette,
-        c'est-à-dire que le Θ_dormant minimal des Écho-Dormants doit être
-        supérieur au Θ_dormant maximal des Non-Dormants.
-        """
         dormants      = [s for s in scores if s.is_dormant]
         non_dormants  = [s for s in scores if not s.is_dormant]
 
