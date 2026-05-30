@@ -36,7 +36,7 @@ class JaegerClient:
     def get_services(self) -> List[str]:
         url      = f"{self.base_url}/{self.api_version}/services"
         response = self._get(url)
-        all_svcs = response.get("data", [])
+        all_svcs = response.get("data") or []
         return [s for s in all_svcs if s not in _JAEGER_INTERNAL]
 
     def get_traces(

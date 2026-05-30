@@ -186,6 +186,40 @@ def run_pipeline(config: dict, services_map: dict, base_dir: Path) -> None:
     writer = MRCatalogWriter()
     writer.write(all_mr, resolve(paths["mr_catalog"]))
 
+    # ── Ajout automatique des MR de type Latence ─────────
+    # Les MR-LAT ne sont pas inférables depuis OpenAPI (elles portent
+    # sur la performance, pas sur la structure des paramètres).
+    # Elles sont ajoutées ici pour que l'opérateur latency_injection
+    # de Phase 4 puisse tuer des mutants via le type "Latence".
+    import yaml as _yaml
+    _mr_lat_path = resolve(paths["mr_catalog"])
+    with open(_mr_lat_path, encoding="utf-8") as _f:
+        _cat = _yaml.safe_load(_f)
+    _key = "mr_catalog" if "mr_catalog" in _cat else "relations"
+    _existing_ids = {m.get("id") for m in _cat.get(_key, [])}
+    _latence_mrs = [
+        {"id": "MR-LAT-01", "type": "Latence", "service": "ts-order-service",
+         "phi": "Appel nominal avec durée <= 2000ms",
+         "rho": "Tout appel identique doit répondre en <= 2000ms",
+         "source": "performance"},
+        {"id": "MR-LAT-02", "type": "Latence", "service": "ts-ticketinfo-service",
+         "phi": "Appel nominal avec durée <= 2000ms",
+         "rho": "Tout appel identique doit répondre en <= 2000ms",
+         "source": "performance"},
+        {"id": "MR-LAT-03", "type": "Latence", "service": "ts-basic-service",
+         "phi": "Appel nominal avec durée <= 2000ms",
+         "rho": "Tout appel identique doit répondre en <= 2000ms",
+         "source": "performance"},
+    ]
+    _added = [m for m in _latence_mrs if m["id"] not in _existing_ids]
+    if _added:
+        _cat[_key].extend(_added)
+        with open(_mr_lat_path, "w", encoding="utf-8") as _f:
+            _yaml.dump(_cat, _f, allow_unicode=True, sort_keys=False)
+        logger.info("MR-LAT ajoutées automatiquement : %d MR de Latence", len(_added))
+    else:
+        logger.info("MR-LAT déjà présentes dans le catalogue")
+
     # ── Résumé final ──────────────────────────────────────
     logger.info("=" * 55)
     logger.info("Phase 1 terminée — Artefacts produits :")

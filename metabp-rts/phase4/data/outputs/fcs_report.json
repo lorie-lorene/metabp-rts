@@ -1,40 +1,40 @@
 {
-  "fcs": 99.92,
-  "n_total": 1218,
-  "n_killed": 1217,
-  "n_survived": 1,
+  "fcs": 99.85,
+  "n_total": 5196,
+  "n_killed": 5188,
+  "n_survived": 8,
   "by_operator": {
     "span_deletion": {
-      "n_killed": 406,
-      "n_total": 406,
-      "fcs": 100.0
+      "n_killed": 1731,
+      "n_total": 1732,
+      "fcs": 99.94
     },
     "error_injection": {
-      "n_killed": 406,
-      "n_total": 406,
-      "fcs": 100.0
+      "n_killed": 1731,
+      "n_total": 1732,
+      "fcs": 99.94
     },
     "latency_injection": {
-      "n_killed": 405,
-      "n_total": 406,
-      "fcs": 99.75
+      "n_killed": 1726,
+      "n_total": 1732,
+      "fcs": 99.65
     }
   },
   "by_mr_type": {
     "Permutation": {
-      "n_killed": 812,
-      "n_total": 1218,
-      "fcs": 66.67
-    },
-    "Monotonie": {
-      "n_killed": 480,
-      "n_total": 720,
+      "n_killed": 3462,
+      "n_total": 5193,
       "fcs": 66.67
     },
     "Latence": {
-      "n_killed": 405,
-      "n_total": 1215,
+      "n_killed": 1726,
+      "n_total": 5178,
       "fcs": 33.33
+    },
+    "Monotonie": {
+      "n_killed": 1608,
+      "n_total": 2412,
+      "fcs": 66.67
     }
   }
 }

@@ -1,55 +1,83 @@
 {
-  "n_tests": 406,
-  "n_mr_verified": 2490,
-  "n_pass": 2490,
+  "n_tests": 1732,
+  "n_mr_verified": 17586,
+  "n_pass": 17586,
   "n_fail": 0,
   "pass_rate": 100.0,
   "mode": "offline",
   "by_mr_type": {
-    "Monotonie": {
-      "pass": 268,
-      "fail": 0
-    },
     "Permutation": {
-      "pass": 1652,
+      "pass": 11728,
       "fail": 0
     },
     "Latence": {
-      "pass": 570,
+      "pass": 2650,
+      "fail": 0
+    },
+    "Monotonie": {
+      "pass": 3208,
       "fail": 0
     }
   },
   "by_service": {
-    "ts-order-service": {
-      "pass": 960,
-      "fail": 0
-    },
-    "ts-station-service": {
-      "pass": 784,
-      "fail": 0
-    },
-    "ts-cancel-service": {
-      "pass": 28,
-      "fail": 0
-    },
-    "ts-inside-payment-service": {
-      "pass": 56,
-      "fail": 0
-    },
     "ts-travel2-service": {
-      "pass": 330,
+      "pass": 1848,
       "fail": 0
     },
     "ts-ticketinfo-service": {
-      "pass": 165,
+      "pass": 924,
       "fail": 0
     },
     "ts-basic-service": {
-      "pass": 165,
+      "pass": 924,
+      "fail": 0
+    },
+    "ts-station-service": {
+      "pass": 1850,
+      "fail": 0
+    },
+    "ts-preserve-service": {
+      "pass": 1600,
+      "fail": 0
+    },
+    "ts-security-service": {
+      "pass": 2403,
+      "fail": 0
+    },
+    "ts-order-service": {
+      "pass": 3208,
+      "fail": 0
+    },
+    "ts-order-other-service": {
+      "pass": 2406,
+      "fail": 0
+    },
+    "ts-contacts-service": {
+      "pass": 2403,
       "fail": 0
     },
     "ts-admin-basic-info-service": {
+      "pass": 8,
+      "fail": 0
+    },
+    "ts-train-service": {
       "pass": 2,
+      "fail": 0
+    },
+    "ts-price-service": {
+      "pass": 2,
+      "fail": 0
+    },
+    "ts-config-service": {
+      "pass": 2,
+      "fail": 0
+    },
+    "ts-cancel-service": {
+      "pass": 2,
+      "fail": 0
+    },
+    "ts-inside-payment-service": {
+      "pass": 4,
       "fail": 0
     }
   }

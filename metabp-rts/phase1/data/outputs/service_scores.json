@@ -1,74 +1,106 @@
 [
   {
-    "service_name": "ts-order-service",
-    "C": 0.25,
-    "P": 0.500693,
-    "F": 0.0,
-    "theta_dormant": 0.267997,
+    "service_name": "ts-preserve-service",
+    "C": 0.15,
+    "P": 0.350499,
+    "F": 1.0,
+    "theta_dormant": 0.738605,
     "is_dormant": true
+  },
+  {
+    "service_name": "ts-order-service",
+    "C": 0.3875,
+    "P": 0.500844,
+    "F": 0.0,
+    "theta_dormant": 0.180178,
+    "is_dormant": false
+  },
+  {
+    "service_name": "ts-order-other-service",
+    "C": 0.23125,
+    "P": 0.500855,
+    "F": 0.0,
+    "theta_dormant": 0.167709,
+    "is_dormant": false
   },
   {
     "service_name": "ts-ticketinfo-service",
-    "C": 0.25,
-    "P": 0.500462,
+    "C": 0.23125,
+    "P": 0.500399,
     "F": 0.0,
-    "theta_dormant": 0.267915,
-    "is_dormant": true
+    "theta_dormant": 0.167573,
+    "is_dormant": false
   },
   {
     "service_name": "ts-basic-service",
-    "C": 0.25,
-    "P": 0.500153,
+    "C": 0.23125,
+    "P": 0.500151,
     "F": 0.0,
-    "theta_dormant": 0.267805,
-    "is_dormant": true
+    "theta_dormant": 0.167499,
+    "is_dormant": false
+  },
+  {
+    "service_name": "ts-auth-service",
+    "C": 0.075,
+    "P": 0.500878,
+    "F": 0.0,
+    "theta_dormant": 0.155243,
+    "is_dormant": false
+  },
+  {
+    "service_name": "ts-travel2-service",
+    "C": 0.075,
+    "P": 0.500656,
+    "F": 0.0,
+    "theta_dormant": 0.155177,
+    "is_dormant": false
+  },
+  {
+    "service_name": "ts-security-service",
+    "C": 0.30625,
+    "P": 0.250212,
+    "F": 0.0,
+    "theta_dormant": 0.099007,
+    "is_dormant": false
+  },
+  {
+    "service_name": "ts-cancel-service",
+    "C": 0.3,
+    "P": 0.205178,
+    "F": 0.0,
+    "theta_dormant": 0.085088,
+    "is_dormant": false
+  },
+  {
+    "service_name": "ts-admin-basic-info-service",
+    "C": 0.375,
+    "P": 0.100209,
+    "F": 0.0,
+    "theta_dormant": 0.059796,
+    "is_dormant": false
   },
   {
     "service_name": "ts-station-service",
     "C": 0.625,
     "P": 0.0,
     "F": 0.0,
-    "theta_dormant": 0.223125,
+    "theta_dormant": 0.049891,
     "is_dormant": false
   },
   {
-    "service_name": "ts-travel2-service",
-    "C": 0.09375,
-    "P": 0.500827,
+    "service_name": "ts-contacts-service",
+    "C": 0.3125,
+    "P": 0.0,
     "F": 0.0,
-    "theta_dormant": 0.212264,
+    "theta_dormant": 0.024945,
     "is_dormant": false
   },
   {
-    "service_name": "ts-order-other-service",
-    "C": 0.09375,
-    "P": 0.500695,
+    "service_name": "ts-config-service",
+    "C": 0.15625,
+    "P": 0.0,
     "F": 0.0,
-    "theta_dormant": 0.212217,
-    "is_dormant": false
-  },
-  {
-    "service_name": "ts-admin-basic-info-service",
-    "C": 0.09375,
-    "P": 0.500387,
-    "F": 0.0,
-    "theta_dormant": 0.212107,
-    "is_dormant": false
-  },
-  {
-    "service_name": "ts-auth-service",
-    "C": 0.09375,
-    "P": 0.500056,
-    "F": 0.0,
-    "theta_dormant": 0.211989,
-    "is_dormant": false
-  },
-  {
-    "service_name": "ts-cancel-service",
-    "C": 0.375,
-    "P": 0.200524,
-    "F": 0.0,
-    "theta_dormant": 0.205462,
+    "theta_dormant": 0.012473,
     "is_dormant": false
   },
   {
@@ -76,15 +108,7 @@
     "C": 0.15625,
     "P": 0.0,
     "F": 0.0,
-    "theta_dormant": 0.055781,
-    "is_dormant": false
-  },
-  {
-    "service_name": "ts-user-service",
-    "C": 0.15625,
-    "P": 0.0,
-    "F": 0.0,
-    "theta_dormant": 0.055781,
+    "theta_dormant": 0.012473,
     "is_dormant": false
   },
   {
@@ -92,7 +116,31 @@
     "C": 0.15625,
     "P": 0.0,
     "F": 0.0,
-    "theta_dormant": 0.055781,
+    "theta_dormant": 0.012473,
+    "is_dormant": false
+  },
+  {
+    "service_name": "ts-price-service",
+    "C": 0.15625,
+    "P": 0.0,
+    "F": 0.0,
+    "theta_dormant": 0.012473,
+    "is_dormant": false
+  },
+  {
+    "service_name": "ts-train-service",
+    "C": 0.15625,
+    "P": 0.0,
+    "F": 0.0,
+    "theta_dormant": 0.012473,
+    "is_dormant": false
+  },
+  {
+    "service_name": "ts-user-service",
+    "C": 0.15625,
+    "P": 0.0,
+    "F": 0.0,
+    "theta_dormant": 0.012473,
     "is_dormant": false
   },
   {
@@ -100,7 +148,7 @@
     "C": 0.15625,
     "P": 0.0,
     "F": 0.0,
-    "theta_dormant": 0.055781,
+    "theta_dormant": 0.012473,
     "is_dormant": false
   }
 ]

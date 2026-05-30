@@ -1,0 +1,90 @@
+{
+  "weighting": {
+    "method": "ewm_critic",
+    "omega_theta": 0.27278,
+    "omega_B": 0.72722,
+    "details": {
+      "method": "EWM-CRITIC combined",
+      "n_services": 19,
+      "n_criteria": 2,
+      "criteria": [
+        "Θ_dormant",
+        "CIT"
+      ],
+      "weights_ewm": {
+        "Θ_dormant": 0.395335,
+        "CIT": 0.604665
+      },
+      "weights_critic": {
+        "Θ_dormant": 0.364562,
+        "CIT": 0.635438
+      },
+      "weights_combined": {
+        "Θ_dormant": 0.27278,
+        "CIT": 0.72722
+      },
+      "references": [
+        "Shannon, C.E. (1948). A Mathematical Theory of Communication.",
+        "Diakoulaki, D. et al. (1995). The CRITIC method. C&OR 22(7), 763-770."
+      ]
+    }
+  },
+  "threshold": {
+    "method": "auto",
+    "tau_impact": 0.250328,
+    "details": {
+      "method": "kmeans_k3_auto_threshold",
+      "k": 3,
+      "tau": 0.250328,
+      "n_dormant": 2,
+      "n_total": 16,
+      "cluster_high": {
+        "centroid": 0.61963,
+        "n_members": 2,
+        "min": 0.500656,
+        "max": 0.738605
+      },
+      "cluster_mid": {
+        "centroid": 0.0,
+        "n_members": 14,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "separation": 0.500656,
+      "formula": "τ = (min(Cluster_haut) + max(Cluster_intermédiaire)) / 2",
+      "top_gaps": [
+        {
+          "rank": 2,
+          "score_above": 0.500656,
+          "score_below": 0.0,
+          "gap": 0.500656
+        },
+        {
+          "rank": 1,
+          "score_above": 0.738605,
+          "score_below": 0.500656,
+          "gap": 0.237949
+        },
+        {
+          "rank": 3,
+          "score_above": 0.0,
+          "score_below": 0.0,
+          "gap": 0.0
+        },
+        {
+          "rank": 4,
+          "score_above": 0.0,
+          "score_below": 0.0,
+          "gap": 0.0
+        },
+        {
+          "rank": 5,
+          "score_above": 0.0,
+          "score_below": 0.0,
+          "gap": 0.0
+        }
+      ],
+      "justification": "K-means k=3 identifie 2 services dans le cluster supérieur (centroïde=0.6196). Le seuil τ=0.2503 est la frontière naturelle entre ce cluster et le cluster intermédiaire (centroïde=0.0000). Le gap de séparation est 0.5007."
+    }
+  }
+}
