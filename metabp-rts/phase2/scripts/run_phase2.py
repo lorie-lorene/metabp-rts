@@ -272,8 +272,9 @@ def main():
 
     logger.info("── Étape 4/5 : CIT + Θ_complet + identification Écho-Impact")
     cit_builder = CITBuilder(
-        tau_impact=bp_cfg.get("tau_impact", 0.30),
-        omega_B=bp_cfg.get("omega_B", 0.30),
+        weighting_method="ewm_critic",
+        threshold_method="auto",
+        k_clusters=3,
     )
     cit_result = cit_builder.build(
         p_final=p_final, delta_s=delta_s, scores=scores

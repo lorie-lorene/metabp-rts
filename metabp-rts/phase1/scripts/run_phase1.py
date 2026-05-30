@@ -136,10 +136,9 @@ def run_pipeline(config: dict, services_map: dict, base_dir: Path) -> None:
     # ── Étape 9 : Classification Écho-Dormant ─────────────
     logger.info("── Étape 9/12 : Classification Écho-Dormant")
     classifier = EchoDormantClassifier(
-        tau_dormant=ed_cfg["tau_dormant"],
-        omega_C=ed_cfg["omega_C"],
-        omega_P=ed_cfg["omega_P"],
-        omega_F=ed_cfg["omega_F"],
+        weighting_method="ewm_critic",
+        threshold_method="auto",
+        k_clusters=3,
     )
     scores = classifier.classify(C_scores, P_scores, F_scores)
     classifier.save(scores, resolve(paths["service_scores"]))
