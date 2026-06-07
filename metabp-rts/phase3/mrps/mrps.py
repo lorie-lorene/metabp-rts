@@ -1,26 +1,27 @@
 """
-ALGORITHME: MRPS — Metamorphic Relation Path Signature
+ALGORITHME: PathMR — Path Signature-Based Metamorphic Reduction
 
     Calcule la signature de chaque chemin Tier 2 et regroupe les chemins
     redondants. Pour chaque groupe, conserve un représentant unique.
     Réduit Tier2 sans perdre de couverture sémantique.
 
-SIGNATURE :
+SIGNATURE (Option B — séquence ordonnée, conforme à la littérature) :
     Mode structural :
-        sig(t) = frozenset(services traversés)
-        Deux chemins avec les mêmes services = redondants
+        sig(t) = séquence ordonnée des arcs d'invocation
+               = ((s_i, s_j), (s_j, s_k), ...)
+        Deux chemins avec la MÊME séquence d'invocations = redondants.
+        L'ordre ET la structure causale sont préservés (cf. test path,
+        Chen et al. Déf. 2.1 ; trace-equivalence en théorie des processus).
 
     Mode enriched (recommandé) :
-        sig(t) = (frozenset(services), frozenset(MR_associées))
-        MR(t)  = { mr | service(mr) ∈ services(t) }
-        Deux chemins structurellement identiques mais vérifiant
-        des MR différentes NE sont PAS redondants.
+        sig(t) = (séquence_invocations, frozenset(MR_associées))
+        Deux chemins de même séquence mais vérifiant des MR différentes
+        NE sont PAS redondants.
 
 REPRÉSENTANT :
-    Pour chaque groupe de chemins redondants, on conserve celui
-    dont le score CIT est le plus élevé — il est le plus susceptible
-    de détecter des régressions liées à ΔS.
-
+    Pour chaque groupe de chemins redondants, on conserve celui dont le
+    score CIT maximal est le plus élevé — le plus susceptible de détecter
+    des régressions liées à ΔS.
 """
 
 import json
@@ -40,7 +41,6 @@ class MRPS:
         mode: str = "enriched",
         representative: str = "cit",
     ):
-       
         assert mode in ("structural", "enriched"), \
             f"Mode inconnu : {mode}"
         assert representative in ("cit", "first"), \
@@ -49,7 +49,8 @@ class MRPS:
         self.representative = representative
 
     def _extract_services(self, tp: Dict) -> List[str]:
-        """Extrait la liste ordonnée des services depuis un chemin."""
+        """Extrait la liste ordonnée des services depuis un chemin
+        (utilisée pour le calcul des MR et du score CIT)."""
         chain = tp.get("invocation_chain", [])
         if chain:
             seen = []
@@ -60,8 +61,25 @@ class MRPS:
             return seen
         return tp.get("services", tp.get("path", []))
 
+    def _extract_invocation_sequence(self, tp: Dict) -> Tuple:
+        """
+        Extrait la SÉQUENCE ORDONNÉE des arcs d'invocation (Option B).
+
+        Préserve l'ordre et la structure causale du chemin :
+            invocation_chain = [[s_i, s_j], [s_j, s_k], ...]
+            → ((s_i, s_j), (s_j, s_k), ...)
+
+        Si invocation_chain est absent, repli sur la séquence ordonnée
+        des services (tuple, ordre préservé) — et non un frozenset.
+        """
+        chain = tp.get("invocation_chain", [])
+        if chain:
+            return tuple(tuple(pair) for pair in chain)
+        # Repli : séquence ordonnée de services (ordre conservé)
+        services = tp.get("services", tp.get("path", []))
+        return tuple(services)
+
     def _load_mr_catalog(self, catalog_path: str) -> Dict[str, List[str]]:
- 
         with open(catalog_path, encoding="utf-8") as f:
             catalog = yaml.safe_load(f)
 
@@ -78,7 +96,7 @@ class MRPS:
                 service_to_mrs[svc].append(mr_id)
 
         logger.info(
-            "MRPS — catalogue MR chargé : %d MR sur %d services",
+            "PathMR — catalogue MR chargé : %d MR sur %d services",
             sum(len(v) for v in service_to_mrs.values()),
             len(service_to_mrs),
         )
@@ -86,19 +104,22 @@ class MRPS:
 
     def _compute_signature(
         self,
+        invocation_seq: Tuple,
         services: List[str],
         service_to_mrs: Dict[str, List[str]],
     ) -> Tuple:
         """
         Calcule la signature d'un chemin.
 
-        Mode structural  : (frozenset(services),)
-        Mode enriched    : (frozenset(services), frozenset(MR_associées))
-        """
-        svc_set = frozenset(services)
+        Mode structural : (séquence_invocations,)
+        Mode enriched   : (séquence_invocations, frozenset(MR_associées))
 
+        La séquence d'invocations préserve l'ordre (Option B).
+        Les MR restent un ensemble non ordonné : l'ensemble des
+        propriétés applicables ne dépend pas de l'ordre du chemin.
+        """
         if self.mode == "structural":
-            return (svc_set,)
+            return (invocation_seq,)
 
         # Mode enriched : MR(t) = union des MR de tous les services traversés
         mr_set = frozenset(
@@ -106,7 +127,7 @@ class MRPS:
             for svc in services
             for mr_id in service_to_mrs.get(svc, [])
         )
-        return (svc_set, mr_set)
+        return (invocation_seq, mr_set)
 
     def _select_representative(
         self,
@@ -116,7 +137,7 @@ class MRPS:
         """
         Sélectionne le représentant du groupe.
 
-        "cit"   : chemin dont le score max CIT est le plus élevé
+        "cit"   : chemin dont le score CIT MAXIMAL est le plus élevé
         "first" : premier chemin du groupe
         """
         if self.representative == "first" or not cit:
@@ -135,7 +156,7 @@ class MRPS:
         mr_catalog_path: str,
         cit: Optional[Dict[str, float]] = None,
     ) -> Dict:
-       
+
         service_to_mrs = self._load_mr_catalog(mr_catalog_path)
         cit = cit or {}
 
@@ -143,13 +164,14 @@ class MRPS:
         groups: Dict[Tuple, List[Dict]] = defaultdict(list)
 
         for tp in tier2_tests:
-            services = self._extract_services(tp)
+            invocation_seq = self._extract_invocation_sequence(tp)
+            services       = self._extract_services(tp)
 
             # Enrichir le chemin avec les services extraits
             tp = dict(tp)
             tp["services"] = services
 
-            sig = self._compute_signature(services, service_to_mrs)
+            sig = self._compute_signature(invocation_seq, services, service_to_mrs)
             groups[sig].append(tp)
 
         # Sélectionner le représentant de chaque groupe
@@ -160,8 +182,8 @@ class MRPS:
             rep = self._select_representative(group, cit)
             representatives.append(rep)
 
-            # Clé sérialisable pour JSON
-            sig_key = str(sorted(list(sig[0])))
+            # Clé sérialisable pour JSON : la séquence d'invocations
+            sig_key = str(sig[0])
             groups_serializable[sig_key] = [
                 tp.get("test_id", tp.get("trace_id", "?"))
                 for tp in group
@@ -178,7 +200,7 @@ class MRPS:
         singletons     = sum(1 for s in group_sizes if s == 1)
 
         logger.info(
-            "MRPS — mode=%s | %d chemins → %d groupes uniques | "
+            "PathMR — mode=%s | %d chemins → %d groupes uniques | "
             "réduction=%.1f%% | avg_groupe=%.1f | max_groupe=%d | singletons=%d",
             self.mode, n_input, n_groups,
             dedup_rate * 100, avg_group_size, max_group_size, singletons,
@@ -206,7 +228,6 @@ class MRPS:
 
     def save(self, result: Dict, groups_path: str, dedup_path: str) -> None:
         """Sauvegarde les groupes et les représentants."""
-        # Groupes (pour analyse)
         p1 = Path(groups_path)
         p1.parent.mkdir(parents=True, exist_ok=True)
         with open(p1, "w", encoding="utf-8") as f:
@@ -215,11 +236,10 @@ class MRPS:
                 "stats":      result["stats"],
                 "groups":     result["groups"],
             }, f, indent=2, ensure_ascii=False)
-        logger.info("MRPS groupes → %s", p1)
+        logger.info("PathMR groupes → %s", p1)
 
-        # Représentants = Tier2_dédupliqué
         p2 = Path(dedup_path)
         p2.parent.mkdir(parents=True, exist_ok=True)
         with open(p2, "w", encoding="utf-8") as f:
             json.dump(result["representatives"], f, indent=2, ensure_ascii=False)
-        logger.info("MRPS Tier2_dédupliqué → %s (%d représentants)", p2, len(result["representatives"]))
+        logger.info("PathMR Tier2_dédupliqué → %s (%d représentants)", p2, len(result["representatives"]))

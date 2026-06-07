@@ -1,11 +1,11 @@
 {
   "TO_us": 189842848,
   "TR_us": 67490779,
-  "TS_us": 23168500,
+  "TS_us": 23085300,
   "TO_s": 189.8428,
   "TR_s": 67.4908,
-  "TS_s": 23.1685,
-  "ET": 52.25,
+  "TS_s": 23.0853,
+  "ET": 52.29,
   "EN": 82.74,
   "n_original": 10034,
   "n_sel": 1732,
@@ -15,7 +15,7 @@
   "TS_breakdown_s": {
     "phase1": 22.2231,
     "phase2": 0.7101,
-    "phase3": 0.2353
+    "phase3": 0.1521
   },
   "note_breakdown": "Phase 1 est un coût amortissable (indépendant de ΔS, calculé une fois et réutilisé). Phase 2+3 se relancent à chaque cycle de régression."
 }
