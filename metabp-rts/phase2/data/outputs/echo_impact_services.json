@@ -1,17 +1,14 @@
 {
   "delta_s": [
-    "ts-admin-basic-info-service",
-    "ts-contacts-service",
-    "ts-ticketinfo-service"
+    "ts-admin-basic-info-service"
   ],
-  "tau_impact": 0.250328,
+  "tau_impact": 0.369302,
   "weighting_method": "ewm_critic",
   "threshold_method": "auto",
-  "omega_theta": 0.2727803084341708,
-  "omega_B": 0.7272196915658292,
+  "omega_theta": 0.24505059750239672,
+  "omega_B": 0.7549494024976033,
   "s_echo": [
-    "ts-preserve-service",
-    "ts-travel2-service"
+    "ts-preserve-service"
   ],
   "echo_impact_services": [
     {
@@ -21,30 +18,22 @@
       "theta_complet": 0.738605,
       "was_dormant": true,
       "resonance": true
-    },
-    {
-      "service_name": "ts-travel2-service",
-      "cit_score": 0.500656,
-      "theta_phase1": 0.155177,
-      "theta_complet": 0.406416,
-      "was_dormant": false,
-      "resonance": false
     }
   ],
   "stats": {
     "n_services_total": 19,
-    "n_modified": 3,
-    "n_echo_impact": 2,
+    "n_modified": 1,
+    "n_echo_impact": 1,
     "n_resonant": 1,
-    "resonance_rate": 0.5,
+    "resonance_rate": 1.0,
     "max_cit": 1.0,
-    "avg_cit_all": 0.2231,
-    "avg_cit_echo_impact": 0.6196,
-    "avg_theta_complet": 0.193,
+    "avg_cit_all": 0.0915,
+    "avg_cit_echo_impact": 0.7386,
+    "avg_theta_complet": 0.0967,
     "weighting_method": "ewm_critic",
     "threshold_method": "auto",
-    "omega_theta": 0.27278,
-    "omega_B": 0.72722,
-    "tau_impact": 0.250328
+    "omega_theta": 0.245051,
+    "omega_B": 0.754949,
+    "tau_impact": 0.369302
   }
 }

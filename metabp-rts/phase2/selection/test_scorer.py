@@ -83,9 +83,9 @@ class TestScorer:
             # Tiering : Tier 1 si au moins un service ∈ S_echo
             in_s_echo  = any(s in s_echo_set for s in services)
             tier       = 1 if in_s_echo else 2
-
             test_scores.append({
                 "test_id":    tp.get("test_id", tp.get("trace_id", tp.get("path_id", "?"))),
+                "invocation_chain": tp.get("invocation_chain", []),   # ← AJOUTER CETTE LIGNE
                 "services":   services,
                 "score":      round(score_max, 6),
                 "score_avg":  score_avg,
