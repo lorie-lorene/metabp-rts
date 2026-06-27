@@ -268,7 +268,7 @@ docker compose restart jaeger
 
 ## 5. Installer les dépendances Python
 
-### 5.1 Créer un environnement virtuel (recommandé)
+### 5.1 Créer un environnement virtuel 
 
 ```bash
 cd ~/metabp-rts
