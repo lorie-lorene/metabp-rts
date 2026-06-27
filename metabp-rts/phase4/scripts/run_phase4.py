@@ -5,14 +5,14 @@ Orchestrateur Phase 4 MetaBP-RTS — Validation sans oracle.
 
 Sous-phases :
   4A — Mutation de traces :
-       Évalue la qualité de T_sel en mutant les traces Jaeger
-       et en vérifiant si les MR détectent les anomalies.
-       Produit : FCS (Fault Coverage Score)
+    Évalue la qualité de T_sel en mutant les traces Jaeger
+    et en vérifiant si les MR détectent les anomalies.
+    Produit : FCS (Fault Coverage Score)
 
-  4B — Vérification métamorphique :
-       Vérifie les relations MR sur T_sel pour détecter des
-       régressions après ΔS sans oracle complet.
-       Produit : taux de violations MR
+4B — Vérification métamorphique :
+        Vérifie les relations MR sur T_sel pour détecter des
+        régressions après ΔS sans oracle complet.
+        Produit : taux de violations MR
 
 Usage :
     python run_phase4.py --config ../config/phase4_config.yaml

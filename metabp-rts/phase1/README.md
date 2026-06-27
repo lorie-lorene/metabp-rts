@@ -9,7 +9,8 @@ Méthodologie MetaBP-RTS — Phase 1 : Modélisation Architecturale & Extraction
 ## Lancement Phase 1
 ```bash
 pip install -r requirements.txt
-python phase1/scripts/run_phase1.py --config phase1/config/system_config.yaml
+cd ~/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase1/scripts
+python run_phase1.py --config ../config/system_config.yaml
 ```
 
 ## Artefacts produits
@@ -463,7 +464,7 @@ Sortie attendue :
 
 ### 8.3 Scénarios exécutés
 
-| Scénario | Endpoint appelé | Ce que ça produit dans Jaeger |
+| Scénario | Endpoint appelé | Ce que ça produit dans Jaeger |on peut ajouter si on le souhaite
 |---|---|---|
 | `login` | `POST /api/v1/users/login` | Traces auth-service, user-service |
 | `search_ticket` | `GET /api/v1/travel/query` | Traces travel, route, train, station |

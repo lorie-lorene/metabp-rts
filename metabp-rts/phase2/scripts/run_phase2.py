@@ -18,7 +18,7 @@ Etapes :
 
 Usage :
     python run_phase2.py --config ../config/phase2_config.yaml \\
-                         --delta-s ts-cancel-service
+--delta-s ts-cancel-service
 """
 
 import argparse
