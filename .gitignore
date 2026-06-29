@@ -1,1 +1,9 @@
 metabp-rts/phase1/data/raw/traces_raw.json
+
+# Caches et artefacts generes
+__pycache__/
+*.pyc
+phase*/data/
+phase4/mutation/*.json
+phase4/latence/*.yaml
+phase4/metamorphic/*.json

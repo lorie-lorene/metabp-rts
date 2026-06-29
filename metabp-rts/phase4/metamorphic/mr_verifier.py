@@ -1,12 +1,8 @@
 """
 mr_verifier.py — Phase 4B (verification metamorphique PAR SEUIL reel)
 Verifie les MR data-driven (Latence/Erreur/Completude) sur les VRAIS
-spans des traces de T_sel (test_id == traceID), par seuil appris :
-  - Latence    : chaque span du service        duration_us <= threshold_us
-  - Erreur     : taux d'erreur du service       <= threshold_error_rate
-  - Completude : nb de spans du service/trace    >= threshold_min_spans
+spans des traces de T_sel (test_id == traceID), par seuil appris.
 Produit un P_mr REEL (de vrais FAIL possibles), plus de PASS systematique.
-Signature conservee pour run_phase4.py (verify_t_sel, save, mêmes cles).
 """
 
 import json
@@ -18,6 +14,10 @@ from typing import Dict, List
 
 logger = logging.getLogger(__name__)
 
+# Chemin par defaut relatif a ce fichier (phase4/metamorphic/ -> phase1/data/raw/)
+_DEFAULT_TRACES = (Path(__file__).resolve().parent.parent.parent
+                   / "phase1" / "data" / "raw" / "traces_raw.json")
+
 
 class MRVerifier:
 
@@ -27,8 +27,7 @@ class MRVerifier:
         self.mode = mode
         self.sut_url = sut_url
         self.timeout = timeout
-        self.traces_path = traces_path or \
-            "/home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase1/data/raw/traces_raw.json"
+        self.traces_path = str(traces_path) if traces_path else str(_DEFAULT_TRACES)
         self.lat, self.err, self.cmp = self._load_thresholds(mr_catalog_path)
         self._index = None
 
@@ -85,14 +84,11 @@ class MRVerifier:
             spans = index.get(tid)
             if not spans:
                 continue
-
-            # comptage par service dans cette trace
             svc_spans = defaultdict(list)
             for s in spans:
                 svc_spans[s["service"]].append(s)
 
             for svc, slist in svc_spans.items():
-                # --- LATENCE : chaque span <= seuil ---
                 if svc in self.lat:
                     thr = self.lat[svc]
                     for s in slist:
@@ -102,7 +98,6 @@ class MRVerifier:
                                      f"duration {s['duration']} vs {thr}")
                         if ok: n_pass += 1
                         else:  n_fail += 1
-                # --- ERREUR : taux du service <= seuil ---
                 if svc in self.err:
                     thr = self.err[svc]
                     taux = sum(1 for s in slist if s["error"]) / len(slist)
@@ -112,7 +107,6 @@ class MRVerifier:
                                  f"taux {round(taux,3)} vs {thr}")
                     if ok: n_pass += 1
                     else:  n_fail += 1
-                # --- COMPLETUDE : nb spans >= seuil ---
                 if svc in self.cmp:
                     thr = self.cmp[svc]
                     ok = len(slist) >= thr
@@ -127,9 +121,10 @@ class MRVerifier:
         logger.info("MRVerifier — %d tests | %d MR verifiees | %d PASS | %d FAIL | taux=%.2f%%",
                     len(t_sel), n_mr, n_pass, n_fail, pass_rate)
         if violations:
-            logger.warning("%d violation(s) MR — regressions potentielles", len(violations))
+            logger.warning("%d MR non conformes (variabilite nominale + anomalies preexistantes)",
+                           len(violations))
         else:
-            logger.info("Aucune violation MR (mode %s)", self.mode)
+            logger.info("Aucune non-conformite MR (mode %s)", self.mode)
 
         return {
             "results": all_results, "n_tests": len(t_sel),
@@ -156,7 +151,7 @@ class MRVerifier:
         p1 = Path(pairs_path); p1.parent.mkdir(parents=True, exist_ok=True)
         with open(p1, "w", encoding="utf-8") as f:
             json.dump(verification["violations"], f, indent=2, ensure_ascii=False)
-        logger.info("Violations MR -> %s (%d)", p1, len(verification["violations"]))
+        logger.info("Non-conformites MR -> %s (%d)", p1, len(verification["violations"]))
         p2 = Path(results_path)
         with open(p2, "w", encoding="utf-8") as f:
             json.dump({k: verification[k] for k in
