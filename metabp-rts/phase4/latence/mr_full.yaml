@@ -1,0 +1,592 @@
+mr_catalog:
+- id: MR-LAT-ts-admin-basic-info-service
+  type: Latence
+  service: ts-admin-basic-info-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-admin-basic-info-service ; mediane ~ 5.2 ms
+  rho: duration_us <= 19256 (P99)
+  source: traces-p99
+  threshold_us: 19256
+- id: MR-ERR-ts-admin-basic-info-service
+  type: Erreur
+  service: ts-admin-basic-info-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-admin-basic-info-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-admin-basic-info-service
+  type: Completude
+  service: ts-admin-basic-info-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-admin-basic-info-service produit typiquement >= 2 span(s) par trace ou il
+    apparait
+  rho: nb_spans(ts-admin-basic-info-service) >= 2
+  source: traces-completude
+  threshold_min_spans: 2
+- id: MR-LAT-ts-assurance-service
+  type: Latence
+  service: ts-assurance-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-assurance-service ; mediane ~ 2.7 ms
+  rho: duration_us <= 10147 (P99)
+  source: traces-p99
+  threshold_us: 10147
+- id: MR-ERR-ts-assurance-service
+  type: Erreur
+  service: ts-assurance-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-assurance-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-assurance-service
+  type: Completude
+  service: ts-assurance-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-assurance-service produit typiquement >= 1 span(s) par trace ou il apparait
+  rho: nb_spans(ts-assurance-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-auth-service
+  type: Latence
+  service: ts-auth-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-auth-service ; mediane ~ 11.4 ms
+  rho: duration_us <= 565338 (P99)
+  source: traces-p99
+  threshold_us: 565338
+- id: MR-ERR-ts-auth-service
+  type: Erreur
+  service: ts-auth-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-auth-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-auth-service
+  type: Completude
+  service: ts-auth-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-auth-service produit typiquement >= 2 span(s) par trace ou il apparait
+  rho: nb_spans(ts-auth-service) >= 2
+  source: traces-completude
+  threshold_min_spans: 2
+- id: MR-LAT-ts-basic-service
+  type: Latence
+  service: ts-basic-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-basic-service ; mediane ~ 5.2 ms
+  rho: duration_us <= 16853 (P99)
+  source: traces-p99
+  threshold_us: 16853
+- id: MR-ERR-ts-basic-service
+  type: Erreur
+  service: ts-basic-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-basic-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-basic-service
+  type: Completude
+  service: ts-basic-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-basic-service produit typiquement >= 4 span(s) par trace ou il apparait
+  rho: nb_spans(ts-basic-service) >= 4
+  source: traces-completude
+  threshold_min_spans: 4
+- id: MR-LAT-ts-cancel-service
+  type: Latence
+  service: ts-cancel-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-cancel-service ; mediane ~ 5.7 ms
+  rho: duration_us <= 22436 (P99)
+  source: traces-p99
+  threshold_us: 22436
+- id: MR-ERR-ts-cancel-service
+  type: Erreur
+  service: ts-cancel-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-cancel-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-cancel-service
+  type: Completude
+  service: ts-cancel-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-cancel-service produit typiquement >= 2 span(s) par trace ou il apparait
+  rho: nb_spans(ts-cancel-service) >= 2
+  source: traces-completude
+  threshold_min_spans: 2
+- id: MR-LAT-ts-config-service
+  type: Latence
+  service: ts-config-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-config-service ; mediane ~ 3.6 ms
+  rho: duration_us <= 13089 (P99)
+  source: traces-p99
+  threshold_us: 13089
+- id: MR-ERR-ts-config-service
+  type: Erreur
+  service: ts-config-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-config-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-config-service
+  type: Completude
+  service: ts-config-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-config-service produit typiquement >= 1 span(s) par trace ou il apparait
+  rho: nb_spans(ts-config-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-consign-service
+  type: Latence
+  service: ts-consign-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-consign-service ; mediane ~ 4.5 ms
+  rho: duration_us <= 13423 (P99)
+  source: traces-p99
+  threshold_us: 13423
+- id: MR-ERR-ts-consign-service
+  type: Erreur
+  service: ts-consign-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-consign-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-consign-service
+  type: Completude
+  service: ts-consign-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-consign-service produit typiquement >= 1 span(s) par trace ou il apparait
+  rho: nb_spans(ts-consign-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-contacts-service
+  type: Latence
+  service: ts-contacts-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-contacts-service ; mediane ~ 2.7 ms
+  rho: duration_us <= 11686 (P99)
+  source: traces-p99
+  threshold_us: 11686
+- id: MR-ERR-ts-contacts-service
+  type: Erreur
+  service: ts-contacts-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-contacts-service = 25.0%
+  rho: taux_erreur <= 0.3498 (nominal 0.2498 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.3498
+  nominal_error_rate: 0.2498
+- id: MR-CMP-ts-contacts-service
+  type: Completude
+  service: ts-contacts-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-contacts-service produit typiquement >= 1 span(s) par trace ou il apparait
+  rho: nb_spans(ts-contacts-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-food-service
+  type: Latence
+  service: ts-food-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-food-service ; mediane ~ 0.9 ms
+  rho: duration_us <= 16898 (P99)
+  source: traces-p99
+  threshold_us: 16898
+- id: MR-ERR-ts-food-service
+  type: Erreur
+  service: ts-food-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-food-service = 66.6%
+  rho: taux_erreur <= 0.7661 (nominal 0.6661 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.7661
+  nominal_error_rate: 0.6661
+- id: MR-CMP-ts-food-service
+  type: Completude
+  service: ts-food-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-food-service produit typiquement >= 3 span(s) par trace ou il apparait
+  rho: nb_spans(ts-food-service) >= 3
+  source: traces-completude
+  threshold_min_spans: 3
+- id: MR-LAT-ts-inside-payment-service
+  type: Latence
+  service: ts-inside-payment-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-inside-payment-service ; mediane ~ 5.3 ms
+  rho: duration_us <= 21987 (P99)
+  source: traces-p99
+  threshold_us: 21987
+- id: MR-ERR-ts-inside-payment-service
+  type: Erreur
+  service: ts-inside-payment-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-inside-payment-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-inside-payment-service
+  type: Completude
+  service: ts-inside-payment-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-inside-payment-service produit typiquement >= 1 span(s) par trace ou il
+    apparait
+  rho: nb_spans(ts-inside-payment-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-order-other-service
+  type: Latence
+  service: ts-order-other-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-order-other-service ; mediane ~ 12.0 ms
+  rho: duration_us <= 44610 (P99)
+  source: traces-p99
+  threshold_us: 44610
+- id: MR-ERR-ts-order-other-service
+  type: Erreur
+  service: ts-order-other-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-order-other-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-order-other-service
+  type: Completude
+  service: ts-order-other-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-order-other-service produit typiquement >= 1 span(s) par trace ou il apparait
+  rho: nb_spans(ts-order-other-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-order-service
+  type: Latence
+  service: ts-order-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-order-service ; mediane ~ 14.4 ms
+  rho: duration_us <= 40685 (P99)
+  source: traces-p99
+  threshold_us: 40685
+- id: MR-ERR-ts-order-service
+  type: Erreur
+  service: ts-order-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-order-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-order-service
+  type: Completude
+  service: ts-order-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-order-service produit typiquement >= 1 span(s) par trace ou il apparait
+  rho: nb_spans(ts-order-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-preserve-service
+  type: Latence
+  service: ts-preserve-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-preserve-service ; mediane ~ 11.4 ms
+  rho: duration_us <= 49316 (P99)
+  source: traces-p99
+  threshold_us: 49316
+- id: MR-ERR-ts-preserve-service
+  type: Erreur
+  service: ts-preserve-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-preserve-service = 25.0%
+  rho: taux_erreur <= 0.3498 (nominal 0.2498 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.3498
+  nominal_error_rate: 0.2498
+- id: MR-CMP-ts-preserve-service
+  type: Completude
+  service: ts-preserve-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-preserve-service produit typiquement >= 4 span(s) par trace ou il apparait
+  rho: nb_spans(ts-preserve-service) >= 4
+  source: traces-completude
+  threshold_min_spans: 4
+- id: MR-LAT-ts-price-service
+  type: Latence
+  service: ts-price-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-price-service ; mediane ~ 4.3 ms
+  rho: duration_us <= 18626 (P99)
+  source: traces-p99
+  threshold_us: 18626
+- id: MR-ERR-ts-price-service
+  type: Erreur
+  service: ts-price-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-price-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-price-service
+  type: Completude
+  service: ts-price-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-price-service produit typiquement >= 1 span(s) par trace ou il apparait
+  rho: nb_spans(ts-price-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-security-service
+  type: Latence
+  service: ts-security-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-security-service ; mediane ~ 5.3 ms
+  rho: duration_us <= 29854 (P99)
+  source: traces-p99
+  threshold_us: 29854
+- id: MR-ERR-ts-security-service
+  type: Erreur
+  service: ts-security-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-security-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-security-service
+  type: Completude
+  service: ts-security-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-security-service produit typiquement >= 3 span(s) par trace ou il apparait
+  rho: nb_spans(ts-security-service) >= 3
+  source: traces-completude
+  threshold_min_spans: 3
+- id: MR-LAT-ts-station-service
+  type: Latence
+  service: ts-station-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-station-service ; mediane ~ 3.4 ms
+  rho: duration_us <= 29785 (P99)
+  source: traces-p99
+  threshold_us: 29785
+- id: MR-ERR-ts-station-service
+  type: Erreur
+  service: ts-station-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-station-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-station-service
+  type: Completude
+  service: ts-station-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-station-service produit typiquement >= 1 span(s) par trace ou il apparait
+  rho: nb_spans(ts-station-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-ticketinfo-service
+  type: Latence
+  service: ts-ticketinfo-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-ticketinfo-service ; mediane ~ 9.3 ms
+  rho: duration_us <= 25987 (P99)
+  source: traces-p99
+  threshold_us: 25987
+- id: MR-ERR-ts-ticketinfo-service
+  type: Erreur
+  service: ts-ticketinfo-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-ticketinfo-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-ticketinfo-service
+  type: Completude
+  service: ts-ticketinfo-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-ticketinfo-service produit typiquement >= 4 span(s) par trace ou il apparait
+  rho: nb_spans(ts-ticketinfo-service) >= 4
+  source: traces-completude
+  threshold_min_spans: 4
+- id: MR-LAT-ts-train-service
+  type: Latence
+  service: ts-train-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-train-service ; mediane ~ 3.5 ms
+  rho: duration_us <= 14249 (P99)
+  source: traces-p99
+  threshold_us: 14249
+- id: MR-ERR-ts-train-service
+  type: Erreur
+  service: ts-train-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-train-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-train-service
+  type: Completude
+  service: ts-train-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-train-service produit typiquement >= 1 span(s) par trace ou il apparait
+  rho: nb_spans(ts-train-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-travel2-service
+  type: Latence
+  service: ts-travel2-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-travel2-service ; mediane ~ 11.4 ms
+  rho: duration_us <= 54740 (P99)
+  source: traces-p99
+  threshold_us: 54740
+- id: MR-ERR-ts-travel2-service
+  type: Erreur
+  service: ts-travel2-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-travel2-service = 25.0%
+  rho: taux_erreur <= 0.3499 (nominal 0.2499 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.3499
+  nominal_error_rate: 0.2499
+- id: MR-CMP-ts-travel2-service
+  type: Completude
+  service: ts-travel2-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-travel2-service produit typiquement >= 4 span(s) par trace ou il apparait
+  rho: nb_spans(ts-travel2-service) >= 4
+  source: traces-completude
+  threshold_min_spans: 4
+- id: MR-LAT-ts-user-service
+  type: Latence
+  service: ts-user-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-user-service ; mediane ~ 7.2 ms
+  rho: duration_us <= 357198 (P99)
+  source: traces-p99
+  threshold_us: 357198
+- id: MR-ERR-ts-user-service
+  type: Erreur
+  service: ts-user-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-user-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-user-service
+  type: Completude
+  service: ts-user-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-user-service produit typiquement >= 1 span(s) par trace ou il apparait
+  rho: nb_spans(ts-user-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-verification-code-service
+  type: Latence
+  service: ts-verification-code-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-verification-code-service ; mediane ~ 4.2 ms
+  rho: duration_us <= 16061 (P99)
+  source: traces-p99
+  threshold_us: 16061
+- id: MR-ERR-ts-verification-code-service
+  type: Erreur
+  service: ts-verification-code-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-verification-code-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-verification-code-service
+  type: Completude
+  service: ts-verification-code-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-verification-code-service produit typiquement >= 1 span(s) par trace ou
+    il apparait
+  rho: nb_spans(ts-verification-code-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1

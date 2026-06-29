@@ -1,0 +1,211 @@
+mr_catalog:
+- id: MR-ABI-LAT-01
+  type: Latence
+  service: ts-admin-basic-info-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel équivalent de ts-admin-basic-info-service ; comportement nominal médian
+    ≈ 5.2 ms (8002 spans observés)
+  rho: duration_us <= 19256  (seuil P99 appris = 19.3 ms)
+  source: traces-p99
+  _threshold_us: 19256
+- id: MR-A-LAT-01
+  type: Latence
+  service: ts-assurance-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel équivalent de ts-assurance-service ; comportement nominal médian ≈ 2.7
+    ms (1102 spans observés)
+  rho: duration_us <= 10147  (seuil P99 appris = 10.1 ms)
+  source: traces-p99
+  _threshold_us: 10147
+- id: MR-A-LAT-01
+  type: Latence
+  service: ts-auth-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel équivalent de ts-auth-service ; comportement nominal médian ≈ 11.4 ms
+    (24 spans observés)
+  rho: duration_us <= 565338  (seuil P99 appris = 565.3 ms)
+  source: traces-p99
+  _threshold_us: 565338
+- id: MR-B-LAT-01
+  type: Latence
+  service: ts-basic-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel équivalent de ts-basic-service ; comportement nominal médian ≈ 5.2 ms
+    (3696 spans observés)
+  rho: duration_us <= 16853  (seuil P99 appris = 16.9 ms)
+  source: traces-p99
+  _threshold_us: 16853
+- id: MR-C-LAT-01
+  type: Latence
+  service: ts-cancel-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel équivalent de ts-cancel-service ; comportement nominal médian ≈ 5.7 ms
+    (1614 spans observés)
+  rho: duration_us <= 22436  (seuil P99 appris = 22.4 ms)
+  source: traces-p99
+  _threshold_us: 22436
+- id: MR-C-LAT-01
+  type: Latence
+  service: ts-config-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel équivalent de ts-config-service ; comportement nominal médian ≈ 3.6 ms
+    (1602 spans observés)
+  rho: duration_us <= 13089  (seuil P99 appris = 13.1 ms)
+  source: traces-p99
+  _threshold_us: 13089
+- id: MR-C-LAT-01
+  type: Latence
+  service: ts-consign-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel équivalent de ts-consign-service ; comportement nominal médian ≈ 4.5
+    ms (802 spans observés)
+  rho: duration_us <= 13423  (seuil P99 appris = 13.4 ms)
+  source: traces-p99
+  _threshold_us: 13423
+- id: MR-C-LAT-01
+  type: Latence
+  service: ts-contacts-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel équivalent de ts-contacts-service ; comportement nominal médian ≈ 2.7
+    ms (3202 spans observés)
+  rho: duration_us <= 11686  (seuil P99 appris = 11.7 ms)
+  source: traces-p99
+  _threshold_us: 11686
+- id: MR-F-LAT-01
+  type: Latence
+  service: ts-food-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel équivalent de ts-food-service ; comportement nominal médian ≈ 0.9 ms
+    (2402 spans observés)
+  rho: duration_us <= 16898  (seuil P99 appris = 16.9 ms)
+  source: traces-p99
+  _threshold_us: 16898
+- id: MR-IP-LAT-01
+  type: Latence
+  service: ts-inside-payment-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel équivalent de ts-inside-payment-service ; comportement nominal médian
+    ≈ 5.3 ms (804 spans observés)
+  rho: duration_us <= 21987  (seuil P99 appris = 22.0 ms)
+  source: traces-p99
+  _threshold_us: 21987
+- id: MR-OO-LAT-01
+  type: Latence
+  service: ts-order-other-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel équivalent de ts-order-other-service ; comportement nominal médian ≈
+    12.0 ms (3446 spans observés)
+  rho: duration_us <= 44610  (seuil P99 appris = 44.6 ms)
+  source: traces-p99
+  _threshold_us: 44610
+- id: MR-O-LAT-01
+  type: Latence
+  service: ts-order-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel équivalent de ts-order-service ; comportement nominal médian ≈ 14.4 ms
+    (5962 spans observés)
+  rho: duration_us <= 40685  (seuil P99 appris = 40.7 ms)
+  source: traces-p99
+  _threshold_us: 40685
+- id: MR-P-LAT-01
+  type: Latence
+  service: ts-preserve-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel équivalent de ts-preserve-service ; comportement nominal médian ≈ 11.4
+    ms (3202 spans observés)
+  rho: duration_us <= 49316  (seuil P99 appris = 49.3 ms)
+  source: traces-p99
+  _threshold_us: 49316
+- id: MR-P-LAT-01
+  type: Latence
+  service: ts-price-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel équivalent de ts-price-service ; comportement nominal médian ≈ 4.3 ms
+    (802 spans observés)
+  rho: duration_us <= 18626  (seuil P99 appris = 18.6 ms)
+  source: traces-p99
+  _threshold_us: 18626
+- id: MR-S-LAT-01
+  type: Latence
+  service: ts-security-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel équivalent de ts-security-service ; comportement nominal médian ≈ 5.3
+    ms (4802 spans observés)
+  rho: duration_us <= 29854  (seuil P99 appris = 29.9 ms)
+  source: traces-p99
+  _threshold_us: 29854
+- id: MR-S-LAT-01
+  type: Latence
+  service: ts-station-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel équivalent de ts-station-service ; comportement nominal médian ≈ 3.4
+    ms (6150 spans observés)
+  rho: duration_us <= 29785  (seuil P99 appris = 29.8 ms)
+  source: traces-p99
+  _threshold_us: 29785
+- id: MR-T-LAT-01
+  type: Latence
+  service: ts-ticketinfo-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel équivalent de ts-ticketinfo-service ; comportement nominal médian ≈ 9.3
+    ms (3696 spans observés)
+  rho: duration_us <= 25987  (seuil P99 appris = 26.0 ms)
+  source: traces-p99
+  _threshold_us: 25987
+- id: MR-T-LAT-01
+  type: Latence
+  service: ts-train-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel équivalent de ts-train-service ; comportement nominal médian ≈ 3.5 ms
+    (1602 spans observés)
+  rho: duration_us <= 14249  (seuil P99 appris = 14.2 ms)
+  source: traces-p99
+  _threshold_us: 14249
+- id: MR-T-LAT-01
+  type: Latence
+  service: ts-travel2-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel équivalent de ts-travel2-service ; comportement nominal médian ≈ 11.4
+    ms (3698 spans observés)
+  rho: duration_us <= 54740  (seuil P99 appris = 54.7 ms)
+  source: traces-p99
+  _threshold_us: 54740
+- id: MR-U-LAT-01
+  type: Latence
+  service: ts-user-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel équivalent de ts-user-service ; comportement nominal médian ≈ 7.2 ms
+    (10 spans observés)
+  rho: duration_us <= 357198  (seuil P99 appris = 357.2 ms)
+  source: traces-p99
+  _threshold_us: 357198
+- id: MR-VC-LAT-01
+  type: Latence
+  service: ts-verification-code-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel équivalent de ts-verification-code-service ; comportement nominal médian
+    ≈ 4.2 ms (816 spans observés)
+  rho: duration_us <= 16061  (seuil P99 appris = 16.1 ms)
+  source: traces-p99
+  _threshold_us: 16061

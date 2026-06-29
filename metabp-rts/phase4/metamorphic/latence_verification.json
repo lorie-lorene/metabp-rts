@@ -1,0 +1,4224 @@
+{
+  "n_verified": 57436,
+  "n_pass": 56846,
+  "n_fail": 590,
+  "p_mr": 98.97,
+  "violations": [
+    {
+      "mr_id": "MR-LAT-ts-cancel-service",
+      "service": "ts-cancel-service",
+      "duration_us": 30041,
+      "threshold_us": 22436,
+      "trace_id": "3ed04e72f0415b00"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 40886,
+      "threshold_us": 40685,
+      "trace_id": "b67d980438bce4e7"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 46201,
+      "threshold_us": 40685,
+      "trace_id": "f611aaeeadb5e0d9"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 55250,
+      "threshold_us": 40685,
+      "trace_id": "f611aaeeadb5e0d9"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 43021,
+      "threshold_us": 29785,
+      "trace_id": "f611aaeeadb5e0d9"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 33465,
+      "threshold_us": 29854,
+      "trace_id": "57fe2a3925246cc7"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 29963,
+      "threshold_us": 29854,
+      "trace_id": "5fe35f86137ffed2"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 43296,
+      "threshold_us": 40685,
+      "trace_id": "4613fbb5a902ae07"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 44934,
+      "threshold_us": 40685,
+      "trace_id": "38d7f712a562d699"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 56835,
+      "threshold_us": 40685,
+      "trace_id": "38d7f712a562d699"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 44106,
+      "threshold_us": 29785,
+      "trace_id": "38d7f712a562d699"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 38805,
+      "threshold_us": 29854,
+      "trace_id": "fedca08d5b55861c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 71647,
+      "threshold_us": 49316,
+      "trace_id": "fedca08d5b55861c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 47829,
+      "threshold_us": 40685,
+      "trace_id": "5de0a0fb2baed473"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 70148,
+      "threshold_us": 40685,
+      "trace_id": "5de0a0fb2baed473"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 46037,
+      "threshold_us": 29785,
+      "trace_id": "5de0a0fb2baed473"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 38392,
+      "threshold_us": 29785,
+      "trace_id": "7d2ed3b5b1b68c96"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 52425,
+      "threshold_us": 40685,
+      "trace_id": "7d2ed3b5b1b68c96"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 52989,
+      "threshold_us": 40685,
+      "trace_id": "576ba7b518442947"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 39230,
+      "threshold_us": 29785,
+      "trace_id": "576ba7b518442947"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 31038,
+      "threshold_us": 29854,
+      "trace_id": "a92e2682cab3a655"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 34441,
+      "threshold_us": 29785,
+      "trace_id": "77a87b4a5680f3cc"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 40987,
+      "threshold_us": 40685,
+      "trace_id": "77a87b4a5680f3cc"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 73895,
+      "threshold_us": 40685,
+      "trace_id": "77a87b4a5680f3cc"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 32956,
+      "threshold_us": 29854,
+      "trace_id": "8525f125a3008eda"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 34530,
+      "threshold_us": 29854,
+      "trace_id": "736f45ca3df9f368"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 38980,
+      "threshold_us": 29854,
+      "trace_id": "8c7b103e14024c00"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 11720,
+      "threshold_us": 11686,
+      "trace_id": "9023ed3763395765"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 83339,
+      "threshold_us": 49316,
+      "trace_id": "9023ed3763395765"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 42081,
+      "threshold_us": 29854,
+      "trace_id": "9023ed3763395765"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 32829,
+      "threshold_us": 29854,
+      "trace_id": "e50badd46411bdb9"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 30672,
+      "threshold_us": 29854,
+      "trace_id": "e9968504e15152e5"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 50370,
+      "threshold_us": 49316,
+      "trace_id": "e9968504e15152e5"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 33900,
+      "threshold_us": 29854,
+      "trace_id": "8c3b0a20d8b0ea4b"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 59761,
+      "threshold_us": 49316,
+      "trace_id": "8c3b0a20d8b0ea4b"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 50998,
+      "threshold_us": 49316,
+      "trace_id": "10b48c756553f3a4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 35761,
+      "threshold_us": 29854,
+      "trace_id": "10b48c756553f3a4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 40748,
+      "threshold_us": 40685,
+      "trace_id": "93c4e5116ca59c97"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 14966,
+      "threshold_us": 11686,
+      "trace_id": "76cc6ceedc9127ea"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 59708,
+      "threshold_us": 49316,
+      "trace_id": "76cc6ceedc9127ea"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 45388,
+      "threshold_us": 40685,
+      "trace_id": "b453ac4a19ad9828"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 34396,
+      "threshold_us": 29854,
+      "trace_id": "4a0fd0cc023fe40a"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 15934,
+      "threshold_us": 11686,
+      "trace_id": "4a0fd0cc023fe40a"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 70405,
+      "threshold_us": 49316,
+      "trace_id": "4a0fd0cc023fe40a"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 67055,
+      "threshold_us": 40685,
+      "trace_id": "06b1b6d4f6dbec23"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 52154,
+      "threshold_us": 40685,
+      "trace_id": "06b1b6d4f6dbec23"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 51581,
+      "threshold_us": 29785,
+      "trace_id": "06b1b6d4f6dbec23"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 49410,
+      "threshold_us": 49316,
+      "trace_id": "00e77f553e89a2c4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 34369,
+      "threshold_us": 29854,
+      "trace_id": "fe8b0fe5dc36bd62"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 70055,
+      "threshold_us": 49316,
+      "trace_id": "fe8b0fe5dc36bd62"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 50238,
+      "threshold_us": 49316,
+      "trace_id": "77fc3676a1423cb3"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 58162,
+      "threshold_us": 40685,
+      "trace_id": "1806339a1aa5bd67"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 42167,
+      "threshold_us": 40685,
+      "trace_id": "1806339a1aa5bd67"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 40582,
+      "threshold_us": 29785,
+      "trace_id": "1806339a1aa5bd67"
+    },
+    {
+      "mr_id": "MR-LAT-ts-cancel-service",
+      "service": "ts-cancel-service",
+      "duration_us": 22932,
+      "threshold_us": 22436,
+      "trace_id": "15df2ef9e28acd9f"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 54007,
+      "threshold_us": 49316,
+      "trace_id": "0a69a907465fd197"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 63427,
+      "threshold_us": 40685,
+      "trace_id": "94afb10c531cfe4c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 86904,
+      "threshold_us": 40685,
+      "trace_id": "94afb10c531cfe4c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 59680,
+      "threshold_us": 29785,
+      "trace_id": "94afb10c531cfe4c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 45067,
+      "threshold_us": 40685,
+      "trace_id": "0c25bad0208ca990"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 30575,
+      "threshold_us": 29785,
+      "trace_id": "0c25bad0208ca990"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 41388,
+      "threshold_us": 29854,
+      "trace_id": "68824f5c9b954256"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 68984,
+      "threshold_us": 49316,
+      "trace_id": "68824f5c9b954256"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 986980,
+      "threshold_us": 40685,
+      "trace_id": "2732c5407e49acf8"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 1421369,
+      "threshold_us": 40685,
+      "trace_id": "2732c5407e49acf8"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 446658,
+      "threshold_us": 29785,
+      "trace_id": "2732c5407e49acf8"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 65116,
+      "threshold_us": 40685,
+      "trace_id": "7d5ad8900039c3e2"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 86131,
+      "threshold_us": 40685,
+      "trace_id": "7d5ad8900039c3e2"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 64687,
+      "threshold_us": 29785,
+      "trace_id": "7d5ad8900039c3e2"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 52057,
+      "threshold_us": 40685,
+      "trace_id": "6ef7da919bd749f4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 36154,
+      "threshold_us": 29785,
+      "trace_id": "6ef7da919bd749f4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 46199,
+      "threshold_us": 40685,
+      "trace_id": "30d6ad35a536033d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 42690,
+      "threshold_us": 40685,
+      "trace_id": "4f0fc1be224ad89d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 32164,
+      "threshold_us": 29785,
+      "trace_id": "4f0fc1be224ad89d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 32219,
+      "threshold_us": 29854,
+      "trace_id": "1d4dfa9b003910f9"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 43339,
+      "threshold_us": 40685,
+      "trace_id": "33146c57855fb0d8"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 30867,
+      "threshold_us": 29785,
+      "trace_id": "33146c57855fb0d8"
+    },
+    {
+      "mr_id": "MR-LAT-ts-cancel-service",
+      "service": "ts-cancel-service",
+      "duration_us": 31575,
+      "threshold_us": 22436,
+      "trace_id": "c807aaefb4a1fc53"
+    },
+    {
+      "mr_id": "MR-LAT-ts-inside-payment-service",
+      "service": "ts-inside-payment-service",
+      "duration_us": 31222,
+      "threshold_us": 21987,
+      "trace_id": "c807aaefb4a1fc53"
+    },
+    {
+      "mr_id": "MR-LAT-ts-cancel-service",
+      "service": "ts-cancel-service",
+      "duration_us": 4911063,
+      "threshold_us": 22436,
+      "trace_id": "c807aaefb4a1fc53"
+    },
+    {
+      "mr_id": "MR-LAT-ts-cancel-service",
+      "service": "ts-cancel-service",
+      "duration_us": 5037215,
+      "threshold_us": 22436,
+      "trace_id": "c807aaefb4a1fc53"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 42368,
+      "threshold_us": 40685,
+      "trace_id": "40e4e1ae8c019c75"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 29854,
+      "threshold_us": 29785,
+      "trace_id": "bdd79610b2fda54a"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 41921,
+      "threshold_us": 40685,
+      "trace_id": "bdd79610b2fda54a"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 51337,
+      "threshold_us": 49316,
+      "trace_id": "eaf6027da58b89a8"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 55948,
+      "threshold_us": 49316,
+      "trace_id": "c9ac817c26c3d317"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 34711,
+      "threshold_us": 29854,
+      "trace_id": "c9ac817c26c3d317"
+    },
+    {
+      "mr_id": "MR-LAT-ts-cancel-service",
+      "service": "ts-cancel-service",
+      "duration_us": 35192,
+      "threshold_us": 22436,
+      "trace_id": "6073d811c54275b4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 44056,
+      "threshold_us": 40685,
+      "trace_id": "d8241ace701cec55"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 77553,
+      "threshold_us": 49316,
+      "trace_id": "ec27488061764aac"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 43096,
+      "threshold_us": 29854,
+      "trace_id": "ec27488061764aac"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 31274,
+      "threshold_us": 29785,
+      "trace_id": "31f4cdd3f71367c6"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 45799,
+      "threshold_us": 40685,
+      "trace_id": "31f4cdd3f71367c6"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 127640,
+      "threshold_us": 40685,
+      "trace_id": "e78b1e428d3c1c1d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 30138,
+      "threshold_us": 29854,
+      "trace_id": "dad59947292b6370"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 52089,
+      "threshold_us": 40685,
+      "trace_id": "f8e6305e300406a4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 37984,
+      "threshold_us": 29785,
+      "trace_id": "f8e6305e300406a4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 30974,
+      "threshold_us": 29854,
+      "trace_id": "c4fa2cba5efb3855"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 84702,
+      "threshold_us": 40685,
+      "trace_id": "745f837195c6da6f"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 55934,
+      "threshold_us": 40685,
+      "trace_id": "745f837195c6da6f"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 55597,
+      "threshold_us": 29785,
+      "trace_id": "745f837195c6da6f"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 33005,
+      "threshold_us": 29854,
+      "trace_id": "b9f130c10a4603e5"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 37365,
+      "threshold_us": 29854,
+      "trace_id": "98f9280970e7a94a"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 63550,
+      "threshold_us": 29854,
+      "trace_id": "1bf9d6f4a9336a8d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 42680,
+      "threshold_us": 40685,
+      "trace_id": "05a19f59493e3d06"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 60591,
+      "threshold_us": 40685,
+      "trace_id": "05a19f59493e3d06"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 42127,
+      "threshold_us": 29785,
+      "trace_id": "05a19f59493e3d06"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 50959,
+      "threshold_us": 49316,
+      "trace_id": "0d6e37afc843afea"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 42856,
+      "threshold_us": 40685,
+      "trace_id": "2ace00c2c27b89cb"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 55977,
+      "threshold_us": 40685,
+      "trace_id": "2ace00c2c27b89cb"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 42285,
+      "threshold_us": 29785,
+      "trace_id": "2ace00c2c27b89cb"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 34453,
+      "threshold_us": 29854,
+      "trace_id": "d9ac30b3d6174d01"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 62083,
+      "threshold_us": 49316,
+      "trace_id": "d9ac30b3d6174d01"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 42392,
+      "threshold_us": 40685,
+      "trace_id": "0128acea044099fe"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 37825,
+      "threshold_us": 29854,
+      "trace_id": "f34c2d4163edf067"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 63548,
+      "threshold_us": 40685,
+      "trace_id": "f794f359334814a4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 50123,
+      "threshold_us": 40685,
+      "trace_id": "f794f359334814a4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 48961,
+      "threshold_us": 29785,
+      "trace_id": "f794f359334814a4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 42781,
+      "threshold_us": 40685,
+      "trace_id": "2367da3eba83e702"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 31793,
+      "threshold_us": 29785,
+      "trace_id": "2367da3eba83e702"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 38767,
+      "threshold_us": 29854,
+      "trace_id": "b157f61c27cb6676"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 71058,
+      "threshold_us": 49316,
+      "trace_id": "b157f61c27cb6676"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 56730,
+      "threshold_us": 40685,
+      "trace_id": "c2dd55c48be5ca55"
+    },
+    {
+      "mr_id": "MR-LAT-ts-cancel-service",
+      "service": "ts-cancel-service",
+      "duration_us": 132435,
+      "threshold_us": 22436,
+      "trace_id": "c2dd55c48be5ca55"
+    },
+    {
+      "mr_id": "MR-LAT-ts-cancel-service",
+      "service": "ts-cancel-service",
+      "duration_us": 61127,
+      "threshold_us": 22436,
+      "trace_id": "c2dd55c48be5ca55"
+    },
+    {
+      "mr_id": "MR-LAT-ts-cancel-service",
+      "service": "ts-cancel-service",
+      "duration_us": 806641,
+      "threshold_us": 22436,
+      "trace_id": "c2dd55c48be5ca55"
+    },
+    {
+      "mr_id": "MR-LAT-ts-inside-payment-service",
+      "service": "ts-inside-payment-service",
+      "duration_us": 378249,
+      "threshold_us": 21987,
+      "trace_id": "c2dd55c48be5ca55"
+    },
+    {
+      "mr_id": "MR-LAT-ts-cancel-service",
+      "service": "ts-cancel-service",
+      "duration_us": 798100,
+      "threshold_us": 22436,
+      "trace_id": "c2dd55c48be5ca55"
+    },
+    {
+      "mr_id": "MR-LAT-ts-user-service",
+      "service": "ts-user-service",
+      "duration_us": 390890,
+      "threshold_us": 357198,
+      "trace_id": "c2dd55c48be5ca55"
+    },
+    {
+      "mr_id": "MR-LAT-ts-cancel-service",
+      "service": "ts-cancel-service",
+      "duration_us": 7450204,
+      "threshold_us": 22436,
+      "trace_id": "c2dd55c48be5ca55"
+    },
+    {
+      "mr_id": "MR-LAT-ts-cancel-service",
+      "service": "ts-cancel-service",
+      "duration_us": 9796588,
+      "threshold_us": 22436,
+      "trace_id": "c2dd55c48be5ca55"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 40782,
+      "threshold_us": 40685,
+      "trace_id": "5b078e04d153c392"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 32010,
+      "threshold_us": 29785,
+      "trace_id": "5b078e04d153c392"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 33673,
+      "threshold_us": 29854,
+      "trace_id": "04f9f7c414daa791"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 54708,
+      "threshold_us": 49316,
+      "trace_id": "31ecdb3a1a171cee"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 49319,
+      "threshold_us": 49316,
+      "trace_id": "2e775f4bc91acd9a"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 32427,
+      "threshold_us": 29854,
+      "trace_id": "130c41fc13acacae"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 46275,
+      "threshold_us": 29854,
+      "trace_id": "9e83e961bc22c289"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 13459,
+      "threshold_us": 11686,
+      "trace_id": "9e83e961bc22c289"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 89866,
+      "threshold_us": 49316,
+      "trace_id": "9e83e961bc22c289"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 29868,
+      "threshold_us": 29854,
+      "trace_id": "718fc2fe11bffae6"
+    },
+    {
+      "mr_id": "MR-LAT-ts-cancel-service",
+      "service": "ts-cancel-service",
+      "duration_us": 26484,
+      "threshold_us": 22436,
+      "trace_id": "cf594bfe12e6beb7"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 31362,
+      "threshold_us": 29854,
+      "trace_id": "023907889df2eab5"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 49150,
+      "threshold_us": 29854,
+      "trace_id": "d6870c7bbfe22229"
+    },
+    {
+      "mr_id": "MR-LAT-ts-cancel-service",
+      "service": "ts-cancel-service",
+      "duration_us": 31568,
+      "threshold_us": 22436,
+      "trace_id": "053846b37362835d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 37781,
+      "threshold_us": 29854,
+      "trace_id": "eedaa01f8ad75bae"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 34432,
+      "threshold_us": 29854,
+      "trace_id": "e5d5135b34c563f4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 12843,
+      "threshold_us": 11686,
+      "trace_id": "e5d5135b34c563f4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 72036,
+      "threshold_us": 49316,
+      "trace_id": "e5d5135b34c563f4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 37060,
+      "threshold_us": 29854,
+      "trace_id": "56abb16894a3938d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 50285,
+      "threshold_us": 29854,
+      "trace_id": "e7d80aaf778bfb63"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 30433,
+      "threshold_us": 29785,
+      "trace_id": "822c80d0d6099535"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 54646,
+      "threshold_us": 40685,
+      "trace_id": "d4eb244e2dda20b4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 39447,
+      "threshold_us": 29785,
+      "trace_id": "d4eb244e2dda20b4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 41983,
+      "threshold_us": 29854,
+      "trace_id": "15b6a28aa9751a30"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 35522,
+      "threshold_us": 29854,
+      "trace_id": "0916f396b1d330e8"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 60362,
+      "threshold_us": 49316,
+      "trace_id": "0916f396b1d330e8"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 29855,
+      "threshold_us": 29854,
+      "trace_id": "fdcddced26c33c57"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 55185,
+      "threshold_us": 49316,
+      "trace_id": "fdcddced26c33c57"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 52185,
+      "threshold_us": 49316,
+      "trace_id": "61ac9a892bc92666"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 54442,
+      "threshold_us": 40685,
+      "trace_id": "24c735be88a31895"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 38756,
+      "threshold_us": 29785,
+      "trace_id": "24c735be88a31895"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 50954,
+      "threshold_us": 49316,
+      "trace_id": "a0489f2316543e02"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 42148,
+      "threshold_us": 40685,
+      "trace_id": "c1085cfc55fdef9c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 31428,
+      "threshold_us": 29854,
+      "trace_id": "7826d3b627bfa9a7"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 45382,
+      "threshold_us": 40685,
+      "trace_id": "291abde6493087a9"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 34917,
+      "threshold_us": 29785,
+      "trace_id": "291abde6493087a9"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 51818,
+      "threshold_us": 40685,
+      "trace_id": "d140fc47c2784994"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 35457,
+      "threshold_us": 29785,
+      "trace_id": "d140fc47c2784994"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 48707,
+      "threshold_us": 40685,
+      "trace_id": "81a4c2f2afa1e5d2"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 67601,
+      "threshold_us": 40685,
+      "trace_id": "81a4c2f2afa1e5d2"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 46365,
+      "threshold_us": 29785,
+      "trace_id": "81a4c2f2afa1e5d2"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 38818,
+      "threshold_us": 29854,
+      "trace_id": "fd56d2d393112c24"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 40769,
+      "threshold_us": 40685,
+      "trace_id": "c5fb58552ab8189c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 32597,
+      "threshold_us": 29785,
+      "trace_id": "4a4123cbbd3c5792"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 47943,
+      "threshold_us": 40685,
+      "trace_id": "4a4123cbbd3c5792"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 50161,
+      "threshold_us": 49316,
+      "trace_id": "329f9093ee037b9c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 212115,
+      "threshold_us": 29854,
+      "trace_id": "c8fa78e068c501e1"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 43502,
+      "threshold_us": 29854,
+      "trace_id": "c8fa78e068c501e1"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 603927,
+      "threshold_us": 29854,
+      "trace_id": "c8fa78e068c501e1"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 45448,
+      "threshold_us": 29854,
+      "trace_id": "6f2bb903e5356440"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 95168,
+      "threshold_us": 49316,
+      "trace_id": "6f2bb903e5356440"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 30542,
+      "threshold_us": 29785,
+      "trace_id": "37c24b27c92b194b"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 46401,
+      "threshold_us": 40685,
+      "trace_id": "37c24b27c92b194b"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 36392,
+      "threshold_us": 29854,
+      "trace_id": "d51035e528f6bf98"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 67584,
+      "threshold_us": 49316,
+      "trace_id": "d51035e528f6bf98"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 30368,
+      "threshold_us": 29854,
+      "trace_id": "06d00108cc7c1bb5"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 40819,
+      "threshold_us": 40685,
+      "trace_id": "182dc352b20b079f"
+    },
+    {
+      "mr_id": "MR-LAT-ts-cancel-service",
+      "service": "ts-cancel-service",
+      "duration_us": 27074,
+      "threshold_us": 22436,
+      "trace_id": "1bd05d66d3ae363c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 44072,
+      "threshold_us": 40685,
+      "trace_id": "2b85bb421ed98bce"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 32012,
+      "threshold_us": 29785,
+      "trace_id": "2b85bb421ed98bce"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 64470,
+      "threshold_us": 29854,
+      "trace_id": "b113a73cbcc8e790"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 38649,
+      "threshold_us": 11686,
+      "trace_id": "b113a73cbcc8e790"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 186244,
+      "threshold_us": 49316,
+      "trace_id": "b113a73cbcc8e790"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 568473,
+      "threshold_us": 49316,
+      "trace_id": "b113a73cbcc8e790"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 82514,
+      "threshold_us": 49316,
+      "trace_id": "b113a73cbcc8e790"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-service",
+      "service": "ts-order-service",
+      "duration_us": 44655,
+      "threshold_us": 40685,
+      "trace_id": "69b08b179bfeeacc"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 34239,
+      "threshold_us": 29785,
+      "trace_id": "69b08b179bfeeacc"
+    },
+    {
+      "mr_id": "MR-LAT-ts-cancel-service",
+      "service": "ts-cancel-service",
+      "duration_us": 22447,
+      "threshold_us": 22436,
+      "trace_id": "18c2184011ddb72b"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 61516,
+      "threshold_us": 54740,
+      "trace_id": "cf1bdad6dd2b48be"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 19963,
+      "threshold_us": 16853,
+      "trace_id": "cf1bdad6dd2b48be"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 29193,
+      "threshold_us": 25987,
+      "trace_id": "cf1bdad6dd2b48be"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 62939,
+      "threshold_us": 54740,
+      "trace_id": "5e76e6bd0a3c8a2c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 63449,
+      "threshold_us": 54740,
+      "trace_id": "8a11db40a62106a4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 26531,
+      "threshold_us": 25987,
+      "trace_id": "8a11db40a62106a4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 60295,
+      "threshold_us": 54740,
+      "trace_id": "f2137ac35de8113c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 33066,
+      "threshold_us": 16853,
+      "trace_id": "967d91cb17487273"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 22833,
+      "threshold_us": 16853,
+      "trace_id": "967d91cb17487273"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 91444,
+      "threshold_us": 54740,
+      "trace_id": "967d91cb17487273"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 36968,
+      "threshold_us": 25987,
+      "trace_id": "967d91cb17487273"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 47135,
+      "threshold_us": 25987,
+      "trace_id": "967d91cb17487273"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 68530,
+      "threshold_us": 54740,
+      "trace_id": "80b28e8faa0560f4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 29130,
+      "threshold_us": 25987,
+      "trace_id": "80b28e8faa0560f4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 17647,
+      "threshold_us": 16853,
+      "trace_id": "80b28e8faa0560f4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 58016,
+      "threshold_us": 54740,
+      "trace_id": "eae7e89f44de2973"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 19344,
+      "threshold_us": 16853,
+      "trace_id": "18a9fee1918f15b0"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 69382,
+      "threshold_us": 54740,
+      "trace_id": "18a9fee1918f15b0"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 29758,
+      "threshold_us": 25987,
+      "trace_id": "18a9fee1918f15b0"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 63501,
+      "threshold_us": 54740,
+      "trace_id": "cb2d2caa303299a8"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 29327,
+      "threshold_us": 25987,
+      "trace_id": "cb2d2caa303299a8"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 19080,
+      "threshold_us": 16853,
+      "trace_id": "f8d3bffb5d1f9a47"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 27089,
+      "threshold_us": 25987,
+      "trace_id": "1def73732cb1a61f"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 33877,
+      "threshold_us": 25987,
+      "trace_id": "1def73732cb1a61f"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 59282,
+      "threshold_us": 54740,
+      "trace_id": "1def73732cb1a61f"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 26401,
+      "threshold_us": 16853,
+      "trace_id": "1def73732cb1a61f"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 18296,
+      "threshold_us": 16853,
+      "trace_id": "1def73732cb1a61f"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 16976,
+      "threshold_us": 16853,
+      "trace_id": "66c0e8d466b9fc36"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 34762,
+      "threshold_us": 25987,
+      "trace_id": "5a5fb2a4d7855c5c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 27678,
+      "threshold_us": 25987,
+      "trace_id": "5a5fb2a4d7855c5c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 40033,
+      "threshold_us": 25987,
+      "trace_id": "5a5fb2a4d7855c5c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 93176,
+      "threshold_us": 54740,
+      "trace_id": "5a5fb2a4d7855c5c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 21937,
+      "threshold_us": 16853,
+      "trace_id": "5a5fb2a4d7855c5c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 26601,
+      "threshold_us": 16853,
+      "trace_id": "5a5fb2a4d7855c5c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 56646,
+      "threshold_us": 54740,
+      "trace_id": "ab531e01919ff287"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 59532,
+      "threshold_us": 54740,
+      "trace_id": "3b10135ba19337f2"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 60810,
+      "threshold_us": 54740,
+      "trace_id": "e3bfc240f2caa241"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 66994,
+      "threshold_us": 54740,
+      "trace_id": "95f19517015ee140"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 55835,
+      "threshold_us": 54740,
+      "trace_id": "c4ac60e15ec6234d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 28294,
+      "threshold_us": 25987,
+      "trace_id": "c4ac60e15ec6234d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 22242,
+      "threshold_us": 16853,
+      "trace_id": "49beca879d4bf862"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 72557,
+      "threshold_us": 54740,
+      "trace_id": "49beca879d4bf862"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 33458,
+      "threshold_us": 25987,
+      "trace_id": "49beca879d4bf862"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 70592,
+      "threshold_us": 54740,
+      "trace_id": "5a8f5ffc002a683e"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 19544,
+      "threshold_us": 16853,
+      "trace_id": "5a8f5ffc002a683e"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 18486,
+      "threshold_us": 16853,
+      "trace_id": "5a8f5ffc002a683e"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 26683,
+      "threshold_us": 25987,
+      "trace_id": "5a8f5ffc002a683e"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 29123,
+      "threshold_us": 25987,
+      "trace_id": "5a8f5ffc002a683e"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 24331,
+      "threshold_us": 16853,
+      "trace_id": "105edf2fa24fbe46"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 19213,
+      "threshold_us": 16853,
+      "trace_id": "105edf2fa24fbe46"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 29282,
+      "threshold_us": 16853,
+      "trace_id": "105edf2fa24fbe46"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 106699,
+      "threshold_us": 54740,
+      "trace_id": "105edf2fa24fbe46"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 45475,
+      "threshold_us": 25987,
+      "trace_id": "105edf2fa24fbe46"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 30981,
+      "threshold_us": 25987,
+      "trace_id": "105edf2fa24fbe46"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 40703,
+      "threshold_us": 25987,
+      "trace_id": "105edf2fa24fbe46"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 60296,
+      "threshold_us": 54740,
+      "trace_id": "fa900940836db2a5"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 26307,
+      "threshold_us": 25987,
+      "trace_id": "6b86d7a25f52aa75"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 128434,
+      "threshold_us": 16853,
+      "trace_id": "487e574c26d80416"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 677701,
+      "threshold_us": 16853,
+      "trace_id": "487e574c26d80416"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 2778982,
+      "threshold_us": 54740,
+      "trace_id": "487e574c26d80416"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 2301522,
+      "threshold_us": 54740,
+      "trace_id": "487e574c26d80416"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 1699297,
+      "threshold_us": 25987,
+      "trace_id": "487e574c26d80416"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 49994,
+      "threshold_us": 25987,
+      "trace_id": "487e574c26d80416"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 1191676,
+      "threshold_us": 25987,
+      "trace_id": "487e574c26d80416"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 32311,
+      "threshold_us": 25987,
+      "trace_id": "487e574c26d80416"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 31264,
+      "threshold_us": 16853,
+      "trace_id": "487e574c26d80416"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 56627,
+      "threshold_us": 54740,
+      "trace_id": "ee592bb242fa92ec"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 20537,
+      "threshold_us": 16853,
+      "trace_id": "84b0eb864073b4e9"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 91564,
+      "threshold_us": 54740,
+      "trace_id": "6b825b2bbd021640"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 38503,
+      "threshold_us": 25987,
+      "trace_id": "6b825b2bbd021640"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 32641,
+      "threshold_us": 25987,
+      "trace_id": "6b825b2bbd021640"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 26070,
+      "threshold_us": 16853,
+      "trace_id": "6b825b2bbd021640"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 21492,
+      "threshold_us": 16853,
+      "trace_id": "6b825b2bbd021640"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 83281,
+      "threshold_us": 54740,
+      "trace_id": "0c49433cb3082f51"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 24956,
+      "threshold_us": 16853,
+      "trace_id": "0c49433cb3082f51"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 18831,
+      "threshold_us": 16853,
+      "trace_id": "0c49433cb3082f51"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 34035,
+      "threshold_us": 25987,
+      "trace_id": "0c49433cb3082f51"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 31806,
+      "threshold_us": 25987,
+      "trace_id": "0c49433cb3082f51"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 17019,
+      "threshold_us": 16853,
+      "trace_id": "d32cb4d979dd09a3"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 60602,
+      "threshold_us": 54740,
+      "trace_id": "42b8eef253725808"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 66822,
+      "threshold_us": 54740,
+      "trace_id": "76981d959f34fc7a"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 18732,
+      "threshold_us": 16853,
+      "trace_id": "76981d959f34fc7a"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 28568,
+      "threshold_us": 25987,
+      "trace_id": "76981d959f34fc7a"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 57848,
+      "threshold_us": 54740,
+      "trace_id": "79df02a091427bbc"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 17259,
+      "threshold_us": 16853,
+      "trace_id": "818a4586b6b36c45"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 17363,
+      "threshold_us": 16853,
+      "trace_id": "818a4586b6b36c45"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 70194,
+      "threshold_us": 54740,
+      "trace_id": "818a4586b6b36c45"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 27419,
+      "threshold_us": 25987,
+      "trace_id": "818a4586b6b36c45"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 29161,
+      "threshold_us": 25987,
+      "trace_id": "818a4586b6b36c45"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 18311,
+      "threshold_us": 16853,
+      "trace_id": "b0bb9635875c177d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 57139,
+      "threshold_us": 54740,
+      "trace_id": "ed368167396c3783"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 20716,
+      "threshold_us": 16853,
+      "trace_id": "d91c09030e361233"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 76868,
+      "threshold_us": 54740,
+      "trace_id": "d91c09030e361233"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 34068,
+      "threshold_us": 25987,
+      "trace_id": "d91c09030e361233"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 55512,
+      "threshold_us": 54740,
+      "trace_id": "6007fc3ec5ea1afc"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 64074,
+      "threshold_us": 54740,
+      "trace_id": "6fa2ff7fbb1054fa"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 23010,
+      "threshold_us": 16853,
+      "trace_id": "5f76de424c2315ea"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 21044,
+      "threshold_us": 16853,
+      "trace_id": "5f76de424c2315ea"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 94684,
+      "threshold_us": 54740,
+      "trace_id": "5f76de424c2315ea"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 36173,
+      "threshold_us": 25987,
+      "trace_id": "5f76de424c2315ea"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 35058,
+      "threshold_us": 25987,
+      "trace_id": "5f76de424c2315ea"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 18414,
+      "threshold_us": 16853,
+      "trace_id": "ec48607a54fce7b9"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 56922,
+      "threshold_us": 54740,
+      "trace_id": "20f4515d5eaee7af"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 77617,
+      "threshold_us": 54740,
+      "trace_id": "f88444615fcf105b"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 19337,
+      "threshold_us": 16853,
+      "trace_id": "f88444615fcf105b"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 20721,
+      "threshold_us": 16853,
+      "trace_id": "f88444615fcf105b"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 29649,
+      "threshold_us": 25987,
+      "trace_id": "f88444615fcf105b"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 34076,
+      "threshold_us": 25987,
+      "trace_id": "f88444615fcf105b"
+    },
+    {
+      "mr_id": "MR-LAT-ts-ticketinfo-service",
+      "service": "ts-ticketinfo-service",
+      "duration_us": 26012,
+      "threshold_us": 25987,
+      "trace_id": "cc3b0c7b365c7bb3"
+    },
+    {
+      "mr_id": "MR-LAT-ts-basic-service",
+      "service": "ts-basic-service",
+      "duration_us": 17177,
+      "threshold_us": 16853,
+      "trace_id": "cc3b0c7b365c7bb3"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 45689,
+      "threshold_us": 44610,
+      "trace_id": "155e2c9904462b04"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 63743,
+      "threshold_us": 44610,
+      "trace_id": "e7aa49895a65f6a8"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 45880,
+      "threshold_us": 44610,
+      "trace_id": "e7aa49895a65f6a8"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 45000,
+      "threshold_us": 29785,
+      "trace_id": "e7aa49895a65f6a8"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 30990,
+      "threshold_us": 19256,
+      "trace_id": "17f367151456c402"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 47931,
+      "threshold_us": 19256,
+      "trace_id": "17f367151456c402"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 52713,
+      "threshold_us": 44610,
+      "trace_id": "f30072f864593a5b"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 41172,
+      "threshold_us": 29785,
+      "trace_id": "f30072f864593a5b"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 52458,
+      "threshold_us": 44610,
+      "trace_id": "817490a232c26a86"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 38139,
+      "threshold_us": 29785,
+      "trace_id": "817490a232c26a86"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 49819,
+      "threshold_us": 44610,
+      "trace_id": "389fee47c5c4bfcd"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 83896,
+      "threshold_us": 44610,
+      "trace_id": "389fee47c5c4bfcd"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 48751,
+      "threshold_us": 29785,
+      "trace_id": "389fee47c5c4bfcd"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 44691,
+      "threshold_us": 44610,
+      "trace_id": "00a3f71a8a0dd0cf"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 30227,
+      "threshold_us": 29785,
+      "trace_id": "99719d0061371df4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 50858,
+      "threshold_us": 44610,
+      "trace_id": "15020107757c763a"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 34247,
+      "threshold_us": 29785,
+      "trace_id": "15020107757c763a"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 31335,
+      "threshold_us": 29785,
+      "trace_id": "85f4942773df5a0e"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 47458,
+      "threshold_us": 44610,
+      "trace_id": "e2df03eac91fe0ae"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 36623,
+      "threshold_us": 29785,
+      "trace_id": "e2df03eac91fe0ae"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 58006,
+      "threshold_us": 44610,
+      "trace_id": "558be1fc52e4a3fe"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 39127,
+      "threshold_us": 29785,
+      "trace_id": "558be1fc52e4a3fe"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 61174,
+      "threshold_us": 44610,
+      "trace_id": "1e8a43786c1b2d5f"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 40936,
+      "threshold_us": 29785,
+      "trace_id": "1e8a43786c1b2d5f"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 58864,
+      "threshold_us": 44610,
+      "trace_id": "e8842ca8f36f4634"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 43326,
+      "threshold_us": 29785,
+      "trace_id": "e8842ca8f36f4634"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 55250,
+      "threshold_us": 29785,
+      "trace_id": "9b275350afd8bea4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 55118,
+      "threshold_us": 44610,
+      "trace_id": "9b275350afd8bea4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 80779,
+      "threshold_us": 44610,
+      "trace_id": "9b275350afd8bea4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 45523,
+      "threshold_us": 44610,
+      "trace_id": "99c6b5ec7b09c867"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 33835,
+      "threshold_us": 29785,
+      "trace_id": "99c6b5ec7b09c867"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 48165,
+      "threshold_us": 44610,
+      "trace_id": "b726fdf2c6f3989b"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 33468,
+      "threshold_us": 29785,
+      "trace_id": "b726fdf2c6f3989b"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 33587,
+      "threshold_us": 29785,
+      "trace_id": "9efe15060f85f5ea"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 48773,
+      "threshold_us": 44610,
+      "trace_id": "d20e68d0007959eb"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 34799,
+      "threshold_us": 29785,
+      "trace_id": "d20e68d0007959eb"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 49993,
+      "threshold_us": 44610,
+      "trace_id": "ba48344089b4271c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 31415,
+      "threshold_us": 29785,
+      "trace_id": "ba48344089b4271c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 47811,
+      "threshold_us": 44610,
+      "trace_id": "a48d21e5e26bd02d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 52099,
+      "threshold_us": 44610,
+      "trace_id": "0a737dc4da173cf3"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 34351,
+      "threshold_us": 29785,
+      "trace_id": "0a737dc4da173cf3"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 74568,
+      "threshold_us": 44610,
+      "trace_id": "5e19f8900d2487f1"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 66386,
+      "threshold_us": 44610,
+      "trace_id": "4c2f91cc6c915220"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 46330,
+      "threshold_us": 44610,
+      "trace_id": "4c2f91cc6c915220"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 46161,
+      "threshold_us": 29785,
+      "trace_id": "4c2f91cc6c915220"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 163665,
+      "threshold_us": 44610,
+      "trace_id": "79ffad05803b5a4b"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 690529,
+      "threshold_us": 44610,
+      "trace_id": "79ffad05803b5a4b"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 58893,
+      "threshold_us": 29785,
+      "trace_id": "79ffad05803b5a4b"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 41615,
+      "threshold_us": 29785,
+      "trace_id": "a3789c9659ed635b"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 47888,
+      "threshold_us": 44610,
+      "trace_id": "ed64d29a4bc3794d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 36361,
+      "threshold_us": 29785,
+      "trace_id": "ed64d29a4bc3794d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 54489,
+      "threshold_us": 44610,
+      "trace_id": "0e728b4ee83072af"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 85605,
+      "threshold_us": 44610,
+      "trace_id": "0e728b4ee83072af"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 53229,
+      "threshold_us": 29785,
+      "trace_id": "0e728b4ee83072af"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 61730,
+      "threshold_us": 44610,
+      "trace_id": "e6d46f5bbb3799c5"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 41618,
+      "threshold_us": 29785,
+      "trace_id": "e6d46f5bbb3799c5"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 52360,
+      "threshold_us": 44610,
+      "trace_id": "8b60017ef61ddd11"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 38579,
+      "threshold_us": 29785,
+      "trace_id": "8b60017ef61ddd11"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 46913,
+      "threshold_us": 44610,
+      "trace_id": "325a16264b13f58c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 62627,
+      "threshold_us": 44610,
+      "trace_id": "325a16264b13f58c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 46115,
+      "threshold_us": 29785,
+      "trace_id": "325a16264b13f58c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 151964,
+      "threshold_us": 29785,
+      "trace_id": "11a22a1807d7e2d5"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 47438,
+      "threshold_us": 44610,
+      "trace_id": "326991d068bbe434"
+    },
+    {
+      "mr_id": "MR-LAT-ts-station-service",
+      "service": "ts-station-service",
+      "duration_us": 30575,
+      "threshold_us": 29785,
+      "trace_id": "326991d068bbe434"
+    },
+    {
+      "mr_id": "MR-LAT-ts-train-service",
+      "service": "ts-train-service",
+      "duration_us": 330439,
+      "threshold_us": 14249,
+      "trace_id": "32e8d636994cb4b7"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 380898,
+      "threshold_us": 19256,
+      "trace_id": "32e8d636994cb4b7"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 354963,
+      "threshold_us": 19256,
+      "trace_id": "32e8d636994cb4b7"
+    },
+    {
+      "mr_id": "MR-LAT-ts-train-service",
+      "service": "ts-train-service",
+      "duration_us": 17974,
+      "threshold_us": 14249,
+      "trace_id": "250bcecb45887320"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 25642,
+      "threshold_us": 19256,
+      "trace_id": "250bcecb45887320"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 21524,
+      "threshold_us": 19256,
+      "trace_id": "2f01505695d36efd"
+    },
+    {
+      "mr_id": "MR-LAT-ts-train-service",
+      "service": "ts-train-service",
+      "duration_us": 17427,
+      "threshold_us": 14249,
+      "trace_id": "17e68c1dd419a576"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 25998,
+      "threshold_us": 19256,
+      "trace_id": "17e68c1dd419a576"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 26621,
+      "threshold_us": 19256,
+      "trace_id": "358c5d0920a7c853"
+    },
+    {
+      "mr_id": "MR-LAT-ts-train-service",
+      "service": "ts-train-service",
+      "duration_us": 19960,
+      "threshold_us": 14249,
+      "trace_id": "2e65064508240fd2"
+    },
+    {
+      "mr_id": "MR-LAT-ts-train-service",
+      "service": "ts-train-service",
+      "duration_us": 37837,
+      "threshold_us": 14249,
+      "trace_id": "b79cc33dd971abe4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 37859,
+      "threshold_us": 19256,
+      "trace_id": "b79cc33dd971abe4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 43635,
+      "threshold_us": 19256,
+      "trace_id": "b79cc33dd971abe4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 22265,
+      "threshold_us": 19256,
+      "trace_id": "fc00690f27d2d064"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 22319,
+      "threshold_us": 19256,
+      "trace_id": "df41f194a316160d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-train-service",
+      "service": "ts-train-service",
+      "duration_us": 20158,
+      "threshold_us": 14249,
+      "trace_id": "0abb2ed7c2f72a72"
+    },
+    {
+      "mr_id": "MR-LAT-ts-train-service",
+      "service": "ts-train-service",
+      "duration_us": 14258,
+      "threshold_us": 14249,
+      "trace_id": "3d35d82f4ec06963"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 20198,
+      "threshold_us": 19256,
+      "trace_id": "ab896688cfed8776"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 21854,
+      "threshold_us": 19256,
+      "trace_id": "70c7ab1e2915128e"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 24461,
+      "threshold_us": 19256,
+      "trace_id": "df988ae61caaffaf"
+    },
+    {
+      "mr_id": "MR-LAT-ts-train-service",
+      "service": "ts-train-service",
+      "duration_us": 16284,
+      "threshold_us": 14249,
+      "trace_id": "d299466a9a789911"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 20756,
+      "threshold_us": 19256,
+      "trace_id": "ff2b2323b4cc638d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-train-service",
+      "service": "ts-train-service",
+      "duration_us": 17121,
+      "threshold_us": 14249,
+      "trace_id": "2e47cbc3df6aad3d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 31329,
+      "threshold_us": 19256,
+      "trace_id": "2e47cbc3df6aad3d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-train-service",
+      "service": "ts-train-service",
+      "duration_us": 413913,
+      "threshold_us": 14249,
+      "trace_id": "a38845ae377b596d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-train-service",
+      "service": "ts-train-service",
+      "duration_us": 14373,
+      "threshold_us": 14249,
+      "trace_id": "ef24935451865a34"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 28567,
+      "threshold_us": 19256,
+      "trace_id": "ef24935451865a34"
+    },
+    {
+      "mr_id": "MR-LAT-ts-train-service",
+      "service": "ts-train-service",
+      "duration_us": 20301,
+      "threshold_us": 14249,
+      "trace_id": "48ef615acfcc20c2"
+    },
+    {
+      "mr_id": "MR-LAT-ts-train-service",
+      "service": "ts-train-service",
+      "duration_us": 14610,
+      "threshold_us": 14249,
+      "trace_id": "933a22669dbad57a"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 23144,
+      "threshold_us": 19256,
+      "trace_id": "d65c606e1898fa87"
+    },
+    {
+      "mr_id": "MR-LAT-ts-train-service",
+      "service": "ts-train-service",
+      "duration_us": 23005,
+      "threshold_us": 14249,
+      "trace_id": "e5af16e4fd6f4fd9"
+    },
+    {
+      "mr_id": "MR-LAT-ts-train-service",
+      "service": "ts-train-service",
+      "duration_us": 16946,
+      "threshold_us": 14249,
+      "trace_id": "218462f22a53520c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 30935,
+      "threshold_us": 19256,
+      "trace_id": "218462f22a53520c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 21384,
+      "threshold_us": 19256,
+      "trace_id": "39a0b26056f76315"
+    },
+    {
+      "mr_id": "MR-LAT-ts-train-service",
+      "service": "ts-train-service",
+      "duration_us": 14380,
+      "threshold_us": 14249,
+      "trace_id": "672089a75a399483"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 19925,
+      "threshold_us": 19256,
+      "trace_id": "ef658c35bdddbbc5"
+    },
+    {
+      "mr_id": "MR-LAT-ts-train-service",
+      "service": "ts-train-service",
+      "duration_us": 17563,
+      "threshold_us": 14249,
+      "trace_id": "e5bb8ef3b52624bf"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 37480,
+      "threshold_us": 19256,
+      "trace_id": "e5bb8ef3b52624bf"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 19710,
+      "threshold_us": 19256,
+      "trace_id": "de0f38f0745a0b3b"
+    },
+    {
+      "mr_id": "MR-LAT-ts-verification-code-service",
+      "service": "ts-verification-code-service",
+      "duration_us": 388236,
+      "threshold_us": 16061,
+      "trace_id": "4ff109f3d900522e"
+    },
+    {
+      "mr_id": "MR-LAT-ts-verification-code-service",
+      "service": "ts-verification-code-service",
+      "duration_us": 22506,
+      "threshold_us": 16061,
+      "trace_id": "37ce60e69a0cbede"
+    },
+    {
+      "mr_id": "MR-LAT-ts-verification-code-service",
+      "service": "ts-verification-code-service",
+      "duration_us": 21285,
+      "threshold_us": 16061,
+      "trace_id": "38b9ad320eabe05e"
+    },
+    {
+      "mr_id": "MR-LAT-ts-verification-code-service",
+      "service": "ts-verification-code-service",
+      "duration_us": 17769,
+      "threshold_us": 16061,
+      "trace_id": "4bbb461ae0e35a1b"
+    },
+    {
+      "mr_id": "MR-LAT-ts-verification-code-service",
+      "service": "ts-verification-code-service",
+      "duration_us": 98602,
+      "threshold_us": 16061,
+      "trace_id": "fcee3ca08e29e583"
+    },
+    {
+      "mr_id": "MR-LAT-ts-auth-service",
+      "service": "ts-auth-service",
+      "duration_us": 679297,
+      "threshold_us": 565338,
+      "trace_id": "fcee3ca08e29e583"
+    },
+    {
+      "mr_id": "MR-LAT-ts-verification-code-service",
+      "service": "ts-verification-code-service",
+      "duration_us": 220177,
+      "threshold_us": 16061,
+      "trace_id": "146d44e87ea71dfd"
+    },
+    {
+      "mr_id": "MR-LAT-ts-verification-code-service",
+      "service": "ts-verification-code-service",
+      "duration_us": 16068,
+      "threshold_us": 16061,
+      "trace_id": "280c1618329374d0"
+    },
+    {
+      "mr_id": "MR-LAT-ts-verification-code-service",
+      "service": "ts-verification-code-service",
+      "duration_us": 76569,
+      "threshold_us": 16061,
+      "trace_id": "63aed7bdb1c2cd10"
+    },
+    {
+      "mr_id": "MR-LAT-ts-verification-code-service",
+      "service": "ts-verification-code-service",
+      "duration_us": 19255,
+      "threshold_us": 16061,
+      "trace_id": "d4d4b9621be5a1e8"
+    },
+    {
+      "mr_id": "MR-LAT-ts-assurance-service",
+      "service": "ts-assurance-service",
+      "duration_us": 11642,
+      "threshold_us": 10147,
+      "trace_id": "38ebe289708e0f3f"
+    },
+    {
+      "mr_id": "MR-LAT-ts-assurance-service",
+      "service": "ts-assurance-service",
+      "duration_us": 190699,
+      "threshold_us": 10147,
+      "trace_id": "2390be03f2628e34"
+    },
+    {
+      "mr_id": "MR-LAT-ts-assurance-service",
+      "service": "ts-assurance-service",
+      "duration_us": 16443,
+      "threshold_us": 10147,
+      "trace_id": "8787a89f16501246"
+    },
+    {
+      "mr_id": "MR-LAT-ts-assurance-service",
+      "service": "ts-assurance-service",
+      "duration_us": 26530,
+      "threshold_us": 10147,
+      "trace_id": "5682292a8e5ae299"
+    },
+    {
+      "mr_id": "MR-LAT-ts-assurance-service",
+      "service": "ts-assurance-service",
+      "duration_us": 13330,
+      "threshold_us": 10147,
+      "trace_id": "7a6cf9ebcd19b81a"
+    },
+    {
+      "mr_id": "MR-LAT-ts-assurance-service",
+      "service": "ts-assurance-service",
+      "duration_us": 19103,
+      "threshold_us": 10147,
+      "trace_id": "c83fea023bf27fcd"
+    },
+    {
+      "mr_id": "MR-LAT-ts-assurance-service",
+      "service": "ts-assurance-service",
+      "duration_us": 418976,
+      "threshold_us": 10147,
+      "trace_id": "041146741f1f469c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-assurance-service",
+      "service": "ts-assurance-service",
+      "duration_us": 10367,
+      "threshold_us": 10147,
+      "trace_id": "679af30b5db56f3b"
+    },
+    {
+      "mr_id": "MR-LAT-ts-assurance-service",
+      "service": "ts-assurance-service",
+      "duration_us": 10852,
+      "threshold_us": 10147,
+      "trace_id": "89b5c23ce30dcc2b"
+    },
+    {
+      "mr_id": "MR-LAT-ts-assurance-service",
+      "service": "ts-assurance-service",
+      "duration_us": 10629,
+      "threshold_us": 10147,
+      "trace_id": "9a6c6f656ff46daf"
+    },
+    {
+      "mr_id": "MR-LAT-ts-assurance-service",
+      "service": "ts-assurance-service",
+      "duration_us": 10151,
+      "threshold_us": 10147,
+      "trace_id": "fa01c8fdd4e6cd82"
+    },
+    {
+      "mr_id": "MR-LAT-ts-assurance-service",
+      "service": "ts-assurance-service",
+      "duration_us": 10442,
+      "threshold_us": 10147,
+      "trace_id": "ead69204801a7e86"
+    },
+    {
+      "mr_id": "MR-LAT-ts-preserve-service",
+      "service": "ts-preserve-service",
+      "duration_us": 545898,
+      "threshold_us": 49316,
+      "trace_id": "a243e9f1172d3cce"
+    },
+    {
+      "mr_id": "MR-LAT-ts-order-other-service",
+      "service": "ts-order-other-service",
+      "duration_us": 164910,
+      "threshold_us": 44610,
+      "trace_id": "9d8954b88f60e675"
+    },
+    {
+      "mr_id": "MR-LAT-ts-cancel-service",
+      "service": "ts-cancel-service",
+      "duration_us": 217285,
+      "threshold_us": 22436,
+      "trace_id": "ea039a0ba9dab23d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-travel2-service",
+      "service": "ts-travel2-service",
+      "duration_us": 152388,
+      "threshold_us": 54740,
+      "trace_id": "ac3cabaa1c79b43c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 30669,
+      "threshold_us": 19256,
+      "trace_id": "fdc5a57c4fe180a0"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 21537,
+      "threshold_us": 19256,
+      "trace_id": "b3e6b696c3d303f5"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 20794,
+      "threshold_us": 19256,
+      "trace_id": "1c33a14a7d2664ec"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 24240,
+      "threshold_us": 19256,
+      "trace_id": "c1dcd2844d7c03b7"
+    },
+    {
+      "mr_id": "MR-LAT-ts-price-service",
+      "service": "ts-price-service",
+      "duration_us": 24484,
+      "threshold_us": 18626,
+      "trace_id": "b7fdeeddb00fbf59"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 37827,
+      "threshold_us": 19256,
+      "trace_id": "b7fdeeddb00fbf59"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 24000,
+      "threshold_us": 19256,
+      "trace_id": "b7fdeeddb00fbf59"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 31542,
+      "threshold_us": 19256,
+      "trace_id": "abf910a439315259"
+    },
+    {
+      "mr_id": "MR-LAT-ts-price-service",
+      "service": "ts-price-service",
+      "duration_us": 373543,
+      "threshold_us": 18626,
+      "trace_id": "27d30dd9c48233de"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 21231,
+      "threshold_us": 19256,
+      "trace_id": "2f9d6047c80db44c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-price-service",
+      "service": "ts-price-service",
+      "duration_us": 18691,
+      "threshold_us": 18626,
+      "trace_id": "a6838c5569c92d92"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 27166,
+      "threshold_us": 19256,
+      "trace_id": "a6838c5569c92d92"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 20445,
+      "threshold_us": 19256,
+      "trace_id": "ec76ae077e2283a8"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 20513,
+      "threshold_us": 19256,
+      "trace_id": "66b3cf1f27a1d343"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 31201,
+      "threshold_us": 19256,
+      "trace_id": "03c31c437765d0c8"
+    },
+    {
+      "mr_id": "MR-LAT-ts-price-service",
+      "service": "ts-price-service",
+      "duration_us": 18628,
+      "threshold_us": 18626,
+      "trace_id": "03c31c437765d0c8"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 25802,
+      "threshold_us": 19256,
+      "trace_id": "af39d8e3ba379589"
+    },
+    {
+      "mr_id": "MR-LAT-ts-price-service",
+      "service": "ts-price-service",
+      "duration_us": 35443,
+      "threshold_us": 18626,
+      "trace_id": "f057c571d2418881"
+    },
+    {
+      "mr_id": "MR-LAT-ts-price-service",
+      "service": "ts-price-service",
+      "duration_us": 18926,
+      "threshold_us": 18626,
+      "trace_id": "9b8864b1ac0cd204"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 27535,
+      "threshold_us": 19256,
+      "trace_id": "9b8864b1ac0cd204"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 24478,
+      "threshold_us": 19256,
+      "trace_id": "e72abfcb882048b1"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 23315,
+      "threshold_us": 19256,
+      "trace_id": "3a89f63fb8e5c09d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 19706,
+      "threshold_us": 19256,
+      "trace_id": "25d3e88104d7da52"
+    },
+    {
+      "mr_id": "MR-LAT-ts-price-service",
+      "service": "ts-price-service",
+      "duration_us": 21680,
+      "threshold_us": 18626,
+      "trace_id": "d21974e4101a93a9"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 21373,
+      "threshold_us": 19256,
+      "trace_id": "d21974e4101a93a9"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 33459,
+      "threshold_us": 19256,
+      "trace_id": "d21974e4101a93a9"
+    },
+    {
+      "mr_id": "MR-LAT-ts-price-service",
+      "service": "ts-price-service",
+      "duration_us": 224064,
+      "threshold_us": 18626,
+      "trace_id": "77875cfb011a6e56"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 264107,
+      "threshold_us": 19256,
+      "trace_id": "77875cfb011a6e56"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 240234,
+      "threshold_us": 19256,
+      "trace_id": "77875cfb011a6e56"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 24664,
+      "threshold_us": 19256,
+      "trace_id": "a062b8bade7c018f"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 19808,
+      "threshold_us": 19256,
+      "trace_id": "057f33c39a4a523c"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 19569,
+      "threshold_us": 19256,
+      "trace_id": "f42941d0dada2dd1"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 21445,
+      "threshold_us": 19256,
+      "trace_id": "f42941d0dada2dd1"
+    },
+    {
+      "mr_id": "MR-LAT-ts-price-service",
+      "service": "ts-price-service",
+      "duration_us": 23561,
+      "threshold_us": 18626,
+      "trace_id": "11e2ac4acebe7075"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 24501,
+      "threshold_us": 19256,
+      "trace_id": "11e2ac4acebe7075"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 41992,
+      "threshold_us": 19256,
+      "trace_id": "11e2ac4acebe7075"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 20035,
+      "threshold_us": 19256,
+      "trace_id": "53dcaa4471e44fc5"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 30037,
+      "threshold_us": 19256,
+      "trace_id": "25de61e980dbb235"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 13544,
+      "threshold_us": 11686,
+      "trace_id": "25de61e980dbb235"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 26353,
+      "threshold_us": 11686,
+      "trace_id": "f15331877835dccf"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 544471,
+      "threshold_us": 19256,
+      "trace_id": "00ea73a58ffdde2d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 884990,
+      "threshold_us": 19256,
+      "trace_id": "00ea73a58ffdde2d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 298342,
+      "threshold_us": 11686,
+      "trace_id": "00ea73a58ffdde2d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 19708,
+      "threshold_us": 19256,
+      "trace_id": "ab5f4a00d8801c32"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 15249,
+      "threshold_us": 11686,
+      "trace_id": "fcd97013559724f3"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 14275,
+      "threshold_us": 11686,
+      "trace_id": "b9686ee72bd8df06"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 24495,
+      "threshold_us": 19256,
+      "trace_id": "b9686ee72bd8df06"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 13160,
+      "threshold_us": 11686,
+      "trace_id": "c5fbde6954aba84d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 24603,
+      "threshold_us": 19256,
+      "trace_id": "8d9a6ef12c520558"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 13412,
+      "threshold_us": 11686,
+      "trace_id": "8d9a6ef12c520558"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 37540,
+      "threshold_us": 19256,
+      "trace_id": "adaaba0f24e3aeca"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 18143,
+      "threshold_us": 11686,
+      "trace_id": "adaaba0f24e3aeca"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 52025,
+      "threshold_us": 11686,
+      "trace_id": "ee3019edc3cac423"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 26781,
+      "threshold_us": 19256,
+      "trace_id": "e2e1b0d98b7f3e4e"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 12797,
+      "threshold_us": 11686,
+      "trace_id": "e2e1b0d98b7f3e4e"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 15885,
+      "threshold_us": 11686,
+      "trace_id": "994b2990ff0f5cc3"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 13274,
+      "threshold_us": 11686,
+      "trace_id": "74c1bab0bc0f3dbd"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 14840,
+      "threshold_us": 11686,
+      "trace_id": "cb1672e9495866dd"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 13838,
+      "threshold_us": 11686,
+      "trace_id": "f6ebdebe60446df8"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 30034,
+      "threshold_us": 19256,
+      "trace_id": "f6ebdebe60446df8"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 20113,
+      "threshold_us": 19256,
+      "trace_id": "a4a0be40fa2f94e2"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 17287,
+      "threshold_us": 11686,
+      "trace_id": "a4a0be40fa2f94e2"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 13820,
+      "threshold_us": 11686,
+      "trace_id": "5511bcc9eaf52abb"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 18927,
+      "threshold_us": 11686,
+      "trace_id": "ff1bab271f482268"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 25206,
+      "threshold_us": 11686,
+      "trace_id": "5d85038bdef1412f"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 21999,
+      "threshold_us": 19256,
+      "trace_id": "a2a4c40464b7a6ad"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 11687,
+      "threshold_us": 11686,
+      "trace_id": "a2a4c40464b7a6ad"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 12606,
+      "threshold_us": 11686,
+      "trace_id": "b8d8023da27bd52a"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 367708,
+      "threshold_us": 11686,
+      "trace_id": "23780fe6492694ed"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 21188,
+      "threshold_us": 19256,
+      "trace_id": "09aebeae31553131"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 16553,
+      "threshold_us": 11686,
+      "trace_id": "09aebeae31553131"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 12011,
+      "threshold_us": 11686,
+      "trace_id": "c8fd969f5b9e2eeb"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 20005,
+      "threshold_us": 11686,
+      "trace_id": "3c882be96846f8df"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 19337,
+      "threshold_us": 19256,
+      "trace_id": "35144c09906c9aad"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 15872,
+      "threshold_us": 11686,
+      "trace_id": "c2b959c47e71fac5"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 11773,
+      "threshold_us": 11686,
+      "trace_id": "fbc3110cb13d2ede"
+    },
+    {
+      "mr_id": "MR-LAT-ts-contacts-service",
+      "service": "ts-contacts-service",
+      "duration_us": 31795,
+      "threshold_us": 11686,
+      "trace_id": "5a5f3448eba02123"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 481673,
+      "threshold_us": 19256,
+      "trace_id": "1597021fd1a5708e"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 19258,
+      "threshold_us": 19256,
+      "trace_id": "07cab46348d63b1f"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 30602,
+      "threshold_us": 19256,
+      "trace_id": "c08cff2733fb98e2"
+    },
+    {
+      "mr_id": "MR-LAT-ts-config-service",
+      "service": "ts-config-service",
+      "duration_us": 274796,
+      "threshold_us": 13089,
+      "trace_id": "a24b794561c5880d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 291332,
+      "threshold_us": 19256,
+      "trace_id": "a24b794561c5880d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 311131,
+      "threshold_us": 19256,
+      "trace_id": "a24b794561c5880d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 27804,
+      "threshold_us": 19256,
+      "trace_id": "4e50d6e5788389ce"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 22678,
+      "threshold_us": 19256,
+      "trace_id": "23d9f756c89b6f91"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 26298,
+      "threshold_us": 19256,
+      "trace_id": "304926066b229947"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 20079,
+      "threshold_us": 19256,
+      "trace_id": "e02287ffc56968d7"
+    },
+    {
+      "mr_id": "MR-LAT-ts-config-service",
+      "service": "ts-config-service",
+      "duration_us": 13137,
+      "threshold_us": 13089,
+      "trace_id": "8daef72e90e4ad2d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 29660,
+      "threshold_us": 19256,
+      "trace_id": "8daef72e90e4ad2d"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 22715,
+      "threshold_us": 19256,
+      "trace_id": "0fb539915ea5475f"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 29236,
+      "threshold_us": 19256,
+      "trace_id": "cbb3aaf2e7d13a81"
+    },
+    {
+      "mr_id": "MR-LAT-ts-config-service",
+      "service": "ts-config-service",
+      "duration_us": 13499,
+      "threshold_us": 13089,
+      "trace_id": "9f0df0f6aec5abff"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 23301,
+      "threshold_us": 19256,
+      "trace_id": "9f0df0f6aec5abff"
+    },
+    {
+      "mr_id": "MR-LAT-ts-config-service",
+      "service": "ts-config-service",
+      "duration_us": 14868,
+      "threshold_us": 13089,
+      "trace_id": "e363051963ec60aa"
+    },
+    {
+      "mr_id": "MR-LAT-ts-config-service",
+      "service": "ts-config-service",
+      "duration_us": 15862,
+      "threshold_us": 13089,
+      "trace_id": "82138e7c5c674606"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 28731,
+      "threshold_us": 19256,
+      "trace_id": "82138e7c5c674606"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 20962,
+      "threshold_us": 19256,
+      "trace_id": "9e7c228f7f408c64"
+    },
+    {
+      "mr_id": "MR-LAT-ts-admin-basic-info-service",
+      "service": "ts-admin-basic-info-service",
+      "duration_us": 24517,
+      "threshold_us": 19256,
+      "trace_id": "0cc153c37c1eeb94"
+    },
+    {
+      "mr_id": "MR-LAT-ts-config-service",
+      "service": "ts-config-service",
+      "duration_us": 19271,
+      "threshold_us": 13089,
+      "trace_id": "0cc153c37c1eeb94"
+    },
+    {
+      "mr_id": "MR-LAT-ts-consign-service",
+      "service": "ts-consign-service",
+      "duration_us": 13429,
+      "threshold_us": 13423,
+      "trace_id": "a910992f31f0dbaf"
+    },
+    {
+      "mr_id": "MR-LAT-ts-consign-service",
+      "service": "ts-consign-service",
+      "duration_us": 16231,
+      "threshold_us": 13423,
+      "trace_id": "c7b655a9342226f2"
+    },
+    {
+      "mr_id": "MR-LAT-ts-consign-service",
+      "service": "ts-consign-service",
+      "duration_us": 331481,
+      "threshold_us": 13423,
+      "trace_id": "8e85e814aec97a06"
+    },
+    {
+      "mr_id": "MR-LAT-ts-consign-service",
+      "service": "ts-consign-service",
+      "duration_us": 38844,
+      "threshold_us": 13423,
+      "trace_id": "d9f30e82beda1db8"
+    },
+    {
+      "mr_id": "MR-LAT-ts-consign-service",
+      "service": "ts-consign-service",
+      "duration_us": 20379,
+      "threshold_us": 13423,
+      "trace_id": "c52275857c94d490"
+    },
+    {
+      "mr_id": "MR-LAT-ts-consign-service",
+      "service": "ts-consign-service",
+      "duration_us": 17937,
+      "threshold_us": 13423,
+      "trace_id": "9d469c16ee000100"
+    },
+    {
+      "mr_id": "MR-LAT-ts-consign-service",
+      "service": "ts-consign-service",
+      "duration_us": 434757,
+      "threshold_us": 13423,
+      "trace_id": "7061a0f668927b13"
+    },
+    {
+      "mr_id": "MR-LAT-ts-consign-service",
+      "service": "ts-consign-service",
+      "duration_us": 14520,
+      "threshold_us": 13423,
+      "trace_id": "fa30f77e6aeb7442"
+    },
+    {
+      "mr_id": "MR-LAT-ts-consign-service",
+      "service": "ts-consign-service",
+      "duration_us": 26524,
+      "threshold_us": 13423,
+      "trace_id": "425a7c0ecd78b82a"
+    },
+    {
+      "mr_id": "MR-LAT-ts-security-service",
+      "service": "ts-security-service",
+      "duration_us": 412054,
+      "threshold_us": 29854,
+      "trace_id": "95db9e8e5ea67d08"
+    },
+    {
+      "mr_id": "MR-LAT-ts-config-service",
+      "service": "ts-config-service",
+      "duration_us": 14824,
+      "threshold_us": 13089,
+      "trace_id": "ffc83f65d88d0e5b"
+    },
+    {
+      "mr_id": "MR-LAT-ts-config-service",
+      "service": "ts-config-service",
+      "duration_us": 15722,
+      "threshold_us": 13089,
+      "trace_id": "09132736aded10ce"
+    },
+    {
+      "mr_id": "MR-LAT-ts-config-service",
+      "service": "ts-config-service",
+      "duration_us": 14026,
+      "threshold_us": 13089,
+      "trace_id": "7f10e062d98c5ce9"
+    },
+    {
+      "mr_id": "MR-LAT-ts-config-service",
+      "service": "ts-config-service",
+      "duration_us": 19370,
+      "threshold_us": 13089,
+      "trace_id": "0814e88eb76ec6d7"
+    },
+    {
+      "mr_id": "MR-LAT-ts-config-service",
+      "service": "ts-config-service",
+      "duration_us": 44958,
+      "threshold_us": 13089,
+      "trace_id": "328920abb7929814"
+    },
+    {
+      "mr_id": "MR-LAT-ts-config-service",
+      "service": "ts-config-service",
+      "duration_us": 17932,
+      "threshold_us": 13089,
+      "trace_id": "9db91f1b8f7a9128"
+    },
+    {
+      "mr_id": "MR-LAT-ts-config-service",
+      "service": "ts-config-service",
+      "duration_us": 325621,
+      "threshold_us": 13089,
+      "trace_id": "03136c564e357cef"
+    },
+    {
+      "mr_id": "MR-LAT-ts-config-service",
+      "service": "ts-config-service",
+      "duration_us": 13569,
+      "threshold_us": 13089,
+      "trace_id": "98e0f8b44fb30642"
+    },
+    {
+      "mr_id": "MR-LAT-ts-config-service",
+      "service": "ts-config-service",
+      "duration_us": 13092,
+      "threshold_us": 13089,
+      "trace_id": "01372a37c2265e0b"
+    },
+    {
+      "mr_id": "MR-LAT-ts-config-service",
+      "service": "ts-config-service",
+      "duration_us": 21752,
+      "threshold_us": 13089,
+      "trace_id": "20849c1ee4af221f"
+    },
+    {
+      "mr_id": "MR-LAT-ts-config-service",
+      "service": "ts-config-service",
+      "duration_us": 17465,
+      "threshold_us": 13089,
+      "trace_id": "9e842aa0158e4f9e"
+    },
+    {
+      "mr_id": "MR-LAT-ts-food-service",
+      "service": "ts-food-service",
+      "duration_us": 21875,
+      "threshold_us": 16898,
+      "trace_id": "0624f6539bf2d65e"
+    },
+    {
+      "mr_id": "MR-LAT-ts-food-service",
+      "service": "ts-food-service",
+      "duration_us": 25003,
+      "threshold_us": 16898,
+      "trace_id": "0624f6539bf2d65e"
+    },
+    {
+      "mr_id": "MR-LAT-ts-food-service",
+      "service": "ts-food-service",
+      "duration_us": 20498,
+      "threshold_us": 16898,
+      "trace_id": "51e42e2ac1862f49"
+    },
+    {
+      "mr_id": "MR-LAT-ts-food-service",
+      "service": "ts-food-service",
+      "duration_us": 23714,
+      "threshold_us": 16898,
+      "trace_id": "2015754b4db05355"
+    },
+    {
+      "mr_id": "MR-LAT-ts-food-service",
+      "service": "ts-food-service",
+      "duration_us": 18215,
+      "threshold_us": 16898,
+      "trace_id": "dc36bdd80b738995"
+    },
+    {
+      "mr_id": "MR-LAT-ts-food-service",
+      "service": "ts-food-service",
+      "duration_us": 418094,
+      "threshold_us": 16898,
+      "trace_id": "1e3b3e8b9a8bd874"
+    },
+    {
+      "mr_id": "MR-LAT-ts-food-service",
+      "service": "ts-food-service",
+      "duration_us": 148987,
+      "threshold_us": 16898,
+      "trace_id": "1e3b3e8b9a8bd874"
+    },
+    {
+      "mr_id": "MR-LAT-ts-food-service",
+      "service": "ts-food-service",
+      "duration_us": 20378,
+      "threshold_us": 16898,
+      "trace_id": "68dba2358bb400f6"
+    },
+    {
+      "mr_id": "MR-LAT-ts-food-service",
+      "service": "ts-food-service",
+      "duration_us": 35073,
+      "threshold_us": 16898,
+      "trace_id": "013e1d6563b96b6b"
+    },
+    {
+      "mr_id": "MR-LAT-ts-food-service",
+      "service": "ts-food-service",
+      "duration_us": 39960,
+      "threshold_us": 16898,
+      "trace_id": "9e4f840c44b6d874"
+    },
+    {
+      "mr_id": "MR-LAT-ts-food-service",
+      "service": "ts-food-service",
+      "duration_us": 42909,
+      "threshold_us": 16898,
+      "trace_id": "9e4f840c44b6d874"
+    },
+    {
+      "mr_id": "MR-LAT-ts-food-service",
+      "service": "ts-food-service",
+      "duration_us": 23612,
+      "threshold_us": 16898,
+      "trace_id": "e16ea77deb2abc56"
+    },
+    {
+      "mr_id": "MR-LAT-ts-food-service",
+      "service": "ts-food-service",
+      "duration_us": 18810,
+      "threshold_us": 16898,
+      "trace_id": "d496de81db1744f9"
+    },
+    {
+      "mr_id": "MR-LAT-ts-food-service",
+      "service": "ts-food-service",
+      "duration_us": 16899,
+      "threshold_us": 16898,
+      "trace_id": "b8f2da91600a02b4"
+    },
+    {
+      "mr_id": "MR-LAT-ts-food-service",
+      "service": "ts-food-service",
+      "duration_us": 384396,
+      "threshold_us": 16898,
+      "trace_id": "c16da1b1b63ae248"
+    },
+    {
+      "mr_id": "MR-LAT-ts-food-service",
+      "service": "ts-food-service",
+      "duration_us": 18268,
+      "threshold_us": 16898,
+      "trace_id": "f972a7e2d60b11c2"
+    },
+    {
+      "mr_id": "MR-LAT-ts-food-service",
+      "service": "ts-food-service",
+      "duration_us": 17394,
+      "threshold_us": 16898,
+      "trace_id": "b1952a299c497c73"
+    },
+    {
+      "mr_id": "MR-LAT-ts-food-service",
+      "service": "ts-food-service",
+      "duration_us": 573679,
+      "threshold_us": 16898,
+      "trace_id": "f53211d694fcf935"
+    },
+    {
+      "mr_id": "MR-LAT-ts-food-service",
+      "service": "ts-food-service",
+      "duration_us": 568406,
+      "threshold_us": 16898,
+      "trace_id": "f53211d694fcf935"
+    },
+    {
+      "mr_id": "MR-LAT-ts-food-service",
+      "service": "ts-food-service",
+      "duration_us": 108425,
+      "threshold_us": 16898,
+      "trace_id": "7f50003e3a66cdb9"
+    },
+    {
+      "mr_id": "MR-LAT-ts-food-service",
+      "service": "ts-food-service",
+      "duration_us": 112467,
+      "threshold_us": 16898,
+      "trace_id": "7f50003e3a66cdb9"
+    },
+    {
+      "mr_id": "MR-LAT-ts-food-service",
+      "service": "ts-food-service",
+      "duration_us": 21885,
+      "threshold_us": 16898,
+      "trace_id": "0daa4e551aa8ef8f"
+    },
+    {
+      "mr_id": "MR-LAT-ts-food-service",
+      "service": "ts-food-service",
+      "duration_us": 28843,
+      "threshold_us": 16898,
+      "trace_id": "25a86a76fb65b3b2"
+    },
+    {
+      "mr_id": "MR-LAT-ts-food-service",
+      "service": "ts-food-service",
+      "duration_us": 511770,
+      "threshold_us": 16898,
+      "trace_id": "ba7a0a21c3357633"
+    },
+    {
+      "mr_id": "MR-LAT-ts-food-service",
+      "service": "ts-food-service",
+      "duration_us": 506796,
+      "threshold_us": 16898,
+      "trace_id": "ba7a0a21c3357633"
+    },
+    {
+      "mr_id": "MR-LAT-ts-inside-payment-service",
+      "service": "ts-inside-payment-service",
+      "duration_us": 31282,
+      "threshold_us": 21987,
+      "trace_id": "4ff1468e4d50537f"
+    },
+    {
+      "mr_id": "MR-LAT-ts-inside-payment-service",
+      "service": "ts-inside-payment-service",
+      "duration_us": 24284,
+      "threshold_us": 21987,
+      "trace_id": "86cc694056026631"
+    },
+    {
+      "mr_id": "MR-LAT-ts-inside-payment-service",
+      "service": "ts-inside-payment-service",
+      "duration_us": 29403,
+      "threshold_us": 21987,
+      "trace_id": "1364ee2e14876280"
+    },
+    {
+      "mr_id": "MR-LAT-ts-inside-payment-service",
+      "service": "ts-inside-payment-service",
+      "duration_us": 32810,
+      "threshold_us": 21987,
+      "trace_id": "d3547463f2865f81"
+    },
+    {
+      "mr_id": "MR-LAT-ts-inside-payment-service",
+      "service": "ts-inside-payment-service",
+      "duration_us": 273949,
+      "threshold_us": 21987,
+      "trace_id": "3e57d362612cecea"
+    },
+    {
+      "mr_id": "MR-LAT-ts-inside-payment-service",
+      "service": "ts-inside-payment-service",
+      "duration_us": 22054,
+      "threshold_us": 21987,
+      "trace_id": "7de4bf1509f1bfd1"
+    },
+    {
+      "mr_id": "MR-LAT-ts-inside-payment-service",
+      "service": "ts-inside-payment-service",
+      "duration_us": 25862,
+      "threshold_us": 21987,
+      "trace_id": "b7ddab6f1276a149"
+    }
+  ],
+  "by_service": {
+    "ts-order-service": {
+      "pass": 5902,
+      "fail": 60
+    },
+    "ts-station-service": {
+      "pass": 6088,
+      "fail": 62
+    },
+    "ts-security-service": {
+      "pass": 4753,
+      "fail": 49
+    },
+    "ts-order-other-service": {
+      "pass": 3411,
+      "fail": 35
+    },
+    "ts-cancel-service": {
+      "pass": 1597,
+      "fail": 17
+    },
+    "ts-contacts-service": {
+      "pass": 3169,
+      "fail": 33
+    },
+    "ts-preserve-service": {
+      "pass": 3169,
+      "fail": 33
+    },
+    "ts-user-service": {
+      "pass": 9,
+      "fail": 1
+    },
+    "ts-inside-payment-service": {
+      "pass": 795,
+      "fail": 9
+    },
+    "ts-travel2-service": {
+      "pass": 3661,
+      "fail": 37
+    },
+    "ts-basic-service": {
+      "pass": 3659,
+      "fail": 37
+    },
+    "ts-ticketinfo-service": {
+      "pass": 3659,
+      "fail": 37
+    },
+    "ts-admin-basic-info-service": {
+      "pass": 7921,
+      "fail": 81
+    },
+    "ts-train-service": {
+      "pass": 1585,
+      "fail": 17
+    },
+    "ts-verification-code-service": {
+      "pass": 807,
+      "fail": 9
+    },
+    "ts-auth-service": {
+      "pass": 23,
+      "fail": 1
+    },
+    "ts-assurance-service": {
+      "pass": 1090,
+      "fail": 12
+    },
+    "ts-price-service": {
+      "pass": 793,
+      "fail": 9
+    },
+    "ts-config-service": {
+      "pass": 1585,
+      "fail": 17
+    },
+    "ts-consign-service": {
+      "pass": 793,
+      "fail": 9
+    },
+    "ts-food-service": {
+      "pass": 2377,
+      "fail": 25
+    }
+  }
+}

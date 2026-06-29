@@ -1,37 +1,19 @@
 """
-trace_mutator.py
-================
-BLOC      : Phase 4A — Mutation de traces
-ROLE      : Applique des opérateurs de mutation sur les traces Jaeger
-            produites par T_sel pour évaluer la qualité de la sélection.
-
-PRINCIPE :
-    En test de mutation classique, on modifie le code source.
-    En boîte noire, on mute les traces Jaeger à la place.
-
-    Pour chaque chemin t ∈ T_sel :
-      1. Trace nominale = invocation_chain de t
-      2. Appliquer les opérateurs de mutation
-      3. Produire des mutants (traces altérées)
-
-    Chaque mutant simule un comportement anormal du système :
-      - span_deletion    : un service ne répond plus (span supprimé)
-      - error_injection  : un service retourne une erreur
-      - latency_injection: un service devient lent
-
-OPÉRATEURS :
-    span_deletion    : supprimer un span de la trace
-    error_injection  : ajouter error=true + http_status=500 sur un span
-    latency_injection: multiplier la durée d'un span par un facteur élevé
-
-RÉSULTAT :
-    Pour N chemins dans T_sel et K opérateurs :
-    → N × K mutants maximum (limité par max_mutants_per_path)
+trace_mutator.py — Phase 4A (Option A : mutation des VRAIES traces)
+Pour chaque chemin t de T_sel, on retrouve la trace Jaeger reelle
+(via test_id == traceID) et on mute ses spans reels :
+  - latency_injection : duration <- latency_ms*1000 (us)
+  - error_injection   : error <- True sur un span sain
+  - span_deletion     : retrait d'un span d'un service donne
+Chaque mutant porte le service cible, la valeur mutee et le nb de spans
+du service apres mutation, pour une verification PAR SEUIL (pas par type).
 """
 
 import json
 import logging
 import copy
+import random
+from collections import defaultdict
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -39,173 +21,116 @@ logger = logging.getLogger(__name__)
 
 
 class TraceMutator:
-    """
-    Génère des mutants de traces depuis T_sel.
-    """
 
     OPERATORS = ["span_deletion", "error_injection", "latency_injection"]
 
-    def __init__(
-        self,
-        operators: Optional[List[str]] = None,
-        latency_ms: int = 5000,
-        max_mutants_per_path: int = 3,
-    ):
-        self.operators           = operators or self.OPERATORS
-        self.latency_ms          = latency_ms
+    def __init__(self, operators: Optional[List[str]] = None,
+                 latency_ms: int = 5000, max_mutants_per_path: int = 3,
+                 traces_path: str = None, seed: int = 42):
+        self.operators = operators or self.OPERATORS
+        self.latency_us = latency_ms * 1000
         self.max_mutants_per_path = max_mutants_per_path
+        self.traces_path = traces_path
+        random.seed(seed)
+        self._trace_index = None
 
-    def _extract_services(self, tp: Dict) -> List[str]:
-        """Extrait les services depuis un chemin."""
-        services = tp.get("services", [])
-        if services:
-            return services
-        chain = tp.get("invocation_chain", [])
-        if chain:
-            seen = []
-            for pair in chain:
-                for svc in pair:
-                    if svc not in seen:
-                        seen.append(svc)
-            return seen
-        return []
+    def _load_trace_index(self) -> Dict[str, dict]:
+        """Indexe les traces brutes par traceID, avec service_name par span."""
+        if self._trace_index is not None:
+            return self._trace_index
+        if not self.traces_path:
+            raise ValueError("traces_path non defini pour TraceMutator")
+        with open(self.traces_path, encoding="utf-8") as f:
+            raw = json.load(f)
+        traces = raw.get("data", raw) if isinstance(raw, dict) else raw
+        index = {}
+        for tr in traces:
+            procs = {p: v.get("serviceName", "unknown")
+                     for p, v in tr.get("processes", {}).items()}
+            spans = []
+            for s in tr.get("spans", []):
+                svc = procs.get(s.get("processID", ""), "unknown")
+                is_err = any(t.get("key") == "error" and t.get("value") is True
+                             for t in s.get("tags", []))
+                spans.append({
+                    "span_id": s.get("spanID", ""),
+                    "service": svc,
+                    "duration": int(s.get("duration", 0)),
+                    "error": is_err,
+                })
+            index[tr.get("traceID")] = spans
+        self._trace_index = index
+        logger.info("TraceMutator — %d traces indexees", len(index))
+        return index
 
-    def _build_spans(self, services: List[str], trace_id: str) -> List[Dict]:
-        """
-        Construit une liste de spans depuis la séquence de services.
-        Chaque span représente un appel inter-service.
-        """
-        spans = []
-        for i, svc in enumerate(services):
-            spans.append({
-                "span_id":   f"span_{i:03d}",
-                "service":   svc,
-                "duration":  50 + i * 10,
-                "status":    "OK",
-                "error":     False,
-                "http_status": 200,
-                "parent_span_id": f"span_{i-1:03d}" if i > 0 else None,
-            })
-        return spans
-
-    def _apply_span_deletion(
-        self, spans: List[Dict], target_idx: int
-    ) -> List[Dict]:
-        """Supprime le span à target_idx."""
-        mutated = copy.deepcopy(spans)
-        if 0 < target_idx < len(mutated):
-            deleted = mutated.pop(target_idx)
-            logger.debug("span_deletion → supprimé : %s", deleted["service"])
-        return mutated
-
-    def _apply_error_injection(
-        self, spans: List[Dict], target_idx: int
-    ) -> List[Dict]:
-        """Injecte error=true sur le span à target_idx."""
-        mutated = copy.deepcopy(spans)
-        if target_idx < len(mutated):
-            mutated[target_idx]["error"]       = True
-            mutated[target_idx]["status"]      = "ERROR"
-            mutated[target_idx]["http_status"] = 500
-        return mutated
-
-    def _apply_latency_injection(
-        self, spans: List[Dict], target_idx: int
-    ) -> List[Dict]:
-        """Augmente la durée du span à target_idx."""
-        mutated = copy.deepcopy(spans)
-        if target_idx < len(mutated):
-            original = mutated[target_idx]["duration"]
-            mutated[target_idx]["duration"] = self.latency_ms
-            logger.debug(
-                "latency_injection → %s : %dms → %dms",
-                mutated[target_idx]["service"], original, self.latency_ms,
-            )
-        return mutated
+    def _svc_span_count(self, spans, svc):
+        return sum(1 for s in spans if s["service"] == svc)
 
     def generate_mutants(self, t_sel: List[Dict]) -> List[Dict]:
-        """
-        Génère tous les mutants depuis T_sel.
-
-        Pour chaque chemin t ∈ T_sel :
-          - Construit les spans nominaux
-          - Applique chaque opérateur sur un span cible
-          - Produit max_mutants_per_path mutants par chemin
-
-        Returns
-        -------
-        Liste de mutants, chaque mutant contenant :
-          {
-            "mutant_id":   str,
-            "test_id":     str,
-            "operator":    str,
-            "target_span": str,
-            "services":    List[str],
-            "spans_nominal": List[Dict],
-            "spans_mutated": List[Dict],
-            "killed":      bool   (initialisé à False, mis à jour par le vérificateur)
-          }
-        """
+        index = self._load_trace_index()
         mutants = []
-        n_paths = len(t_sel)
+        skipped = 0
 
-        for path_idx, tp in enumerate(t_sel):
-            test_id  = tp.get("test_id", tp.get("trace_id", f"path_{path_idx:04d}"))
-            services = self._extract_services(tp)
-
-            if len(services) < 2:
+        for tp in t_sel:
+            tid = tp.get("test_id", tp.get("trace_id"))
+            spans = index.get(tid)
+            if not spans or len(spans) < 1:
+                skipped += 1
                 continue
-
-            spans_nominal = self._build_spans(services, test_id)
-
-            # Choisir le span cible : éviter le premier (racine)
-            # et préférer les spans intermédiaires
-            target_candidates = list(range(1, len(spans_nominal)))
 
             count = 0
             for operator in self.operators:
                 if count >= self.max_mutants_per_path:
                     break
 
-                # Cible = span au milieu de la chaîne
-                target_idx = target_candidates[len(target_candidates) // 2]
-                target_svc = spans_nominal[target_idx]["service"]
+                if operator == "latency_injection":
+                    # cible : un span au hasard
+                    s = random.choice(spans)
+                    svc = s["service"]
+                    mutants.append({
+                        "mutant_id": f"{tid}__lat__{svc}",
+                        "test_id": tid, "operator": operator,
+                        "target_service": svc,
+                        "mutated_duration_us": self.latency_us,
+                        "killed": False,
+                    })
+                    count += 1
 
-                if operator == "span_deletion":
-                    spans_mutated = self._apply_span_deletion(
-                        spans_nominal, target_idx
-                    )
                 elif operator == "error_injection":
-                    spans_mutated = self._apply_error_injection(
-                        spans_nominal, target_idx
-                    )
-                elif operator == "latency_injection":
-                    spans_mutated = self._apply_latency_injection(
-                        spans_nominal, target_idx
-                    )
-                else:
-                    continue
+                    # cible : un span SAIN (sinon l'injection ne change rien)
+                    sains = [s for s in spans if not s["error"]]
+                    if not sains:
+                        continue
+                    s = random.choice(sains)
+                    svc = s["service"]
+                    tot = self._svc_span_count(spans, svc)
+                    err = sum(1 for x in spans if x["service"] == svc and x["error"])
+                    taux_mute = (err + 1) / tot if tot else 1.0
+                    mutants.append({
+                        "mutant_id": f"{tid}__err__{svc}",
+                        "test_id": tid, "operator": operator,
+                        "target_service": svc,
+                        "mutated_error_rate": round(taux_mute, 4),
+                        "killed": False,
+                    })
+                    count += 1
 
-                mutant_id = f"{test_id}__{operator}__{target_svc}"
-                mutants.append({
-                    "mutant_id":      mutant_id,
-                    "test_id":        test_id,
-                    "operator":       operator,
-                    "target_service": target_svc,
-                    "target_idx":     target_idx,
-                    "services":       services,
-                    "spans_nominal":  spans_nominal,
-                    "spans_mutated":  spans_mutated,
-                    "killed":         False,
-                })
-                count += 1
+                elif operator == "span_deletion":
+                    s = random.choice(spans)
+                    svc = s["service"]
+                    apres = self._svc_span_count(spans, svc) - 1
+                    mutants.append({
+                        "mutant_id": f"{tid}__del__{svc}",
+                        "test_id": tid, "operator": operator,
+                        "target_service": svc,
+                        "spans_after_deletion": apres,
+                        "killed": False,
+                    })
+                    count += 1
 
-        logger.info(
-            "TraceMutator — %d chemins → %d mutants générés "
-            "(%d opérateurs × max %d/chemin)",
-            n_paths, len(mutants),
-            len(self.operators), self.max_mutants_per_path,
-        )
+        logger.info("TraceMutator — %d chemins T_sel → %d mutants reels "
+                    "(%d chemins sans trace, ignores)",
+                    len(t_sel), len(mutants), skipped)
         return mutants
 
     def save(self, mutants: List[Dict], output_path: str) -> None:
@@ -213,4 +138,4 @@ class TraceMutator:
         path.parent.mkdir(parents=True, exist_ok=True)
         with open(path, "w", encoding="utf-8") as f:
             json.dump(mutants, f, indent=2, ensure_ascii=False)
-        logger.info("Mutants sauvegardés → %s (%d)", path, len(mutants))
+        logger.info("Mutants sauvegardes → %s (%d)", path, len(mutants))
