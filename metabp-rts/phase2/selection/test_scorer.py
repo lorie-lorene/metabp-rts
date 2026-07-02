@@ -85,7 +85,7 @@ class TestScorer:
             tier       = 1 if in_s_echo else 2
             test_scores.append({
                 "test_id":    tp.get("test_id", tp.get("trace_id", tp.get("path_id", "?"))),
-                "invocation_chain": tp.get("invocation_chain", []),   # ← AJOUTER CETTE LIGNE
+                "invocation_chain": tp.get("invocation_chain", []),
                 "services":   services,
                 "score":      round(score_max, 6),
                 "score_avg":  score_avg,

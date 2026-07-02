@@ -222,8 +222,8 @@ def run_pipeline(config: dict, services_map: dict, base_dir: Path) -> None:
     logger.info("  G        : %s noeuds, %s arcs", summary["nodes"], summary["edges"])
     logger.info("  T        : %d cas de test", len(test_suite))
     logger.info("  Scores   : %d services (%d Écho-Dormants)", len(scores), len(S_dormant))
-    logger.info("  MR       : %d relations (%d OpenAPI + %d fallback)",
-                len(all_mr), len(mr_openapi), len(mr_fallback))
+    logger.info("  MR       : %d relations (%d OpenAPI + %d fallback + %d data-driven)",
+                len(all_mr) + len(_added), len(mr_openapi), len(mr_fallback), len(_added))
     logger.info("=" * 55)
 
     # ── Visualisation automatique du graphe G ─────────────

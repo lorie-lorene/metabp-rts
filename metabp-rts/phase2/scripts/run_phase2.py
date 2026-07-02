@@ -326,8 +326,8 @@ def main():
     logger.info("  ΔS                    : %s", delta_s)
     logger.info("  Mode BP utilisé       : %s", bp_mode)
     logger.info("  Itérations BP         : %d (convergé=%s)", n_iter, converged)
-    logger.info("  Services Écho-Impact  : %d (τ=%.2f)",
-                sc["n_echo_impact"], bp_cfg.get("tau_impact", 0.30))
+    logger.info("  Services Écho-Impact  : %d (τ=%.4f, AutoThreshold)",
+                sc["n_echo_impact"], sc["tau_impact"])
     logger.info("  Résonance confirmée   : %d/%d",
                 sc["n_resonant"], sc["n_echo_impact"])
     logger.info("  Tier 1 (S_echo)       : %d tests (%s)",

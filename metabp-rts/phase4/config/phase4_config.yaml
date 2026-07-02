@@ -26,8 +26,7 @@ metamorphic:
   sut_url: http://localhost:8080
   timeout: 10
   mr_types:
-  - Permutation
-  - Idempotence
-  - Monotonie
-  - Equivalence
+  - Latence
+  - Erreur
+  - Completude
   mode: offline
