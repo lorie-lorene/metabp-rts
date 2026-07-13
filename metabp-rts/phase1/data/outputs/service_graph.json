@@ -1,0 +1,180 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "id": "njila-proxy-service"
+    },
+    {
+      "id": "njila-auth-service"
+    },
+    {
+      "id": "njila-user-service"
+    },
+    {
+      "id": "njila-registry-service"
+    },
+    {
+      "id": "njila-fleet-service"
+    },
+    {
+      "id": "njila-booking-service"
+    },
+    {
+      "id": "njila-subscribe-service"
+    },
+    {
+      "id": "njila-payement-service"
+    },
+    {
+      "id": "njila-conf-service"
+    }
+  ],
+  "links": [
+    {
+      "w_ij": 0.080574,
+      "rate_ij": 0.160877,
+      "lat_norm": 0.000452,
+      "err_ij": 0.0,
+      "freq": 829,
+      "source": "njila-proxy-service",
+      "target": "njila-auth-service"
+    },
+    {
+      "w_ij": 0.207176,
+      "rate_ij": 0.013584,
+      "lat_norm": 0.001278,
+      "err_ij": 1.0,
+      "freq": 70,
+      "source": "njila-proxy-service",
+      "target": "njila-user-service"
+    },
+    {
+      "w_ij": 0.341287,
+      "rate_ij": 0.682515,
+      "lat_norm": 9.7e-05,
+      "err_ij": 0.0,
+      "freq": 3517,
+      "source": "njila-proxy-service",
+      "target": "njila-registry-service"
+    },
+    {
+      "w_ij": 0.131867,
+      "rate_ij": 0.081506,
+      "lat_norm": 0.002127,
+      "err_ij": 0.452381,
+      "freq": 420,
+      "source": "njila-proxy-service",
+      "target": "njila-fleet-service"
+    },
+    {
+      "w_ij": 0.010784,
+      "rate_ij": 0.021347,
+      "lat_norm": 0.000369,
+      "err_ij": 0.0,
+      "freq": 110,
+      "source": "njila-proxy-service",
+      "target": "njila-booking-service"
+    },
+    {
+      "w_ij": 0.014713,
+      "rate_ij": 0.029109,
+      "lat_norm": 0.000527,
+      "err_ij": 0.0,
+      "freq": 150,
+      "source": "njila-proxy-service",
+      "target": "njila-subscribe-service"
+    },
+    {
+      "w_ij": 0.005726,
+      "rate_ij": 0.010673,
+      "lat_norm": 0.001299,
+      "err_ij": 0.0,
+      "freq": 55,
+      "source": "njila-proxy-service",
+      "target": "njila-payement-service"
+    },
+    {
+      "w_ij": 0.131943,
+      "rate_ij": 0.000388,
+      "lat_norm": 0.439162,
+      "err_ij": 0.0,
+      "freq": 2,
+      "source": "njila-proxy-service",
+      "target": "njila-conf-service"
+    },
+    {
+      "w_ij": 0.499524,
+      "rate_ij": 0.999007,
+      "lat_norm": 6.8e-05,
+      "err_ij": 0.0,
+      "freq": 1006,
+      "source": "njila-user-service",
+      "target": "njila-registry-service"
+    },
+    {
+      "w_ij": 0.274446,
+      "rate_ij": 0.000993,
+      "lat_norm": 0.913165,
+      "err_ij": 0.0,
+      "freq": 1,
+      "source": "njila-user-service",
+      "target": "njila-conf-service"
+    },
+    {
+      "w_ij": 0.8,
+      "rate_ij": 1.0,
+      "lat_norm": 1.0,
+      "err_ij": 0.0,
+      "freq": 1,
+      "source": "njila-registry-service",
+      "target": "njila-conf-service"
+    },
+    {
+      "w_ij": 0.500053,
+      "rate_ij": 1.0,
+      "lat_norm": 0.000177,
+      "err_ij": 0.0,
+      "freq": 248,
+      "source": "njila-fleet-service",
+      "target": "njila-auth-service"
+    },
+    {
+      "w_ij": 0.499524,
+      "rate_ij": 0.999007,
+      "lat_norm": 7e-05,
+      "err_ij": 0.0,
+      "freq": 1006,
+      "source": "njila-booking-service",
+      "target": "njila-registry-service"
+    },
+    {
+      "w_ij": 0.230148,
+      "rate_ij": 0.000993,
+      "lat_norm": 0.765506,
+      "err_ij": 0.0,
+      "freq": 1,
+      "source": "njila-booking-service",
+      "target": "njila-conf-service"
+    },
+    {
+      "w_ij": 0.499526,
+      "rate_ij": 0.999007,
+      "lat_norm": 7.5e-05,
+      "err_ij": 0.0,
+      "freq": 1006,
+      "source": "njila-payement-service",
+      "target": "njila-registry-service"
+    },
+    {
+      "w_ij": 0.217246,
+      "rate_ij": 0.000993,
+      "lat_norm": 0.722497,
+      "err_ij": 0.0,
+      "freq": 1,
+      "source": "njila-payement-service",
+      "target": "njila-conf-service"
+    }
+  ]
+}

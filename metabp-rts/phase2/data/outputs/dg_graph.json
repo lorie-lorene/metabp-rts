@@ -1,0 +1,178 @@
+{
+  "nodes": [
+    "njila-proxy-service",
+    "njila-auth-service",
+    "njila-user-service",
+    "njila-registry-service",
+    "njila-fleet-service",
+    "njila-booking-service",
+    "njila-subscribe-service",
+    "njila-payement-service",
+    "njila-conf-service"
+  ],
+  "edges": [
+    {
+      "source": "njila-auth-service",
+      "target": "njila-proxy-service",
+      "w_ij": 0.080574
+    },
+    {
+      "source": "njila-user-service",
+      "target": "njila-proxy-service",
+      "w_ij": 0.207176
+    },
+    {
+      "source": "njila-registry-service",
+      "target": "njila-proxy-service",
+      "w_ij": 0.341287
+    },
+    {
+      "source": "njila-fleet-service",
+      "target": "njila-proxy-service",
+      "w_ij": 0.131867
+    },
+    {
+      "source": "njila-booking-service",
+      "target": "njila-proxy-service",
+      "w_ij": 0.010784
+    },
+    {
+      "source": "njila-subscribe-service",
+      "target": "njila-proxy-service",
+      "w_ij": 0.014713
+    },
+    {
+      "source": "njila-payement-service",
+      "target": "njila-proxy-service",
+      "w_ij": 0.005726
+    },
+    {
+      "source": "njila-conf-service",
+      "target": "njila-proxy-service",
+      "w_ij": 0.131943
+    },
+    {
+      "source": "njila-registry-service",
+      "target": "njila-user-service",
+      "w_ij": 0.499524
+    },
+    {
+      "source": "njila-conf-service",
+      "target": "njila-user-service",
+      "w_ij": 0.274446
+    },
+    {
+      "source": "njila-conf-service",
+      "target": "njila-registry-service",
+      "w_ij": 0.8
+    },
+    {
+      "source": "njila-auth-service",
+      "target": "njila-fleet-service",
+      "w_ij": 0.500053
+    },
+    {
+      "source": "njila-registry-service",
+      "target": "njila-booking-service",
+      "w_ij": 0.499524
+    },
+    {
+      "source": "njila-conf-service",
+      "target": "njila-booking-service",
+      "w_ij": 0.230148
+    },
+    {
+      "source": "njila-registry-service",
+      "target": "njila-payement-service",
+      "w_ij": 0.499526
+    },
+    {
+      "source": "njila-conf-service",
+      "target": "njila-payement-service",
+      "w_ij": 0.217246
+    }
+  ],
+  "adjacency": {
+    "njila-proxy-service": [],
+    "njila-auth-service": [
+      {
+        "neighbor": "njila-proxy-service",
+        "w_ij": 0.080574
+      },
+      {
+        "neighbor": "njila-fleet-service",
+        "w_ij": 0.500053
+      }
+    ],
+    "njila-user-service": [
+      {
+        "neighbor": "njila-proxy-service",
+        "w_ij": 0.207176
+      }
+    ],
+    "njila-registry-service": [
+      {
+        "neighbor": "njila-proxy-service",
+        "w_ij": 0.341287
+      },
+      {
+        "neighbor": "njila-user-service",
+        "w_ij": 0.499524
+      },
+      {
+        "neighbor": "njila-booking-service",
+        "w_ij": 0.499524
+      },
+      {
+        "neighbor": "njila-payement-service",
+        "w_ij": 0.499526
+      }
+    ],
+    "njila-fleet-service": [
+      {
+        "neighbor": "njila-proxy-service",
+        "w_ij": 0.131867
+      }
+    ],
+    "njila-booking-service": [
+      {
+        "neighbor": "njila-proxy-service",
+        "w_ij": 0.010784
+      }
+    ],
+    "njila-subscribe-service": [
+      {
+        "neighbor": "njila-proxy-service",
+        "w_ij": 0.014713
+      }
+    ],
+    "njila-payement-service": [
+      {
+        "neighbor": "njila-proxy-service",
+        "w_ij": 0.005726
+      }
+    ],
+    "njila-conf-service": [
+      {
+        "neighbor": "njila-proxy-service",
+        "w_ij": 0.131943
+      },
+      {
+        "neighbor": "njila-user-service",
+        "w_ij": 0.274446
+      },
+      {
+        "neighbor": "njila-registry-service",
+        "w_ij": 0.8
+      },
+      {
+        "neighbor": "njila-booking-service",
+        "w_ij": 0.230148
+      },
+      {
+        "neighbor": "njila-payement-service",
+        "w_ij": 0.217246
+      }
+    ]
+  }
+}

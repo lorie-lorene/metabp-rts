@@ -1,0 +1,253 @@
+mr_catalog:
+- id: MR-LAT-njila-auth-service
+  type: Latence
+  service: njila-auth-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de njila-auth-service ; mediane ~ 2.6 ms
+  rho: duration_us <= 11299 (P99)
+  source: traces-p99
+  threshold_us: 11299
+- id: MR-ERR-njila-auth-service
+  type: Erreur
+  service: njila-auth-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de njila-auth-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-njila-auth-service
+  type: Completude
+  service: njila-auth-service
+  endpoint: '*'
+  http_method: '*'
+  phi: njila-auth-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(njila-auth-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-njila-booking-service
+  type: Latence
+  service: njila-booking-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de njila-booking-service ; mediane ~ 3.0 ms
+  rho: duration_us <= 15430 (P99)
+  source: traces-p99
+  threshold_us: 15430
+- id: MR-ERR-njila-booking-service
+  type: Erreur
+  service: njila-booking-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de njila-booking-service = 0.0%
+  rho: taux_erreur <= 0.1004 (nominal 0.0004 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1004
+  nominal_error_rate: 0.0004
+- id: MR-CMP-njila-booking-service
+  type: Completude
+  service: njila-booking-service
+  endpoint: '*'
+  http_method: '*'
+  phi: njila-booking-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(njila-booking-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-njila-conf-service
+  type: Latence
+  service: njila-conf-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de njila-conf-service ; mediane ~ 1444.5 ms
+  rho: duration_us <= 13795367 (P99)
+  source: traces-p99
+  threshold_us: 13795367
+- id: MR-ERR-njila-conf-service
+  type: Erreur
+  service: njila-conf-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de njila-conf-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-njila-conf-service
+  type: Completude
+  service: njila-conf-service
+  endpoint: '*'
+  http_method: '*'
+  phi: njila-conf-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(njila-conf-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-njila-fleet-service
+  type: Latence
+  service: njila-fleet-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de njila-fleet-service ; mediane ~ 12.3 ms
+  rho: duration_us <= 73068 (P99)
+  source: traces-p99
+  threshold_us: 73068
+- id: MR-ERR-njila-fleet-service
+  type: Erreur
+  service: njila-fleet-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de njila-fleet-service = 33.6%
+  rho: taux_erreur <= 0.4365 (nominal 0.3365 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.4365
+  nominal_error_rate: 0.3365
+- id: MR-CMP-njila-fleet-service
+  type: Completude
+  service: njila-fleet-service
+  endpoint: '*'
+  http_method: '*'
+  phi: njila-fleet-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(njila-fleet-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-njila-payement-service
+  type: Latence
+  service: njila-payement-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de njila-payement-service ; mediane ~ 3.7 ms
+  rho: duration_us <= 14585 (P99)
+  source: traces-p99
+  threshold_us: 14585
+- id: MR-ERR-njila-payement-service
+  type: Erreur
+  service: njila-payement-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de njila-payement-service = 0.1%
+  rho: taux_erreur <= 0.1008 (nominal 0.0008 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1008
+  nominal_error_rate: 0.0008
+- id: MR-CMP-njila-payement-service
+  type: Completude
+  service: njila-payement-service
+  endpoint: '*'
+  http_method: '*'
+  phi: njila-payement-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(njila-payement-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-njila-proxy-service
+  type: Latence
+  service: njila-proxy-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de njila-proxy-service ; mediane ~ 2.9 ms
+  rho: duration_us <= 72860 (P99)
+  source: traces-p99
+  threshold_us: 72860
+- id: MR-ERR-njila-proxy-service
+  type: Erreur
+  service: njila-proxy-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de njila-proxy-service = 9.3%
+  rho: taux_erreur <= 0.1926 (nominal 0.0926 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1926
+  nominal_error_rate: 0.0926
+- id: MR-CMP-njila-proxy-service
+  type: Completude
+  service: njila-proxy-service
+  endpoint: '*'
+  http_method: '*'
+  phi: njila-proxy-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(njila-proxy-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-njila-registry-service
+  type: Latence
+  service: njila-registry-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de njila-registry-service ; mediane ~ 1.1 ms
+  rho: duration_us <= 5306 (P99)
+  source: traces-p99
+  threshold_us: 5306
+- id: MR-ERR-njila-registry-service
+  type: Erreur
+  service: njila-registry-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de njila-registry-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-njila-registry-service
+  type: Completude
+  service: njila-registry-service
+  endpoint: '*'
+  http_method: '*'
+  phi: njila-registry-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(njila-registry-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-njila-subscribe-service
+  type: Latence
+  service: njila-subscribe-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de njila-subscribe-service ; mediane ~ 8.1 ms
+  rho: duration_us <= 11768 (P99)
+  source: traces-p99
+  threshold_us: 11768
+- id: MR-ERR-njila-subscribe-service
+  type: Erreur
+  service: njila-subscribe-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de njila-subscribe-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-njila-subscribe-service
+  type: Completude
+  service: njila-subscribe-service
+  endpoint: '*'
+  http_method: '*'
+  phi: njila-subscribe-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(njila-subscribe-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-njila-user-service
+  type: Latence
+  service: njila-user-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de njila-user-service ; mediane ~ 3.4 ms
+  rho: duration_us <= 20070 (P99)
+  source: traces-p99
+  threshold_us: 20070
+- id: MR-ERR-njila-user-service
+  type: Erreur
+  service: njila-user-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de njila-user-service = 6.0%
+  rho: taux_erreur <= 0.1596 (nominal 0.0596 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1596
+  nominal_error_rate: 0.0596
+- id: MR-CMP-njila-user-service
+  type: Completude
+  service: njila-user-service
+  endpoint: '*'
+  http_method: '*'
+  phi: njila-user-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(njila-user-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1

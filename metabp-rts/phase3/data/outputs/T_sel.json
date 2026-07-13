@@ -1,0 +1,112 @@
+[
+  {
+    "test_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e",
+    "invocation_chain": [
+      [
+        "njila-proxy-service",
+        "njila-auth-service"
+      ],
+      [
+        "njila-proxy-service",
+        "njila-booking-service"
+      ]
+    ],
+    "services": [
+      "njila-proxy-service",
+      "njila-auth-service",
+      "njila-booking-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.666667,
+    "n_above_p": 2,
+    "n_services": 3,
+    "tier": 2,
+    "in_s_echo": false,
+    "duration_us": 18565
+  },
+  {
+    "test_id": "00104f7a819b22f16f92bb9d63775bde",
+    "invocation_chain": [
+      [
+        "njila-user-service",
+        "njila-registry-service"
+      ]
+    ],
+    "services": [
+      "njila-user-service",
+      "njila-registry-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.5,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 2,
+    "in_s_echo": false,
+    "duration_us": 2631
+  },
+  {
+    "test_id": "02080ec38b84ebeaf17fd7eb52297daa",
+    "invocation_chain": [
+      [
+        "njila-proxy-service",
+        "njila-fleet-service"
+      ]
+    ],
+    "services": [
+      "njila-proxy-service",
+      "njila-fleet-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.5,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 2,
+    "in_s_echo": false,
+    "duration_us": 18821
+  },
+  {
+    "test_id": "00b65c4522764f70f4f4270dc1dd1cc4",
+    "invocation_chain": [
+      [
+        "njila-proxy-service",
+        "njila-auth-service"
+      ],
+      [
+        "njila-proxy-service",
+        "njila-subscribe-service"
+      ]
+    ],
+    "services": [
+      "njila-proxy-service",
+      "njila-auth-service",
+      "njila-subscribe-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.333333,
+    "n_above_p": 1,
+    "n_services": 3,
+    "tier": 2,
+    "in_s_echo": false,
+    "duration_us": 18470
+  },
+  {
+    "test_id": "92df80ab5e1951d356ea087090469757",
+    "invocation_chain": [
+      [
+        "njila-payement-service",
+        "njila-conf-service"
+      ]
+    ],
+    "services": [
+      "njila-payement-service",
+      "njila-conf-service"
+    ],
+    "score": 0.0,
+    "score_avg": 0.0,
+    "n_above_p": 0,
+    "n_services": 2,
+    "tier": 2,
+    "in_s_echo": false,
+    "duration_us": 10296505
+  }
+]

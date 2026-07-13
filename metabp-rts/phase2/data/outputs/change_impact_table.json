@@ -1,0 +1,11 @@
+{
+  "njila-proxy-service": 1.0,
+  "njila-auth-service": 0.0,
+  "njila-user-service": 1.0,
+  "njila-registry-service": 0.0,
+  "njila-fleet-service": 0.0,
+  "njila-booking-service": 1.0,
+  "njila-subscribe-service": 0.0,
+  "njila-payement-service": 0.0,
+  "njila-conf-service": 0.0
+}

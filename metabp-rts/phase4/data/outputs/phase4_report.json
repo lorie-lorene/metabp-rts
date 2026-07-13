@@ -1,0 +1,616 @@
+{
+  "input": {
+    "n_original": 7548,
+    "n_t_sel": 5
+  },
+  "phase_4a": {
+    "results": [
+      {
+        "mutant_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e__del__njila-proxy-service",
+        "test_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e",
+        "operator": "span_deletion",
+        "target_service": "njila-proxy-service",
+        "spans_after_deletion": 6,
+        "killed": false,
+        "reason": "spans 6 vs min 1"
+      },
+      {
+        "mutant_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e__err__njila-auth-service",
+        "test_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e",
+        "operator": "error_injection",
+        "target_service": "njila-auth-service",
+        "mutated_error_rate": 1.0,
+        "killed": true,
+        "reason": "taux 1.0 vs seuil 0.1"
+      },
+      {
+        "mutant_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e__lat__njila-proxy-service",
+        "test_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e",
+        "operator": "latency_injection",
+        "target_service": "njila-proxy-service",
+        "mutated_duration_us": 5000000,
+        "killed": true,
+        "reason": "duration 5000000 vs seuil 72860"
+      },
+      {
+        "mutant_id": "00104f7a819b22f16f92bb9d63775bde__del__njila-user-service",
+        "test_id": "00104f7a819b22f16f92bb9d63775bde",
+        "operator": "span_deletion",
+        "target_service": "njila-user-service",
+        "spans_after_deletion": 0,
+        "killed": true,
+        "reason": "spans 0 vs min 1"
+      },
+      {
+        "mutant_id": "00104f7a819b22f16f92bb9d63775bde__err__njila-user-service",
+        "test_id": "00104f7a819b22f16f92bb9d63775bde",
+        "operator": "error_injection",
+        "target_service": "njila-user-service",
+        "mutated_error_rate": 1.0,
+        "killed": true,
+        "reason": "taux 1.0 vs seuil 0.1596"
+      },
+      {
+        "mutant_id": "00104f7a819b22f16f92bb9d63775bde__lat__njila-user-service",
+        "test_id": "00104f7a819b22f16f92bb9d63775bde",
+        "operator": "latency_injection",
+        "target_service": "njila-user-service",
+        "mutated_duration_us": 5000000,
+        "killed": true,
+        "reason": "duration 5000000 vs seuil 20070"
+      },
+      {
+        "mutant_id": "02080ec38b84ebeaf17fd7eb52297daa__del__njila-proxy-service",
+        "test_id": "02080ec38b84ebeaf17fd7eb52297daa",
+        "operator": "span_deletion",
+        "target_service": "njila-proxy-service",
+        "spans_after_deletion": 5,
+        "killed": false,
+        "reason": "spans 5 vs min 1"
+      },
+      {
+        "mutant_id": "02080ec38b84ebeaf17fd7eb52297daa__err__njila-fleet-service",
+        "test_id": "02080ec38b84ebeaf17fd7eb52297daa",
+        "operator": "error_injection",
+        "target_service": "njila-fleet-service",
+        "mutated_error_rate": 1.0,
+        "killed": true,
+        "reason": "taux 1.0 vs seuil 0.4365"
+      },
+      {
+        "mutant_id": "02080ec38b84ebeaf17fd7eb52297daa__lat__njila-proxy-service",
+        "test_id": "02080ec38b84ebeaf17fd7eb52297daa",
+        "operator": "latency_injection",
+        "target_service": "njila-proxy-service",
+        "mutated_duration_us": 5000000,
+        "killed": true,
+        "reason": "duration 5000000 vs seuil 72860"
+      },
+      {
+        "mutant_id": "00b65c4522764f70f4f4270dc1dd1cc4__del__njila-auth-service",
+        "test_id": "00b65c4522764f70f4f4270dc1dd1cc4",
+        "operator": "span_deletion",
+        "target_service": "njila-auth-service",
+        "spans_after_deletion": 0,
+        "killed": true,
+        "reason": "spans 0 vs min 1"
+      },
+      {
+        "mutant_id": "00b65c4522764f70f4f4270dc1dd1cc4__err__njila-proxy-service",
+        "test_id": "00b65c4522764f70f4f4270dc1dd1cc4",
+        "operator": "error_injection",
+        "target_service": "njila-proxy-service",
+        "mutated_error_rate": 0.2857,
+        "killed": true,
+        "reason": "taux 0.2857 vs seuil 0.1926"
+      },
+      {
+        "mutant_id": "00b65c4522764f70f4f4270dc1dd1cc4__lat__njila-proxy-service",
+        "test_id": "00b65c4522764f70f4f4270dc1dd1cc4",
+        "operator": "latency_injection",
+        "target_service": "njila-proxy-service",
+        "mutated_duration_us": 5000000,
+        "killed": true,
+        "reason": "duration 5000000 vs seuil 72860"
+      },
+      {
+        "mutant_id": "92df80ab5e1951d356ea087090469757__del__njila-payement-service",
+        "test_id": "92df80ab5e1951d356ea087090469757",
+        "operator": "span_deletion",
+        "target_service": "njila-payement-service",
+        "spans_after_deletion": 0,
+        "killed": true,
+        "reason": "spans 0 vs min 1"
+      },
+      {
+        "mutant_id": "92df80ab5e1951d356ea087090469757__err__njila-payement-service",
+        "test_id": "92df80ab5e1951d356ea087090469757",
+        "operator": "error_injection",
+        "target_service": "njila-payement-service",
+        "mutated_error_rate": 1.0,
+        "killed": true,
+        "reason": "taux 1.0 vs seuil 0.1008"
+      },
+      {
+        "mutant_id": "92df80ab5e1951d356ea087090469757__lat__njila-payement-service",
+        "test_id": "92df80ab5e1951d356ea087090469757",
+        "operator": "latency_injection",
+        "target_service": "njila-payement-service",
+        "mutated_duration_us": 5000000,
+        "killed": true,
+        "reason": "duration 5000000 vs seuil 14585"
+      }
+    ],
+    "fcs": 86.67,
+    "n_total": 15,
+    "n_killed": 13,
+    "n_survived": 2,
+    "by_operator": {
+      "span_deletion": {
+        "n_killed": 3,
+        "n_total": 5,
+        "fcs": 60.0
+      },
+      "error_injection": {
+        "n_killed": 5,
+        "n_total": 5,
+        "fcs": 100.0
+      },
+      "latency_injection": {
+        "n_killed": 5,
+        "n_total": 5,
+        "fcs": 100.0
+      }
+    },
+    "by_mr_type": {}
+  },
+  "phase_4b": {
+    "results": [
+      {
+        "test_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e",
+        "service": "njila-auth-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 2257 vs 11299"
+      },
+      {
+        "test_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e",
+        "service": "njila-auth-service",
+        "mr_type": "Erreur",
+        "passed": true,
+        "reason": "taux 0.0 vs 0.1"
+      },
+      {
+        "test_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e",
+        "service": "njila-auth-service",
+        "mr_type": "Completude",
+        "passed": true,
+        "reason": "nb_spans 1 vs min 1"
+      },
+      {
+        "test_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e",
+        "service": "njila-proxy-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 385 vs 72860"
+      },
+      {
+        "test_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e",
+        "service": "njila-proxy-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 318 vs 72860"
+      },
+      {
+        "test_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e",
+        "service": "njila-proxy-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 1189 vs 72860"
+      },
+      {
+        "test_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e",
+        "service": "njila-proxy-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 287 vs 72860"
+      },
+      {
+        "test_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e",
+        "service": "njila-proxy-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 5557 vs 72860"
+      },
+      {
+        "test_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e",
+        "service": "njila-proxy-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 18565 vs 72860"
+      },
+      {
+        "test_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e",
+        "service": "njila-proxy-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 5598 vs 72860"
+      },
+      {
+        "test_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e",
+        "service": "njila-proxy-service",
+        "mr_type": "Erreur",
+        "passed": true,
+        "reason": "taux 0.143 vs 0.1926"
+      },
+      {
+        "test_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e",
+        "service": "njila-proxy-service",
+        "mr_type": "Completude",
+        "passed": true,
+        "reason": "nb_spans 7 vs min 1"
+      },
+      {
+        "test_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e",
+        "service": "njila-booking-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 4239 vs 15430"
+      },
+      {
+        "test_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e",
+        "service": "njila-booking-service",
+        "mr_type": "Erreur",
+        "passed": true,
+        "reason": "taux 0.0 vs 0.1004"
+      },
+      {
+        "test_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e",
+        "service": "njila-booking-service",
+        "mr_type": "Completude",
+        "passed": true,
+        "reason": "nb_spans 1 vs min 1"
+      },
+      {
+        "test_id": "00104f7a819b22f16f92bb9d63775bde",
+        "service": "njila-user-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 2631 vs 20070"
+      },
+      {
+        "test_id": "00104f7a819b22f16f92bb9d63775bde",
+        "service": "njila-user-service",
+        "mr_type": "Erreur",
+        "passed": true,
+        "reason": "taux 0.0 vs 0.1596"
+      },
+      {
+        "test_id": "00104f7a819b22f16f92bb9d63775bde",
+        "service": "njila-user-service",
+        "mr_type": "Completude",
+        "passed": true,
+        "reason": "nb_spans 1 vs min 1"
+      },
+      {
+        "test_id": "00104f7a819b22f16f92bb9d63775bde",
+        "service": "njila-registry-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 547 vs 5306"
+      },
+      {
+        "test_id": "00104f7a819b22f16f92bb9d63775bde",
+        "service": "njila-registry-service",
+        "mr_type": "Erreur",
+        "passed": true,
+        "reason": "taux 0.0 vs 0.1"
+      },
+      {
+        "test_id": "00104f7a819b22f16f92bb9d63775bde",
+        "service": "njila-registry-service",
+        "mr_type": "Completude",
+        "passed": true,
+        "reason": "nb_spans 1 vs min 1"
+      },
+      {
+        "test_id": "02080ec38b84ebeaf17fd7eb52297daa",
+        "service": "njila-fleet-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 11048 vs 73068"
+      },
+      {
+        "test_id": "02080ec38b84ebeaf17fd7eb52297daa",
+        "service": "njila-fleet-service",
+        "mr_type": "Erreur",
+        "passed": true,
+        "reason": "taux 0.0 vs 0.4365"
+      },
+      {
+        "test_id": "02080ec38b84ebeaf17fd7eb52297daa",
+        "service": "njila-fleet-service",
+        "mr_type": "Completude",
+        "passed": true,
+        "reason": "nb_spans 1 vs min 1"
+      },
+      {
+        "test_id": "02080ec38b84ebeaf17fd7eb52297daa",
+        "service": "njila-proxy-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 342 vs 72860"
+      },
+      {
+        "test_id": "02080ec38b84ebeaf17fd7eb52297daa",
+        "service": "njila-proxy-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 334 vs 72860"
+      },
+      {
+        "test_id": "02080ec38b84ebeaf17fd7eb52297daa",
+        "service": "njila-proxy-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 929 vs 72860"
+      },
+      {
+        "test_id": "02080ec38b84ebeaf17fd7eb52297daa",
+        "service": "njila-proxy-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 347 vs 72860"
+      },
+      {
+        "test_id": "02080ec38b84ebeaf17fd7eb52297daa",
+        "service": "njila-proxy-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 18821 vs 72860"
+      },
+      {
+        "test_id": "02080ec38b84ebeaf17fd7eb52297daa",
+        "service": "njila-proxy-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 14097 vs 72860"
+      },
+      {
+        "test_id": "02080ec38b84ebeaf17fd7eb52297daa",
+        "service": "njila-proxy-service",
+        "mr_type": "Erreur",
+        "passed": true,
+        "reason": "taux 0.0 vs 0.1926"
+      },
+      {
+        "test_id": "02080ec38b84ebeaf17fd7eb52297daa",
+        "service": "njila-proxy-service",
+        "mr_type": "Completude",
+        "passed": true,
+        "reason": "nb_spans 6 vs min 1"
+      },
+      {
+        "test_id": "00b65c4522764f70f4f4270dc1dd1cc4",
+        "service": "njila-proxy-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 317 vs 72860"
+      },
+      {
+        "test_id": "00b65c4522764f70f4f4270dc1dd1cc4",
+        "service": "njila-proxy-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 204 vs 72860"
+      },
+      {
+        "test_id": "00b65c4522764f70f4f4270dc1dd1cc4",
+        "service": "njila-proxy-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 959 vs 72860"
+      },
+      {
+        "test_id": "00b65c4522764f70f4f4270dc1dd1cc4",
+        "service": "njila-proxy-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 289 vs 72860"
+      },
+      {
+        "test_id": "00b65c4522764f70f4f4270dc1dd1cc4",
+        "service": "njila-proxy-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 4902 vs 72860"
+      },
+      {
+        "test_id": "00b65c4522764f70f4f4270dc1dd1cc4",
+        "service": "njila-proxy-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 18470 vs 72860"
+      },
+      {
+        "test_id": "00b65c4522764f70f4f4270dc1dd1cc4",
+        "service": "njila-proxy-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 7642 vs 72860"
+      },
+      {
+        "test_id": "00b65c4522764f70f4f4270dc1dd1cc4",
+        "service": "njila-proxy-service",
+        "mr_type": "Erreur",
+        "passed": true,
+        "reason": "taux 0.143 vs 0.1926"
+      },
+      {
+        "test_id": "00b65c4522764f70f4f4270dc1dd1cc4",
+        "service": "njila-proxy-service",
+        "mr_type": "Completude",
+        "passed": true,
+        "reason": "nb_spans 7 vs min 1"
+      },
+      {
+        "test_id": "00b65c4522764f70f4f4270dc1dd1cc4",
+        "service": "njila-subscribe-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 4735 vs 11768"
+      },
+      {
+        "test_id": "00b65c4522764f70f4f4270dc1dd1cc4",
+        "service": "njila-subscribe-service",
+        "mr_type": "Erreur",
+        "passed": true,
+        "reason": "taux 0.0 vs 0.1"
+      },
+      {
+        "test_id": "00b65c4522764f70f4f4270dc1dd1cc4",
+        "service": "njila-subscribe-service",
+        "mr_type": "Completude",
+        "passed": true,
+        "reason": "nb_spans 1 vs min 1"
+      },
+      {
+        "test_id": "00b65c4522764f70f4f4270dc1dd1cc4",
+        "service": "njila-auth-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 1949 vs 11299"
+      },
+      {
+        "test_id": "00b65c4522764f70f4f4270dc1dd1cc4",
+        "service": "njila-auth-service",
+        "mr_type": "Erreur",
+        "passed": true,
+        "reason": "taux 0.0 vs 0.1"
+      },
+      {
+        "test_id": "00b65c4522764f70f4f4270dc1dd1cc4",
+        "service": "njila-auth-service",
+        "mr_type": "Completude",
+        "passed": true,
+        "reason": "nb_spans 1 vs min 1"
+      },
+      {
+        "test_id": "92df80ab5e1951d356ea087090469757",
+        "service": "njila-payement-service",
+        "mr_type": "Latence",
+        "passed": false,
+        "reason": "duration 10296505 vs 14585"
+      },
+      {
+        "test_id": "92df80ab5e1951d356ea087090469757",
+        "service": "njila-payement-service",
+        "mr_type": "Erreur",
+        "passed": true,
+        "reason": "taux 0.0 vs 0.1008"
+      },
+      {
+        "test_id": "92df80ab5e1951d356ea087090469757",
+        "service": "njila-payement-service",
+        "mr_type": "Completude",
+        "passed": true,
+        "reason": "nb_spans 1 vs min 1"
+      },
+      {
+        "test_id": "92df80ab5e1951d356ea087090469757",
+        "service": "njila-conf-service",
+        "mr_type": "Latence",
+        "passed": true,
+        "reason": "duration 10242838 vs 13795367"
+      },
+      {
+        "test_id": "92df80ab5e1951d356ea087090469757",
+        "service": "njila-conf-service",
+        "mr_type": "Erreur",
+        "passed": true,
+        "reason": "taux 0.0 vs 0.1"
+      },
+      {
+        "test_id": "92df80ab5e1951d356ea087090469757",
+        "service": "njila-conf-service",
+        "mr_type": "Completude",
+        "passed": true,
+        "reason": "nb_spans 1 vs min 1"
+      }
+    ],
+    "n_tests": 5,
+    "n_mr_verified": 53,
+    "n_pass": 52,
+    "n_fail": 1,
+    "violations": [
+      {
+        "test_id": "92df80ab5e1951d356ea087090469757",
+        "service": "njila-payement-service",
+        "mr_type": "Latence",
+        "passed": false,
+        "reason": "duration 10296505 vs 14585"
+      }
+    ],
+    "pass_rate": 98.11,
+    "by_mr_type": {
+      "Latence": {
+        "pass": 28,
+        "fail": 1
+      },
+      "Erreur": {
+        "pass": 12,
+        "fail": 0
+      },
+      "Completude": {
+        "pass": 12,
+        "fail": 0
+      }
+    },
+    "by_service": {
+      "njila-auth-service": {
+        "pass": 6,
+        "fail": 0
+      },
+      "njila-proxy-service": {
+        "pass": 26,
+        "fail": 0
+      },
+      "njila-booking-service": {
+        "pass": 3,
+        "fail": 0
+      },
+      "njila-user-service": {
+        "pass": 3,
+        "fail": 0
+      },
+      "njila-registry-service": {
+        "pass": 3,
+        "fail": 0
+      },
+      "njila-fleet-service": {
+        "pass": 3,
+        "fail": 0
+      },
+      "njila-subscribe-service": {
+        "pass": 3,
+        "fail": 0
+      },
+      "njila-payement-service": {
+        "pass": 2,
+        "fail": 1
+      },
+      "njila-conf-service": {
+        "pass": 3,
+        "fail": 0
+      }
+    },
+    "mode": "offline"
+  },
+  "metrics": {
+    "EN": 99.93,
+    "FCS": 86.67,
+    "P_mr": 98.11,
+    "F": 92.04,
+    "note": "FCS = proxy du Recall via mutation ; P_mr = conformite MR sur donnees nominales"
+  }
+}

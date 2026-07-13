@@ -1,0 +1,30 @@
+{
+  "delta_s": [
+    "njila-proxy-service",
+    "njila-user-service",
+    "njila-booking-service"
+  ],
+  "tau_impact": 0.0,
+  "weighting_method": "ewm_critic",
+  "threshold_method": "auto",
+  "omega_theta": 0.2927308054309272,
+  "omega_B": 0.7072691945690728,
+  "s_echo": [],
+  "echo_impact_services": [],
+  "stats": {
+    "n_services_total": 9,
+    "n_modified": 3,
+    "n_echo_impact": 0,
+    "n_resonant": 0,
+    "resonance_rate": 0.0,
+    "max_cit": 1.0,
+    "avg_cit_all": 0.3333,
+    "avg_cit_echo_impact": 0.0,
+    "avg_theta_complet": 0.2837,
+    "weighting_method": "ewm_critic",
+    "threshold_method": "auto",
+    "omega_theta": 0.292731,
+    "omega_B": 0.707269,
+    "tau_impact": 0.0
+  }
+}

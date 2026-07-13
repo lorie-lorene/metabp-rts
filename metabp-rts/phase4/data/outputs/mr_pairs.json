@@ -1,0 +1,9 @@
+[
+  {
+    "test_id": "92df80ab5e1951d356ea087090469757",
+    "service": "njila-payement-service",
+    "mr_type": "Latence",
+    "passed": false,
+    "reason": "duration 10296505 vs 14585"
+  }
+]

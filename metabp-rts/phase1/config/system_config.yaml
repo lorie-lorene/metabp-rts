@@ -1,5 +1,5 @@
 jaeger:
-  base_url: "http://localhost:16686"
+  base_url: "http://localhost:16687"
   api_version: "api"
   default_service: "ts-station-service"
   lookback: "1h"

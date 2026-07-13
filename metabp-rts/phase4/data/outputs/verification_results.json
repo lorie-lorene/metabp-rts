@@ -1,0 +1,60 @@
+{
+  "n_tests": 5,
+  "n_mr_verified": 53,
+  "n_pass": 52,
+  "n_fail": 1,
+  "pass_rate": 98.11,
+  "mode": "offline",
+  "by_mr_type": {
+    "Latence": {
+      "pass": 28,
+      "fail": 1
+    },
+    "Erreur": {
+      "pass": 12,
+      "fail": 0
+    },
+    "Completude": {
+      "pass": 12,
+      "fail": 0
+    }
+  },
+  "by_service": {
+    "njila-auth-service": {
+      "pass": 6,
+      "fail": 0
+    },
+    "njila-proxy-service": {
+      "pass": 26,
+      "fail": 0
+    },
+    "njila-booking-service": {
+      "pass": 3,
+      "fail": 0
+    },
+    "njila-user-service": {
+      "pass": 3,
+      "fail": 0
+    },
+    "njila-registry-service": {
+      "pass": 3,
+      "fail": 0
+    },
+    "njila-fleet-service": {
+      "pass": 3,
+      "fail": 0
+    },
+    "njila-subscribe-service": {
+      "pass": 3,
+      "fail": 0
+    },
+    "njila-payement-service": {
+      "pass": 2,
+      "fail": 1
+    },
+    "njila-conf-service": {
+      "pass": 3,
+      "fail": 0
+    }
+  }
+}

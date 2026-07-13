@@ -1,0 +1,40 @@
+{
+  "weighting": {
+    "method": "ewm_critic",
+    "omega_theta": 0.292731,
+    "omega_B": 0.707269,
+    "details": {
+      "method": "EWM-CRITIC combined",
+      "n_services": 9,
+      "n_criteria": 2,
+      "criteria": [
+        "Θ_dormant",
+        "CIT"
+      ],
+      "weights_ewm": {
+        "Θ_dormant": 0.400834,
+        "CIT": 0.599166
+      },
+      "weights_critic": {
+        "Θ_dormant": 0.382213,
+        "CIT": 0.617787
+      },
+      "weights_combined": {
+        "Θ_dormant": 0.292731,
+        "CIT": 0.707269
+      },
+      "references": [
+        "Shannon, C.E. (1948). A Mathematical Theory of Communication.",
+        "Diakoulaki, D. et al. (1995). The CRITIC method. C&OR 22(7), 763-770."
+      ]
+    }
+  },
+  "threshold": {
+    "method": "auto",
+    "tau_impact": null,
+    "details": {
+      "method": "gap_fallback",
+      "tau": 0.0
+    }
+  }
+}

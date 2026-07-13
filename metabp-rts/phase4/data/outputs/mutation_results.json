@@ -1,0 +1,137 @@
+[
+  {
+    "mutant_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e__del__njila-proxy-service",
+    "test_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e",
+    "operator": "span_deletion",
+    "target_service": "njila-proxy-service",
+    "spans_after_deletion": 6,
+    "killed": false,
+    "reason": "spans 6 vs min 1"
+  },
+  {
+    "mutant_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e__err__njila-auth-service",
+    "test_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e",
+    "operator": "error_injection",
+    "target_service": "njila-auth-service",
+    "mutated_error_rate": 1.0,
+    "killed": true,
+    "reason": "taux 1.0 vs seuil 0.1"
+  },
+  {
+    "mutant_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e__lat__njila-proxy-service",
+    "test_id": "008c52bf6bfc18f207c2ea1e7f4cfa2e",
+    "operator": "latency_injection",
+    "target_service": "njila-proxy-service",
+    "mutated_duration_us": 5000000,
+    "killed": true,
+    "reason": "duration 5000000 vs seuil 72860"
+  },
+  {
+    "mutant_id": "00104f7a819b22f16f92bb9d63775bde__del__njila-user-service",
+    "test_id": "00104f7a819b22f16f92bb9d63775bde",
+    "operator": "span_deletion",
+    "target_service": "njila-user-service",
+    "spans_after_deletion": 0,
+    "killed": true,
+    "reason": "spans 0 vs min 1"
+  },
+  {
+    "mutant_id": "00104f7a819b22f16f92bb9d63775bde__err__njila-user-service",
+    "test_id": "00104f7a819b22f16f92bb9d63775bde",
+    "operator": "error_injection",
+    "target_service": "njila-user-service",
+    "mutated_error_rate": 1.0,
+    "killed": true,
+    "reason": "taux 1.0 vs seuil 0.1596"
+  },
+  {
+    "mutant_id": "00104f7a819b22f16f92bb9d63775bde__lat__njila-user-service",
+    "test_id": "00104f7a819b22f16f92bb9d63775bde",
+    "operator": "latency_injection",
+    "target_service": "njila-user-service",
+    "mutated_duration_us": 5000000,
+    "killed": true,
+    "reason": "duration 5000000 vs seuil 20070"
+  },
+  {
+    "mutant_id": "02080ec38b84ebeaf17fd7eb52297daa__del__njila-proxy-service",
+    "test_id": "02080ec38b84ebeaf17fd7eb52297daa",
+    "operator": "span_deletion",
+    "target_service": "njila-proxy-service",
+    "spans_after_deletion": 5,
+    "killed": false,
+    "reason": "spans 5 vs min 1"
+  },
+  {
+    "mutant_id": "02080ec38b84ebeaf17fd7eb52297daa__err__njila-fleet-service",
+    "test_id": "02080ec38b84ebeaf17fd7eb52297daa",
+    "operator": "error_injection",
+    "target_service": "njila-fleet-service",
+    "mutated_error_rate": 1.0,
+    "killed": true,
+    "reason": "taux 1.0 vs seuil 0.4365"
+  },
+  {
+    "mutant_id": "02080ec38b84ebeaf17fd7eb52297daa__lat__njila-proxy-service",
+    "test_id": "02080ec38b84ebeaf17fd7eb52297daa",
+    "operator": "latency_injection",
+    "target_service": "njila-proxy-service",
+    "mutated_duration_us": 5000000,
+    "killed": true,
+    "reason": "duration 5000000 vs seuil 72860"
+  },
+  {
+    "mutant_id": "00b65c4522764f70f4f4270dc1dd1cc4__del__njila-auth-service",
+    "test_id": "00b65c4522764f70f4f4270dc1dd1cc4",
+    "operator": "span_deletion",
+    "target_service": "njila-auth-service",
+    "spans_after_deletion": 0,
+    "killed": true,
+    "reason": "spans 0 vs min 1"
+  },
+  {
+    "mutant_id": "00b65c4522764f70f4f4270dc1dd1cc4__err__njila-proxy-service",
+    "test_id": "00b65c4522764f70f4f4270dc1dd1cc4",
+    "operator": "error_injection",
+    "target_service": "njila-proxy-service",
+    "mutated_error_rate": 0.2857,
+    "killed": true,
+    "reason": "taux 0.2857 vs seuil 0.1926"
+  },
+  {
+    "mutant_id": "00b65c4522764f70f4f4270dc1dd1cc4__lat__njila-proxy-service",
+    "test_id": "00b65c4522764f70f4f4270dc1dd1cc4",
+    "operator": "latency_injection",
+    "target_service": "njila-proxy-service",
+    "mutated_duration_us": 5000000,
+    "killed": true,
+    "reason": "duration 5000000 vs seuil 72860"
+  },
+  {
+    "mutant_id": "92df80ab5e1951d356ea087090469757__del__njila-payement-service",
+    "test_id": "92df80ab5e1951d356ea087090469757",
+    "operator": "span_deletion",
+    "target_service": "njila-payement-service",
+    "spans_after_deletion": 0,
+    "killed": true,
+    "reason": "spans 0 vs min 1"
+  },
+  {
+    "mutant_id": "92df80ab5e1951d356ea087090469757__err__njila-payement-service",
+    "test_id": "92df80ab5e1951d356ea087090469757",
+    "operator": "error_injection",
+    "target_service": "njila-payement-service",
+    "mutated_error_rate": 1.0,
+    "killed": true,
+    "reason": "taux 1.0 vs seuil 0.1008"
+  },
+  {
+    "mutant_id": "92df80ab5e1951d356ea087090469757__lat__njila-payement-service",
+    "test_id": "92df80ab5e1951d356ea087090469757",
+    "operator": "latency_injection",
+    "target_service": "njila-payement-service",
+    "mutated_duration_us": 5000000,
+    "killed": true,
+    "reason": "duration 5000000 vs seuil 14585"
+  }
+]

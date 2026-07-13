@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>MetaBP-RTS &#8212; Graphe G (Phase 1)</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#0a0c10; color:#cbd5e1;
+       font-family:'Segoe UI',system-ui,sans-serif; }
+header { display:flex; align-items:center; gap:1rem; flex-wrap:wrap;
+         padding:1rem 1.5rem; border-bottom:1px solid #1e2535;
+         background:#0f1117; }
+h1 { font-size:1rem; letter-spacing:0.04em; color:#e2e8f0;
+     text-transform:uppercase; }
+.badge { font-size:0.7rem; padding:2px 10px; border-radius:12px;
+         font-family:monospace; }
+.badge-g { background:#132036; color:#93c5fd; }
+.badge-d { background:#2a1f5e; color:#c4b5fd; }
+.badge-n { background:#134e4a; color:#5eead4; }
+.main { padding:1.25rem; display:flex; flex-direction:column;
+        gap:1.25rem; max-width:1500px; margin:0 auto; }
+.section { background:#141821; border:1px solid #1e2535;
+           border-radius:10px; overflow:hidden; }
+.section-title { padding:0.7rem 1.25rem; font-size:0.72rem;
+                 font-weight:700; text-transform:uppercase;
+                 letter-spacing:0.1em; color:#64748b;
+                 border-bottom:1px solid #1e2535; background:#0f1117; }
+.graph-container { padding:1rem; }
+.metrics-grid { display:grid;
+                grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+                gap:1px; background:#1e2535; }
+.metric-card { background:#141821; padding:0.9rem 1.1rem; }
+.metric-label { font-size:0.65rem; text-transform:uppercase;
+                letter-spacing:0.08em; color:#64748b; }
+.metric-value { font-size:1.5rem; font-weight:700; font-family:monospace;
+                margin-top:2px; }
+.metric-sub { font-size:0.65rem; color:#475569; font-family:monospace; }
+.legend { display:flex; gap:1.5rem; padding:0.75rem 1.25rem;
+          border-top:1px solid #1e2535; background:#0f1117;
+          flex-wrap:wrap; align-items:center; }
+.legend-item { display:flex; align-items:center; gap:6px;
+               font-size:0.72rem; color:#94a3b8; }
+.legend-dot { width:12px; height:12px; border-radius:50%;
+              border:2px solid; }
+.legend-line { width:24px; border-radius:2px; }
+table { width:100%; border-collapse:collapse; font-size:0.8rem; }
+thead th { padding:0.6rem 1rem; text-align:left; font-size:0.67rem;
+           font-weight:700; text-transform:uppercase;
+           letter-spacing:0.08em; color:#64748b;
+           border-bottom:1px solid #1e2535; background:#0f1117;
+           position:sticky; top:0; }
+tbody td { padding:0.65rem 1rem; border-bottom:1px solid #0f1117;
+           vertical-align:middle; }
+tbody tr:hover td { background:#1a1f2e; }
+.formulas { padding:1.25rem; display:flex; gap:1rem 2rem;
+            flex-wrap:wrap; }
+.formula { font-family:monospace; font-size:0.8rem; color:#94a3b8;
+           background:#0f1117; padding:0.5rem 1rem; border-radius:6px;
+           border:1px solid #1e2535; }
+.formula strong { color:#e2e8f0; }
+.hint { padding:0.5rem 1.25rem; font-size:0.7rem; color:#475569;
+        border-top:1px solid #1e2535; background:#0f1117; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>MetaBP-RTS &#8212; Graphe de services G &#183; Phase 1</h1>
+  <span class="badge badge-g">9 services &#183; 16 arcs</span>
+  <span class="badge badge-d">1 &#201;cho-Dormant(s)</span>
+  <span class="badge badge-n">8 Non-Dormant(s)</span>
+  <span style="margin-left:auto;font-size:0.7rem;color:#475569">
+    &#964;_dormant = 0.4880 (AutoThreshold, d&#233;riv&#233; du run courant)
+  </span>
+</header>
+
+<div class="main">
+
+  <div class="section">
+    <div class="section-title">M&#233;triques globales</div>
+    <div class="metrics-grid">
+      <div class="metric-card"><div class="metric-label">Services</div>
+        <div class="metric-value" style="color:#93c5fd">9</div>
+        <div class="metric-sub">n&#339;uds de G</div></div>
+      <div class="metric-card"><div class="metric-label">D&#233;pendances</div>
+        <div class="metric-value" style="color:#93c5fd">16</div>
+        <div class="metric-sub">arcs de G</div></div>
+      <div class="metric-card"><div class="metric-label">Densit&#233;</div>
+        <div class="metric-value" style="color:#94a3b8;font-size:1.2rem">0.2222</div>
+        <div class="metric-sub">|E| / |V|(|V|&#8722;1)</div></div>
+      <div class="metric-card"><div class="metric-label">w_ij moyen</div>
+        <div class="metric-value" style="color:#f59e0b;font-size:1.2rem">0.2778</div>
+        <div class="metric-sub">poids moyen des arcs</div></div>
+      <div class="metric-card"><div class="metric-label">&#201;cho-Dormants</div>
+        <div class="metric-value" style="color:#a78bfa">1</div>
+        <div class="metric-sub">&#920; &#8805; &#964; = 0.4880</div></div>
+      <div class="metric-card"><div class="metric-label">Non-Dormants</div>
+        <div class="metric-value" style="color:#5eead4">8</div>
+        <div class="metric-sub">&#920; &lt; &#964; = 0.4880</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Graphe G &#8212; hi&#233;rarchie appelant &#8594; appel&#233;
+      (agr&#233;gation des relations parent-enfant des spans)</div>
+    <div class="graph-container">
+      <svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1120 420" width="100%"
+     style="background:#0f1117;border-radius:8px">
+  <defs>
+    <marker id="arrT" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5"
+            markerHeight="5" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#14b8a6" stroke-width="1.6"/>
+    </marker>
+    <marker id="arrO" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5"
+            markerHeight="5" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#f59e0b" stroke-width="1.6"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5"
+            markerHeight="5" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#ef4444" stroke-width="1.6"/>
+    </marker>
+  </defs>
+  <text x="12" y="38" font-size="10" fill="#475569" font-family="monospace">niveau 0 &#8212; points d'entree (jamais appeles)</text><line x1="8" y1="44" x2="1112" y2="44" stroke="#1e2535" stroke-dasharray="4 6"/><text x="12" y="278" font-size="10" fill="#475569" font-family="monospace">niveau 1 &#8212; appeles (profondeur 1)</text><line x1="8" y1="284" x2="1112" y2="284" stroke="#1e2535" stroke-dasharray="4 6"/>
+  
+  <g class="edge" data-i="0">
+    <path d="M529.7,105.5 Q305.0,161.0 128.3,310.4"
+          fill="none" stroke="#14b8a6" stroke-width="1.7"
+          marker-end="url(#arrT)" opacity="0.75">
+      <title>njila-proxy-service -> njila-auth-service&#10;w_ij = 0.0806&#10;rate = 0.1609 | lat = 0.0005 | err = 0.0000&#10;frequence = 829 appels</title>
+    </path>
+    <text id="wl0" x="317.0" y="178.5" text-anchor="middle"
+          font-size="11" fill="#14b8a6" font-weight="700"
+          font-family="monospace" visibility="hidden"
+          paint-order="stroke" stroke="#0f1117" stroke-width="3">w=0.081</text>
+  </g>
+  <g class="edge" data-i="1">
+    <path d="M590.3,105.5 Q767.0,255.0 991.7,310.4"
+          fill="none" stroke="#14b8a6" stroke-width="2.3"
+          marker-end="url(#arrT)" opacity="0.75">
+      <title>njila-proxy-service -> njila-user-service&#10;w_ij = 0.2072&#10;rate = 0.0136 | lat = 0.0013 | err = 1.0000&#10;frequence = 70 appels</title>
+    </path>
+    <text id="wl1" x="779.0" y="225.5" text-anchor="middle"
+          font-size="11" fill="#14b8a6" font-weight="700"
+          font-family="monospace" visibility="hidden"
+          paint-order="stroke" stroke="#0f1117" stroke-width="3">w=0.207</text>
+  </g>
+  <g class="edge" data-i="2">
+    <path d="M581.8,116.1 Q633.6,226.7 733.4,297.0"
+          fill="none" stroke="#14b8a6" stroke-width="2.8"
+          marker-end="url(#arrT)" opacity="0.75">
+      <title>njila-proxy-service -> njila-registry-service&#10;w_ij = 0.3413&#10;rate = 0.6825 | lat = 0.0001 | err = 0.0000&#10;frequence = 3517 appels</title>
+    </path>
+    <text id="wl2" x="645.6" y="210.6" text-anchor="middle"
+          font-size="11" fill="#14b8a6" font-weight="700"
+          font-family="monospace" visibility="hidden"
+          paint-order="stroke" stroke="#0f1117" stroke-width="3">w=0.341</text>
+  </g>
+  <g class="edge" data-i="3">
+    <path d="M550.9,122.7 Q503.7,199.0 504.6,288.6"
+          fill="none" stroke="#14b8a6" stroke-width="2.0"
+          marker-end="url(#arrT)" opacity="0.75">
+      <title>njila-proxy-service -> njila-fleet-service&#10;w_ij = 0.1319&#10;rate = 0.0815 | lat = 0.0021 | err = 0.4524&#10;frequence = 420 appels</title>
+    </path>
+    <text id="wl3" x="515.7" y="196.3" text-anchor="middle"
+          font-size="11" fill="#14b8a6" font-weight="700"
+          font-family="monospace" visibility="hidden"
+          paint-order="stroke" stroke="#0f1117" stroke-width="3">w=0.132</text>
+  </g>
+  <g class="edge" data-i="4">
+    <path d="M532.3,109.8 Q371.7,173.8 259.0,305.0"
+          fill="none" stroke="#14b8a6" stroke-width="1.4"
+          marker-end="url(#arrT)" opacity="0.75">
+      <title>njila-proxy-service -> njila-booking-service&#10;w_ij = 0.0108&#10;rate = 0.0213 | lat = 0.0004 | err = 0.0000&#10;frequence = 110 appels</title>
+    </path>
+    <text id="wl4" x="383.7" y="184.6" text-anchor="middle"
+          font-size="11" fill="#14b8a6" font-weight="700"
+          font-family="monospace" visibility="hidden"
+          paint-order="stroke" stroke="#0f1117" stroke-width="3">w=0.011</text>
+  </g>
+  <g class="edge" data-i="5">
+    <path d="M587.7,109.8 Q700.3,241.0 861.0,305.0"
+          fill="none" stroke="#14b8a6" stroke-width="1.5"
+          marker-end="url(#arrT)" opacity="0.75">
+      <title>njila-proxy-service -> njila-subscribe-service&#10;w_ij = 0.0147&#10;rate = 0.0291 | lat = 0.0005 | err = 0.0000&#10;frequence = 150 appels</title>
+    </path>
+    <text id="wl5" x="712.3" y="218.2" text-anchor="middle"
+          font-size="11" fill="#14b8a6" font-weight="700"
+          font-family="monospace" visibility="hidden"
+          paint-order="stroke" stroke="#0f1117" stroke-width="3">w=0.015</text>
+  </g>
+  <g class="edge" data-i="6">
+    <path d="M569.1,122.7 Q568.3,212.4 615.4,288.6"
+          fill="none" stroke="#14b8a6" stroke-width="1.4"
+          marker-end="url(#arrT)" opacity="0.75">
+      <title>njila-proxy-service -> njila-payement-service&#10;w_ij = 0.0057&#10;rate = 0.0107 | lat = 0.0013 | err = 0.0000&#10;frequence = 55 appels</title>
+    </path>
+    <text id="wl6" x="580.3" y="203.0" text-anchor="middle"
+          font-size="11" fill="#14b8a6" font-weight="700"
+          font-family="monospace" visibility="hidden"
+          paint-order="stroke" stroke="#0f1117" stroke-width="3">w=0.006</text>
+  </g>
+  <g class="edge" data-i="7">
+    <path d="M538.2,116.1 Q438.4,186.5 386.6,297.0"
+          fill="none" stroke="#14b8a6" stroke-width="2.0"
+          marker-end="url(#arrT)" opacity="0.75">
+      <title>njila-proxy-service -> njila-conf-service&#10;w_ij = 0.1319&#10;rate = 0.0004 | lat = 0.4392 | err = 0.0000&#10;frequence = 2 appels</title>
+    </path>
+    <text id="wl7" x="450.4" y="190.5" text-anchor="middle"
+          font-size="11" fill="#14b8a6" font-weight="700"
+          font-family="monospace" visibility="hidden"
+          paint-order="stroke" stroke="#0f1117" stroke-width="3">w=0.132</text>
+  </g>
+  <g class="edge" data-i="8">
+    <path d="M996.0,330.0 Q900.0,254.7 804.0,330.0"
+          fill="none" stroke="#f59e0b" stroke-width="3.5"
+          marker-end="url(#arrO)" opacity="0.75">
+      <title>njila-user-service -> njila-registry-service&#10;w_ij = 0.4995&#10;rate = 0.9990 | lat = 0.0001 | err = 0.0000&#10;frequence = 1006 appels</title>
+    </path>
+    <text id="wl8" x="900.0" y="286.3" text-anchor="middle"
+          font-size="11" fill="#f59e0b" font-weight="700"
+          font-family="monospace" visibility="hidden"
+          paint-order="stroke" stroke="#0f1117" stroke-width="3">w=0.499</text>
+  </g>
+  <g class="edge" data-i="9">
+    <path d="M996.0,330.0 Q699.0,142.1 402.0,330.0"
+          fill="none" stroke="#14b8a6" stroke-width="2.6"
+          marker-end="url(#arrT)" opacity="0.75">
+      <title>njila-user-service -> njila-conf-service&#10;w_ij = 0.2744&#10;rate = 0.0010 | lat = 0.9132 | err = 0.0000&#10;frequence = 1 appels</title>
+    </path>
+    <text id="wl9" x="699.0" y="230.1" text-anchor="middle"
+          font-size="11" fill="#14b8a6" font-weight="700"
+          font-family="monospace" visibility="hidden"
+          paint-order="stroke" stroke="#0f1117" stroke-width="3">w=0.274</text>
+  </g>
+  <g class="edge" data-i="10">
+    <path d="M727.0,330.0 Q564.5,217.4 402.0,330.0"
+          fill="none" stroke="#ef4444" stroke-width="4.8"
+          marker-end="url(#arrR)" opacity="0.75">
+      <title>njila-registry-service -> njila-conf-service&#10;w_ij = 0.8000&#10;rate = 1.0000 | lat = 1.0000 | err = 0.0000&#10;frequence = 1 appels</title>
+    </path>
+    <text id="wl10" x="564.5" y="267.7" text-anchor="middle"
+          font-size="11" fill="#ef4444" font-weight="700"
+          font-family="monospace" visibility="hidden"
+          paint-order="stroke" stroke="#0f1117" stroke-width="3">w=0.800</text>
+  </g>
+  <g class="edge" data-i="11">
+    <path d="M459.0,330.0 Q296.0,217.2 133.0,330.0"
+          fill="none" stroke="#f59e0b" stroke-width="3.5"
+          marker-end="url(#arrO)" opacity="0.75">
+      <title>njila-fleet-service -> njila-auth-service&#10;w_ij = 0.5001&#10;rate = 1.0000 | lat = 0.0002 | err = 0.0000&#10;frequence = 248 appels</title>
+    </path>
+    <text id="wl11" x="296.0" y="267.6" text-anchor="middle"
+          font-size="11" fill="#f59e0b" font-weight="700"
+          font-family="monospace" visibility="hidden"
+          paint-order="stroke" stroke="#0f1117" stroke-width="3">w=0.500</text>
+  </g>
+  <g class="edge" data-i="12">
+    <path d="M258.0,330.0 Q488.0,480.4 718.0,330.0"
+          fill="none" stroke="#f59e0b" stroke-width="3.5"
+          marker-end="url(#arrO)" opacity="0.75">
+      <title>njila-booking-service -> njila-registry-service&#10;w_ij = 0.4995&#10;rate = 0.9990 | lat = 0.0001 | err = 0.0000&#10;frequence = 1006 appels</title>
+    </path>
+    <text id="wl12" x="488.0" y="399.2" text-anchor="middle"
+          font-size="11" fill="#f59e0b" font-weight="700"
+          font-family="monospace" visibility="hidden"
+          paint-order="stroke" stroke="#0f1117" stroke-width="3">w=0.499</text>
+  </g>
+  <g class="edge" data-i="13">
+    <path d="M258.0,330.0 Q287.0,367.8 316.0,330.0"
+          fill="none" stroke="#14b8a6" stroke-width="2.4"
+          marker-end="url(#arrT)" opacity="0.75">
+      <title>njila-booking-service -> njila-conf-service&#10;w_ij = 0.2301&#10;rate = 0.0010 | lat = 0.7655 | err = 0.0000&#10;frequence = 1 appels</title>
+    </path>
+    <text id="wl13" x="287.0" y="342.9" text-anchor="middle"
+          font-size="11" fill="#14b8a6" font-weight="700"
+          font-family="monospace" visibility="hidden"
+          paint-order="stroke" stroke="#0f1117" stroke-width="3">w=0.230</text>
+  </g>
+  <g class="edge" data-i="14">
+    <path d="M661.0,330.0 Q689.5,367.5 718.0,330.0"
+          fill="none" stroke="#f59e0b" stroke-width="3.5"
+          marker-end="url(#arrO)" opacity="0.75">
+      <title>njila-payement-service -> njila-registry-service&#10;w_ij = 0.4995&#10;rate = 0.9990 | lat = 0.0001 | err = 0.0000&#10;frequence = 1006 appels</title>
+    </path>
+    <text id="wl14" x="689.5" y="342.8" text-anchor="middle"
+          font-size="11" fill="#f59e0b" font-weight="700"
+          font-family="monospace" visibility="hidden"
+          paint-order="stroke" stroke="#0f1117" stroke-width="3">w=0.499</text>
+  </g>
+  <g class="edge" data-i="15">
+    <path d="M593.0,330.0 Q497.5,255.0 402.0,330.0"
+          fill="none" stroke="#14b8a6" stroke-width="2.3"
+          marker-end="url(#arrT)" opacity="0.75">
+      <title>njila-payement-service -> njila-conf-service&#10;w_ij = 0.2172&#10;rate = 0.0010 | lat = 0.7225 | err = 0.0000&#10;frequence = 1 appels</title>
+    </path>
+    <text id="wl15" x="497.5" y="286.5" text-anchor="middle"
+          font-size="11" fill="#14b8a6" font-weight="700"
+          font-family="monospace" visibility="hidden"
+          paint-order="stroke" stroke="#0f1117" stroke-width="3">w=0.217</text>
+  </g>
+  
+  <g class="node">
+    <circle cx="560" cy="90" r="34" fill="#3b1f8c"
+            stroke="#8b5cf6" stroke-width="2.5">
+      <title>njila-proxy-service&#10;Theta_dormant = 0.7701&#10;C = 0.3750 | P = 0.1155 | F = 1.0000&#10;niveau d'appel = 0</title>
+    </circle>
+    <text x="560" y="83" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif" pointer-events="none">njila-proxy</text>
+    <text x="560" y="98" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8" font-family="monospace"
+          pointer-events="none">&#920;=0.770</text>
+    <text x="560" y="111" text-anchor="middle" font-size="8" fill="#c4b5fd" font-family="monospace" font-weight="700">DORMANT</text>
+  </g>
+  <g class="node">
+    <circle cx="90" cy="330" r="34" fill="#0f4c3a"
+            stroke="#14b8a6" stroke-width="2.5">
+      <title>njila-auth-service&#10;Theta_dormant = 0.0285&#10;C = 0.2500 | P = 0.0000 | F = 0.0000&#10;niveau d'appel = 1</title>
+    </circle>
+    <text x="90" y="323" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif" pointer-events="none">njila-auth</text>
+    <text x="90" y="338" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8" font-family="monospace"
+          pointer-events="none">&#920;=0.029</text>
+    
+  </g>
+  <g class="node">
+    <circle cx="1030" cy="330" r="34" fill="#0f4c3a"
+            stroke="#14b8a6" stroke-width="2.5">
+      <title>njila-user-service&#10;Theta_dormant = 0.0943&#10;C = 0.2188 | P = 0.3870 | F = 0.0000&#10;niveau d'appel = 1</title>
+    </circle>
+    <text x="1030" y="323" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif" pointer-events="none">njila-user</text>
+    <text x="1030" y="338" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8" font-family="monospace"
+          pointer-events="none">&#920;=0.094</text>
+    
+  </g>
+  <g class="node">
+    <circle cx="761" cy="330" r="34" fill="#0f4c3a"
+            stroke="#14b8a6" stroke-width="2.5">
+      <title>njila-registry-service&#10;Theta_dormant = 0.2058&#10;C = 0.5469 | P = 0.8000 | F = 0.0000&#10;niveau d'appel = 1</title>
+    </circle>
+    <text x="761" y="323" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif" pointer-events="none">njila-registry</text>
+    <text x="761" y="338" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8" font-family="monospace"
+          pointer-events="none">&#920;=0.206</text>
+    
+  </g>
+  <g class="node">
+    <circle cx="493" cy="330" r="34" fill="#0f4c3a"
+            stroke="#14b8a6" stroke-width="2.5">
+      <title>njila-fleet-service&#10;Theta_dormant = 0.1093&#10;C = 0.1719 | P = 0.5001 | F = 0.0000&#10;niveau d'appel = 1</title>
+    </circle>
+    <text x="493" y="323" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif" pointer-events="none">njila-fleet</text>
+    <text x="493" y="338" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8" font-family="monospace"
+          pointer-events="none">&#920;=0.109</text>
+    
+  </g>
+  <g class="node">
+    <circle cx="224" cy="330" r="34" fill="#0f4c3a"
+            stroke="#14b8a6" stroke-width="2.5">
+      <title>njila-booking-service&#10;Theta_dormant = 0.0904&#10;C = 0.2188 | P = 0.3648 | F = 0.0000&#10;niveau d'appel = 1</title>
+    </circle>
+    <text x="224" y="323" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif" pointer-events="none">njila-booking</text>
+    <text x="224" y="338" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8" font-family="monospace"
+          pointer-events="none">&#920;=0.090</text>
+    
+  </g>
+  <g class="node">
+    <circle cx="896" cy="330" r="34" fill="#0f4c3a"
+            stroke="#14b8a6" stroke-width="2.5">
+      <title>njila-subscribe-service&#10;Theta_dormant = 0.0143&#10;C = 0.1250 | P = 0.0000 | F = 0.0000&#10;niveau d'appel = 1</title>
+    </circle>
+    <text x="896" y="323" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif" pointer-events="none">njila-subscribe</text>
+    <text x="896" y="338" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8" font-family="monospace"
+          pointer-events="none">&#920;=0.014</text>
+    
+  </g>
+  <g class="node">
+    <circle cx="627" cy="330" r="34" fill="#0f4c3a"
+            stroke="#14b8a6" stroke-width="2.5">
+      <title>njila-payement-service&#10;Theta_dormant = 0.0892&#10;C = 0.2188 | P = 0.3584 | F = 0.0000&#10;niveau d'appel = 1</title>
+    </circle>
+    <text x="627" y="323" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif" pointer-events="none">njila-payement</text>
+    <text x="627" y="338" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8" font-family="monospace"
+          pointer-events="none">&#920;=0.089</text>
+    
+  </g>
+  <g class="node">
+    <circle cx="359" cy="330" r="34" fill="#0f4c3a"
+            stroke="#14b8a6" stroke-width="2.5">
+      <title>njila-conf-service&#10;Theta_dormant = 0.0713&#10;C = 0.6250 | P = 0.0000 | F = 0.0000&#10;niveau d'appel = 1</title>
+    </circle>
+    <text x="359" y="323" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif" pointer-events="none">njila-conf</text>
+    <text x="359" y="338" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8" font-family="monospace"
+          pointer-events="none">&#920;=0.071</text>
+    
+  </g>
+</svg>
+<script>
+document.querySelectorAll('.edge').forEach(function(g) {
+  var lbl = document.getElementById('wl' + g.dataset.i);
+  var path = g.querySelector('path');
+  g.addEventListener('mouseenter', function() {
+    lbl.setAttribute('visibility', 'visible');
+    path.setAttribute('opacity', '1');
+    path.setAttribute('stroke-width',
+        (parseFloat(path.getAttribute('stroke-width')) + 1.5));
+  });
+  g.addEventListener('mouseleave', function() {
+    lbl.setAttribute('visibility', 'hidden');
+    path.setAttribute('opacity', '0.75');
+    path.setAttribute('stroke-width',
+        (parseFloat(path.getAttribute('stroke-width')) - 1.5));
+  });
+});
+</script>
+    </div>
+    <div class="legend">
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#3b1f8c;border-color:#8b5cf6"></div>
+        &#201;cho-Dormant (&#920; &#8805; 0.4880)</div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#0f4c3a;border-color:#14b8a6"></div>
+        Non-Dormant (&#920; &lt; 0.4880)</div>
+      <div class="legend-item">
+        <div class="legend-line" style="background:#14b8a6;height:2px"></div>
+        w_ij &lt; 0.40</div>
+      <div class="legend-item">
+        <div class="legend-line" style="background:#f59e0b;height:3px"></div>
+        0.40 &#8804; w_ij &lt; 0.60</div>
+      <div class="legend-item">
+        <div class="legend-line" style="background:#ef4444;height:4px"></div>
+        w_ij &#8805; 0.60</div>
+      <div class="legend-item" style="color:#475569">
+        &#233;paisseur &#8733; w_ij &#183; survoler un arc pour w exact &#183;
+        survoler un n&#339;ud pour C/P/F/&#920;</div>
+    </div>
+    <div class="hint">
+      Lecture : un arc s_i &#8594; s_j signifie &#171; des spans du service s_i
+      ont &#233;t&#233; parents de spans du service s_j dans les traces &#187;
+      (relation appelant &#8594; appel&#233; agr&#233;g&#233;e sur l'ensemble
+      des traces). Les niveaux verticaux mat&#233;rialisent la profondeur
+      d'appel : niveau 0 = services jamais appel&#233;s (points d'entr&#233;e
+      du trafic observ&#233;).
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Formules MetaBP-RTS (param&#232;tres du run courant)</div>
+    <div class="formulas">
+      <div class="formula"><strong>w_ij</strong> = &#945;&#183;rate_ij + &#946;&#183;lat_norm + &#947;&#183;err_ij</div>
+      <div class="formula"><strong>&#920;(s_i)</strong> = &#969;_C&#183;C + &#969;_P&#183;P + &#969;_F&#183;F</div>
+      <div class="formula"><strong>S_dormant</strong> = &#123; s_i | &#920;(s_i) &#8805; &#964; &#125;
+        &#183; <strong>&#964;</strong> = 0.4880</div>
+      <div class="formula"><strong>&#969;_C</strong>=0.1140 &#183; <strong>&#969;_P</strong>=0.1793 &#183; <strong>&#969;_F</strong>=0.7067 <span style="color:#475569">(EWM-CRITIC, run courant)</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Scores par service &#8212; &#920;, C, P, F</div>
+    <div style="overflow-x:auto"><table>
+      <thead><tr><th>Service</th><th>Statut</th><th>&#920;_dormant</th>
+        <th>C &#8212; Centralit&#233;</th><th>P &#8212; Propagation</th>
+        <th>F &#8212; Fragilit&#233;</th>
+      </tr></thead>
+      <tbody><tr><td style="font-weight:600;color:#e2e8f0">njila-proxy-service</td><td><span style="background:#3b2f7f;color:#c4b5fd;padding:1px 6px;border-radius:4px;font-size:0.68rem">DORMANT</span></td><td><div style="display:flex;align-items:center;gap:6px"><div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:77.0%;height:4px;background:#f59e0b;border-radius:2px"></div></div><span style="font-family:monospace;color:#f59e0b">0.7701</span></div></td><td><div style="display:flex;align-items:center;gap:6px"><div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:37.5%;height:4px;background:#14b8a6;border-radius:2px"></div></div><span style="font-family:monospace;color:#14b8a6">0.3750</span></div></td><td><div style="display:flex;align-items:center;gap:6px"><div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:11.6%;height:4px;background:#8b5cf6;border-radius:2px"></div></div><span style="font-family:monospace;color:#8b5cf6">0.1155</span></div></td><td style="font-family:monospace;color:#f87171">1.0000</td></tr><tr><td style="font-weight:600;color:#e2e8f0">njila-registry-service</td><td><span style="background:#134e4a;color:#5eead4;padding:1px 6px;border-radius:4px;font-size:0.68rem">actif</span></td><td><div style="display:flex;align-items:center;gap:6px"><div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:20.6%;height:4px;background:#f59e0b;border-radius:2px"></div></div><span style="font-family:monospace;color:#f59e0b">0.2058</span></div></td><td><div style="display:flex;align-items:center;gap:6px"><div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:54.7%;height:4px;background:#14b8a6;border-radius:2px"></div></div><span style="font-family:monospace;color:#14b8a6">0.5469</span></div></td><td><div style="display:flex;align-items:center;gap:6px"><div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:80.0%;height:4px;background:#8b5cf6;border-radius:2px"></div></div><span style="font-family:monospace;color:#8b5cf6">0.8000</span></div></td><td style="font-family:monospace;color:#94a3b8">0.0000</td></tr><tr><td style="font-weight:600;color:#e2e8f0">njila-fleet-service</td><td><span style="background:#134e4a;color:#5eead4;padding:1px 6px;border-radius:4px;font-size:0.68rem">actif</span></td><td><div style="display:flex;align-items:center;gap:6px"><div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:10.9%;height:4px;background:#f59e0b;border-radius:2px"></div></div><span style="font-family:monospace;color:#f59e0b">0.1093</span></div></td><td><div style="display:flex;align-items:center;gap:6px"><div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:17.2%;height:4px;background:#14b8a6;border-radius:2px"></div></div><span style="font-family:monospace;color:#14b8a6">0.1719</span></div></td><td><div style="display:flex;align-items:center;gap:6px"><div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:50.0%;height:4px;background:#8b5cf6;border-radius:2px"></div></div><span style="font-family:monospace;color:#8b5cf6">0.5001</span></div></td><td style="font-family:monospace;color:#94a3b8">0.0000</td></tr><tr><td style="font-weight:600;color:#e2e8f0">njila-user-service</td><td><span style="background:#134e4a;color:#5eead4;padding:1px 6px;border-radius:4px;font-size:0.68rem">actif</span></td><td><div style="display:flex;align-items:center;gap:6px"><div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:9.4%;height:4px;background:#f59e0b;border-radius:2px"></div></div><span style="font-family:monospace;color:#f59e0b">0.0943</span></div></td><td><div style="display:flex;align-items:center;gap:6px"><div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:21.9%;height:4px;background:#14b8a6;border-radius:2px"></div></div><span style="font-family:monospace;color:#14b8a6">0.2188</span></div></td><td><div style="display:flex;align-items:center;gap:6px"><div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:38.7%;height:4px;background:#8b5cf6;border-radius:2px"></div></div><span style="font-family:monospace;color:#8b5cf6">0.3870</span></div></td><td style="font-family:monospace;color:#94a3b8">0.0000</td></tr><tr><td style="font-weight:600;color:#e2e8f0">njila-booking-service</td><td><span style="background:#134e4a;color:#5eead4;padding:1px 6px;border-radius:4px;font-size:0.68rem">actif</span></td><td><div style="display:flex;align-items:center;gap:6px"><div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:9.0%;height:4px;background:#f59e0b;border-radius:2px"></div></div><span style="font-family:monospace;color:#f59e0b">0.0904</span></div></td><td><div style="display:flex;align-items:center;gap:6px"><div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:21.9%;height:4px;background:#14b8a6;border-radius:2px"></div></div><span style="font-family:monospace;color:#14b8a6">0.2188</span></div></td><td><div style="display:flex;align-items:center;gap:6px"><div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:36.5%;height:4px;background:#8b5cf6;border-radius:2px"></div></div><span style="font-family:monospace;color:#8b5cf6">0.3648</span></div></td><td style="font-family:monospace;color:#94a3b8">0.0000</td></tr><tr><td style="font-weight:600;color:#e2e8f0">njila-payement-service</td><td><span style="background:#134e4a;color:#5eead4;padding:1px 6px;border-radius:4px;font-size:0.68rem">actif</span></td><td><div style="display:flex;align-items:center;gap:6px"><div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:8.9%;height:4px;background:#f59e0b;border-radius:2px"></div></div><span style="font-family:monospace;color:#f59e0b">0.0892</span></div></td><td><div style="display:flex;align-items:center;gap:6px"><div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:21.9%;height:4px;background:#14b8a6;border-radius:2px"></div></div><span style="font-family:monospace;color:#14b8a6">0.2188</span></div></td><td><div style="display:flex;align-items:center;gap:6px"><div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:35.8%;height:4px;background:#8b5cf6;border-radius:2px"></div></div><span style="font-family:monospace;color:#8b5cf6">0.3584</span></div></td><td style="font-family:monospace;color:#94a3b8">0.0000</td></tr><tr><td style="font-weight:600;color:#e2e8f0">njila-conf-service</td><td><span style="background:#134e4a;color:#5eead4;padding:1px 6px;border-radius:4px;font-size:0.68rem">actif</span></td><td><div style="display:flex;align-items:center;gap:6px"><div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:7.1%;height:4px;background:#f59e0b;border-radius:2px"></div></div><span style="font-family:monospace;color:#f59e0b">0.0713</span></div></td><td><div style="display:flex;align-items:center;gap:6px"><div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:62.5%;height:4px;background:#14b8a6;border-radius:2px"></div></div><span style="font-family:monospace;color:#14b8a6">0.6250</span></div></td><td><div style="display:flex;align-items:center;gap:6px"><div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:0.0%;height:4px;background:#8b5cf6;border-radius:2px"></div></div><span style="font-family:monospace;color:#8b5cf6">0.0000</span></div></td><td style="font-family:monospace;color:#94a3b8">0.0000</td></tr><tr><td style="font-weight:600;color:#e2e8f0">njila-auth-service</td><td><span style="background:#134e4a;color:#5eead4;padding:1px 6px;border-radius:4px;font-size:0.68rem">actif</span></td><td><div style="display:flex;align-items:center;gap:6px"><div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:2.9%;height:4px;background:#f59e0b;border-radius:2px"></div></div><span style="font-family:monospace;color:#f59e0b">0.0285</span></div></td><td><div style="display:flex;align-items:center;gap:6px"><div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:25.0%;height:4px;background:#14b8a6;border-radius:2px"></div></div><span style="font-family:monospace;color:#14b8a6">0.2500</span></div></td><td><div style="display:flex;align-items:center;gap:6px"><div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:0.0%;height:4px;background:#8b5cf6;border-radius:2px"></div></div><span style="font-family:monospace;color:#8b5cf6">0.0000</span></div></td><td style="font-family:monospace;color:#94a3b8">0.0000</td></tr><tr><td style="font-weight:600;color:#e2e8f0">njila-subscribe-service</td><td><span style="background:#134e4a;color:#5eead4;padding:1px 6px;border-radius:4px;font-size:0.68rem">actif</span></td><td><div style="display:flex;align-items:center;gap:6px"><div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:1.4%;height:4px;background:#f59e0b;border-radius:2px"></div></div><span style="font-family:monospace;color:#f59e0b">0.0143</span></div></td><td><div style="display:flex;align-items:center;gap:6px"><div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:12.5%;height:4px;background:#14b8a6;border-radius:2px"></div></div><span style="font-family:monospace;color:#14b8a6">0.1250</span></div></td><td><div style="display:flex;align-items:center;gap:6px"><div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:0.0%;height:4px;background:#8b5cf6;border-radius:2px"></div></div><span style="font-family:monospace;color:#8b5cf6">0.0000</span></div></td><td style="font-family:monospace;color:#94a3b8">0.0000</td></tr></tbody>
+    </table></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Arcs de G &#8212; poids w_ij et composantes</div>
+    <div style="overflow-x:auto"><table>
+      <thead><tr><th>Source</th><th></th><th>Cible</th><th>w_ij</th>
+        <th>rate_ij</th><th>lat_norm</th><th>err_ij</th><th>fr&#233;q.</th>
+      </tr></thead>
+      <tbody><tr><td style="font-family:monospace;color:#e2e8f0">njila-registry-service</td><td style="text-align:center;color:#64748b">&#8594;</td><td style="font-family:monospace;color:#e2e8f0">njila-conf-service</td><td style="font-family:monospace;color:#ef4444;font-weight:700">0.8000</td><td style="font-family:monospace">1.0000</td><td style="font-family:monospace">1.0000</td><td style="font-family:monospace">0.0000</td><td style="font-family:monospace;color:#94a3b8">1</td></tr><tr><td style="font-family:monospace;color:#e2e8f0">njila-fleet-service</td><td style="text-align:center;color:#64748b">&#8594;</td><td style="font-family:monospace;color:#e2e8f0">njila-auth-service</td><td style="font-family:monospace;color:#f59e0b;font-weight:700">0.5001</td><td style="font-family:monospace">1.0000</td><td style="font-family:monospace">0.0002</td><td style="font-family:monospace">0.0000</td><td style="font-family:monospace;color:#94a3b8">248</td></tr><tr><td style="font-family:monospace;color:#e2e8f0">njila-user-service</td><td style="text-align:center;color:#64748b">&#8594;</td><td style="font-family:monospace;color:#e2e8f0">njila-registry-service</td><td style="font-family:monospace;color:#f59e0b;font-weight:700">0.4995</td><td style="font-family:monospace">0.9990</td><td style="font-family:monospace">0.0001</td><td style="font-family:monospace">0.0000</td><td style="font-family:monospace;color:#94a3b8">1006</td></tr><tr><td style="font-family:monospace;color:#e2e8f0">njila-booking-service</td><td style="text-align:center;color:#64748b">&#8594;</td><td style="font-family:monospace;color:#e2e8f0">njila-registry-service</td><td style="font-family:monospace;color:#f59e0b;font-weight:700">0.4995</td><td style="font-family:monospace">0.9990</td><td style="font-family:monospace">0.0001</td><td style="font-family:monospace">0.0000</td><td style="font-family:monospace;color:#94a3b8">1006</td></tr><tr><td style="font-family:monospace;color:#e2e8f0">njila-payement-service</td><td style="text-align:center;color:#64748b">&#8594;</td><td style="font-family:monospace;color:#e2e8f0">njila-registry-service</td><td style="font-family:monospace;color:#f59e0b;font-weight:700">0.4995</td><td style="font-family:monospace">0.9990</td><td style="font-family:monospace">0.0001</td><td style="font-family:monospace">0.0000</td><td style="font-family:monospace;color:#94a3b8">1006</td></tr><tr><td style="font-family:monospace;color:#e2e8f0">njila-proxy-service</td><td style="text-align:center;color:#64748b">&#8594;</td><td style="font-family:monospace;color:#e2e8f0">njila-registry-service</td><td style="font-family:monospace;color:#14b8a6;font-weight:700">0.3413</td><td style="font-family:monospace">0.6825</td><td style="font-family:monospace">0.0001</td><td style="font-family:monospace">0.0000</td><td style="font-family:monospace;color:#94a3b8">3517</td></tr><tr><td style="font-family:monospace;color:#e2e8f0">njila-user-service</td><td style="text-align:center;color:#64748b">&#8594;</td><td style="font-family:monospace;color:#e2e8f0">njila-conf-service</td><td style="font-family:monospace;color:#14b8a6;font-weight:700">0.2744</td><td style="font-family:monospace">0.0010</td><td style="font-family:monospace">0.9132</td><td style="font-family:monospace">0.0000</td><td style="font-family:monospace;color:#94a3b8">1</td></tr><tr><td style="font-family:monospace;color:#e2e8f0">njila-booking-service</td><td style="text-align:center;color:#64748b">&#8594;</td><td style="font-family:monospace;color:#e2e8f0">njila-conf-service</td><td style="font-family:monospace;color:#14b8a6;font-weight:700">0.2301</td><td style="font-family:monospace">0.0010</td><td style="font-family:monospace">0.7655</td><td style="font-family:monospace">0.0000</td><td style="font-family:monospace;color:#94a3b8">1</td></tr><tr><td style="font-family:monospace;color:#e2e8f0">njila-payement-service</td><td style="text-align:center;color:#64748b">&#8594;</td><td style="font-family:monospace;color:#e2e8f0">njila-conf-service</td><td style="font-family:monospace;color:#14b8a6;font-weight:700">0.2172</td><td style="font-family:monospace">0.0010</td><td style="font-family:monospace">0.7225</td><td style="font-family:monospace">0.0000</td><td style="font-family:monospace;color:#94a3b8">1</td></tr><tr><td style="font-family:monospace;color:#e2e8f0">njila-proxy-service</td><td style="text-align:center;color:#64748b">&#8594;</td><td style="font-family:monospace;color:#e2e8f0">njila-user-service</td><td style="font-family:monospace;color:#14b8a6;font-weight:700">0.2072</td><td style="font-family:monospace">0.0136</td><td style="font-family:monospace">0.0013</td><td style="font-family:monospace">1.0000</td><td style="font-family:monospace;color:#94a3b8">70</td></tr><tr><td style="font-family:monospace;color:#e2e8f0">njila-proxy-service</td><td style="text-align:center;color:#64748b">&#8594;</td><td style="font-family:monospace;color:#e2e8f0">njila-fleet-service</td><td style="font-family:monospace;color:#14b8a6;font-weight:700">0.1319</td><td style="font-family:monospace">0.0815</td><td style="font-family:monospace">0.0021</td><td style="font-family:monospace">0.4524</td><td style="font-family:monospace;color:#94a3b8">420</td></tr><tr><td style="font-family:monospace;color:#e2e8f0">njila-proxy-service</td><td style="text-align:center;color:#64748b">&#8594;</td><td style="font-family:monospace;color:#e2e8f0">njila-conf-service</td><td style="font-family:monospace;color:#14b8a6;font-weight:700">0.1319</td><td style="font-family:monospace">0.0004</td><td style="font-family:monospace">0.4392</td><td style="font-family:monospace">0.0000</td><td style="font-family:monospace;color:#94a3b8">2</td></tr><tr><td style="font-family:monospace;color:#e2e8f0">njila-proxy-service</td><td style="text-align:center;color:#64748b">&#8594;</td><td style="font-family:monospace;color:#e2e8f0">njila-auth-service</td><td style="font-family:monospace;color:#14b8a6;font-weight:700">0.0806</td><td style="font-family:monospace">0.1609</td><td style="font-family:monospace">0.0005</td><td style="font-family:monospace">0.0000</td><td style="font-family:monospace;color:#94a3b8">829</td></tr><tr><td style="font-family:monospace;color:#e2e8f0">njila-proxy-service</td><td style="text-align:center;color:#64748b">&#8594;</td><td style="font-family:monospace;color:#e2e8f0">njila-subscribe-service</td><td style="font-family:monospace;color:#14b8a6;font-weight:700">0.0147</td><td style="font-family:monospace">0.0291</td><td style="font-family:monospace">0.0005</td><td style="font-family:monospace">0.0000</td><td style="font-family:monospace;color:#94a3b8">150</td></tr><tr><td style="font-family:monospace;color:#e2e8f0">njila-proxy-service</td><td style="text-align:center;color:#64748b">&#8594;</td><td style="font-family:monospace;color:#e2e8f0">njila-booking-service</td><td style="font-family:monospace;color:#14b8a6;font-weight:700">0.0108</td><td style="font-family:monospace">0.0213</td><td style="font-family:monospace">0.0004</td><td style="font-family:monospace">0.0000</td><td style="font-family:monospace;color:#94a3b8">110</td></tr><tr><td style="font-family:monospace;color:#e2e8f0">njila-proxy-service</td><td style="text-align:center;color:#64748b">&#8594;</td><td style="font-family:monospace;color:#e2e8f0">njila-payement-service</td><td style="font-family:monospace;color:#14b8a6;font-weight:700">0.0057</td><td style="font-family:monospace">0.0107</td><td style="font-family:monospace">0.0013</td><td style="font-family:monospace">0.0000</td><td style="font-family:monospace;color:#94a3b8">55</td></tr></tbody>
+    </table></div>
+  </div>
+
+</div>
+</body>
+</html>

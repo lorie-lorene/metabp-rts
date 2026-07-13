@@ -1,0 +1,6 @@
+{
+  "tier": 1,
+  "description": "Tests traversant au moins un Service Echo-Impact",
+  "n_tests": 0,
+  "tests": []
+}

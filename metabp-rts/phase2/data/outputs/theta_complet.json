@@ -1,0 +1,11 @@
+{
+  "njila-auth-service": 0.008343,
+  "njila-booking-service": 0.733722,
+  "njila-conf-service": 0.020859,
+  "njila-fleet-service": 0.031987,
+  "njila-payement-service": 0.026115,
+  "njila-proxy-service": 0.932708,
+  "njila-registry-service": 0.060249,
+  "njila-subscribe-service": 0.004172,
+  "njila-user-service": 0.734885
+}

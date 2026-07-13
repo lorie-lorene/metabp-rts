@@ -1,0 +1,74 @@
+[
+  {
+    "service_name": "njila-proxy-service",
+    "C": 0.375,
+    "P": 0.115509,
+    "F": 1.0,
+    "theta_dormant": 0.770124,
+    "is_dormant": true
+  },
+  {
+    "service_name": "njila-registry-service",
+    "C": 0.546875,
+    "P": 0.8,
+    "F": 0.0,
+    "theta_dormant": 0.205817,
+    "is_dormant": false
+  },
+  {
+    "service_name": "njila-fleet-service",
+    "C": 0.171875,
+    "P": 0.500053,
+    "F": 0.0,
+    "theta_dormant": 0.109272,
+    "is_dormant": false
+  },
+  {
+    "service_name": "njila-user-service",
+    "C": 0.21875,
+    "P": 0.386985,
+    "F": 0.0,
+    "theta_dormant": 0.094339,
+    "is_dormant": false
+  },
+  {
+    "service_name": "njila-booking-service",
+    "C": 0.21875,
+    "P": 0.364836,
+    "F": 0.0,
+    "theta_dormant": 0.090367,
+    "is_dormant": false
+  },
+  {
+    "service_name": "njila-payement-service",
+    "C": 0.21875,
+    "P": 0.358386,
+    "F": 0.0,
+    "theta_dormant": 0.089211,
+    "is_dormant": false
+  },
+  {
+    "service_name": "njila-conf-service",
+    "C": 0.625,
+    "P": 0.0,
+    "F": 0.0,
+    "theta_dormant": 0.071256,
+    "is_dormant": false
+  },
+  {
+    "service_name": "njila-auth-service",
+    "C": 0.25,
+    "P": 0.0,
+    "F": 0.0,
+    "theta_dormant": 0.028502,
+    "is_dormant": false
+  },
+  {
+    "service_name": "njila-subscribe-service",
+    "C": 0.125,
+    "P": 0.0,
+    "F": 0.0,
+    "theta_dormant": 0.014251,
+    "is_dormant": false
+  }
+]

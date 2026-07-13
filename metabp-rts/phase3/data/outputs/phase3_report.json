@@ -1,0 +1,60 @@
+{
+  "input": {
+    "n_tier1": 0,
+    "n_tier2": 7548,
+    "n_total": 7548,
+    "n_s_echo": 0,
+    "n_services_cit": 9
+  },
+  "mrps": {
+    "n_input": 7548,
+    "n_groups": 17,
+    "dedup_rate": 0.9977,
+    "dedup_pct": "99.8%",
+    "avg_group_size": 444.0,
+    "max_group_size": 3517,
+    "singletons": 4,
+    "singleton_pct": "23.5%"
+  },
+  "pso": {
+    "n_input": 17,
+    "n_selected": 5,
+    "reduction_rate": 0.7059,
+    "reduction_pct": "70.6%",
+    "n_services_total": 9,
+    "n_services_covered": 9,
+    "coverage_rate": 1.0,
+    "coverage_pct": "100.0%",
+    "gbest_fitness": 0.611765,
+    "n_iterations": 20,
+    "converged": true
+  },
+  "et": {
+    "TO_us": 124989922,
+    "TR_us": 10354992,
+    "TS_us": 16651200,
+    "TO_s": 124.9899,
+    "TR_s": 10.355,
+    "TS_s": 16.6512,
+    "ET": 78.39,
+    "EN": 99.93,
+    "n_original": 7548,
+    "n_sel": 5,
+    "n_with_duration": 7548,
+    "coverage_duration": true,
+    "note": "TS mesuré directement (Phase 1+2+3) ; TO/TR estimés via latences Jaeger (duration_us du span racine). Mode online = raffinement futur.",
+    "TS_breakdown_s": {
+      "phase1": 16.056,
+      "phase2": 0.4905,
+      "phase3": 0.1047
+    },
+    "note_breakdown": "Phase 1 est un coût amortissable (indépendant de ΔS, calculé une fois et réutilisé). Phase 2+3 se relancent à chaque cycle de régression."
+  },
+  "output": {
+    "n_tier1_conserved": 0,
+    "n_tier2_selected": 5,
+    "n_t_sel": 5,
+    "reduction_globale": 0.9993,
+    "reduction_pct": "99.9%"
+  }
+}
