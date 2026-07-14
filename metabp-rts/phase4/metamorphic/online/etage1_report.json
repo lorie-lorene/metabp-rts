@@ -1,0 +1,85 @@
+{
+  "results": [
+    {
+      "mr": "MR01_idem_stations",
+      "passed": true,
+      "detail": "|src|=13 |follow|=13 diff=set()",
+      "src_status": 200,
+      "follow_status": 200,
+      "famille": "idempotence"
+    },
+    {
+      "mr": "MR02_idem_trains",
+      "passed": true,
+      "detail": "|src|=6 |follow|=6 diff=set()",
+      "src_status": 200,
+      "follow_status": 200,
+      "famille": "idempotence"
+    },
+    {
+      "mr": "MR03_idem_consigns",
+      "passed": true,
+      "detail": "|src|=60 |follow|=60 diff=set()",
+      "src_status": 200,
+      "follow_status": 200,
+      "famille": "idempotence"
+    },
+    {
+      "mr": "MR04_card_contacts",
+      "passed": true,
+      "detail": "|src|=2 |follow|=2",
+      "src_status": 200,
+      "follow_status": 200,
+      "famille": "cardinalité"
+    },
+    {
+      "mr": "MR05_card_consigns",
+      "passed": true,
+      "detail": "|src|=60 |follow|=60",
+      "src_status": 200,
+      "follow_status": 200,
+      "famille": "cardinalité"
+    },
+    {
+      "mr": "MR06_auth_contacts",
+      "passed": true,
+      "detail": "src=200 follow=403",
+      "src_status": 200,
+      "follow_status": 403,
+      "famille": "auth"
+    },
+    {
+      "mr": "MR08_auth_consigns",
+      "passed": true,
+      "detail": "src=200 follow=403",
+      "src_status": 200,
+      "follow_status": 403,
+      "famille": "auth"
+    },
+    {
+      "mr": "MR09_equiv_name_id",
+      "passed": true,
+      "detail": "attendu=['shanghai', 'suzhou'] obtenu=['shanghai', 'suzhou']",
+      "src_status": 200,
+      "follow_status": 200,
+      "famille": "équivalence"
+    },
+    {
+      "mr": "MR10_xsvc_contacts",
+      "passed": true,
+      "detail": "|A|=2 |B|=2 diff=set()",
+      "src_status": 200,
+      "follow_status": 200,
+      "famille": "cohérence-inter-svc"
+    }
+  ],
+  "p_mr": 100.0,
+  "n": 9,
+  "familles": [
+    "auth",
+    "cardinalité",
+    "cohérence-inter-svc",
+    "idempotence",
+    "équivalence"
+  ]
+}
