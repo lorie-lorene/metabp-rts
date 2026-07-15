@@ -1,60 +1,60 @@
 {
   "input": {
-    "n_tier1": 3000,
-    "n_tier2": 4203,
-    "n_total": 7203,
-    "n_s_echo": 2,
-    "n_services_cit": 16
+    "n_tier1": 981,
+    "n_tier2": 478,
+    "n_total": 1459,
+    "n_s_echo": 10,
+    "n_services_cit": 27
   },
   "mrps": {
-    "n_input": 4203,
-    "n_groups": 8,
-    "dedup_rate": 0.9981,
-    "dedup_pct": "99.8%",
-    "avg_group_size": 525.38,
-    "max_group_size": 600,
-    "singletons": 0,
-    "singleton_pct": "0.0%"
+    "n_input": 478,
+    "n_groups": 27,
+    "dedup_rate": 0.9435,
+    "dedup_pct": "94.3%",
+    "avg_group_size": 17.7,
+    "max_group_size": 126,
+    "singletons": 4,
+    "singleton_pct": "14.8%"
   },
   "pso": {
-    "n_input": 8,
-    "n_selected": 7,
-    "reduction_rate": 0.125,
-    "reduction_pct": "12.5%",
-    "n_services_total": 16,
-    "n_services_covered": 12,
-    "coverage_rate": 0.75,
-    "coverage_pct": "75.0%",
-    "gbest_fitness": 0.258335,
+    "n_input": 27,
+    "n_selected": 17,
+    "reduction_rate": 0.3704,
+    "reduction_pct": "37.0%",
+    "n_services_total": 31,
+    "n_services_covered": 17,
+    "coverage_rate": 0.5484,
+    "coverage_pct": "54.8%",
+    "gbest_fitness": 0.152578,
     "n_iterations": 20,
     "converged": true
   },
   "et": {
-    "TO_us": 130808974,
-    "TR_us": 66741749,
-    "TS_us": 23231500,
-    "TO_s": 130.809,
-    "TR_s": 66.7417,
-    "TS_s": 23.2315,
-    "ET": 31.22,
-    "EN": 58.25,
-    "n_original": 7203,
-    "n_sel": 3007,
-    "n_with_duration": 7203,
+    "TO_us": 206552982,
+    "TR_us": 177012483,
+    "TS_us": 5984100,
+    "TO_s": 206.553,
+    "TR_s": 177.0125,
+    "TS_s": 5.9841,
+    "ET": 11.4,
+    "EN": 31.6,
+    "n_original": 1459,
+    "n_sel": 998,
+    "n_with_duration": 1459,
     "coverage_duration": true,
     "note": "TS mesuré directement (Phase 1+2+3) ; TO/TR estimés via latences Jaeger (duration_us du span racine). Mode online = raffinement futur.",
     "TS_breakdown_s": {
-      "phase1": 22.5441,
-      "phase2": 0.4809,
-      "phase3": 0.2065
+      "phase1": 5.5488,
+      "phase2": 0.1619,
+      "phase3": 0.2734
     },
     "note_breakdown": "Phase 1 est un coût amortissable (indépendant de ΔS, calculé une fois et réutilisé). Phase 2+3 se relancent à chaque cycle de régression."
   },
   "output": {
-    "n_tier1_conserved": 3000,
-    "n_tier2_selected": 7,
-    "n_t_sel": 3007,
-    "reduction_globale": 0.5825,
-    "reduction_pct": "58.2%"
+    "n_tier1_conserved": 981,
+    "n_tier2_selected": 17,
+    "n_t_sel": 998,
+    "reduction_globale": 0.316,
+    "reduction_pct": "31.6%"
   }
 }

@@ -83,9 +83,6 @@ class SpanParser:
             duration_us=span.get("duration", 0),
             error=self._extract_error(span),
             start_time_us=span.get("startTime", 0),
-            endpoint=self._extract_endpoint(span),
-            http_method=self._extract_tag(span, "http.method") or self._extract_tag(span, "http.request.method"),
-            span_kind=self._extract_tag(span, "span.kind"),
         )
 
     def _extract_processes(self, trace: dict) -> Dict[str, str]:
@@ -102,36 +99,6 @@ class SpanParser:
             if ref.get("refType") == "CHILD_OF":
                 return ref.get("spanID")
         return None
-
-
-    def _extract_tag(self, span: dict, key: str):
-        """Valeur d'un tag Jaeger par cle, ou None."""
-        for tag in span.get("tags", []):
-            if tag.get("key") == key:
-                return tag.get("value")
-        return None
-
-    def _extract_endpoint(self, span: dict):
-        """
-        Extrait le PATH de l'endpoint HTTP depuis les tags.
-        Supporte l'ancienne convention (http.url) et la nouvelle (url.full).
-        Retourne '/api/v1/stationservice/stations' (sans host ni port).
-        """
-        url = self._extract_tag(span, "http.url") or self._extract_tag(span, "url.full")
-        if not url:
-            # fallback : operationName du type "GET /api/v1/..."
-            op = span.get("operationName", "")
-            if "/" in op:
-                parts = op.split()
-                url = parts[-1] if parts else None
-        if not url:
-            return None
-        try:
-            from urllib.parse import urlparse
-            path = urlparse(str(url)).path
-            return path or None
-        except Exception:
-            return None
 
     def _extract_error(self, span: dict) -> bool:
         #Détecte si le span est en erreur via les tags Jaeger.

@@ -97,26 +97,13 @@ class TraceReconstructor:
                         seen.add(arc)
                         chain.append(arc)
 
-        # --- endpoint d'entree : span SERVER le plus precoce (requete recue) ---
-        servers = [s for s in sorted_spans if s.span_kind == "server" and s.endpoint]
-        entry = servers[0] if servers else None
-
-        # Un cas de test = une requete observee sur un endpoint.
-        # La chaine d'invocation peut etre vide (service unique) : le test reste
-        # valide car il exerce le service et est rejouable via son endpoint.
-        if not chain and entry is None:
+        if not chain:
             return None
-
         duration_us = self._compute_trace_duration(trace_spans)
-
-        return TestPath(
-            trace_id=trace_id,
+        
+        return TestPath(trace_id=trace_id,
             invocation_chain=chain,
-            duration_us=duration_us,
-            endpoint=entry.endpoint if entry else None,
-            http_method=entry.http_method if entry else None,
-            entry_service=entry.service_name if entry else None,
-        )
+            duration_us=duration_us,)
 
     def _build_edges(
         self,

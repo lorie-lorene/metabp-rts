@@ -15,9 +15,6 @@ class SpanRecord:
     duration_us: int        # microsecondes
     error: bool
     start_time_us: int      # timestamp microsecondes
-    endpoint: Optional[str] = None      # path HTTP (span server)
-    http_method: Optional[str] = None   # GET/POST...
-    span_kind: Optional[str] = None     # server | client
 
 
 @dataclass
@@ -26,9 +23,6 @@ class TestPath:
     trace_id: str
     invocation_chain: List[Tuple[str, str]]  
     duration_us: int = 0 
-    endpoint: Optional[str] = None      # endpoint d'entree (span racine server)
-    http_method: Optional[str] = None   # methode de l'endpoint d'entree
-    entry_service: Optional[str] = None # service qui recoit la requete
 
 
 @dataclass

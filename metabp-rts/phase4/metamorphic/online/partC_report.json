@@ -1,22 +1,40 @@
 {
   "delta_s": "ts-station-service",
-  "n_T": 7200,
-  "n_T_sel": 3007,
-  "services_T": 14,
-  "services_T_sel": 16,
-  "services_lost": [],
-  "paths_touching_deltaS_T": 3000,
-  "paths_touching_deltaS_Tsel": 1202,
-  "MR_selected": {
-    "MR01_idem_stations": "ts-station-service",
-    "MR02_idem_trains": "ts-train-service",
-    "MR04_card_contacts": "ts-contacts-service",
-    "MR06_auth_contacts": "ts-contacts-service",
-    "MR09_equiv_name_id": "ts-station-service",
-    "MR10_xsvc_contacts": "ts-contacts-service"
-  },
-  "MR_targeting_deltaS": {
-    "MR01_idem_stations": "ts-station-service",
-    "MR09_equiv_name_id": "ts-station-service"
-  }
+  "n_T": 1459,
+  "n_T_sel": 998,
+  "EN_pct": 31.6,
+  "endpoints_T": 46,
+  "endpoints_T_sel": 41,
+  "MR_applicables_T": [
+    "MR01_idem_stations",
+    "MR02_idem_trains",
+    "MR03_idem_consigns",
+    "MR04_card_contacts",
+    "MR05_card_consigns",
+    "MR06_auth_contacts",
+    "MR08_auth_consigns",
+    "MR09_equiv_name_id",
+    "MR10_xsvc_contacts"
+  ],
+  "MR_applicables_T_sel": [
+    "MR01_idem_stations",
+    "MR02_idem_trains",
+    "MR03_idem_consigns",
+    "MR04_card_contacts",
+    "MR05_card_consigns",
+    "MR06_auth_contacts",
+    "MR08_auth_consigns",
+    "MR09_equiv_name_id",
+    "MR10_xsvc_contacts"
+  ],
+  "MR_perdues": [],
+  "MR_detectant_deltaS": [
+    "MR01_idem_stations",
+    "MR09_equiv_name_id"
+  ],
+  "MR_detectant_deltaS_dans_T_sel": [
+    "MR01_idem_stations",
+    "MR09_equiv_name_id"
+  ],
+  "detection_preservee": true
 }

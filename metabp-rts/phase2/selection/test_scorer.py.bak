@@ -41,11 +41,8 @@ class TestScorer:
                     if svc not in seen:
                         seen.append(svc)
             return seen
-        # Test mono-service : il traverse quand meme son service d'entree
-        svc = tp.get("services") or tp.get("path") or []
-        if not svc and tp.get("entry_service"):
-            return [tp["entry_service"]]
-        return svc
+        # Formats alternatifs
+        return tp.get("services", tp.get("path", []))
 
     def score_and_select(
         self,
@@ -97,9 +94,6 @@ class TestScorer:
                 "tier":       tier,
                 "in_s_echo":  in_s_echo,
                 "duration_us": tp.get("duration_us", 0),
-                "endpoint": tp.get("endpoint"),
-                "http_method": tp.get("http_method"),
-                "entry_service": tp.get("entry_service"),
             })
 
         # Tri stable : score desc, score_avg desc, test_id asc

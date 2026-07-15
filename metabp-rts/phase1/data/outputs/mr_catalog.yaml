@@ -1,0 +1,1168 @@
+mr_catalog:
+- id: MR-S-PER-01
+  type: Permutation
+  service: ts-station-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-S-PER-02
+  type: Permutation
+  service: ts-station-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-T-PER-01
+  type: Permutation
+  service: ts-train-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-T-PER-02
+  type: Permutation
+  service: ts-train-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-R-PER-01
+  type: Permutation
+  service: ts-route-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-R-PER-02
+  type: Permutation
+  service: ts-route-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-S-MON-01
+  type: Monotonie
+  service: ts-security-service
+  endpoint: /api/v1/securityservice/securityConfigs/{accountId}
+  http_method: GET
+  phi: Requête GET /api/v1/securityservice/securityConfigs/{accountId} avant et après
+    une opération de réduction
+  rho: valeur_après <= valeur_avant
+  source: openapi
+- id: MR-S-PER-01
+  type: Permutation
+  service: ts-security-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-S-PER-02
+  type: Permutation
+  service: ts-security-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-O-MON-01
+  type: Monotonie
+  service: ts-order-service
+  endpoint: /api/v1/orderservice/order/security/{checkDate}/{accountId}
+  http_method: GET
+  phi: Requête GET /api/v1/orderservice/order/security/{checkDate}/{accountId} avant
+    et après une opération de réduction
+  rho: valeur_après <= valeur_avant
+  source: openapi
+- id: MR-O-PER-01
+  type: Permutation
+  service: ts-order-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-O-PER-02
+  type: Permutation
+  service: ts-order-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-OO-MON-01
+  type: Monotonie
+  service: ts-order-other-service
+  endpoint: /api/v1/orderOtherService/orderOther/security/{checkDate}/{accountId}
+  http_method: GET
+  phi: Requête GET /api/v1/orderOtherService/orderOther/security/{checkDate}/{accountId}
+    avant et après une opération de réduction
+  rho: valeur_après <= valeur_avant
+  source: openapi
+- id: MR-OO-PER-01
+  type: Permutation
+  service: ts-order-other-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-OO-PER-02
+  type: Permutation
+  service: ts-order-other-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-T-PER-01
+  type: Permutation
+  service: ts-travel-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-T-PER-02
+  type: Permutation
+  service: ts-travel-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-T-PER-01
+  type: Permutation
+  service: ts-travel2-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-T-PER-02
+  type: Permutation
+  service: ts-travel2-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-C-MON-01
+  type: Monotonie
+  service: ts-contacts-service
+  endpoint: /api/v1/contactservice/contacts/account/{accountId}
+  http_method: GET
+  phi: Requête GET /api/v1/contactservice/contacts/account/{accountId} avant et après
+    une opération de réduction
+  rho: valeur_après <= valeur_avant
+  source: openapi
+- id: MR-C-PER-01
+  type: Permutation
+  service: ts-contacts-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-C-PER-02
+  type: Permutation
+  service: ts-contacts-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-A-PER-01
+  type: Permutation
+  service: ts-assurance-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-A-PER-02
+  type: Permutation
+  service: ts-assurance-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-ABI-PER-01
+  type: Permutation
+  service: ts-admin-basic-info-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-ABI-PER-02
+  type: Permutation
+  service: ts-admin-basic-info-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-C-PER-01
+  type: Permutation
+  service: ts-config-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-C-PER-02
+  type: Permutation
+  service: ts-config-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-P-PER-01
+  type: Permutation
+  service: ts-price-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-P-PER-02
+  type: Permutation
+  service: ts-price-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-C-PER-01
+  type: Permutation
+  service: ts-cancel-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-C-PER-02
+  type: Permutation
+  service: ts-cancel-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-P-PER-01
+  type: Permutation
+  service: ts-preserve-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-P-PER-02
+  type: Permutation
+  service: ts-preserve-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-IP-MON-01
+  type: Monotonie
+  service: ts-inside-payment-service
+  endpoint: /api/v1/inside_pay_service/inside_payment/account
+  http_method: GET
+  phi: Requête GET /api/v1/inside_pay_service/inside_payment/account avant et après
+    une opération de réduction
+  rho: valeur_après <= valeur_avant
+  source: openapi
+- id: MR-IP-MON-02
+  type: Monotonie
+  service: ts-inside-payment-service
+  endpoint: /api/v1/inside_pay_service/inside_payment/account
+  http_method: POST
+  phi: Requête POST /api/v1/inside_pay_service/inside_payment/account avant et après
+    une opération de réduction
+  rho: valeur_après <= valeur_avant
+  source: openapi
+- id: MR-IP-PER-01
+  type: Permutation
+  service: ts-inside-payment-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-IP-PER-02
+  type: Permutation
+  service: ts-inside-payment-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-P-PER-01
+  type: Permutation
+  service: ts-payment-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-P-PER-02
+  type: Permutation
+  service: ts-payment-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-S-PER-01
+  type: Permutation
+  service: ts-seat-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-S-PER-02
+  type: Permutation
+  service: ts-seat-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-F-PER-01
+  type: Permutation
+  service: ts-food-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-F-PER-02
+  type: Permutation
+  service: ts-food-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-C-MON-01
+  type: Monotonie
+  service: ts-consign-service
+  endpoint: /api/v1/consignservice/consigns/account/{id}
+  http_method: GET
+  phi: Requête GET /api/v1/consignservice/consigns/account/{id} avant et après une
+    opération de réduction
+  rho: valeur_après <= valeur_avant
+  source: openapi
+- id: MR-C-PER-01
+  type: Permutation
+  service: ts-consign-service
+  endpoint: /auditevents
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-C-PER-02
+  type: Permutation
+  service: ts-consign-service
+  endpoint: /auditevents.json
+  http_method: GET
+  phi: Permutation de l'ordre des paramètres ['principal', 'after']
+  rho: Résultat identique quelle que soit l'ordre des paramètres
+  source: openapi
+- id: MR-LAT-ts-admin-basic-info-service
+  type: Latence
+  service: ts-admin-basic-info-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-admin-basic-info-service ; mediane ~ 14.1 ms
+  rho: duration_us <= 119172 (P99)
+  source: traces-p99
+  threshold_us: 119172
+- id: MR-ERR-ts-admin-basic-info-service
+  type: Erreur
+  service: ts-admin-basic-info-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-admin-basic-info-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-admin-basic-info-service
+  type: Completude
+  service: ts-admin-basic-info-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-admin-basic-info-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(ts-admin-basic-info-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-assurance-service
+  type: Latence
+  service: ts-assurance-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-assurance-service ; mediane ~ 6.3 ms
+  rho: duration_us <= 250534 (P99)
+  source: traces-p99
+  threshold_us: 250534
+- id: MR-ERR-ts-assurance-service
+  type: Erreur
+  service: ts-assurance-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-assurance-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-assurance-service
+  type: Completude
+  service: ts-assurance-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-assurance-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(ts-assurance-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-auth-service
+  type: Latence
+  service: ts-auth-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-auth-service ; mediane ~ 14.3 ms
+  rho: duration_us <= 354769 (P99)
+  source: traces-p99
+  threshold_us: 354769
+- id: MR-ERR-ts-auth-service
+  type: Erreur
+  service: ts-auth-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-auth-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-auth-service
+  type: Completude
+  service: ts-auth-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-auth-service produit typiquement >= 2 span(s) par trace
+  rho: nb_spans(ts-auth-service) >= 2
+  source: traces-completude
+  threshold_min_spans: 2
+- id: MR-LAT-ts-basic-service
+  type: Latence
+  service: ts-basic-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-basic-service ; mediane ~ 8.6 ms
+  rho: duration_us <= 121417 (P99)
+  source: traces-p99
+  threshold_us: 121417
+- id: MR-ERR-ts-basic-service
+  type: Erreur
+  service: ts-basic-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-basic-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-basic-service
+  type: Completude
+  service: ts-basic-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-basic-service produit typiquement >= 4 span(s) par trace
+  rho: nb_spans(ts-basic-service) >= 4
+  source: traces-completude
+  threshold_min_spans: 4
+- id: MR-LAT-ts-cancel-service
+  type: Latence
+  service: ts-cancel-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-cancel-service ; mediane ~ 26.9 ms
+  rho: duration_us <= 10498616 (P99)
+  source: traces-p99
+  threshold_us: 10498616
+- id: MR-ERR-ts-cancel-service
+  type: Erreur
+  service: ts-cancel-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-cancel-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-cancel-service
+  type: Completude
+  service: ts-cancel-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-cancel-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(ts-cancel-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-config-service
+  type: Latence
+  service: ts-config-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-config-service ; mediane ~ 9.5 ms
+  rho: duration_us <= 168663 (P99)
+  source: traces-p99
+  threshold_us: 168663
+- id: MR-ERR-ts-config-service
+  type: Erreur
+  service: ts-config-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-config-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-config-service
+  type: Completude
+  service: ts-config-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-config-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(ts-config-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-consign-price-service
+  type: Latence
+  service: ts-consign-price-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-consign-price-service ; mediane ~ 10.0 ms
+  rho: duration_us <= 147911 (P99)
+  source: traces-p99
+  threshold_us: 147911
+- id: MR-ERR-ts-consign-price-service
+  type: Erreur
+  service: ts-consign-price-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-consign-price-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-consign-price-service
+  type: Completude
+  service: ts-consign-price-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-consign-price-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(ts-consign-price-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-consign-service
+  type: Latence
+  service: ts-consign-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-consign-service ; mediane ~ 14.6 ms
+  rho: duration_us <= 329441 (P99)
+  source: traces-p99
+  threshold_us: 329441
+- id: MR-ERR-ts-consign-service
+  type: Erreur
+  service: ts-consign-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-consign-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-consign-service
+  type: Completude
+  service: ts-consign-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-consign-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(ts-consign-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-contacts-service
+  type: Latence
+  service: ts-contacts-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-contacts-service ; mediane ~ 6.9 ms
+  rho: duration_us <= 38141 (P99)
+  source: traces-p99
+  threshold_us: 38141
+- id: MR-ERR-ts-contacts-service
+  type: Erreur
+  service: ts-contacts-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-contacts-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-contacts-service
+  type: Completude
+  service: ts-contacts-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-contacts-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(ts-contacts-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-execute-service
+  type: Latence
+  service: ts-execute-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-execute-service ; mediane ~ 21.7 ms
+  rho: duration_us <= 675060 (P99)
+  source: traces-p99
+  threshold_us: 675060
+- id: MR-ERR-ts-execute-service
+  type: Erreur
+  service: ts-execute-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-execute-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-execute-service
+  type: Completude
+  service: ts-execute-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-execute-service produit typiquement >= 2 span(s) par trace
+  rho: nb_spans(ts-execute-service) >= 2
+  source: traces-completude
+  threshold_min_spans: 2
+- id: MR-LAT-ts-food-service
+  type: Latence
+  service: ts-food-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-food-service ; mediane ~ 33.6 ms
+  rho: duration_us <= 8660404 (P99)
+  source: traces-p99
+  threshold_us: 8660404
+- id: MR-ERR-ts-food-service
+  type: Erreur
+  service: ts-food-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-food-service = 55.6%
+  rho: taux_erreur <= 0.6556 (nominal 0.5556 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.6556
+  nominal_error_rate: 0.5556
+- id: MR-CMP-ts-food-service
+  type: Completude
+  service: ts-food-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-food-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(ts-food-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-inside-payment-service
+  type: Latence
+  service: ts-inside-payment-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-inside-payment-service ; mediane ~ 25.7 ms
+  rho: duration_us <= 436521 (P99)
+  source: traces-p99
+  threshold_us: 436521
+- id: MR-ERR-ts-inside-payment-service
+  type: Erreur
+  service: ts-inside-payment-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-inside-payment-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-inside-payment-service
+  type: Completude
+  service: ts-inside-payment-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-inside-payment-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(ts-inside-payment-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-notification-service
+  type: Latence
+  service: ts-notification-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-notification-service ; mediane ~ 4158.8 ms
+  rho: duration_us <= 10400925 (P99)
+  source: traces-p99
+  threshold_us: 10400925
+- id: MR-ERR-ts-notification-service
+  type: Erreur
+  service: ts-notification-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-notification-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-notification-service
+  type: Completude
+  service: ts-notification-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-notification-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(ts-notification-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-order-other-service
+  type: Latence
+  service: ts-order-other-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-order-other-service ; mediane ~ 40.3 ms
+  rho: duration_us <= 155266 (P99)
+  source: traces-p99
+  threshold_us: 155266
+- id: MR-ERR-ts-order-other-service
+  type: Erreur
+  service: ts-order-other-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-order-other-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-order-other-service
+  type: Completude
+  service: ts-order-other-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-order-other-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(ts-order-other-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-order-service
+  type: Latence
+  service: ts-order-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-order-service ; mediane ~ 37.8 ms
+  rho: duration_us <= 128420 (P99)
+  source: traces-p99
+  threshold_us: 128420
+- id: MR-ERR-ts-order-service
+  type: Erreur
+  service: ts-order-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-order-service = 0.2%
+  rho: taux_erreur <= 0.1016 (nominal 0.0016 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1016
+  nominal_error_rate: 0.0016
+- id: MR-CMP-ts-order-service
+  type: Completude
+  service: ts-order-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-order-service produit typiquement >= 2 span(s) par trace
+  rho: nb_spans(ts-order-service) >= 2
+  source: traces-completude
+  threshold_min_spans: 2
+- id: MR-LAT-ts-preserve-service
+  type: Latence
+  service: ts-preserve-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-preserve-service ; mediane ~ 44.3 ms
+  rho: duration_us <= 10718127 (P99)
+  source: traces-p99
+  threshold_us: 10718127
+- id: MR-ERR-ts-preserve-service
+  type: Erreur
+  service: ts-preserve-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-preserve-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-preserve-service
+  type: Completude
+  service: ts-preserve-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-preserve-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(ts-preserve-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-price-service
+  type: Latence
+  service: ts-price-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-price-service ; mediane ~ 16.4 ms
+  rho: duration_us <= 279825 (P99)
+  source: traces-p99
+  threshold_us: 279825
+- id: MR-ERR-ts-price-service
+  type: Erreur
+  service: ts-price-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-price-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-price-service
+  type: Completude
+  service: ts-price-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-price-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(ts-price-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-rebook-service
+  type: Latence
+  service: ts-rebook-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-rebook-service ; mediane ~ 23.5 ms
+  rho: duration_us <= 667899 (P99)
+  source: traces-p99
+  threshold_us: 667899
+- id: MR-ERR-ts-rebook-service
+  type: Erreur
+  service: ts-rebook-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-rebook-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-rebook-service
+  type: Completude
+  service: ts-rebook-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-rebook-service produit typiquement >= 2 span(s) par trace
+  rho: nb_spans(ts-rebook-service) >= 2
+  source: traces-completude
+  threshold_min_spans: 2
+- id: MR-LAT-ts-route-service
+  type: Latence
+  service: ts-route-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-route-service ; mediane ~ 10.6 ms
+  rho: duration_us <= 248416 (P99)
+  source: traces-p99
+  threshold_us: 248416
+- id: MR-ERR-ts-route-service
+  type: Erreur
+  service: ts-route-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-route-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-route-service
+  type: Completude
+  service: ts-route-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-route-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(ts-route-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-seat-service
+  type: Latence
+  service: ts-seat-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-seat-service ; mediane ~ 23.6 ms
+  rho: duration_us <= 203020 (P99)
+  source: traces-p99
+  threshold_us: 203020
+- id: MR-ERR-ts-seat-service
+  type: Erreur
+  service: ts-seat-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-seat-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-seat-service
+  type: Completude
+  service: ts-seat-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-seat-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(ts-seat-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-security-service
+  type: Latence
+  service: ts-security-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-security-service ; mediane ~ 19.2 ms
+  rho: duration_us <= 479192 (P99)
+  source: traces-p99
+  threshold_us: 479192
+- id: MR-ERR-ts-security-service
+  type: Erreur
+  service: ts-security-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-security-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-security-service
+  type: Completude
+  service: ts-security-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-security-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(ts-security-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-station-service
+  type: Latence
+  service: ts-station-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-station-service ; mediane ~ 14.0 ms
+  rho: duration_us <= 107447 (P99)
+  source: traces-p99
+  threshold_us: 107447
+- id: MR-ERR-ts-station-service
+  type: Erreur
+  service: ts-station-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-station-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-station-service
+  type: Completude
+  service: ts-station-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-station-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(ts-station-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-ticketinfo-service
+  type: Latence
+  service: ts-ticketinfo-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-ticketinfo-service ; mediane ~ 17.1 ms
+  rho: duration_us <= 202753 (P99)
+  source: traces-p99
+  threshold_us: 202753
+- id: MR-ERR-ts-ticketinfo-service
+  type: Erreur
+  service: ts-ticketinfo-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-ticketinfo-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-ticketinfo-service
+  type: Completude
+  service: ts-ticketinfo-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-ticketinfo-service produit typiquement >= 4 span(s) par trace
+  rho: nb_spans(ts-ticketinfo-service) >= 4
+  source: traces-completude
+  threshold_min_spans: 4
+- id: MR-LAT-ts-train-service
+  type: Latence
+  service: ts-train-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-train-service ; mediane ~ 10.3 ms
+  rho: duration_us <= 137469 (P99)
+  source: traces-p99
+  threshold_us: 137469
+- id: MR-ERR-ts-train-service
+  type: Erreur
+  service: ts-train-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-train-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-train-service
+  type: Completude
+  service: ts-train-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-train-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(ts-train-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-travel-service
+  type: Latence
+  service: ts-travel-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-travel-service ; mediane ~ 19.3 ms
+  rho: duration_us <= 654437 (P99)
+  source: traces-p99
+  threshold_us: 654437
+- id: MR-ERR-ts-travel-service
+  type: Erreur
+  service: ts-travel-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-travel-service = 7.8%
+  rho: taux_erreur <= 0.1783 (nominal 0.0783 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1783
+  nominal_error_rate: 0.0783
+- id: MR-CMP-ts-travel-service
+  type: Completude
+  service: ts-travel-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-travel-service produit typiquement >= 2 span(s) par trace
+  rho: nb_spans(ts-travel-service) >= 2
+  source: traces-completude
+  threshold_min_spans: 2
+- id: MR-LAT-ts-travel2-service
+  type: Latence
+  service: ts-travel2-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-travel2-service ; mediane ~ 23.4 ms
+  rho: duration_us <= 482545 (P99)
+  source: traces-p99
+  threshold_us: 482545
+- id: MR-ERR-ts-travel2-service
+  type: Erreur
+  service: ts-travel2-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-travel2-service = 24.4%
+  rho: taux_erreur <= 0.3441 (nominal 0.2441 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.3441
+  nominal_error_rate: 0.2441
+- id: MR-CMP-ts-travel2-service
+  type: Completude
+  service: ts-travel2-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-travel2-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(ts-travel2-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-user-service
+  type: Latence
+  service: ts-user-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-user-service ; mediane ~ 12.7 ms
+  rho: duration_us <= 254792 (P99)
+  source: traces-p99
+  threshold_us: 254792
+- id: MR-ERR-ts-user-service
+  type: Erreur
+  service: ts-user-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-user-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-user-service
+  type: Completude
+  service: ts-user-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-user-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(ts-user-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
+- id: MR-LAT-ts-verification-code-service
+  type: Latence
+  service: ts-verification-code-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-verification-code-service ; mediane ~ 4.5 ms
+  rho: duration_us <= 203337 (P99)
+  source: traces-p99
+  threshold_us: 203337
+- id: MR-ERR-ts-verification-code-service
+  type: Erreur
+  service: ts-verification-code-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-verification-code-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-verification-code-service
+  type: Completude
+  service: ts-verification-code-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-verification-code-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(ts-verification-code-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1

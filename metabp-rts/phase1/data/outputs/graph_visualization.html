@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>MetaBP-RTS — Graphe G Phase 1</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0f1117;
+  color: #e2e8f0;
+  min-height: 100vh;
+  padding: 0;
+}
+
+/* Header */
+header {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #1e2535;
+  background: #13161f;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+header h1 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f8fafc;
+  letter-spacing: -0.02em;
+}
+.badge {
+  padding: 0.2rem 0.7rem;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+.badge-d { background: #3b2f7f; color: #c4b5fd; }
+.badge-n { background: #134e4a; color: #5eead4; }
+.badge-g { background: #1e3a5f; color: #93c5fd; }
+
+/* Layout principal */
+.main {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Section */
+.section {
+  background: #13161f;
+  border: 1px solid #1e2535;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.section-title {
+  padding: 0.75rem 1.25rem;
+  border-bottom: 1px solid #1e2535;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #64748b;
+  background: #0f1117;
+}
+
+/* Métriques globales */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0;
+}
+.metric-card {
+  padding: 1rem 1.25rem;
+  border-right: 1px solid #1e2535;
+  text-align: center;
+}
+.metric-card:last-child { border-right: none; }
+.metric-label {
+  font-size: 0.65rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+.metric-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: monospace;
+  color: #f8fafc;
+}
+.metric-sub {
+  font-size: 0.65rem;
+  color: #475569;
+  margin-top: 2px;
+}
+
+/* Graphe statique */
+.graph-container {
+  padding: 1.5rem;
+}
+
+/* Légende */
+.legend {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  border-top: 1px solid #1e2535;
+  background: #0f1117;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  color: #94a3b8;
+}
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid;
+}
+.legend-line {
+  width: 24px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+/* Tableaux */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+thead th {
+  padding: 0.6rem 1rem;
+  text-align: left;
+  font-size: 0.67rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #64748b;
+  border-bottom: 1px solid #1e2535;
+  background: #0f1117;
+  position: sticky;
+  top: 0;
+}
+tbody td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid #0f1117;
+  vertical-align: middle;
+}
+tbody tr:hover td { background: #1a1f2e; }
+tbody tr:last-child td { border-bottom: none; }
+
+/* Formules */
+.formulas {
+  padding: 1.25rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.formula {
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  background: #0f1117;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #1e2535;
+}
+.formula strong { color: #e2e8f0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>MetaBP-RTS — Graphe de services G · Phase 1</h1>
+  <span class="badge badge-g">27 services · 40 arcs</span>
+  <span class="badge badge-d">9 Écho-Dormant(s)</span>
+  <span class="badge badge-n">18 Non-Dormant(s)</span>
+  <span style="margin-left:auto;font-size:0.7rem;color:#475569">
+    τ_dormant = 0.40 · α=0.5 · β=0.3 · γ=0.2
+  </span>
+</header>
+
+<div class="main">
+
+  <!-- Métriques globales -->
+  <div class="section">
+    <div class="section-title">Métriques globales</div>
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-label">Services</div>
+        <div class="metric-value" style="color:#93c5fd">27</div>
+        <div class="metric-sub">noeuds G</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Dépendances</div>
+        <div class="metric-value" style="color:#93c5fd">40</div>
+        <div class="metric-sub">arcs G</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Densité</div>
+        <div class="metric-value" style="color:#94a3b8;font-size:1.2rem">0.0570</div>
+        <div class="metric-sub">|E|/|V|(|V|−1)</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">w_ij moyen</div>
+        <div class="metric-value" style="color:#f59e0b;font-size:1.2rem">0.2153</div>
+        <div class="metric-sub">poids moyen</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Écho-Dormants</div>
+        <div class="metric-value" style="color:#a78bfa">9</div>
+        <div class="metric-sub">Θ ≥ τ_dormant</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Non-Dormants</div>
+        <div class="metric-value" style="color:#5eead4">18</div>
+        <div class="metric-sub">Θ &lt; τ_dormant</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Graphe statique -->
+  <div class="section">
+    <div class="section-title">Graphe G — Architecture des dépendances inter-services</div>
+    <div class="graph-container">
+      <svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 900 480" width="100%"
+     style="background:#0f1117;border-radius:8px">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#94a3b8"
+            stroke-width="1.5" stroke-linecap="round"/>
+    </marker>
+  </defs>
+  <!-- Arcs -->
+  
+  <path d="M171.1,198.5 Q277.0,276.3 408.3,278.9"
+        fill="none" stroke="#f59e0b" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="289.7" y="228.7" text-anchor="middle"
+        font-size="10" fill="#f59e0b" font-weight="600"
+        font-family="monospace">w=0.501</text>
+  <path d="M442.0,187.0 Q454.0,180.3 466.0,187.0"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="454.0" y="177.0" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.130</text>
+  <path d="M445.8,203.0 Q362.4,212.7 304.4,273.4"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="375.1" y="228.2" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.111</text>
+  <path d="M514.0,187.0 Q588.0,214.4 662.0,187.0"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="588.0" y="177.0" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.261</text>
+  <path d="M458.0,187.0 Q503.0,207.4 548.0,187.0"
+        fill="none" stroke="#f59e0b" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="503.0" y="177.0" text-anchor="middle"
+        font-size="10" fill="#f59e0b" font-weight="600"
+        font-family="monospace">w=0.502</text>
+  <path d="M499.0,187.0 Q482.5,173.4 466.0,187.0"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="482.5" y="177.0" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.250</text>
+  <path d="M499.0,187.0 Q454.0,166.6 409.0,187.0"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="454.0" y="177.0" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.251</text>
+  <path d="M670.0,187.0 Q568.0,152.9 466.0,187.0"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="568.0" y="177.0" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.020</text>
+  <path d="M732.4,211.5 Q747.4,251.0 787.8,263.0"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="760.1" y="227.3" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.067</text>
+  <path d="M686.0,216.9 Q660.0,228.2 659.5,256.4"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="672.7" y="226.7" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.119</text>
+  <path d="M670.0,187.0 Q596.0,159.6 522.0,187.0"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="596.0" y="177.0" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.045</text>
+  <path d="M670.0,187.0 Q681.5,180.2 693.0,187.0"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="681.5" y="177.0" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.257</text>
+  <path d="M116.0,293.0 Q446.0,381.8 776.0,293.0"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="446.0" y="283.0" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.028</text>
+  <path d="M114.6,303.0 Q248.3,389.8 407.7,387.8"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="261.2" y="335.4" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.028</text>
+  <path d="M116.0,293.0 Q353.5,359.6 591.0,293.0"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="353.5" y="283.0" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.028</text>
+  <path d="M115.3,285.7 Q344.8,302.3 548.9,195.9"
+        fill="none" stroke="#f59e0b" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="332.1" y="230.8" text-anchor="middle"
+        font-size="10" fill="#f59e0b" font-weight="600"
+        font-family="monospace">w=0.419</text>
+  <path d="M561.0,113.9 Q542.5,125.2 549.7,145.5"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="555.3" y="119.7" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.052</text>
+  <path d="M593.8,109.3 Q595.8,139.4 623.5,151.1"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="608.7" y="120.2" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.051</text>
+  <path d="M579.3,115.4 Q569.0,131.8 584.3,143.7"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="581.8" y="119.6" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.092</text>
+  <path d="M538.4,89.8 Q374.5,86.9 236.3,175.0"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="387.3" y="122.4" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.047</text>
+  <path d="M537.8,87.6 Q317.6,73.5 123.0,177.7"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="330.4" y="122.7" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.028</text>
+  <path d="M601.0,102.6 Q623.5,147.0 671.7,159.4"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="636.4" y="121.0" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.069</text>
+  <path d="M543.6,100.8 Q487.9,113.1 457.9,161.6"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="500.8" y="121.2" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.047</text>
+  <path d="M538.0,88.6 Q346.0,80.2 179.7,176.5"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="358.9" y="122.5" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.017</text>
+  <path d="M604.4,97.7 Q651.7,154.3 724.7,165.4"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="664.5" y="121.5" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.047</text>
+  <path d="M549.1,106.9 Q515.3,119.1 507.2,154.1"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="528.2" y="120.5" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.050</text>
+  <path d="M539.6,93.5 Q431.4,100.2 348.8,170.5"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="444.2" y="122.0" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.286</text>
+  <path d="M401.0,187.0 Q474.5,214.2 548.0,187.0"
+        fill="none" stroke="#f59e0b" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="474.5" y="177.0" text-anchor="middle"
+        font-size="10" fill="#f59e0b" font-weight="600"
+        font-family="monospace">w=0.502</text>
+  <path d="M613.6,193.6 Q355.7,171.0 123.3,284.9"
+        fill="none" stroke="#f59e0b" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="368.4" y="229.3" text-anchor="middle"
+        font-size="10" fill="#f59e0b" font-weight="600"
+        font-family="monospace">w=0.501</text>
+  <path d="M287.0,187.0 Q304.0,200.7 321.0,187.0"
+        fill="none" stroke="#f59e0b" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="304.0" y="177.0" text-anchor="middle"
+        font-size="10" fill="#f59e0b" font-weight="600"
+        font-family="monospace">w=0.501</text>
+  <path d="M662.7,91.0 Q522.0,92.4 406.9,173.5"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="534.8" y="122.3" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.167</text>
+  <path d="M663.5,93.1 Q550.4,99.0 463.0,171.0"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="563.2" y="122.0" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.334</text>
+  <path d="M106.2,104.6 Q121.2,144.4 161.9,156.9"
+        fill="none" stroke="#f59e0b" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="134.1" y="120.8" text-anchor="middle"
+        font-size="10" fill="#f59e0b" font-weight="600"
+        font-family="monospace">w=0.500</text>
+  <path d="M350.9,106.9 Q359.0,141.9 392.8,154.1"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="371.8" y="120.5" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.201</text>
+  <path d="M362.0,88.6 Q528.3,184.9 720.3,176.5"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="541.1" y="122.5" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.101</text>
+  <path d="M306.2,109.3 Q278.5,121.1 276.5,151.1"
+        fill="none" stroke="#0d9488" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="291.3" y="120.2" text-anchor="middle"
+        font-size="10" fill="#0d9488" font-weight="600"
+        font-family="monospace">w=0.102</text>
+  <path d="M320.7,115.4 Q305.4,127.3 315.7,143.7"
+        fill="none" stroke="#f59e0b" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="318.2" y="119.6" text-anchor="middle"
+        font-size="10" fill="#f59e0b" font-weight="600"
+        font-family="monospace">w=0.400</text>
+  <path d="M789.5,99.1 Q725.1,110.9 686.3,163.7"
+        fill="none" stroke="#f59e0b" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="737.9" y="121.4" text-anchor="middle"
+        font-size="10" fill="#f59e0b" font-weight="600"
+        font-family="monospace">w=0.501</text>
+  <path d="M440.9,114.8 Q424.2,126.3 433.1,144.4"
+        fill="none" stroke="#f59e0b" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="437.0" y="119.6" text-anchor="middle"
+        font-size="10" fill="#f59e0b" font-weight="600"
+        font-family="monospace">w=0.501</text>
+  <path d="M238.5,86.2 Q494.7,206.9 776.6,179.5"
+        fill="none" stroke="#f59e0b" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="507.6" y="122.8" text-anchor="middle"
+        font-size="10" fill="#f59e0b" font-weight="600"
+        font-family="monospace">w=0.500</text>
+  <!-- Noeuds -->
+  
+  <g>
+    <circle cx="137" cy="187" r="36"
+            fill="#3b1f8c" stroke="#7c3aed" stroke-width="2.5"/>
+    <text x="137" y="181" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif">consign</text>
+    <text x="137" y="196" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8"
+          font-family="monospace">Θ=0.410</text>
+    <text x="137" y="207" text-anchor="middle" font-size="8" fill="#a78bfa" font-family="monospace">DORMANT</text>
+  </g>
+  <g>
+    <circle cx="450" cy="293" r="36"
+            fill="#0f4c3a" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="450" y="287" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif">consign-price</text>
+    <text x="450" y="302" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8"
+          font-family="monospace">Θ=0.022</text>
+    
+  </g>
+  <g>
+    <circle cx="478" cy="187" r="36"
+            fill="#0f4c3a" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="478" y="181" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif">seat</text>
+    <text x="478" y="196" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8"
+          font-family="monospace">Θ=0.195</text>
+    
+  </g>
+  <g>
+    <circle cx="422" cy="187" r="36"
+            fill="#3b1f8c" stroke="#7c3aed" stroke-width="2.5"/>
+    <text x="422" y="181" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif">order</text>
+    <text x="422" y="196" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8"
+          font-family="monospace">Θ=0.540</text>
+    <text x="422" y="207" text-anchor="middle" font-size="8" fill="#a78bfa" font-family="monospace">DORMANT</text>
+  </g>
+  <g>
+    <circle cx="535" cy="187" r="36"
+            fill="#0f4c3a" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="535" y="181" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif">security</text>
+    <text x="535" y="196" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8"
+          font-family="monospace">Θ=0.228</text>
+    
+  </g>
+  <g>
+    <circle cx="706" cy="187" r="36"
+            fill="#0f4c3a" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="706" y="181" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif">travel</text>
+    <text x="706" y="196" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8"
+          font-family="monospace">Θ=0.162</text>
+    
+  </g>
+  <g>
+    <circle cx="265" cy="293" r="36"
+            fill="#0f4c3a" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="265" y="287" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif">config</text>
+    <text x="265" y="302" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8"
+          font-family="monospace">Θ=0.022</text>
+    
+  </g>
+  <g>
+    <circle cx="820" cy="293" r="36"
+            fill="#0f4c3a" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="820" y="287" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif">train</text>
+    <text x="820" y="302" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8"
+          font-family="monospace">Θ=0.043</text>
+    
+  </g>
+  <g>
+    <circle cx="80" cy="293" r="36"
+            fill="#0f4c3a" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="80" y="287" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif">basic</text>
+    <text x="80" y="302" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8"
+          font-family="monospace">Θ=0.150</text>
+    
+  </g>
+  <g>
+    <circle cx="573" cy="80" r="36"
+            fill="#0f4c3a" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="573" y="74" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif">preserve</text>
+    <text x="573" y="89" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8"
+          font-family="monospace">Θ=0.145</text>
+    
+  </g>
+  <g>
+    <circle cx="365" cy="187" r="36"
+            fill="#3b1f8c" stroke="#7c3aed" stroke-width="2.5"/>
+    <text x="365" y="181" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif">order-other</text>
+    <text x="365" y="196" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8"
+          font-family="monospace">Θ=0.453</text>
+    <text x="365" y="207" text-anchor="middle" font-size="8" fill="#a78bfa" font-family="monospace">DORMANT</text>
+  </g>
+  <g>
+    <circle cx="450" cy="400" r="36"
+            fill="#0f4c3a" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="450" y="394" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif">price</text>
+    <text x="450" y="409" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8"
+          font-family="monospace">Θ=0.022</text>
+    
+  </g>
+  <g>
+    <circle cx="649" cy="187" r="36"
+            fill="#3b1f8c" stroke="#7c3aed" stroke-width="2.5"/>
+    <text x="649" y="181" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif">ticketinfo</text>
+    <text x="649" y="196" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8"
+          font-family="monospace">Θ=0.453</text>
+    <text x="649" y="207" text-anchor="middle" font-size="8" fill="#a78bfa" font-family="monospace">DORMANT</text>
+  </g>
+  <g>
+    <circle cx="635" cy="293" r="36"
+            fill="#0f4c3a" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="635" y="287" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif">route</text>
+    <text x="635" y="302" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8"
+          font-family="monospace">Θ=0.043</text>
+    
+  </g>
+  <g>
+    <circle cx="592" cy="187" r="36"
+            fill="#0f4c3a" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="592" y="181" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif">station</text>
+    <text x="592" y="196" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8"
+          font-family="monospace">Θ=0.086</text>
+    
+  </g>
+  <g>
+    <circle cx="194" cy="187" r="36"
+            fill="#0f4c3a" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="194" y="181" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif">contacts</text>
+    <text x="194" y="196" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8"
+          font-family="monospace">Θ=0.043</text>
+    
+  </g>
+  <g>
+    <circle cx="80" cy="187" r="36"
+            fill="#0f4c3a" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="80" y="181" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif">assurance</text>
+    <text x="80" y="196" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8"
+          font-family="monospace">Θ=0.022</text>
+    
+  </g>
+  <g>
+    <circle cx="763" cy="187" r="36"
+            fill="#0f4c3a" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="763" y="181" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif">user</text>
+    <text x="763" y="196" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8"
+          font-family="monospace">Θ=0.043</text>
+    
+  </g>
+  <g>
+    <circle cx="308" cy="187" r="36"
+            fill="#0f4c3a" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="308" y="181" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif">notification</text>
+    <text x="308" y="196" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8"
+          font-family="monospace">Θ=0.043</text>
+    
+  </g>
+  <g>
+    <circle cx="251" cy="187" r="36"
+            fill="#3b1f8c" stroke="#7c3aed" stroke-width="2.5"/>
+    <text x="251" y="181" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif">inside-payment</text>
+    <text x="251" y="196" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8"
+          font-family="monospace">Θ=0.410</text>
+    <text x="251" y="207" text-anchor="middle" font-size="8" fill="#a78bfa" font-family="monospace">DORMANT</text>
+  </g>
+  <g>
+    <circle cx="697" cy="80" r="36"
+            fill="#0f4c3a" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="697" y="74" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif">rebook</text>
+    <text x="697" y="89" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8"
+          font-family="monospace">Θ=0.206</text>
+    
+  </g>
+  <g>
+    <circle cx="80" cy="80" r="36"
+            fill="#3b1f8c" stroke="#7c3aed" stroke-width="2.5"/>
+    <text x="80" y="74" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif">admin-basic-info</text>
+    <text x="80" y="89" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8"
+          font-family="monospace">Θ=0.388</text>
+    <text x="80" y="100" text-anchor="middle" font-size="8" fill="#a78bfa" font-family="monospace">DORMANT</text>
+  </g>
+  <g>
+    <circle cx="327" cy="80" r="36"
+            fill="#0f4c3a" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="327" y="74" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif">cancel</text>
+    <text x="327" y="89" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8"
+          font-family="monospace">Θ=0.185</text>
+    
+  </g>
+  <g>
+    <circle cx="820" cy="80" r="36"
+            fill="#3b1f8c" stroke="#7c3aed" stroke-width="2.5"/>
+    <text x="820" y="74" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif">travel2</text>
+    <text x="820" y="89" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8"
+          font-family="monospace">Θ=0.388</text>
+    <text x="820" y="100" text-anchor="middle" font-size="8" fill="#a78bfa" font-family="monospace">DORMANT</text>
+  </g>
+  <g>
+    <circle cx="450" cy="80" r="36"
+            fill="#3b1f8c" stroke="#7c3aed" stroke-width="2.5"/>
+    <text x="450" y="74" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif">execute</text>
+    <text x="450" y="89" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8"
+          font-family="monospace">Θ=0.388</text>
+    <text x="450" y="100" text-anchor="middle" font-size="8" fill="#a78bfa" font-family="monospace">DORMANT</text>
+  </g>
+  <g>
+    <circle cx="203" cy="80" r="36"
+            fill="#3b1f8c" stroke="#7c3aed" stroke-width="2.5"/>
+    <text x="203" y="74" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif">auth</text>
+    <text x="203" y="89" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8"
+          font-family="monospace">Θ=0.388</text>
+    <text x="203" y="100" text-anchor="middle" font-size="8" fill="#a78bfa" font-family="monospace">DORMANT</text>
+  </g>
+  <g>
+    <circle cx="820" cy="187" r="36"
+            fill="#0f4c3a" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="820" y="181" text-anchor="middle" dominant-baseline="central"
+          font-size="11" font-weight="700" fill="#f1f5f9"
+          font-family="'Segoe UI',sans-serif">verification-code</text>
+    <text x="820" y="196" text-anchor="middle" dominant-baseline="central"
+          font-size="9" fill="#94a3b8"
+          font-family="monospace">Θ=0.022</text>
+    
+  </g>
+</svg>
+    </div>
+    <div class="legend">
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#3b1f8c;border-color:#7c3aed"></div>
+        Écho-Dormant (Θ ≥ 0.40)
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#0f4c3a;border-color:#0d9488"></div>
+        Non-Dormant (Θ &lt; 0.40)
+      </div>
+      <div class="legend-item">
+        <div class="legend-line" style="background:#0d9488"></div>
+        w_ij &lt; 0.40 (faible)
+      </div>
+      <div class="legend-item">
+        <div class="legend-line" style="background:#f59e0b"></div>
+        0.40 ≤ w_ij &lt; 0.60 (moyen)
+      </div>
+      <div class="legend-item">
+        <div class="legend-line" style="background:#dc2626"></div>
+        w_ij ≥ 0.60 (élevé)
+      </div>
+    </div>
+  </div>
+
+  <!-- Formules -->
+  <div class="section">
+    <div class="section-title">Formules MetaBP-RTS</div>
+    <div class="formulas">
+      <div class="formula"><strong>w_ij</strong> = α·rate_ij + β·lat_norm + γ·err_ij</div>
+      <div class="formula"><strong>Θ(si)</strong> = ω_C·C(si) + ω_P·P(si) + ω_F·F(si)</div>
+      <div class="formula"><strong>S_dormant</strong> = &#123; si | Θ(si) ≥ τ_dormant &#125;</div>
+      <div class="formula"><strong>α</strong>=0.5 · <strong>β</strong>=0.3 · <strong>γ</strong>=0.2 · <strong>τ</strong>=0.40</div>
+      <div class="formula"><strong>ω_C</strong>=0.357 · <strong>ω_P</strong>=0.357 · <strong>ω_F</strong>=0.286</div>
+    </div>
+  </div>
+
+  <!-- Tableau statistiques -->
+  <div class="section">
+    <div class="section-title">Scores par service — C(si), P(si), F(si), Θ_dormant</div>
+    <div style="overflow-x:auto">
+      <table>
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Statut</th>
+            <th>Θ_dormant</th>
+            <th>C — Centralité</th>
+            <th>P — Propagation</th>
+            <th>F — Fragilité</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+  <td style="font-weight:600;color:#e2e8f0">ts-order-service</td>
+  <td><span style="background:#3b2f7f;color:#c4b5fd;padding:1px 6px;border-radius:4px;font-size:0.68rem">DORMANT</span></td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:54.0%;height:4px;background:#f59e0b;border-radius:2px"></div></div>
+      <span style="font-family:monospace;color:#f59e0b">0.5398</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:65.9%;height:4px;background:#0d9488;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.6591</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:50.2%;height:4px;background:#7c3aed;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.5017</span>
+    </div>
+  </td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+</tr><tr>
+  <td style="font-weight:600;color:#e2e8f0">ts-order-other-service</td>
+  <td><span style="background:#3b2f7f;color:#c4b5fd;padding:1px 6px;border-radius:4px;font-size:0.68rem">DORMANT</span></td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:45.3%;height:4px;background:#f59e0b;border-radius:2px"></div></div>
+      <span style="font-family:monospace;color:#f59e0b">0.4534</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:30.2%;height:4px;background:#0d9488;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.3019</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:50.2%;height:4px;background:#7c3aed;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.5017</span>
+    </div>
+  </td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+</tr><tr>
+  <td style="font-weight:600;color:#e2e8f0">ts-ticketinfo-service</td>
+  <td><span style="background:#3b2f7f;color:#c4b5fd;padding:1px 6px;border-radius:4px;font-size:0.68rem">DORMANT</span></td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:45.3%;height:4px;background:#f59e0b;border-radius:2px"></div></div>
+      <span style="font-family:monospace;color:#f59e0b">0.4530</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:30.2%;height:4px;background:#0d9488;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.3019</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:50.1%;height:4px;background:#7c3aed;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.5012</span>
+    </div>
+  </td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+</tr><tr>
+  <td style="font-weight:600;color:#e2e8f0">ts-consign-service</td>
+  <td><span style="background:#3b2f7f;color:#c4b5fd;padding:1px 6px;border-radius:4px;font-size:0.68rem">DORMANT</span></td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:41.0%;height:4px;background:#f59e0b;border-radius:2px"></div></div>
+      <span style="font-family:monospace;color:#f59e0b">0.4096</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:12.3%;height:4px;background:#0d9488;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.1234</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:50.1%;height:4px;background:#7c3aed;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.5008</span>
+    </div>
+  </td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+</tr><tr>
+  <td style="font-weight:600;color:#e2e8f0">ts-inside-payment-service</td>
+  <td><span style="background:#3b2f7f;color:#c4b5fd;padding:1px 6px;border-radius:4px;font-size:0.68rem">DORMANT</span></td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:41.0%;height:4px;background:#f59e0b;border-radius:2px"></div></div>
+      <span style="font-family:monospace;color:#f59e0b">0.4096</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:12.3%;height:4px;background:#0d9488;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.1234</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:50.1%;height:4px;background:#7c3aed;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.5009</span>
+    </div>
+  </td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+</tr><tr>
+  <td style="font-weight:600;color:#e2e8f0">ts-travel2-service</td>
+  <td><span style="background:#3b2f7f;color:#c4b5fd;padding:1px 6px;border-radius:4px;font-size:0.68rem">DORMANT</span></td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:38.8%;height:4px;background:#f59e0b;border-radius:2px"></div></div>
+      <span style="font-family:monospace;color:#f59e0b">0.3882</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:3.4%;height:4px;background:#0d9488;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.0341</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:50.1%;height:4px;background:#7c3aed;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.5012</span>
+    </div>
+  </td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+</tr><tr>
+  <td style="font-weight:600;color:#e2e8f0">ts-execute-service</td>
+  <td><span style="background:#3b2f7f;color:#c4b5fd;padding:1px 6px;border-radius:4px;font-size:0.68rem">DORMANT</span></td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:38.8%;height:4px;background:#f59e0b;border-radius:2px"></div></div>
+      <span style="font-family:monospace;color:#f59e0b">0.3879</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:3.4%;height:4px;background:#0d9488;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.0341</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:50.1%;height:4px;background:#7c3aed;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.5007</span>
+    </div>
+  </td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+</tr><tr>
+  <td style="font-weight:600;color:#e2e8f0">ts-admin-basic-info-service</td>
+  <td><span style="background:#3b2f7f;color:#c4b5fd;padding:1px 6px;border-radius:4px;font-size:0.68rem">DORMANT</span></td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:38.8%;height:4px;background:#f59e0b;border-radius:2px"></div></div>
+      <span style="font-family:monospace;color:#f59e0b">0.3876</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:3.4%;height:4px;background:#0d9488;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.0341</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:50.0%;height:4px;background:#7c3aed;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.5004</span>
+    </div>
+  </td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+</tr><tr>
+  <td style="font-weight:600;color:#e2e8f0">ts-auth-service</td>
+  <td><span style="background:#3b2f7f;color:#c4b5fd;padding:1px 6px;border-radius:4px;font-size:0.68rem">DORMANT</span></td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:38.8%;height:4px;background:#f59e0b;border-radius:2px"></div></div>
+      <span style="font-family:monospace;color:#f59e0b">0.3876</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:3.4%;height:4px;background:#0d9488;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.0341</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:50.0%;height:4px;background:#7c3aed;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.5003</span>
+    </div>
+  </td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+</tr><tr>
+  <td style="font-weight:600;color:#e2e8f0">ts-security-service</td>
+  <td><span style="background:#134e4a;color:#5eead4;padding:1px 6px;border-radius:4px;font-size:0.68rem">actif</span></td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:22.8%;height:4px;background:#f59e0b;border-radius:2px"></div></div>
+      <span style="font-family:monospace;color:#f59e0b">0.2280</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:15.8%;height:4px;background:#0d9488;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.1575</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:25.0%;height:4px;background:#7c3aed;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.2504</span>
+    </div>
+  </td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+</tr><tr>
+  <td style="font-weight:600;color:#e2e8f0">ts-rebook-service</td>
+  <td><span style="background:#134e4a;color:#5eead4;padding:1px 6px;border-radius:4px;font-size:0.68rem">actif</span></td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:20.6%;height:4px;background:#f59e0b;border-radius:2px"></div></div>
+      <span style="font-family:monospace;color:#f59e0b">0.2064</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:6.8%;height:4px;background:#0d9488;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.0682</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:25.1%;height:4px;background:#7c3aed;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.2505</span>
+    </div>
+  </td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+</tr><tr>
+  <td style="font-weight:600;color:#e2e8f0">ts-seat-service</td>
+  <td><span style="background:#134e4a;color:#5eead4;padding:1px 6px;border-radius:4px;font-size:0.68rem">actif</span></td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:19.5%;height:4px;background:#f59e0b;border-radius:2px"></div></div>
+      <span style="font-family:monospace;color:#f59e0b">0.1948</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:28.1%;height:4px;background:#0d9488;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.2808</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:16.7%;height:4px;background:#7c3aed;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.1674</span>
+    </div>
+  </td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+</tr><tr>
+  <td style="font-weight:600;color:#e2e8f0">ts-cancel-service</td>
+  <td><span style="background:#134e4a;color:#5eead4;padding:1px 6px;border-radius:4px;font-size:0.68rem">actif</span></td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:18.5%;height:4px;background:#f59e0b;border-radius:2px"></div></div>
+      <span style="font-family:monospace;color:#f59e0b">0.1854</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:13.6%;height:4px;background:#0d9488;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.1364</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:20.1%;height:4px;background:#7c3aed;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.2010</span>
+    </div>
+  </td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+</tr><tr>
+  <td style="font-weight:600;color:#e2e8f0">ts-travel-service</td>
+  <td><span style="background:#134e4a;color:#5eead4;padding:1px 6px;border-radius:4px;font-size:0.68rem">actif</span></td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:16.2%;height:4px;background:#f59e0b;border-radius:2px"></div></div>
+      <span style="font-family:monospace;color:#f59e0b">0.1615</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:34.9%;height:4px;background:#0d9488;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.3490</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:10.2%;height:4px;background:#7c3aed;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.1017</span>
+    </div>
+  </td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+</tr><tr>
+  <td style="font-weight:600;color:#e2e8f0">ts-basic-service</td>
+  <td><span style="background:#134e4a;color:#5eead4;padding:1px 6px;border-radius:4px;font-size:0.68rem">actif</span></td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:15.0%;height:4px;background:#f59e0b;border-radius:2px"></div></div>
+      <span style="font-family:monospace;color:#f59e0b">0.1498</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:22.6%;height:4px;background:#0d9488;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.2256</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:12.6%;height:4px;background:#7c3aed;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.1257</span>
+    </div>
+  </td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+</tr><tr>
+  <td style="font-weight:600;color:#e2e8f0">ts-preserve-service</td>
+  <td><span style="background:#134e4a;color:#5eead4;padding:1px 6px;border-radius:4px;font-size:0.68rem">actif</span></td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:14.5%;height:4px;background:#f59e0b;border-radius:2px"></div></div>
+      <span style="font-family:monospace;color:#f59e0b">0.1448</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:37.5%;height:4px;background:#0d9488;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.3750</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:7.1%;height:4px;background:#7c3aed;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.0714</span>
+    </div>
+  </td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+</tr><tr>
+  <td style="font-weight:600;color:#e2e8f0">ts-station-service</td>
+  <td><span style="background:#134e4a;color:#5eead4;padding:1px 6px;border-radius:4px;font-size:0.68rem">actif</span></td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:8.6%;height:4px;background:#f59e0b;border-radius:2px"></div></div>
+      <span style="font-family:monospace;color:#f59e0b">0.0863</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:35.7%;height:4px;background:#0d9488;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.3571</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:0.0%;height:4px;background:#7c3aed;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.0000</span>
+    </div>
+  </td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+</tr><tr>
+  <td style="font-weight:600;color:#e2e8f0">ts-train-service</td>
+  <td><span style="background:#134e4a;color:#5eead4;padding:1px 6px;border-radius:4px;font-size:0.68rem">actif</span></td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:4.3%;height:4px;background:#f59e0b;border-radius:2px"></div></div>
+      <span style="font-family:monospace;color:#f59e0b">0.0432</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:17.9%;height:4px;background:#0d9488;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.1786</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:0.0%;height:4px;background:#7c3aed;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.0000</span>
+    </div>
+  </td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+</tr><tr>
+  <td style="font-weight:600;color:#e2e8f0">ts-route-service</td>
+  <td><span style="background:#134e4a;color:#5eead4;padding:1px 6px;border-radius:4px;font-size:0.68rem">actif</span></td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:4.3%;height:4px;background:#f59e0b;border-radius:2px"></div></div>
+      <span style="font-family:monospace;color:#f59e0b">0.0432</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:17.9%;height:4px;background:#0d9488;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.1786</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:0.0%;height:4px;background:#7c3aed;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.0000</span>
+    </div>
+  </td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+</tr><tr>
+  <td style="font-weight:600;color:#e2e8f0">ts-contacts-service</td>
+  <td><span style="background:#134e4a;color:#5eead4;padding:1px 6px;border-radius:4px;font-size:0.68rem">actif</span></td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:4.3%;height:4px;background:#f59e0b;border-radius:2px"></div></div>
+      <span style="font-family:monospace;color:#f59e0b">0.0432</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:17.9%;height:4px;background:#0d9488;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.1786</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:0.0%;height:4px;background:#7c3aed;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.0000</span>
+    </div>
+  </td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+</tr><tr>
+  <td style="font-weight:600;color:#e2e8f0">ts-user-service</td>
+  <td><span style="background:#134e4a;color:#5eead4;padding:1px 6px;border-radius:4px;font-size:0.68rem">actif</span></td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:4.3%;height:4px;background:#f59e0b;border-radius:2px"></div></div>
+      <span style="font-family:monospace;color:#f59e0b">0.0432</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:17.9%;height:4px;background:#0d9488;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.1786</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:0.0%;height:4px;background:#7c3aed;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.0000</span>
+    </div>
+  </td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+</tr><tr>
+  <td style="font-weight:600;color:#e2e8f0">ts-notification-service</td>
+  <td><span style="background:#134e4a;color:#5eead4;padding:1px 6px;border-radius:4px;font-size:0.68rem">actif</span></td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:4.3%;height:4px;background:#f59e0b;border-radius:2px"></div></div>
+      <span style="font-family:monospace;color:#f59e0b">0.0432</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:17.9%;height:4px;background:#0d9488;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.1786</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:0.0%;height:4px;background:#7c3aed;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.0000</span>
+    </div>
+  </td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+</tr><tr>
+  <td style="font-weight:600;color:#e2e8f0">ts-consign-price-service</td>
+  <td><span style="background:#134e4a;color:#5eead4;padding:1px 6px;border-radius:4px;font-size:0.68rem">actif</span></td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:2.2%;height:4px;background:#f59e0b;border-radius:2px"></div></div>
+      <span style="font-family:monospace;color:#f59e0b">0.0216</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:8.9%;height:4px;background:#0d9488;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.0893</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:0.0%;height:4px;background:#7c3aed;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.0000</span>
+    </div>
+  </td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+</tr><tr>
+  <td style="font-weight:600;color:#e2e8f0">ts-config-service</td>
+  <td><span style="background:#134e4a;color:#5eead4;padding:1px 6px;border-radius:4px;font-size:0.68rem">actif</span></td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:2.2%;height:4px;background:#f59e0b;border-radius:2px"></div></div>
+      <span style="font-family:monospace;color:#f59e0b">0.0216</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:8.9%;height:4px;background:#0d9488;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.0893</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:0.0%;height:4px;background:#7c3aed;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.0000</span>
+    </div>
+  </td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+</tr><tr>
+  <td style="font-weight:600;color:#e2e8f0">ts-price-service</td>
+  <td><span style="background:#134e4a;color:#5eead4;padding:1px 6px;border-radius:4px;font-size:0.68rem">actif</span></td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:2.2%;height:4px;background:#f59e0b;border-radius:2px"></div></div>
+      <span style="font-family:monospace;color:#f59e0b">0.0216</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:8.9%;height:4px;background:#0d9488;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.0893</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:0.0%;height:4px;background:#7c3aed;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.0000</span>
+    </div>
+  </td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+</tr><tr>
+  <td style="font-weight:600;color:#e2e8f0">ts-assurance-service</td>
+  <td><span style="background:#134e4a;color:#5eead4;padding:1px 6px;border-radius:4px;font-size:0.68rem">actif</span></td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:2.2%;height:4px;background:#f59e0b;border-radius:2px"></div></div>
+      <span style="font-family:monospace;color:#f59e0b">0.0216</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:8.9%;height:4px;background:#0d9488;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.0893</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:0.0%;height:4px;background:#7c3aed;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.0000</span>
+    </div>
+  </td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+</tr><tr>
+  <td style="font-weight:600;color:#e2e8f0">ts-verification-code-service</td>
+  <td><span style="background:#134e4a;color:#5eead4;padding:1px 6px;border-radius:4px;font-size:0.68rem">actif</span></td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:2.2%;height:4px;background:#f59e0b;border-radius:2px"></div></div>
+      <span style="font-family:monospace;color:#f59e0b">0.0216</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:8.9%;height:4px;background:#0d9488;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.0893</span>
+    </div>
+  </td>
+  <td>
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="width:60px;height:4px;background:#1e2535;border-radius:2px"><div style="width:0.0%;height:4px;background:#7c3aed;border-radius:2px"></div></div>
+      <span style="font-family:monospace">0.0000</span>
+    </div>
+  </td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+</tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Tableau arcs -->
+  <div class="section">
+    <div class="section-title">Arcs du graphe G — Poids w_ij et composantes</div>
+    <div style="overflow-x:auto">
+      <table>
+        <thead>
+          <tr>
+            <th>Source</th>
+            <th></th>
+            <th>Cible</th>
+            <th>w_ij</th>
+            <th>rate_ij (α=0.5)</th>
+            <th>lat_norm (β=0.3)</th>
+            <th>err_ij (γ=0.2)</th>
+            <th>fréquence</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-order-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-station-service</td>
+  <td><span style="background:#f59e0b22;color:#f59e0b;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.5017</span></td>
+  <td style="font-family:monospace;color:#94a3b8">1.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0058</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">262</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-order-other-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-station-service</td>
+  <td><span style="background:#f59e0b22;color:#f59e0b;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.5017</span></td>
+  <td style="font-family:monospace;color:#94a3b8">1.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0058</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">206</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-ticketinfo-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-basic-service</td>
+  <td><span style="background:#f59e0b22;color:#f59e0b;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.5012</span></td>
+  <td style="font-family:monospace;color:#94a3b8">1.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0040</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">285</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-travel2-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-ticketinfo-service</td>
+  <td><span style="background:#f59e0b22;color:#f59e0b;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.5012</span></td>
+  <td style="font-family:monospace;color:#94a3b8">1.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0038</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">62</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-inside-payment-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-order-other-service</td>
+  <td><span style="background:#f59e0b22;color:#f59e0b;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.5009</span></td>
+  <td style="font-family:monospace;color:#94a3b8">1.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0030</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">3</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-consign-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-consign-price-service</td>
+  <td><span style="background:#f59e0b22;color:#f59e0b;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.5008</span></td>
+  <td style="font-family:monospace;color:#94a3b8">1.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0027</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">80</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-execute-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-order-service</td>
+  <td><span style="background:#f59e0b22;color:#f59e0b;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.5007</span></td>
+  <td style="font-family:monospace;color:#94a3b8">1.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0023</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">9</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-admin-basic-info-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-contacts-service</td>
+  <td><span style="background:#f59e0b22;color:#f59e0b;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.5004</span></td>
+  <td style="font-family:monospace;color:#94a3b8">1.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0012</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">51</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-auth-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-verification-code-service</td>
+  <td><span style="background:#f59e0b22;color:#f59e0b;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.5003</span></td>
+  <td style="font-family:monospace;color:#94a3b8">1.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0010</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">31</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-basic-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-station-service</td>
+  <td><span style="background:#f59e0b22;color:#f59e0b;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.4187</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.8369</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0010</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">354</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-cancel-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-notification-service</td>
+  <td><span style="background:#f59e0b22;color:#f59e0b;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.4000</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.2000</td>
+  <td style="font-family:monospace;color:#94a3b8">1.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">12</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-rebook-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-order-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.3336</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.6667</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0010</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">6</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-preserve-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-notification-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.2865</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.0923</td>
+  <td style="font-family:monospace;color:#94a3b8">0.8011</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">6</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-seat-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-travel-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.2610</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.5195</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0043</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">80</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-travel-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-ticketinfo-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.2565</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.5094</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0062</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">217</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-security-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-order-other-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.2505</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.5000</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0016</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">6</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-security-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-order-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.2504</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.5000</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0013</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">6</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-cancel-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-order-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.2008</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.4000</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0027</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">24</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-rebook-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-order-other-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.1674</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.3333</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0025</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">3</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-seat-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-order-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.1303</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.2597</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0013</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">40</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-travel-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-route-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.1192</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.2371</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0022</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">101</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-seat-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-config-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.1109</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.2208</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0015</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">34</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-cancel-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-inside-payment-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.1024</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.2000</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0081</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">12</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-cancel-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-user-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.1009</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.2000</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0028</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">12</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-preserve-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-station-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.0925</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.1846</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0006</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">12</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-preserve-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-travel-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.0693</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.0923</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0773</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">6</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-travel-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-train-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.0674</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.1338</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0017</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">57</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-preserve-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-security-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.0521</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.0923</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0199</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">6</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-preserve-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-ticketinfo-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.0505</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.0923</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0145</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">6</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-preserve-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-seat-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.0499</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.0923</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0126</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">6</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-preserve-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-contacts-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.0467</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.0923</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0018</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">6</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-preserve-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-order-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.0467</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.0923</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0018</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">6</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-preserve-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-user-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.0467</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.0923</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0019</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">6</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-travel-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-seat-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.0452</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.0798</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0177</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">34</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-basic-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-price-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.0284</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.0544</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0041</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">23</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-preserve-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-assurance-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.0281</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.0462</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0168</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">3</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-basic-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-train-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.0278</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.0544</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0020</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">23</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-basic-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-route-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.0277</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.0544</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0018</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">23</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-travel-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-order-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.0203</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.0399</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0013</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">17</td>
+</tr><tr>
+  <td style="font-family:monospace;color:#e2e8f0">ts-preserve-service</td>
+  <td style="text-align:center;color:#64748b">→</td>
+  <td style="font-family:monospace;color:#e2e8f0">ts-consign-service</td>
+  <td><span style="background:#0d948822;color:#0d9488;padding:2px 8px;border-radius:4px;font-family:monospace;font-size:0.8rem">0.0165</span></td>
+  <td style="font-family:monospace;color:#94a3b8">0.0308</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0036</td>
+  <td style="font-family:monospace;color:#94a3b8">0.0000</td>
+  <td style="font-family:monospace;color:#94a3b8">2</td>
+</tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

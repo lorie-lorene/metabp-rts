@@ -107,7 +107,6 @@ class MRPS:
         invocation_seq: Tuple,
         services: List[str],
         service_to_mrs: Dict[str, List[str]],
-        endpoint: str = None,
     ) -> Tuple:
         """
         Calcule la signature d'un chemin.
@@ -120,7 +119,7 @@ class MRPS:
         propriétés applicables ne dépend pas de l'ordre du chemin.
         """
         if self.mode == "structural":
-            return (invocation_seq, endpoint)
+            return (invocation_seq,)
 
         # Mode enriched : MR(t) = union des MR de tous les services traversés
         mr_set = frozenset(
@@ -128,7 +127,7 @@ class MRPS:
             for svc in services
             for mr_id in service_to_mrs.get(svc, [])
         )
-        return (invocation_seq, endpoint, mr_set)
+        return (invocation_seq, mr_set)
 
     def _select_representative(
         self,
@@ -172,10 +171,7 @@ class MRPS:
             tp = dict(tp)
             tp["services"] = services
 
-            sig = self._compute_signature(
-                invocation_seq, services, service_to_mrs,
-                endpoint=(tp.get("http_method"), tp.get("endpoint")),
-            )
+            sig = self._compute_signature(invocation_seq, services, service_to_mrs)
             groups[sig].append(tp)
 
         # Sélectionner le représentant de chaque groupe

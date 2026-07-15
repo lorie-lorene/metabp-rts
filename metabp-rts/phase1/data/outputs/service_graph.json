@@ -1,0 +1,450 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "id": "ts-consign-service"
+    },
+    {
+      "id": "ts-consign-price-service"
+    },
+    {
+      "id": "ts-seat-service"
+    },
+    {
+      "id": "ts-order-service"
+    },
+    {
+      "id": "ts-security-service"
+    },
+    {
+      "id": "ts-travel-service"
+    },
+    {
+      "id": "ts-config-service"
+    },
+    {
+      "id": "ts-train-service"
+    },
+    {
+      "id": "ts-basic-service"
+    },
+    {
+      "id": "ts-preserve-service"
+    },
+    {
+      "id": "ts-order-other-service"
+    },
+    {
+      "id": "ts-price-service"
+    },
+    {
+      "id": "ts-ticketinfo-service"
+    },
+    {
+      "id": "ts-route-service"
+    },
+    {
+      "id": "ts-station-service"
+    },
+    {
+      "id": "ts-contacts-service"
+    },
+    {
+      "id": "ts-assurance-service"
+    },
+    {
+      "id": "ts-user-service"
+    },
+    {
+      "id": "ts-notification-service"
+    },
+    {
+      "id": "ts-inside-payment-service"
+    },
+    {
+      "id": "ts-rebook-service"
+    },
+    {
+      "id": "ts-admin-basic-info-service"
+    },
+    {
+      "id": "ts-cancel-service"
+    },
+    {
+      "id": "ts-travel2-service"
+    },
+    {
+      "id": "ts-execute-service"
+    },
+    {
+      "id": "ts-auth-service"
+    },
+    {
+      "id": "ts-verification-code-service"
+    }
+  ],
+  "links": [
+    {
+      "w_ij": 0.500819,
+      "rate_ij": 1.0,
+      "lat_norm": 0.002731,
+      "err_ij": 0.0,
+      "freq": 80,
+      "source": "ts-consign-service",
+      "target": "ts-consign-price-service"
+    },
+    {
+      "w_ij": 0.130252,
+      "rate_ij": 0.25974,
+      "lat_norm": 0.001273,
+      "err_ij": 0.0,
+      "freq": 40,
+      "source": "ts-seat-service",
+      "target": "ts-order-service"
+    },
+    {
+      "w_ij": 0.110853,
+      "rate_ij": 0.220779,
+      "lat_norm": 0.001545,
+      "err_ij": 0.0,
+      "freq": 34,
+      "source": "ts-seat-service",
+      "target": "ts-config-service"
+    },
+    {
+      "w_ij": 0.261018,
+      "rate_ij": 0.519481,
+      "lat_norm": 0.004258,
+      "err_ij": 0.0,
+      "freq": 80,
+      "source": "ts-seat-service",
+      "target": "ts-travel-service"
+    },
+    {
+      "w_ij": 0.501745,
+      "rate_ij": 1.0,
+      "lat_norm": 0.005817,
+      "err_ij": 0.0,
+      "freq": 262,
+      "source": "ts-order-service",
+      "target": "ts-station-service"
+    },
+    {
+      "w_ij": 0.250403,
+      "rate_ij": 0.5,
+      "lat_norm": 0.001343,
+      "err_ij": 0.0,
+      "freq": 6,
+      "source": "ts-security-service",
+      "target": "ts-order-service"
+    },
+    {
+      "w_ij": 0.250486,
+      "rate_ij": 0.5,
+      "lat_norm": 0.001618,
+      "err_ij": 0.0,
+      "freq": 6,
+      "source": "ts-security-service",
+      "target": "ts-order-other-service"
+    },
+    {
+      "w_ij": 0.02034,
+      "rate_ij": 0.039906,
+      "lat_norm": 0.00129,
+      "err_ij": 0.0,
+      "freq": 17,
+      "source": "ts-travel-service",
+      "target": "ts-order-service"
+    },
+    {
+      "w_ij": 0.067401,
+      "rate_ij": 0.133803,
+      "lat_norm": 0.001664,
+      "err_ij": 0.0,
+      "freq": 57,
+      "source": "ts-travel-service",
+      "target": "ts-train-service"
+    },
+    {
+      "w_ij": 0.119196,
+      "rate_ij": 0.237089,
+      "lat_norm": 0.002173,
+      "err_ij": 0.0,
+      "freq": 101,
+      "source": "ts-travel-service",
+      "target": "ts-route-service"
+    },
+    {
+      "w_ij": 0.045212,
+      "rate_ij": 0.079812,
+      "lat_norm": 0.017686,
+      "err_ij": 0.0,
+      "freq": 34,
+      "source": "ts-travel-service",
+      "target": "ts-seat-service"
+    },
+    {
+      "w_ij": 0.25654,
+      "rate_ij": 0.50939,
+      "lat_norm": 0.006152,
+      "err_ij": 0.0,
+      "freq": 217,
+      "source": "ts-travel-service",
+      "target": "ts-ticketinfo-service"
+    },
+    {
+      "w_ij": 0.027795,
+      "rate_ij": 0.054374,
+      "lat_norm": 0.002029,
+      "err_ij": 0.0,
+      "freq": 23,
+      "source": "ts-basic-service",
+      "target": "ts-train-service"
+    },
+    {
+      "w_ij": 0.028404,
+      "rate_ij": 0.054374,
+      "lat_norm": 0.004056,
+      "err_ij": 0.0,
+      "freq": 23,
+      "source": "ts-basic-service",
+      "target": "ts-price-service"
+    },
+    {
+      "w_ij": 0.027716,
+      "rate_ij": 0.054374,
+      "lat_norm": 0.001765,
+      "err_ij": 0.0,
+      "freq": 23,
+      "source": "ts-basic-service",
+      "target": "ts-route-service"
+    },
+    {
+      "w_ij": 0.418725,
+      "rate_ij": 0.836879,
+      "lat_norm": 0.000952,
+      "err_ij": 0.0,
+      "freq": 354,
+      "source": "ts-basic-service",
+      "target": "ts-station-service"
+    },
+    {
+      "w_ij": 0.052123,
+      "rate_ij": 0.092308,
+      "lat_norm": 0.019896,
+      "err_ij": 0.0,
+      "freq": 6,
+      "source": "ts-preserve-service",
+      "target": "ts-security-service"
+    },
+    {
+      "w_ij": 0.05051,
+      "rate_ij": 0.092308,
+      "lat_norm": 0.014521,
+      "err_ij": 0.0,
+      "freq": 6,
+      "source": "ts-preserve-service",
+      "target": "ts-ticketinfo-service"
+    },
+    {
+      "w_ij": 0.092499,
+      "rate_ij": 0.184615,
+      "lat_norm": 0.000638,
+      "err_ij": 0.0,
+      "freq": 12,
+      "source": "ts-preserve-service",
+      "target": "ts-station-service"
+    },
+    {
+      "w_ij": 0.046707,
+      "rate_ij": 0.092308,
+      "lat_norm": 0.001843,
+      "err_ij": 0.0,
+      "freq": 6,
+      "source": "ts-preserve-service",
+      "target": "ts-contacts-service"
+    },
+    {
+      "w_ij": 0.028107,
+      "rate_ij": 0.046154,
+      "lat_norm": 0.016768,
+      "err_ij": 0.0,
+      "freq": 3,
+      "source": "ts-preserve-service",
+      "target": "ts-assurance-service"
+    },
+    {
+      "w_ij": 0.069346,
+      "rate_ij": 0.092308,
+      "lat_norm": 0.077306,
+      "err_ij": 0.0,
+      "freq": 6,
+      "source": "ts-preserve-service",
+      "target": "ts-travel-service"
+    },
+    {
+      "w_ij": 0.046693,
+      "rate_ij": 0.092308,
+      "lat_norm": 0.001797,
+      "err_ij": 0.0,
+      "freq": 6,
+      "source": "ts-preserve-service",
+      "target": "ts-order-service"
+    },
+    {
+      "w_ij": 0.016458,
+      "rate_ij": 0.030769,
+      "lat_norm": 0.003579,
+      "err_ij": 0.0,
+      "freq": 2,
+      "source": "ts-preserve-service",
+      "target": "ts-consign-service"
+    },
+    {
+      "w_ij": 0.046737,
+      "rate_ij": 0.092308,
+      "lat_norm": 0.001943,
+      "err_ij": 0.0,
+      "freq": 6,
+      "source": "ts-preserve-service",
+      "target": "ts-user-service"
+    },
+    {
+      "w_ij": 0.049923,
+      "rate_ij": 0.092308,
+      "lat_norm": 0.012564,
+      "err_ij": 0.0,
+      "freq": 6,
+      "source": "ts-preserve-service",
+      "target": "ts-seat-service"
+    },
+    {
+      "w_ij": 0.286471,
+      "rate_ij": 0.092308,
+      "lat_norm": 0.801059,
+      "err_ij": 0.0,
+      "freq": 6,
+      "source": "ts-preserve-service",
+      "target": "ts-notification-service"
+    },
+    {
+      "w_ij": 0.501733,
+      "rate_ij": 1.0,
+      "lat_norm": 0.005778,
+      "err_ij": 0.0,
+      "freq": 206,
+      "source": "ts-order-other-service",
+      "target": "ts-station-service"
+    },
+    {
+      "w_ij": 0.501206,
+      "rate_ij": 1.0,
+      "lat_norm": 0.004019,
+      "err_ij": 0.0,
+      "freq": 285,
+      "source": "ts-ticketinfo-service",
+      "target": "ts-basic-service"
+    },
+    {
+      "w_ij": 0.500909,
+      "rate_ij": 1.0,
+      "lat_norm": 0.003031,
+      "err_ij": 0.0,
+      "freq": 3,
+      "source": "ts-inside-payment-service",
+      "target": "ts-order-other-service"
+    },
+    {
+      "w_ij": 0.167408,
+      "rate_ij": 0.333333,
+      "lat_norm": 0.00247,
+      "err_ij": 0.0,
+      "freq": 3,
+      "source": "ts-rebook-service",
+      "target": "ts-order-other-service"
+    },
+    {
+      "w_ij": 0.333644,
+      "rate_ij": 0.666667,
+      "lat_norm": 0.001035,
+      "err_ij": 0.0,
+      "freq": 6,
+      "source": "ts-rebook-service",
+      "target": "ts-order-service"
+    },
+    {
+      "w_ij": 0.500356,
+      "rate_ij": 1.0,
+      "lat_norm": 0.001187,
+      "err_ij": 0.0,
+      "freq": 51,
+      "source": "ts-admin-basic-info-service",
+      "target": "ts-contacts-service"
+    },
+    {
+      "w_ij": 0.200806,
+      "rate_ij": 0.4,
+      "lat_norm": 0.002688,
+      "err_ij": 0.0,
+      "freq": 24,
+      "source": "ts-cancel-service",
+      "target": "ts-order-service"
+    },
+    {
+      "w_ij": 0.100852,
+      "rate_ij": 0.2,
+      "lat_norm": 0.002839,
+      "err_ij": 0.0,
+      "freq": 12,
+      "source": "ts-cancel-service",
+      "target": "ts-user-service"
+    },
+    {
+      "w_ij": 0.102437,
+      "rate_ij": 0.2,
+      "lat_norm": 0.008123,
+      "err_ij": 0.0,
+      "freq": 12,
+      "source": "ts-cancel-service",
+      "target": "ts-inside-payment-service"
+    },
+    {
+      "w_ij": 0.4,
+      "rate_ij": 0.2,
+      "lat_norm": 1.0,
+      "err_ij": 0.0,
+      "freq": 12,
+      "source": "ts-cancel-service",
+      "target": "ts-notification-service"
+    },
+    {
+      "w_ij": 0.501153,
+      "rate_ij": 1.0,
+      "lat_norm": 0.003845,
+      "err_ij": 0.0,
+      "freq": 62,
+      "source": "ts-travel2-service",
+      "target": "ts-ticketinfo-service"
+    },
+    {
+      "w_ij": 0.500691,
+      "rate_ij": 1.0,
+      "lat_norm": 0.002302,
+      "err_ij": 0.0,
+      "freq": 9,
+      "source": "ts-execute-service",
+      "target": "ts-order-service"
+    },
+    {
+      "w_ij": 0.500301,
+      "rate_ij": 1.0,
+      "lat_norm": 0.001002,
+      "err_ij": 0.0,
+      "freq": 31,
+      "source": "ts-auth-service",
+      "target": "ts-verification-code-service"
+    }
+  ]
+}

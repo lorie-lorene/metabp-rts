@@ -296,17 +296,10 @@ def main():
         k=sel_cfg.get("k", 2),
         threshold_p=sel_cfg.get("threshold_p"),
     )
-    # Tier 1 = Services Echo-Impact UNION Delta-S.
-    # Regle de surete (modification-traversing, Rothermel & Harrold) : tout test
-    # qui exerce un service MODIFIE doit etre conserve. S_echo ne contient que
-    # les services IMPACTES par propagation, pas les services modifies eux-memes.
-    tier1_services = sorted(set(cit_result["s_echo"]) | set(delta_s))
-    logger.info("Tier 1 = S_echo (%d) ∪ ΔS (%d) → %d services",
-                len(cit_result["s_echo"]), len(delta_s), len(tier1_services))
     sel_result = scorer.score_and_select(
         test_suite_path=str(base_dir / p1_cfg["test_suite"]),
         cit=cit_result["cit"],
-        s_echo=tier1_services,
+        s_echo=cit_result["s_echo"],
     )
     scorer.save(
         sel_result,
