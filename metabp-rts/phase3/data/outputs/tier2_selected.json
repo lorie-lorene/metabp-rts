@@ -1,0 +1,152 @@
+[
+  {
+    "test_id": "000a64d55c7484fc",
+    "invocation_chain": [
+      [
+        "ts-admin-basic-info-service",
+        "ts-contacts-service"
+      ]
+    ],
+    "services": [
+      "ts-admin-basic-info-service",
+      "ts-contacts-service"
+    ],
+    "score": 1.0,
+    "score_avg": 1.0,
+    "n_above_p": 2,
+    "n_services": 2,
+    "tier": 2,
+    "in_s_echo": false,
+    "duration_us": 8102
+  },
+  {
+    "test_id": "00388fe008f57a55",
+    "invocation_chain": [
+      [
+        "ts-order-other-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-order-other-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 1.0,
+    "n_above_p": 2,
+    "n_services": 2,
+    "tier": 2,
+    "in_s_echo": false,
+    "duration_us": 173413
+  },
+  {
+    "test_id": "002d9eee32f6635d",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.720822,
+    "n_above_p": 4,
+    "n_services": 4,
+    "tier": 2,
+    "in_s_echo": false,
+    "duration_us": 43335
+  },
+  {
+    "test_id": "00005775622d13c2",
+    "invocation_chain": [
+      [
+        "ts-admin-basic-info-service",
+        "ts-train-service"
+      ]
+    ],
+    "services": [
+      "ts-admin-basic-info-service",
+      "ts-train-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.5,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 2,
+    "in_s_echo": false,
+    "duration_us": 6518
+  },
+  {
+    "test_id": "00db8da2e0495966",
+    "invocation_chain": [
+      [
+        "ts-admin-basic-info-service",
+        "ts-config-service"
+      ]
+    ],
+    "services": [
+      "ts-admin-basic-info-service",
+      "ts-config-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.5,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 2,
+    "in_s_echo": false,
+    "duration_us": 6736
+  },
+  {
+    "test_id": "0155a36c60b4ef33",
+    "invocation_chain": [
+      [
+        "ts-admin-basic-info-service",
+        "ts-price-service"
+      ]
+    ],
+    "services": [
+      "ts-admin-basic-info-service",
+      "ts-price-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.5,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 2,
+    "in_s_echo": false,
+    "duration_us": 8307
+  },
+  {
+    "test_id": "45fd48d7dc3b78f0",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.0,
+    "score_avg": 0.0,
+    "n_above_p": 0,
+    "n_services": 2,
+    "tier": 2,
+    "in_s_echo": false,
+    "duration_us": 76150
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "fcs": 89.68,
+  "n_total": 9021,
+  "n_killed": 8090,
+  "n_survived": 931,
+  "by_operator": {
+    "span_deletion": {
+      "n_killed": 2076,
+      "n_total": 3007,
+      "fcs": 69.04
+    },
+    "error_injection": {
+      "n_killed": 3007,
+      "n_total": 3007,
+      "fcs": 100.0
+    },
+    "latency_injection": {
+      "n_killed": 3007,
+      "n_total": 3007,
+      "fcs": 100.0
+    }
+  }
+}
