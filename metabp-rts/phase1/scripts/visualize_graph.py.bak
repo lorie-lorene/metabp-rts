@@ -64,32 +64,18 @@ def compute_layout(nodes, links):
     for n, lv in levels.items():
         level_groups.setdefault(lv, []).append(n)
 
-    # Canvas large : 27 noeuds ne tiennent pas dans 900x480
-    W, H     = 1600, 920
-    margin_x = 90
-    margin_y = 70
+    # Calculer les positions (SVG 900x500)
+    W, H     = 900, 480
+    margin_x = 80
+    margin_y = 80
     positions = {}
     n_levels  = max(level_groups.keys()) + 1
 
-    # Ordre initial : alphabetique, puis 2 passes barycentriques pour
-    # rapprocher chaque noeud de la moyenne de ses parents -> moins de croisements
-    order = {lv: sorted(g) for lv, g in level_groups.items()}
-    for _ in range(2):
-        for lv in sorted(order.keys()):
-            if lv == 0:
-                continue
-            prev_idx = {n: i for i, n in enumerate(order[lv - 1])}
-            def bary(n):
-                ps = [prev_idx[p] for p in parents[n] if p in prev_idx]
-                return sum(ps) / len(ps) if ps else 1e9
-            order[lv] = sorted(order[lv], key=bary)
-
-    for lv, group in order.items():
+    for lv, group in level_groups.items():
         y = margin_y + lv * ((H - 2 * margin_y) / max(n_levels - 1, 1))
         n_in_level = len(group)
-        for i, nid in enumerate(group):
-            x = (margin_x + i * ((W - 2 * margin_x) / max(n_in_level - 1, 1))
-                 if n_in_level > 1 else W / 2)
+        for i, nid in enumerate(sorted(group)):
+            x = margin_x + i * ((W - 2 * margin_x) / max(n_in_level - 1, 1)) if n_in_level > 1 else W / 2
             positions[nid] = (round(x), round(y))
 
     return positions
@@ -136,8 +122,8 @@ def build_html(graph: dict, scores: list) -> str:
     positions = compute_layout(nodes, links)
 
     # Générer le SVG du graphe statique
-    SVG_W, SVG_H = 1600, 920
-    NODE_R = 30
+    SVG_W, SVG_H = 900, 480
+    NODE_R = 36
 
     def short(name):
         return name.replace("-service", "").replace("ts-", "")
@@ -167,16 +153,13 @@ def build_html(graph: dict, scores: list) -> str:
         mx = (x1 + x2) / 2
         my = (y1 + y2) / 2 - 10
 
-        # Epaisseur proportionnelle au poids ; etiquettes supprimees
-        # (40 labels se chevauchaient) -> valeurs dans le tableau des arcs.
-        sw = 1.0 + 3.0 * min(l["w_ij"], 1.0)
-        op = 0.35 + 0.5 * min(l["w_ij"], 1.0)
         arcs_svg.append(f'''
   <path d="M{x1:.1f},{y1:.1f} Q{cx:.1f},{cy:.1f} {x2:.1f},{y2:.1f}"
-        fill="none" stroke="{color}" stroke-width="{sw:.1f}"
-        marker-end="url(#arr)" opacity="{op:.2f}">
-    <title>{l["source"]} -> {l["target"]}  |  w_ij={l["w_ij"]:.4f}  |  freq={l["freq"]}</title>
-  </path>''')
+        fill="none" stroke="{color}" stroke-width="2"
+        marker-end="url(#arr)" opacity="0.85"/>
+  <text x="{mx:.1f}" y="{my:.1f}" text-anchor="middle"
+        font-size="10" fill="{color}" font-weight="600"
+        font-family="monospace">w={l["w_ij"]:.3f}</text>''')
 
     # Construire les noeuds SVG
     nodes_svg = []
