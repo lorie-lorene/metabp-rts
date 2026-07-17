@@ -387,10 +387,10 @@ mr_catalog:
   service: ts-admin-basic-info-service
   endpoint: '*'
   http_method: '*'
-  phi: Appel equivalent de ts-admin-basic-info-service ; mediane ~ 14.1 ms
-  rho: duration_us <= 119172 (P99)
+  phi: Appel equivalent de ts-admin-basic-info-service ; mediane ~ 12.2 ms
+  rho: duration_us <= 119026 (P99)
   source: traces-p99
-  threshold_us: 119172
+  threshold_us: 119026
 - id: MR-ERR-ts-admin-basic-info-service
   type: Erreur
   service: ts-admin-basic-info-service
@@ -415,10 +415,10 @@ mr_catalog:
   service: ts-assurance-service
   endpoint: '*'
   http_method: '*'
-  phi: Appel equivalent de ts-assurance-service ; mediane ~ 6.3 ms
-  rho: duration_us <= 250534 (P99)
+  phi: Appel equivalent de ts-assurance-service ; mediane ~ 5.0 ms
+  rho: duration_us <= 120778 (P99)
   source: traces-p99
-  threshold_us: 250534
+  threshold_us: 120778
 - id: MR-ERR-ts-assurance-service
   type: Erreur
   service: ts-assurance-service
@@ -443,10 +443,10 @@ mr_catalog:
   service: ts-auth-service
   endpoint: '*'
   http_method: '*'
-  phi: Appel equivalent de ts-auth-service ; mediane ~ 14.3 ms
-  rho: duration_us <= 354769 (P99)
+  phi: Appel equivalent de ts-auth-service ; mediane ~ 10.9 ms
+  rho: duration_us <= 291453 (P99)
   source: traces-p99
-  threshold_us: 354769
+  threshold_us: 291453
 - id: MR-ERR-ts-auth-service
   type: Erreur
   service: ts-auth-service
@@ -471,10 +471,10 @@ mr_catalog:
   service: ts-basic-service
   endpoint: '*'
   http_method: '*'
-  phi: Appel equivalent de ts-basic-service ; mediane ~ 8.6 ms
-  rho: duration_us <= 121417 (P99)
+  phi: Appel equivalent de ts-basic-service ; mediane ~ 6.8 ms
+  rho: duration_us <= 109016 (P99)
   source: traces-p99
-  threshold_us: 121417
+  threshold_us: 109016
 - id: MR-ERR-ts-basic-service
   type: Erreur
   service: ts-basic-service
@@ -499,10 +499,10 @@ mr_catalog:
   service: ts-cancel-service
   endpoint: '*'
   http_method: '*'
-  phi: Appel equivalent de ts-cancel-service ; mediane ~ 26.9 ms
-  rho: duration_us <= 10498616 (P99)
+  phi: Appel equivalent de ts-cancel-service ; mediane ~ 26.7 ms
+  rho: duration_us <= 10493279 (P99)
   source: traces-p99
-  threshold_us: 10498616
+  threshold_us: 10493279
 - id: MR-ERR-ts-cancel-service
   type: Erreur
   service: ts-cancel-service
@@ -527,10 +527,10 @@ mr_catalog:
   service: ts-config-service
   endpoint: '*'
   http_method: '*'
-  phi: Appel equivalent de ts-config-service ; mediane ~ 9.5 ms
-  rho: duration_us <= 168663 (P99)
+  phi: Appel equivalent de ts-config-service ; mediane ~ 9.3 ms
+  rho: duration_us <= 161705 (P99)
   source: traces-p99
-  threshold_us: 168663
+  threshold_us: 161705
 - id: MR-ERR-ts-config-service
   type: Erreur
   service: ts-config-service
@@ -555,10 +555,10 @@ mr_catalog:
   service: ts-consign-price-service
   endpoint: '*'
   http_method: '*'
-  phi: Appel equivalent de ts-consign-price-service ; mediane ~ 10.0 ms
-  rho: duration_us <= 147911 (P99)
+  phi: Appel equivalent de ts-consign-price-service ; mediane ~ 8.7 ms
+  rho: duration_us <= 31361 (P99)
   source: traces-p99
-  threshold_us: 147911
+  threshold_us: 31361
 - id: MR-ERR-ts-consign-price-service
   type: Erreur
   service: ts-consign-price-service
@@ -583,10 +583,10 @@ mr_catalog:
   service: ts-consign-service
   endpoint: '*'
   http_method: '*'
-  phi: Appel equivalent de ts-consign-service ; mediane ~ 14.6 ms
-  rho: duration_us <= 329441 (P99)
+  phi: Appel equivalent de ts-consign-service ; mediane ~ 13.8 ms
+  rho: duration_us <= 69683 (P99)
   source: traces-p99
-  threshold_us: 329441
+  threshold_us: 69683
 - id: MR-ERR-ts-consign-service
   type: Erreur
   service: ts-consign-service
@@ -611,10 +611,10 @@ mr_catalog:
   service: ts-contacts-service
   endpoint: '*'
   http_method: '*'
-  phi: Appel equivalent de ts-contacts-service ; mediane ~ 6.9 ms
-  rho: duration_us <= 38141 (P99)
+  phi: Appel equivalent de ts-contacts-service ; mediane ~ 6.5 ms
+  rho: duration_us <= 30004 (P99)
   source: traces-p99
-  threshold_us: 38141
+  threshold_us: 30004
 - id: MR-ERR-ts-contacts-service
   type: Erreur
   service: ts-contacts-service
@@ -667,20 +667,20 @@ mr_catalog:
   service: ts-food-service
   endpoint: '*'
   http_method: '*'
-  phi: Appel equivalent de ts-food-service ; mediane ~ 33.6 ms
-  rho: duration_us <= 8660404 (P99)
+  phi: Appel equivalent de ts-food-service ; mediane ~ 28.8 ms
+  rho: duration_us <= 8654215 (P99)
   source: traces-p99
-  threshold_us: 8660404
+  threshold_us: 8654215
 - id: MR-ERR-ts-food-service
   type: Erreur
   service: ts-food-service
   endpoint: '*'
   http_method: '*'
-  phi: Taux d'erreur nominal de ts-food-service = 55.6%
-  rho: taux_erreur <= 0.6556 (nominal 0.5556 + marge 0.1)
+  phi: Taux d'erreur nominal de ts-food-service = 47.6%
+  rho: taux_erreur <= 0.5762 (nominal 0.4762 + marge 0.1)
   source: traces-error
-  threshold_error_rate: 0.6556
-  nominal_error_rate: 0.5556
+  threshold_error_rate: 0.5762
+  nominal_error_rate: 0.4762
 - id: MR-CMP-ts-food-service
   type: Completude
   service: ts-food-service
@@ -696,9 +696,9 @@ mr_catalog:
   endpoint: '*'
   http_method: '*'
   phi: Appel equivalent de ts-inside-payment-service ; mediane ~ 25.7 ms
-  rho: duration_us <= 436521 (P99)
+  rho: duration_us <= 433459 (P99)
   source: traces-p99
-  threshold_us: 436521
+  threshold_us: 433459
 - id: MR-ERR-ts-inside-payment-service
   type: Erreur
   service: ts-inside-payment-service
@@ -751,10 +751,10 @@ mr_catalog:
   service: ts-order-other-service
   endpoint: '*'
   http_method: '*'
-  phi: Appel equivalent de ts-order-other-service ; mediane ~ 40.3 ms
-  rho: duration_us <= 155266 (P99)
+  phi: Appel equivalent de ts-order-other-service ; mediane ~ 32.9 ms
+  rho: duration_us <= 140114 (P99)
   source: traces-p99
-  threshold_us: 155266
+  threshold_us: 140114
 - id: MR-ERR-ts-order-other-service
   type: Erreur
   service: ts-order-other-service
@@ -770,29 +770,29 @@ mr_catalog:
   service: ts-order-other-service
   endpoint: '*'
   http_method: '*'
-  phi: ts-order-other-service produit typiquement >= 1 span(s) par trace
-  rho: nb_spans(ts-order-other-service) >= 1
+  phi: ts-order-other-service produit typiquement >= 2 span(s) par trace
+  rho: nb_spans(ts-order-other-service) >= 2
   source: traces-completude
-  threshold_min_spans: 1
+  threshold_min_spans: 2
 - id: MR-LAT-ts-order-service
   type: Latence
   service: ts-order-service
   endpoint: '*'
   http_method: '*'
-  phi: Appel equivalent de ts-order-service ; mediane ~ 37.8 ms
-  rho: duration_us <= 128420 (P99)
+  phi: Appel equivalent de ts-order-service ; mediane ~ 30.2 ms
+  rho: duration_us <= 116631 (P99)
   source: traces-p99
-  threshold_us: 128420
+  threshold_us: 116631
 - id: MR-ERR-ts-order-service
   type: Erreur
   service: ts-order-service
   endpoint: '*'
   http_method: '*'
-  phi: Taux d'erreur nominal de ts-order-service = 0.2%
-  rho: taux_erreur <= 0.1016 (nominal 0.0016 + marge 0.1)
+  phi: Taux d'erreur nominal de ts-order-service = 0.1%
+  rho: taux_erreur <= 0.1008 (nominal 0.0008 + marge 0.1)
   source: traces-error
-  threshold_error_rate: 0.1016
-  nominal_error_rate: 0.0016
+  threshold_error_rate: 0.1008
+  nominal_error_rate: 0.0008
 - id: MR-CMP-ts-order-service
   type: Completude
   service: ts-order-service
@@ -802,15 +802,43 @@ mr_catalog:
   rho: nb_spans(ts-order-service) >= 2
   source: traces-completude
   threshold_min_spans: 2
+- id: MR-LAT-ts-payment-service
+  type: Latence
+  service: ts-payment-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Appel equivalent de ts-payment-service ; mediane ~ 28.1 ms
+  rho: duration_us <= 416248 (P99)
+  source: traces-p99
+  threshold_us: 416248
+- id: MR-ERR-ts-payment-service
+  type: Erreur
+  service: ts-payment-service
+  endpoint: '*'
+  http_method: '*'
+  phi: Taux d'erreur nominal de ts-payment-service = 0.0%
+  rho: taux_erreur <= 0.1 (nominal 0.0 + marge 0.1)
+  source: traces-error
+  threshold_error_rate: 0.1
+  nominal_error_rate: 0.0
+- id: MR-CMP-ts-payment-service
+  type: Completude
+  service: ts-payment-service
+  endpoint: '*'
+  http_method: '*'
+  phi: ts-payment-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(ts-payment-service) >= 1
+  source: traces-completude
+  threshold_min_spans: 1
 - id: MR-LAT-ts-preserve-service
   type: Latence
   service: ts-preserve-service
   endpoint: '*'
   http_method: '*'
-  phi: Appel equivalent de ts-preserve-service ; mediane ~ 44.3 ms
-  rho: duration_us <= 10718127 (P99)
+  phi: Appel equivalent de ts-preserve-service ; mediane ~ 38.7 ms
+  rho: duration_us <= 10656181 (P99)
   source: traces-p99
-  threshold_us: 10718127
+  threshold_us: 10656181
 - id: MR-ERR-ts-preserve-service
   type: Erreur
   service: ts-preserve-service
@@ -835,10 +863,10 @@ mr_catalog:
   service: ts-price-service
   endpoint: '*'
   http_method: '*'
-  phi: Appel equivalent de ts-price-service ; mediane ~ 16.4 ms
-  rho: duration_us <= 279825 (P99)
+  phi: Appel equivalent de ts-price-service ; mediane ~ 16.5 ms
+  rho: duration_us <= 278591 (P99)
   source: traces-p99
-  threshold_us: 279825
+  threshold_us: 278591
 - id: MR-ERR-ts-price-service
   type: Erreur
   service: ts-price-service
@@ -891,10 +919,10 @@ mr_catalog:
   service: ts-route-service
   endpoint: '*'
   http_method: '*'
-  phi: Appel equivalent de ts-route-service ; mediane ~ 10.6 ms
-  rho: duration_us <= 248416 (P99)
+  phi: Appel equivalent de ts-route-service ; mediane ~ 6.3 ms
+  rho: duration_us <= 33530 (P99)
   source: traces-p99
-  threshold_us: 248416
+  threshold_us: 33530
 - id: MR-ERR-ts-route-service
   type: Erreur
   service: ts-route-service
@@ -920,9 +948,9 @@ mr_catalog:
   endpoint: '*'
   http_method: '*'
   phi: Appel equivalent de ts-seat-service ; mediane ~ 23.6 ms
-  rho: duration_us <= 203020 (P99)
+  rho: duration_us <= 198731 (P99)
   source: traces-p99
-  threshold_us: 203020
+  threshold_us: 198731
 - id: MR-ERR-ts-seat-service
   type: Erreur
   service: ts-seat-service
@@ -947,10 +975,10 @@ mr_catalog:
   service: ts-security-service
   endpoint: '*'
   http_method: '*'
-  phi: Appel equivalent de ts-security-service ; mediane ~ 19.2 ms
-  rho: duration_us <= 479192 (P99)
+  phi: Appel equivalent de ts-security-service ; mediane ~ 22.8 ms
+  rho: duration_us <= 475044 (P99)
   source: traces-p99
-  threshold_us: 479192
+  threshold_us: 475044
 - id: MR-ERR-ts-security-service
   type: Erreur
   service: ts-security-service
@@ -975,10 +1003,10 @@ mr_catalog:
   service: ts-station-service
   endpoint: '*'
   http_method: '*'
-  phi: Appel equivalent de ts-station-service ; mediane ~ 14.0 ms
-  rho: duration_us <= 107447 (P99)
+  phi: Appel equivalent de ts-station-service ; mediane ~ 15.5 ms
+  rho: duration_us <= 96637 (P99)
   source: traces-p99
-  threshold_us: 107447
+  threshold_us: 96637
 - id: MR-ERR-ts-station-service
   type: Erreur
   service: ts-station-service
@@ -1003,10 +1031,10 @@ mr_catalog:
   service: ts-ticketinfo-service
   endpoint: '*'
   http_method: '*'
-  phi: Appel equivalent de ts-ticketinfo-service ; mediane ~ 17.1 ms
-  rho: duration_us <= 202753 (P99)
+  phi: Appel equivalent de ts-ticketinfo-service ; mediane ~ 13.6 ms
+  rho: duration_us <= 126184 (P99)
   source: traces-p99
-  threshold_us: 202753
+  threshold_us: 126184
 - id: MR-ERR-ts-ticketinfo-service
   type: Erreur
   service: ts-ticketinfo-service
@@ -1031,10 +1059,10 @@ mr_catalog:
   service: ts-train-service
   endpoint: '*'
   http_method: '*'
-  phi: Appel equivalent de ts-train-service ; mediane ~ 10.3 ms
-  rho: duration_us <= 137469 (P99)
+  phi: Appel equivalent de ts-train-service ; mediane ~ 9.8 ms
+  rho: duration_us <= 106046 (P99)
   source: traces-p99
-  threshold_us: 137469
+  threshold_us: 106046
 - id: MR-ERR-ts-train-service
   type: Erreur
   service: ts-train-service
@@ -1059,48 +1087,48 @@ mr_catalog:
   service: ts-travel-service
   endpoint: '*'
   http_method: '*'
-  phi: Appel equivalent de ts-travel-service ; mediane ~ 19.3 ms
-  rho: duration_us <= 654437 (P99)
+  phi: Appel equivalent de ts-travel-service ; mediane ~ 14.3 ms
+  rho: duration_us <= 609494 (P99)
   source: traces-p99
-  threshold_us: 654437
+  threshold_us: 609494
 - id: MR-ERR-ts-travel-service
   type: Erreur
   service: ts-travel-service
   endpoint: '*'
   http_method: '*'
-  phi: Taux d'erreur nominal de ts-travel-service = 7.8%
-  rho: taux_erreur <= 0.1783 (nominal 0.0783 + marge 0.1)
+  phi: Taux d'erreur nominal de ts-travel-service = 5.2%
+  rho: taux_erreur <= 0.1516 (nominal 0.0516 + marge 0.1)
   source: traces-error
-  threshold_error_rate: 0.1783
-  nominal_error_rate: 0.0783
+  threshold_error_rate: 0.1516
+  nominal_error_rate: 0.0516
 - id: MR-CMP-ts-travel-service
   type: Completude
   service: ts-travel-service
   endpoint: '*'
   http_method: '*'
-  phi: ts-travel-service produit typiquement >= 2 span(s) par trace
-  rho: nb_spans(ts-travel-service) >= 2
+  phi: ts-travel-service produit typiquement >= 1 span(s) par trace
+  rho: nb_spans(ts-travel-service) >= 1
   source: traces-completude
-  threshold_min_spans: 2
+  threshold_min_spans: 1
 - id: MR-LAT-ts-travel2-service
   type: Latence
   service: ts-travel2-service
   endpoint: '*'
   http_method: '*'
-  phi: Appel equivalent de ts-travel2-service ; mediane ~ 23.4 ms
-  rho: duration_us <= 482545 (P99)
+  phi: Appel equivalent de ts-travel2-service ; mediane ~ 16.3 ms
+  rho: duration_us <= 208018 (P99)
   source: traces-p99
-  threshold_us: 482545
+  threshold_us: 208018
 - id: MR-ERR-ts-travel2-service
   type: Erreur
   service: ts-travel2-service
   endpoint: '*'
   http_method: '*'
   phi: Taux d'erreur nominal de ts-travel2-service = 24.4%
-  rho: taux_erreur <= 0.3441 (nominal 0.2441 + marge 0.1)
+  rho: taux_erreur <= 0.3444 (nominal 0.2444 + marge 0.1)
   source: traces-error
-  threshold_error_rate: 0.3441
-  nominal_error_rate: 0.2441
+  threshold_error_rate: 0.3444
+  nominal_error_rate: 0.2444
 - id: MR-CMP-ts-travel2-service
   type: Completude
   service: ts-travel2-service
@@ -1115,10 +1143,10 @@ mr_catalog:
   service: ts-user-service
   endpoint: '*'
   http_method: '*'
-  phi: Appel equivalent de ts-user-service ; mediane ~ 12.7 ms
-  rho: duration_us <= 254792 (P99)
+  phi: Appel equivalent de ts-user-service ; mediane ~ 10.9 ms
+  rho: duration_us <= 214631 (P99)
   source: traces-p99
-  threshold_us: 254792
+  threshold_us: 214631
 - id: MR-ERR-ts-user-service
   type: Erreur
   service: ts-user-service
@@ -1143,10 +1171,10 @@ mr_catalog:
   service: ts-verification-code-service
   endpoint: '*'
   http_method: '*'
-  phi: Appel equivalent de ts-verification-code-service ; mediane ~ 4.5 ms
-  rho: duration_us <= 203337 (P99)
+  phi: Appel equivalent de ts-verification-code-service ; mediane ~ 4.3 ms
+  rho: duration_us <= 170179 (P99)
   source: traces-p99
-  threshold_us: 203337
+  threshold_us: 170179
 - id: MR-ERR-ts-verification-code-service
   type: Erreur
   service: ts-verification-code-service

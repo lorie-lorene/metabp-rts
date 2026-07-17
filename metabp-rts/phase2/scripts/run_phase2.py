@@ -17,8 +17,11 @@ Etapes :
   5. Tiering + Scoring des tests + artefacts Phase 3
 
 Usage :
-    python run_phase2.py --config ../config/phase2_config.yaml \\
---delta-s ts-cancel-service
+    python run_phase2.py --config ../config/phase2_config.yaml --delta-s ts-admin-basic-info-service  ts-contacts-service ts-order-other-service ts-station-service ts-travel2-service
+    
+
+Usage :
+    python run_phase2.py --config ../config/phase2_config.yaml --delta-s njila-proxy-service  njila-user-service njila-booking-service
 """
 
 import argparse
@@ -296,17 +299,10 @@ def main():
         k=sel_cfg.get("k", 2),
         threshold_p=sel_cfg.get("threshold_p"),
     )
-    # Tier 1 = Services Echo-Impact UNION Delta-S.
-    # Regle de surete (modification-traversing, Rothermel & Harrold) : tout test
-    # qui exerce un service MODIFIE doit etre conserve. S_echo ne contient que
-    # les services IMPACTES par propagation, pas les services modifies eux-memes.
-    tier1_services = sorted(set(cit_result["s_echo"]) | set(delta_s))
-    logger.info("Tier 1 = S_echo (%d) ∪ ΔS (%d) → %d services",
-                len(cit_result["s_echo"]), len(delta_s), len(tier1_services))
     sel_result = scorer.score_and_select(
         test_suite_path=str(base_dir / p1_cfg["test_suite"]),
         cit=cit_result["cit"],
-        s_echo=tier1_services,
+        s_echo=cit_result["s_echo"],
     )
     scorer.save(
         sel_result,
@@ -333,8 +329,8 @@ def main():
     logger.info("  ΔS                    : %s", delta_s)
     logger.info("  Mode BP utilisé       : %s", bp_mode)
     logger.info("  Itérations BP         : %d (convergé=%s)", n_iter, converged)
-    logger.info("  Services Écho-Impact  : %d (τ=%.4f, AutoThreshold)",
-                sc["n_echo_impact"], sc["tau_impact"])
+    logger.info("  Services Écho-Impact  : %d (τ=%.2f)",
+                sc["n_echo_impact"], bp_cfg.get("tau_impact", 0.30))
     logger.info("  Résonance confirmée   : %d/%d",
                 sc["n_resonant"], sc["n_echo_impact"])
     logger.info("  Tier 1 (S_echo)       : %d tests (%s)",

@@ -1,51 +1,68 @@
 [
   {
-    "test_id": "27950a6e62eb0b67",
+    "test_id": "021a60124f024ce7",
     "invocation_chain": [],
     "services": [
-      "ts-security-service"
+      "ts-station-service"
     ],
-    "score": 0.243854,
-    "score_avg": 0.243854,
+    "score": 1.0,
+    "score_avg": 1.0,
     "n_above_p": 1,
     "n_services": 1,
     "tier": 2,
     "in_s_echo": false,
-    "duration_us": 35823,
+    "duration_us": 5588,
+    "endpoint": "/api/v1/stationservice/stations/idlist",
+    "http_method": "POST",
+    "entry_service": "ts-station-service"
+  },
+  {
+    "test_id": "01a72fb325b9f262",
+    "invocation_chain": [],
+    "services": [
+      "ts-security-service"
+    ],
+    "score": 0.243727,
+    "score_avg": 0.243727,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 2,
+    "in_s_echo": false,
+    "duration_us": 26414,
     "endpoint": "/v2/api-docs",
     "http_method": "GET",
     "entry_service": "ts-security-service"
   },
   {
-    "test_id": "6c58ee1ad0186a8a",
+    "test_id": "422d85f5e10803f8",
     "invocation_chain": [],
     "services": [
       "ts-preserve-service"
     ],
-    "score": 0.164263,
-    "score_avg": 0.164263,
+    "score": 0.162487,
+    "score_avg": 0.162487,
     "n_above_p": 1,
     "n_services": 1,
     "tier": 2,
     "in_s_echo": false,
-    "duration_us": 38708,
+    "duration_us": 13792,
     "endpoint": "/v2/api-docs",
     "http_method": "GET",
     "entry_service": "ts-preserve-service"
   },
   {
-    "test_id": "9cdfe64e4c4fba09",
+    "test_id": "8be1f0987dc4164d",
     "invocation_chain": [],
     "services": [
       "ts-cancel-service"
     ],
-    "score": 0.145806,
-    "score_avg": 0.145806,
+    "score": 0.145754,
+    "score_avg": 0.145754,
     "n_above_p": 1,
     "n_services": 1,
     "tier": 2,
     "in_s_echo": false,
-    "duration_us": 278728,
+    "duration_us": 16054,
     "endpoint": "/v2/api-docs",
     "http_method": "GET",
     "entry_service": "ts-cancel-service"
@@ -56,8 +73,8 @@
     "services": [
       "ts-travel-service"
     ],
-    "score": 0.129949,
-    "score_avg": 0.129949,
+    "score": 0.10451,
+    "score_avg": 0.10451,
     "n_above_p": 1,
     "n_services": 1,
     "tier": 2,
@@ -68,18 +85,18 @@
     "entry_service": "ts-travel-service"
   },
   {
-    "test_id": "1592909ca5d9b6ac",
+    "test_id": "08d2a154fee34eba",
     "invocation_chain": [],
     "services": [
       "ts-seat-service"
     ],
-    "score": 0.101842,
-    "score_avg": 0.101842,
+    "score": 0.095634,
+    "score_avg": 0.095634,
     "n_above_p": 1,
     "n_services": 1,
     "tier": 2,
     "in_s_echo": false,
-    "duration_us": 340266,
+    "duration_us": 12813,
     "endpoint": "/v2/api-docs",
     "http_method": "GET",
     "entry_service": "ts-seat-service"
@@ -119,7 +136,7 @@
     "entry_service": "ts-assurance-service"
   },
   {
-    "test_id": "05406147605ba528",
+    "test_id": "02ba2e26aed1ac62",
     "invocation_chain": [],
     "services": [
       "ts-config-service"
@@ -130,10 +147,27 @@
     "n_services": 1,
     "tier": 2,
     "in_s_echo": false,
-    "duration_us": 9166,
+    "duration_us": 6802,
     "endpoint": "/api/v1/configservice/configs",
     "http_method": "GET",
     "entry_service": "ts-config-service"
+  },
+  {
+    "test_id": "039b48f4e9b6f022",
+    "invocation_chain": [],
+    "services": [
+      "ts-price-service"
+    ],
+    "score": 0.0,
+    "score_avg": 0.0,
+    "n_above_p": 0,
+    "n_services": 1,
+    "tier": 2,
+    "in_s_echo": false,
+    "duration_us": 13887,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-price-service"
   },
   {
     "test_id": "05e3adbce6d87d1e",
@@ -187,6 +221,23 @@
     "entry_service": "ts-verification-code-service"
   },
   {
+    "test_id": "1257e9e106ad65c0",
+    "invocation_chain": [],
+    "services": [
+      "ts-payment-service"
+    ],
+    "score": 0.0,
+    "score_avg": 0.0,
+    "n_above_p": 0,
+    "n_services": 1,
+    "tier": 2,
+    "in_s_echo": false,
+    "duration_us": 12606,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-payment-service"
+  },
+  {
     "test_id": "1909695a3400a9f9",
     "invocation_chain": [],
     "services": [
@@ -204,10 +255,10 @@
     "entry_service": "ts-user-service"
   },
   {
-    "test_id": "2165c628c0d8e2b6",
+    "test_id": "239f883d85404304",
     "invocation_chain": [],
     "services": [
-      "ts-price-service"
+      "ts-route-service"
     ],
     "score": 0.0,
     "score_avg": 0.0,
@@ -215,10 +266,10 @@
     "n_services": 1,
     "tier": 2,
     "in_s_echo": false,
-    "duration_us": 49161,
+    "duration_us": 27183,
     "endpoint": "/v2/api-docs",
     "http_method": "GET",
-    "entry_service": "ts-price-service"
+    "entry_service": "ts-route-service"
   },
   {
     "test_id": "5a4fde3fcdd5ef47",
@@ -236,40 +287,6 @@
     "endpoint": "/api/v1/adminuserservice/users",
     "http_method": "GET",
     "entry_service": "ts-admin-user-service"
-  },
-  {
-    "test_id": "6ea0a6a280b373f1",
-    "invocation_chain": [],
-    "services": [
-      "ts-route-service"
-    ],
-    "score": 0.0,
-    "score_avg": 0.0,
-    "n_above_p": 0,
-    "n_services": 1,
-    "tier": 2,
-    "in_s_echo": false,
-    "duration_us": 375765,
-    "endpoint": "/v2/api-docs",
-    "http_method": "GET",
-    "entry_service": "ts-route-service"
-  },
-  {
-    "test_id": "79fcef5a0aaa341a",
-    "invocation_chain": [],
-    "services": [
-      "ts-payment-service"
-    ],
-    "score": 0.0,
-    "score_avg": 0.0,
-    "n_above_p": 0,
-    "n_services": 1,
-    "tier": 2,
-    "in_s_echo": false,
-    "duration_us": 436341,
-    "endpoint": "/v2/api-docs",
-    "http_method": "GET",
-    "entry_service": "ts-payment-service"
   },
   {
     "test_id": "c39981e41e12491c",

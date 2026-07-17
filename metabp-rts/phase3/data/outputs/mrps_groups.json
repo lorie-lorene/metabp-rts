@@ -1,53 +1,86 @@
 {
   "mode": "enriched",
   "stats": {
-    "n_input": 478,
-    "n_groups": 27,
-    "dedup_rate": 0.9435,
-    "dedup_pct": "94.3%",
-    "avg_group_size": 17.7,
-    "max_group_size": 126,
+    "n_input": 876,
+    "n_groups": 31,
+    "dedup_rate": 0.9646,
+    "dedup_pct": "96.5%",
+    "avg_group_size": 28.26,
+    "max_group_size": 216,
     "singletons": 4,
-    "singleton_pct": "14.8%"
+    "singleton_pct": "12.9%"
   },
   "groups": {
+    "('ts-station-service',)": [
+      "843323baeaaee265",
+      "bec7d0b1c8d7f022"
+    ],
     "('ts-security-service',)": [
+      "01a72fb325b9f262",
       "27950a6e62eb0b67",
       "701d1f9e4ce79540",
-      "ef972fbb26bc488a"
+      "e1bfff7bcf8478bb",
+      "ef972fbb26bc488a",
+      "fac8588cb77a0571"
     ],
     "('ts-preserve-service',)": [
+      "422d85f5e10803f8",
       "6c58ee1ad0186a8a",
       "8f178f81f98a0ed9",
-      "a65e2ae7db729a7d"
+      "a65e2ae7db729a7d",
+      "b5dee1b7cea44292",
+      "ed4b4e688039160c"
     ],
     "('ts-cancel-service',)": [
+      "8be1f0987dc4164d",
       "9cdfe64e4c4fba09",
       "a0a89d64620553d3",
+      "ac65c6a8da52d366",
+      "f403055837eba660",
       "f5d318dee06fb15b"
     ],
     "('ts-travel-service',)": [
       "651b09c7dde969c0"
     ],
     "('ts-seat-service',)": [
+      "08d2a154fee34eba",
       "1592909ca5d9b6ac",
       "22407a77595315b7",
+      "238b31054413c0d9",
+      "b94ee30de6b6ba73",
       "feeaddfdfb1f25f7"
     ],
     "('ts-contacts-service',)": [
+      "1fa9f29b4648b586",
+      "307f033b1a8b317c",
       "84f269aa9eab7be8",
       "ad01e6e757a2be10",
+      "c4f368193a9095a8",
       "ebac6db1287262d0"
     ],
     "('ts-assurance-service',)": [
       "1a2326f84f4032ea",
+      "3b5491f81029305c",
+      "4ffa40930bc2ec78",
       "7c99ef52f6f21364",
-      "7d4b9023e37bc1b8"
+      "7d4b9023e37bc1b8",
+      "c5d695217696d925"
     ],
     "('ts-config-service',)": [
       "4919dafc5f4d98b0",
       "7adf346074c48640",
-      "90229c49c879ea80"
+      "90229c49c879ea80",
+      "9b1ca64b64c5eda8",
+      "cf44e609ba961c0b",
+      "f38c11cbf53ee1d6"
+    ],
+    "('ts-price-service',)": [
+      "039b48f4e9b6f022",
+      "2165c628c0d8e2b6",
+      "2d6e2584a45330c7",
+      "3f4c5673f0e481d4",
+      "6b033fd4039a1918",
+      "c714a4cfdfbbb620"
     ],
     "('ts-food-service',)": [
       "4acf7e1489424086",
@@ -56,8 +89,11 @@
       "dbaace364167adea"
     ],
     "('ts-train-service',)": [
+      "0dbcaedbc64733c6",
       "219dfa2b2dbe5471",
+      "353fcf0f9e23fcea",
       "500e586f3be57930",
+      "8fa019ce564357a6",
       "b9d1c29bff2637fa"
     ],
     "('ts-verification-code-service',)": [
@@ -69,9 +105,12 @@
       "62ab4180d975c529",
       "6bfde3d9bad7c0aa",
       "6dc156bae99500d7",
+      "6e06d477b77e9ebf",
       "756d0d4055a103bf",
       "7cc3be3513108d86",
+      "83312141ee585d7d",
       "85da2d582f76cda6",
+      "891b33c2850dc8df",
       "926ad91c8000eded",
       "9316f42beb426bba",
       "940f19187f1152d0",
@@ -82,6 +121,7 @@
       "a959e4ff355bf986",
       "a9c2719a446b5e63",
       "b0bdf9fc350a5029",
+      "b30330445ae7df7c",
       "c7688ca5a28270d0",
       "cef789a0c1e37b41",
       "d0473f48c5bda0f8",
@@ -90,9 +130,18 @@
       "d71fe6da554ee8fb",
       "db6bfc4a369c7e56",
       "de6d0cb914402e30",
+      "e46545616fb0f8ff",
       "e95e75973e4e9ee1",
       "f47bfa183bf29c2e",
       "f94f8da0f1dccb83"
+    ],
+    "('ts-payment-service',)": [
+      "1257e9e106ad65c0",
+      "262f411e901518e8",
+      "79fcef5a0aaa341a",
+      "851908a4bf573a37",
+      "9bffe269fa3f67d1",
+      "bb3b538a17455859"
     ],
     "('ts-user-service',)": [
       "2e3555045bb3f187",
@@ -100,23 +149,16 @@
       "898853dcb035b9d1",
       "abc5c84e1be90927"
     ],
-    "('ts-price-service',)": [
-      "2165c628c0d8e2b6",
-      "2d6e2584a45330c7",
-      "6b033fd4039a1918"
+    "('ts-route-service',)": [
+      "239f883d85404304",
+      "6ea0a6a280b373f1",
+      "7fd80275a9cd10eb",
+      "b58e9dbefec41c4a",
+      "f1ef751a4f76a026",
+      "fe230ba7abccc86b"
     ],
     "('ts-admin-user-service',)": [
       "5a4fde3fcdd5ef47"
-    ],
-    "('ts-route-service',)": [
-      "6ea0a6a280b373f1",
-      "b58e9dbefec41c4a",
-      "fe230ba7abccc86b"
-    ],
-    "('ts-payment-service',)": [
-      "79fcef5a0aaa341a",
-      "9bffe269fa3f67d1",
-      "bb3b538a17455859"
     ],
     "('ts-admin-route-service',)": [
       "c39981e41e12491c"

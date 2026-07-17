@@ -19,7 +19,7 @@
     {
       "mr": "MR03_idem_consigns",
       "passed": true,
-      "detail": "|src|=60 |follow|=60 diff=set()",
+      "detail": "|src|=215 |follow|=215 diff=set()",
       "src_status": 200,
       "follow_status": 200,
       "famille": "idempotence"
@@ -35,7 +35,7 @@
     {
       "mr": "MR05_card_consigns",
       "passed": true,
-      "detail": "|src|=60 |follow|=60",
+      "detail": "|src|=215 |follow|=215",
       "src_status": 200,
       "follow_status": 200,
       "famille": "cardinalité"

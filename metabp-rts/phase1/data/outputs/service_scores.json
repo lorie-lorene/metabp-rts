@@ -2,25 +2,25 @@
   {
     "service_name": "ts-order-service",
     "C": 0.659091,
-    "P": 0.501745,
+    "P": 0.501391,
     "F": 0.0,
-    "theta_dormant": 0.539784,
+    "theta_dormant": 0.539508,
     "is_dormant": true
   },
   {
     "service_name": "ts-order-other-service",
     "C": 0.301948,
-    "P": 0.501733,
+    "P": 0.501429,
     "F": 0.0,
-    "theta_dormant": 0.453435,
+    "theta_dormant": 0.453213,
     "is_dormant": true
   },
   {
     "service_name": "ts-ticketinfo-service",
     "C": 0.301948,
-    "P": 0.501206,
+    "P": 0.500908,
     "F": 0.0,
-    "theta_dormant": 0.453035,
+    "theta_dormant": 0.452818,
     "is_dormant": true
   },
   {
@@ -28,23 +28,23 @@
     "C": 0.123377,
     "P": 0.500909,
     "F": 0.0,
-    "theta_dormant": 0.40964,
+    "theta_dormant": 0.409658,
     "is_dormant": true
   },
   {
     "service_name": "ts-consign-service",
     "C": 0.123377,
-    "P": 0.500819,
+    "P": 0.500609,
     "F": 0.0,
-    "theta_dormant": 0.409572,
+    "theta_dormant": 0.40943,
     "is_dormant": true
   },
   {
     "service_name": "ts-travel2-service",
     "C": 0.034091,
-    "P": 0.501153,
+    "P": 0.500841,
     "F": 0.0,
-    "theta_dormant": 0.38824,
+    "theta_dormant": 0.388025,
     "is_dormant": true
   },
   {
@@ -52,21 +52,21 @@
     "C": 0.034091,
     "P": 0.500691,
     "F": 0.0,
-    "theta_dormant": 0.38789,
+    "theta_dormant": 0.387911,
     "is_dormant": true
   },
   {
     "service_name": "ts-admin-basic-info-service",
     "C": 0.034091,
-    "P": 0.500356,
+    "P": 0.500322,
     "F": 0.0,
-    "theta_dormant": 0.387636,
+    "theta_dormant": 0.387632,
     "is_dormant": true
   },
   {
     "service_name": "ts-auth-service",
     "C": 0.034091,
-    "P": 0.500301,
+    "P": 0.500272,
     "F": 0.0,
     "theta_dormant": 0.387594,
     "is_dormant": true
@@ -76,7 +76,7 @@
     "C": 0.157468,
     "P": 0.250444,
     "F": 0.0,
-    "theta_dormant": 0.227967,
+    "theta_dormant": 0.227971,
     "is_dormant": false
   },
   {
@@ -84,7 +84,7 @@
     "C": 0.068182,
     "P": 0.250526,
     "F": 0.0,
-    "theta_dormant": 0.206444,
+    "theta_dormant": 0.206453,
     "is_dormant": false
   },
   {
@@ -92,7 +92,7 @@
     "C": 0.280844,
     "P": 0.167374,
     "F": 0.0,
-    "theta_dormant": 0.194806,
+    "theta_dormant": 0.1948,
     "is_dormant": false
   },
   {
@@ -100,23 +100,23 @@
     "C": 0.136364,
     "P": 0.201024,
     "F": 0.0,
-    "theta_dormant": 0.185392,
+    "theta_dormant": 0.185395,
     "is_dormant": false
   },
   {
     "service_name": "ts-travel-service",
     "C": 0.349026,
-    "P": 0.101738,
+    "P": 0.101615,
     "F": 0.0,
-    "theta_dormant": 0.16152,
+    "theta_dormant": 0.161415,
     "is_dormant": false
   },
   {
     "service_name": "ts-basic-service",
     "C": 0.225649,
-    "P": 0.12566,
+    "P": 0.125648,
     "F": 0.0,
-    "theta_dormant": 0.149833,
+    "theta_dormant": 0.149819,
     "is_dormant": false
   },
   {
@@ -124,7 +124,7 @@
     "C": 0.375,
     "P": 0.071416,
     "F": 0.0,
-    "theta_dormant": 0.144808,
+    "theta_dormant": 0.144794,
     "is_dormant": false
   },
   {
@@ -132,7 +132,7 @@
     "C": 0.357143,
     "P": 0.0,
     "F": 0.0,
-    "theta_dormant": 0.08634,
+    "theta_dormant": 0.086323,
     "is_dormant": false
   },
   {
@@ -140,7 +140,7 @@
     "C": 0.178571,
     "P": 0.0,
     "F": 0.0,
-    "theta_dormant": 0.04317,
+    "theta_dormant": 0.043161,
     "is_dormant": false
   },
   {
@@ -148,7 +148,7 @@
     "C": 0.178571,
     "P": 0.0,
     "F": 0.0,
-    "theta_dormant": 0.04317,
+    "theta_dormant": 0.043161,
     "is_dormant": false
   },
   {
@@ -156,7 +156,7 @@
     "C": 0.178571,
     "P": 0.0,
     "F": 0.0,
-    "theta_dormant": 0.04317,
+    "theta_dormant": 0.043161,
     "is_dormant": false
   },
   {
@@ -164,7 +164,7 @@
     "C": 0.178571,
     "P": 0.0,
     "F": 0.0,
-    "theta_dormant": 0.04317,
+    "theta_dormant": 0.043161,
     "is_dormant": false
   },
   {
@@ -172,7 +172,7 @@
     "C": 0.178571,
     "P": 0.0,
     "F": 0.0,
-    "theta_dormant": 0.04317,
+    "theta_dormant": 0.043161,
     "is_dormant": false
   },
   {
@@ -180,7 +180,7 @@
     "C": 0.089286,
     "P": 0.0,
     "F": 0.0,
-    "theta_dormant": 0.021585,
+    "theta_dormant": 0.021581,
     "is_dormant": false
   },
   {
@@ -188,7 +188,7 @@
     "C": 0.089286,
     "P": 0.0,
     "F": 0.0,
-    "theta_dormant": 0.021585,
+    "theta_dormant": 0.021581,
     "is_dormant": false
   },
   {
@@ -196,7 +196,7 @@
     "C": 0.089286,
     "P": 0.0,
     "F": 0.0,
-    "theta_dormant": 0.021585,
+    "theta_dormant": 0.021581,
     "is_dormant": false
   },
   {
@@ -204,7 +204,7 @@
     "C": 0.089286,
     "P": 0.0,
     "F": 0.0,
-    "theta_dormant": 0.021585,
+    "theta_dormant": 0.021581,
     "is_dormant": false
   },
   {
@@ -212,7 +212,7 @@
     "C": 0.089286,
     "P": 0.0,
     "F": 0.0,
-    "theta_dormant": 0.021585,
+    "theta_dormant": 0.021581,
     "is_dormant": false
   }
 ]

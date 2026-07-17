@@ -1,0 +1,325 @@
+=== RUN COMPLET MetaBP-RTS — mer. 15 juil. 2026 20:57:43 WAT ===
+ΔS = ts-station-service
+
+
+########## PHASE 1 : Observation → G, T, scores, MR ##########
+20:57:43 [INFO] run_phase1 — MetaBP-RTS Phase 1 — démarrage
+20:57:43 [INFO] run_phase1 — Config     : /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase1/config/system_config.yaml
+20:57:43 [INFO] run_phase1 — Services   : 22 services chargés
+20:57:43 [INFO] run_phase1 — ── Étape 1/12 : Récupération traces Jaeger
+20:57:43 [INFO] ingestion.jaeger_client — Ingestion globale → 31 services détectés : ['ts-preserve-service', 'ts-rebook-service', 'ts-contacts-service', 'ts-auth-service', 'ts-train-service', 'ts-verification-code-service', 'ts-travel2-service', 'ts-config-service', 'ts-payment-service', 'ts-execute-service', 'ts-station-service', 'ts-food-service', 'ts-route-service', 'ts-order-other-service', 'ts-price-service', 'ts-consign-service', 'ts-inside-payment-service', 'ts-admin-basic-info-service', 'ts-assurance-service', 'ts-travel-service', 'ts-user-service', 'ts-security-service', 'ts-consign-price-service', 'ts-ticketinfo-service', 'ts-order-service', 'ts-admin-route-service', 'ts-admin-user-service', 'ts-cancel-service', 'ts-seat-service', 'ts-notification-service', 'ts-basic-service']
+20:57:43 [INFO] ingestion.jaeger_client — Jaeger → service=ts-preserve-service | lookback=1h | traces récupérées=10
+20:57:43 [INFO] ingestion.jaeger_client — Jaeger → service=ts-rebook-service | lookback=1h | traces récupérées=9
+20:57:43 [INFO] ingestion.jaeger_client — Jaeger → service=ts-contacts-service | lookback=1h | traces récupérées=266
+20:57:43 [INFO] ingestion.jaeger_client — Jaeger → service=ts-auth-service | lookback=1h | traces récupérées=42
+20:57:43 [INFO] ingestion.jaeger_client — Jaeger → service=ts-train-service | lookback=1h | traces récupérées=92
+20:57:43 [INFO] ingestion.jaeger_client — Jaeger → service=ts-verification-code-service | lookback=1h | traces récupérées=69
+20:57:43 [INFO] ingestion.jaeger_client — Jaeger → service=ts-travel2-service | lookback=1h | traces récupérées=70
+20:57:43 [INFO] ingestion.jaeger_client — Jaeger → service=ts-config-service | lookback=1h | traces récupérées=83
+20:57:43 [INFO] ingestion.jaeger_client — Jaeger → service=ts-payment-service | lookback=1h | traces récupérées=4
+20:57:43 [INFO] ingestion.jaeger_client — Jaeger → service=ts-execute-service | lookback=1h | traces récupérées=6
+20:57:44 [INFO] ingestion.jaeger_client — Jaeger → service=ts-station-service | lookback=1h | traces récupérées=1259
+20:57:44 [INFO] ingestion.jaeger_client — Jaeger → service=ts-food-service | lookback=1h | traces récupérées=9
+20:57:44 [INFO] ingestion.jaeger_client — Jaeger → service=ts-route-service | lookback=1h | traces récupérées=61
+20:57:44 [INFO] ingestion.jaeger_client — Jaeger → service=ts-order-other-service | lookback=1h | traces récupérées=395
+20:57:44 [INFO] ingestion.jaeger_client — Jaeger → service=ts-price-service | lookback=1h | traces récupérées=21
+20:57:44 [INFO] ingestion.jaeger_client — Jaeger → service=ts-consign-service | lookback=1h | traces récupérées=237
+20:57:44 [INFO] ingestion.jaeger_client — Jaeger → service=ts-inside-payment-service | lookback=1h | traces récupérées=19
+20:57:44 [INFO] ingestion.jaeger_client — Jaeger → service=ts-admin-basic-info-service | lookback=1h | traces récupérées=70
+20:57:44 [INFO] ingestion.jaeger_client — Jaeger → service=ts-assurance-service | lookback=1h | traces récupérées=223
+20:57:45 [INFO] ingestion.jaeger_client — Jaeger → service=ts-travel-service | lookback=1h | traces récupérées=111
+20:57:45 [INFO] ingestion.jaeger_client — Jaeger → service=ts-user-service | lookback=1h | traces récupérées=30
+20:57:45 [INFO] ingestion.jaeger_client — Jaeger → service=ts-security-service | lookback=1h | traces récupérées=10
+20:57:45 [INFO] ingestion.jaeger_client — Jaeger → service=ts-consign-price-service | lookback=1h | traces récupérées=155
+20:57:45 [INFO] ingestion.jaeger_client — Jaeger → service=ts-ticketinfo-service | lookback=1h | traces récupérées=172
+20:57:45 [INFO] ingestion.jaeger_client — Jaeger → service=ts-order-service | lookback=1h | traces récupérées=585
+20:57:45 [INFO] ingestion.jaeger_client — Jaeger → service=ts-admin-route-service | lookback=1h | traces récupérées=1
+20:57:45 [INFO] ingestion.jaeger_client — Jaeger → service=ts-admin-user-service | lookback=1h | traces récupérées=1
+20:57:45 [INFO] ingestion.jaeger_client — Jaeger → service=ts-cancel-service | lookback=1h | traces récupérées=16
+20:57:46 [INFO] ingestion.jaeger_client — Jaeger → service=ts-seat-service | lookback=1h | traces récupérées=21
+20:57:46 [INFO] ingestion.jaeger_client — Jaeger → service=ts-notification-service | lookback=1h | traces récupérées=18
+20:57:46 [INFO] ingestion.jaeger_client — Jaeger → service=ts-basic-service | lookback=1h | traces récupérées=172
+20:57:46 [INFO] ingestion.jaeger_client — Ingestion globale terminée → 2299 traces consolidées | 9145 spans totaux
+20:57:47 [INFO] ingestion.jaeger_client — Traces brutes sauvegardées → /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase1/data/raw/traces_raw.json (2299 traces)
+20:57:47 [INFO] run_phase1 — ── Étape 2/12 : Parsing des spans
+20:57:47 [INFO] ingestion.span_parser — SpanParser → 9145 spans parsés depuis 2299 traces
+20:57:47 [INFO] run_phase1 — ── Étape 3/12 : Reconstruction T et edge_list
+20:57:47 [INFO] ingestion.trace_reconstructor — TraceReconstructor → T=2299 test paths | edge_list=3331 arcs bruts
+20:57:47 [INFO] run_phase1 — Test suite T sauvegardée → /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase1/data/outputs/test_suite_T.json (2299 cas)
+20:57:47 [INFO] run_phase1 — ── Étape 4/12 : Calcul des poids w_ij
+20:57:47 [INFO] graph.weight_calculator — WeightCalculator → 40 arcs uniques calculés (α=0.5 β=0.3 γ=0.2)
+20:57:47 [INFO] run_phase1 — ── Étape 5/12 : Construction du graphe G
+20:57:47 [INFO] graph.graph_builder — GraphBuilder → G créé : 27 services (noeuds) | 40 dépendances (arcs)
+20:57:47 [INFO] graph.graph_builder — Graphe G sauvegardé → /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase1/data/outputs/service_graph.json
+20:57:47 [INFO] run_phase1 — Résumé G : {'nodes': 27, 'edges': 40, 'density': 0.057, 'is_weakly_connected': False, 'avg_w_ij': 0.2153}
+20:57:47 [INFO] run_phase1 — ── Étape 6/12 : Calcul centralité C(si)
+20:57:47 [INFO] graph.centrality — CentralityCalculator → 27 services scorés | max C=0.6591
+20:57:47 [INFO] run_phase1 — ── Étape 7/12 : Calcul propagation P(si)
+20:57:47 [INFO] graph.propagation_coeff — PropagationCalculator → 27 services scorés | max P=0.5014
+20:57:47 [INFO] run_phase1 — ── Étape 8/12 : Calcul fragilité F(si)
+20:57:47 [INFO] graph.fragility — FragilityCalculator → 16 services scorés | max F=0.0000
+20:57:47 [INFO] run_phase1 — ── Étape 9/12 : Classification Écho-Dormant
+20:57:47 [INFO] graph.ewm_critic — EWM-CRITIC — matrice 27 services × 3 critères
+20:57:47 [INFO] graph.ewm_critic —   EWM  ω(C) = 0.3856
+20:57:47 [INFO] graph.ewm_critic —   EWM  ω(P) = 0.6144
+20:57:47 [INFO] graph.ewm_critic —   EWM  ω(F) = 0.0000
+20:57:47 [INFO] graph.ewm_critic —   CRITIC ω(C) = 0.3369
+20:57:47 [INFO] graph.ewm_critic —   CRITIC ω(P) = 0.6631
+20:57:47 [INFO] graph.ewm_critic —   CRITIC ω(F) = 0.0000
+20:57:47 [INFO] graph.ewm_critic —   ── Poids combinés EWM×CRITIC ──
+20:57:47 [INFO] graph.ewm_critic —   ω_final(C) = 0.2417
+20:57:47 [INFO] graph.ewm_critic —   ω_final(P) = 0.7583
+20:57:47 [INFO] graph.ewm_critic —   ω_final(F) = 0.0000
+20:57:47 [INFO] graph.echo_dormant — Poids EWM-CRITIC → ω_C=0.2417  ω_P=0.7583  ω_F=0.0000
+20:57:47 [INFO] graph.ewm_critic — AutoThreshold — k=3 | τ=0.3078 | 9/27 Écho-Dormants | gap=0.1596
+20:57:47 [INFO] graph.echo_dormant — Seuil auto (K-means k=3) → τ_dormant=0.3078
+20:57:47 [INFO] graph.echo_dormant — EchoDormantClassifier → 27 services | 9 Écho-Dormants | 18 Non-Dormants | τ=0.3078
+20:57:47 [INFO] graph.echo_dormant — Scores sauvegardés → /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase1/data/outputs/service_scores.json (27 services)
+20:57:47 [INFO] graph.echo_dormant — Rapport EWM-CRITIC + AutoThreshold → /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase1/data/outputs/ewm_critic_weights_phase1.json
+20:57:47 [INFO] graph.echo_dormant — Théorème de Sécurité d'Exclusion : OK   (min_dormant=0.3876 > max_non_dormant=0.2280)
+20:57:47 [INFO] run_phase1 — S_dormant (9 services) : ['ts-order-service', 'ts-order-other-service', 'ts-ticketinfo-service', 'ts-inside-payment-service', 'ts-consign-service', 'ts-travel2-service', 'ts-execute-service', 'ts-admin-basic-info-service', 'ts-auth-service']
+20:57:47 [INFO] run_phase1 — ── Étape 10/12 : Lecture specs OpenAPI
+20:57:47 [WARNING] mr_catalog.openapi_reader — OpenAPI non accessible pour ts-auth-service (port 12340) — fallback activé
+20:57:47 [WARNING] mr_catalog.openapi_reader — OpenAPI non accessible pour ts-user-service (port 12342) — fallback activé
+20:57:48 [INFO] mr_catalog.openapi_reader — OpenAPIReader → 20/22 services avec spec OpenAPI accessible
+20:57:48 [INFO] run_phase1 — ── Étape 11/12 : Inférence MR
+20:57:48 [INFO] mr_catalog.mr_inferrer — MRInferrer → 47 MR inférées depuis OpenAPI (20 services)
+20:57:48 [INFO] run_phase1 — Fallback Jaeger activé pour 2 services sans spec OpenAPI
+20:57:48 [INFO] mr_catalog.jaeger_fallback_mr — JaegerFallbackMR → 0 MR inférées depuis operationName (2 services)
+20:57:48 [INFO] run_phase1 — ── Étape 12/12 : Écriture mr_catalog.yaml
+20:57:48 [INFO] mr_catalog.mr_catalog_writer — MRCatalogWriter → /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase1/data/outputs/mr_catalog.yaml écrit (47 MR | 2 types | 20 services)
+20:57:48 [INFO] mr_catalog.mr_generator_full — MRGeneratorFull -> 84 MR (28 Lat, 28 Err, 28 Cmp)
+20:57:48 [INFO] run_phase1 — MR data-driven ajoutees : 84 (28 Latence, 28 Erreur, 28 Completude)
+20:57:48 [INFO] run_phase1 — =======================================================
+20:57:48 [INFO] run_phase1 — Phase 1 terminée — Artefacts produits :
+20:57:48 [INFO] run_phase1 —   G        : 27 noeuds, 40 arcs
+20:57:48 [INFO] run_phase1 —   T        : 2299 cas de test
+20:57:48 [INFO] run_phase1 —   Scores   : 27 services (9 Écho-Dormants)
+20:57:48 [INFO] run_phase1 —   MR       : 131 relations (47 OpenAPI + 0 fallback + 84 data-driven)
+20:57:48 [INFO] run_phase1 — =======================================================
+20:57:48 [INFO] run_phase1 — Temps Phase 1 : 4.79s → /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase1/data/outputs/timing_phase1.json
+20:57:48 [INFO] run_phase1 — Visualisation → /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase1/data/outputs/graph_visualization.html
+20:57:48 [INFO] run_phase1 — Ouvrir : file:///home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase1/data/outputs/graph_visualization.html
+
+
+########## PHASE 2 : BP → CIT, tiering ##########
+20:57:48 [INFO] run_phase2 — MetaBP-RTS Phase 2 — démarrage
+20:57:48 [INFO] run_phase2 — ΔS               : ['ts-station-service']
+20:57:48 [INFO] run_phase2 — S_dormant Phase 1: ['ts-order-service', 'ts-order-other-service', 'ts-ticketinfo-service', 'ts-inside-payment-service', 'ts-consign-service', 'ts-travel2-service', 'ts-execute-service', 'ts-admin-basic-info-service', 'ts-auth-service']
+20:57:48 [INFO] run_phase2 — Mode BP          : noisy_or
+20:57:48 [INFO] run_phase2 — Comparaison      : False
+20:57:48 [INFO] run_phase2 — ── Étape 1/5 : Inversion G → DG
+20:57:48 [INFO] bp.graph_inverter — GraphInverter — DG : 27 noeuds | 40 arcs inversés | 0 isolés
+20:57:48 [INFO] bp.graph_inverter — DG sauvegardé → /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase2/data/outputs/dg_graph.json
+20:57:48 [INFO] run_phase2 — ── Étape 2/5 : Initialisation p0
+20:57:48 [INFO] bp.bp_initializer — BPInitializer — 27 noeuds initialisés : 1 modifiés (ψ=1.0) | 9 Écho-Dormants (ψ=Θ) | 17 neutres (ψ=0.0)
+20:57:48 [INFO] run_phase2 — p0 — modifiés=['ts-station-service'] | Écho-Dormants ψ>0=['ts-order-service', 'ts-order-other-service', 'ts-ticketinfo-service', 'ts-consign-service', 'ts-admin-basic-info-service', 'ts-auth-service', 'ts-travel2-service', 'ts-execute-service', 'ts-inside-payment-service']
+20:57:48 [INFO] run_phase2 — ── Étape 3/5 : Propagation BP
+20:57:48 [INFO] run_phase2 — BP mode=noisy_or — démarrage
+20:57:48 [INFO] bp.bp_propagator — BPPropagator — démarrage mode=noisy_or | max_iter=100 | epsilon=1.0e-06
+20:57:48 [INFO] bp.bp_propagator — BPPropagator — convergence à t=7 | Δmax=4.71e-08
+20:57:48 [INFO] bp.bp_propagator — BPPropagator — 7 itérations | 17 services impactés (p>0) | mode=noisy_or
+20:57:48 [INFO] run_phase2 — BP mode=noisy_or — 7 itérations | convergence=True | 17 services impactés
+20:57:48 [INFO] run_phase2 — ── Étape 4/5 : CIT + Θ_complet + identification Écho-Impact
+20:57:48 [INFO] bp.ewm_critic — EWM-CRITIC — matrice 27 services × 2 critères
+20:57:48 [INFO] bp.ewm_critic —   EWM  ω(Θ_dormant) = 0.4523
+20:57:48 [INFO] bp.ewm_critic —   EWM  ω(CIT) = 0.5477
+20:57:48 [INFO] bp.ewm_critic —   CRITIC ω(Θ_dormant) = 0.5737
+20:57:48 [INFO] bp.ewm_critic —   CRITIC ω(CIT) = 0.4263
+20:57:48 [INFO] bp.ewm_critic —   ── Poids combinés EWM×CRITIC ──
+20:57:48 [INFO] bp.ewm_critic —   ω_final(Θ_dormant) = 0.5264
+20:57:48 [INFO] bp.ewm_critic —   ω_final(CIT) = 0.4736
+20:57:48 [INFO] bp.cit_builder — EWM-CRITIC Phase 2 → ω_Θ=0.5264  ω_B=0.4736
+20:57:48 [INFO] bp.ewm_critic — AutoThreshold — k=3 | τ=0.3182 | 10/26 Écho-Dormants | gap=0.1388
+20:57:48 [INFO] bp.cit_builder — AutoThreshold Phase 2 (k=3) → τ_impact=0.3182
+20:57:48 [INFO] bp.cit_builder — CITBuilder — 10 Services Écho-Impact (τ=0.3182) | 9 en résonance (étaient Écho-Dormants Phase 1)
+20:57:48 [INFO] bp.cit_builder — RÉSONANCE CONFIRMÉE : 9/10 — principe de résonance différée MetaBP-RTS validé empiriquement.
+20:57:48 [INFO] bp.cit_builder — Sauvegardé → /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase2/data/outputs/change_impact_table.json
+20:57:48 [INFO] bp.cit_builder — Sauvegardé → /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase2/data/outputs/echo_impact_services.json
+20:57:48 [INFO] bp.cit_builder — Sauvegardé → /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase2/data/outputs/theta_complet.json
+20:57:48 [INFO] bp.cit_builder — Rapport EWM-CRITIC + AutoThreshold Phase 2 → /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase2/data/outputs/ewm_critic_weights_phase2.json
+20:57:48 [INFO] run_phase2 — ── Étape 5/5 : Tiering + Scoring des tests
+20:57:48 [INFO] selection.test_scorer — TestScorer — stratégie=existent | p=0.0956 | k=2 | |S_echo|=10
+20:57:48 [INFO] selection.test_scorer — TestScorer — 2299 tests : Tier1=1484 | Tier2=815 | sélectionnés=1674 (réduction=27.2%)
+20:57:48 [INFO] selection.test_scorer — list → /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase2/data/outputs/test_scores.json
+20:57:48 [INFO] selection.test_scorer — list → /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase2/data/outputs/selected_tests.json
+20:57:48 [INFO] selection.test_scorer — dict → /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase2/data/outputs/tier1_tests.json
+20:57:48 [INFO] selection.test_scorer — dict → /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase2/data/outputs/tier2_tests.json
+20:57:48 [INFO] run_phase2 — =======================================================
+20:57:48 [INFO] run_phase2 — Phase 2 terminée :
+20:57:48 [INFO] run_phase2 —   ΔS                    : ['ts-station-service']
+20:57:48 [INFO] run_phase2 —   Mode BP utilisé       : noisy_or
+20:57:48 [INFO] run_phase2 —   Itérations BP         : 7 (convergé=True)
+20:57:48 [INFO] run_phase2 —   Services Écho-Impact  : 10 (τ=0.25)
+20:57:48 [INFO] run_phase2 —   Résonance confirmée   : 9/10
+20:57:48 [INFO] run_phase2 —   Tier 1 (S_echo)       : 1484 tests (64.5%)
+20:57:48 [INFO] run_phase2 —   Tier 2 (candidats PSO): 815 tests (35.5%)
+20:57:48 [INFO] run_phase2 —   Sélection totale      : 1674/2299 (27.2%)
+20:57:48 [INFO] run_phase2 —   Temps Phase 2 (TS)    : 0.16s
+20:57:48 [INFO] run_phase2 — =======================================================
+20:57:48 [INFO] run_phase2 — Top Services Écho-Impact :
+20:57:48 [INFO] run_phase2 —   ts-order-service                    CIT=0.5395 | Θ_complet=0.5395 ← RÉSONANCE
+20:57:48 [INFO] run_phase2 —   ts-order-other-service              CIT=0.5014 | Θ_complet=0.4760 ← RÉSONANCE
+20:57:48 [INFO] run_phase2 —   ts-ticketinfo-service               CIT=0.4528 | Θ_complet=0.4528 ← RÉSONANCE
+20:57:48 [INFO] run_phase2 —   ts-basic-service                    CIT=0.4400 | Θ_complet=0.2873
+20:57:48 [INFO] run_phase2 —   ts-inside-payment-service           CIT=0.4097 | Θ_complet=0.4097 ← RÉSONANCE
+20:57:48 [INFO] run_phase2 — 
+20:57:48 [INFO] run_phase2 — Artefacts → Phase 3 :
+20:57:48 [INFO] run_phase2 —   tier1_tests.json    : Tier 1 — 100%% conservés
+20:57:48 [INFO] run_phase2 —   tier2_tests.json    : Tier 2 — candidats PSO
+20:57:48 [INFO] run_phase2 —   change_impact_table : CIT pour fitness PSO
+
+
+########## PHASE 3 : MRPS + PSO → T_sel ##########
+20:57:48 [INFO] run_phase3 — MetaBP-RTS Phase 3 — démarrage
+20:57:48 [INFO] run_phase3 — Entrées — Tier1=1484 | Tier2=815 | S_echo=10 | CIT=27 services
+20:57:48 [INFO] run_phase3 — Services à couvrir par PSO : 31
+20:57:48 [INFO] run_phase3 — ── Étape 1/3 : MRPS — déduplication Tier 2
+20:57:48 [INFO] mrps.mrps — PathMR — catalogue MR chargé : 131 MR sur 29 services
+20:57:48 [INFO] mrps.mrps — PathMR — mode=enriched | 815 chemins → 31 groupes uniques | réduction=96.2% | avg_groupe=26.3 | max_groupe=216 | singletons=4
+20:57:48 [INFO] mrps.mrps — PathMR groupes → /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase3/data/outputs/mrps_groups.json
+20:57:48 [INFO] mrps.mrps — PathMR Tier2_dédupliqué → /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase3/data/outputs/tier2_deduplicated.json (31 représentants)
+20:57:48 [INFO] run_phase3 — MRPS terminé : 815 → 31 chemins uniques | réduction=96.2% | singletons=12.9%
+20:57:48 [INFO] run_phase3 — ── Étape 2/3 : Binary PSO — sélection optimale Tier 2
+20:57:48 [INFO] pso.binary_pso — BinaryPSO — démarrage : 31 chemins | 31 services | 30 particules | max_iter=100
+20:57:48 [INFO] pso.binary_pso — PSO iter=1 | gbest=0.2020 | sélectionnés=18 | no_improve=1/20
+20:57:48 [INFO] pso.binary_pso — PSO iter=10 | gbest=0.2020 | sélectionnés=18 | no_improve=10/20
+20:57:48 [INFO] pso.binary_pso — PSO iter=20 | gbest=0.2020 | sélectionnés=18 | no_improve=20/20
+20:57:48 [INFO] pso.binary_pso — BinaryPSO — convergence à iter=20 (pas d'amélioration depuis 20 itérations)
+20:57:48 [INFO] pso.binary_pso — BinaryPSO — terminé : 18/31 chemins sélectionnés | couverture=18/31 services (58.1%) | fitness=0.2020
+20:57:48 [INFO] pso.binary_pso — PSO Tier2_sel → /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase3/data/outputs/tier2_selected.json (18 chemins)
+20:57:48 [INFO] pso.binary_pso — PSO historique → /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase3/data/outputs/pso_history.json
+20:57:48 [INFO] run_phase3 — PSO terminé : 18/31 chemins sélectionnés | couverture=58.1% | réduction=41.9% | iter=20 | convergé=True
+20:57:48 [INFO] run_phase3 — ── Étape 3/3 : Assemblage T_sel = Tier1 ∪ Tier2_sel
+20:57:48 [INFO] run_phase3 — T_sel sauvegardé : 1502 chemins
+20:57:48 [INFO] run_phase3 — ── Calcul ET : agrégation TS Phase 1+2+3
+20:57:48 [INFO] metrics.et_calculator — ETCalculator — TO=227.536s | TR=194.932s | TS=5.114s | ET=12.1% | EN=34.7%
+20:57:48 [INFO] metrics.et_calculator — Rapport ET → /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase3/data/outputs/et_report.json
+20:57:48 [INFO] run_phase3 — =======================================================
+20:57:48 [INFO] run_phase3 — Phase 3 terminée :
+20:57:48 [INFO] run_phase3 —   T original     : 2299 chemins
+20:57:48 [INFO] run_phase3 —   ── MRPS        : 815 → 31 (réduction 96.2%)
+20:57:48 [INFO] run_phase3 —   ── PSO         : 31 → 18 (réduction 41.9%)
+20:57:48 [INFO] run_phase3 —   Tier 1         : 1484 (100% conservés)
+20:57:48 [INFO] run_phase3 —   Tier 2_sel     : 18 (optimisé MRPS+PSO)
+20:57:48 [INFO] run_phase3 —   T_sel final    : 1502 chemins
+20:57:48 [INFO] run_phase3 —   Réduction glob : 34.7%
+20:57:48 [INFO] run_phase3 —   Couverture     : 58.1% services
+20:57:48 [INFO] run_phase3 —   ── Métrique ET ─────────────────────────────
+20:57:48 [INFO] run_phase3 —   TO (tous tests): 227.536s
+20:57:48 [INFO] run_phase3 —   TR (T_sel)     : 194.932s
+20:57:48 [INFO] run_phase3 —   TS (pipeline)  : 5.114s  [P1=4.79 P2=0.16 P3=0.16]
+20:57:48 [INFO] run_phase3 —   EN (nombre)    : 34.7%
+20:57:48 [INFO] run_phase3 —   ET (temps)     : 12.1%
+20:57:48 [INFO] run_phase3 — =======================================================
+20:57:48 [INFO] run_phase3 — Artefacts → Phase 4 :
+20:57:48 [INFO] run_phase3 —   T_sel.json      : suite de test optimisée
+20:57:48 [INFO] run_phase3 —   phase3_report   : métriques complètes (avec ET)
+20:57:48 [INFO] run_phase3 —   et_report.json  : détail de la métrique ET
+
+
+########## PHASE 4 : mutation + vérification MR ##########
+20:57:48 [INFO] run_phase4 — MetaBP-RTS Phase 4 — démarrage
+20:57:48 [INFO] run_phase4 — T original : 2299 chemins
+20:57:48 [INFO] run_phase4 — T_sel      : 1502 chemins
+20:57:48 [INFO] run_phase4 — Mode MR    : offline
+20:57:48 [INFO] run_phase4 — ── Sous-phase 4A : Mutation de traces
+20:57:49 [INFO] mutation.trace_mutator — TraceMutator — 2299 traces indexees
+20:57:49 [INFO] mutation.trace_mutator — TraceMutator — 1502 chemins T_sel → 4506 mutants reels (0 chemins sans trace, ignores)
+20:57:49 [INFO] mutation.trace_mutator — Mutants sauvegardes → /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase4/data/outputs/mutants.json (4506)
+20:57:49 [INFO] mutation.mutation_verifier — MutationVerifier — seuils charges : 28 Lat, 28 Err, 28 Cmp
+20:57:49 [INFO] mutation.mutation_verifier — MutationVerifier — 4506 mutants | 4205 tues | 301 survivants | FCS=93.32%
+20:57:49 [INFO] mutation.mutation_verifier —   span_deletion             : 1246/1502 tues (FCS=82.96%)
+20:57:49 [INFO] mutation.mutation_verifier —   error_injection           : 1472/1502 tues (FCS=98.00%)
+20:57:49 [INFO] mutation.mutation_verifier —   latency_injection         : 1487/1502 tues (FCS=99.00%)
+20:57:49 [INFO] mutation.mutation_verifier — Rapport FCS -> /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase4/data/outputs/fcs_report.json
+20:57:49 [INFO] run_phase4 — 4A terminée : 4506 mutants | 4205 tués | FCS=93.3%
+20:57:49 [INFO] run_phase4 — ── Sous-phase 4B : Vérification métamorphique
+20:57:49 [INFO] metamorphic.mr_verifier — MRVerifier — seuils : 28 Lat, 28 Err, 28 Cmp
+20:57:49 [INFO] metamorphic.mr_verifier — MRVerifier — 2299 traces indexees
+20:57:49 [INFO] metamorphic.mr_verifier — MRVerifier — 1502 tests | 15162 MR verifiees | 14988 PASS | 174 FAIL | taux=98.85%
+20:57:49 [WARNING] metamorphic.mr_verifier — 174 MR non conformes (variabilite nominale + anomalies preexistantes)
+20:57:49 [INFO] metamorphic.mr_verifier — Non-conformites MR -> /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase4/data/outputs/mr_pairs.json (174)
+20:57:49 [INFO] metamorphic.mr_verifier — Resultats verification MR -> /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/phase4/data/outputs/verification_results.json
+20:57:49 [INFO] run_phase4 — 4B terminée : 15162 MR vérifiées | 14988 PASS | 174 FAIL | taux=98.8%
+20:57:49 [INFO] run_phase4 — =======================================================
+20:57:49 [INFO] run_phase4 — Phase 4 terminée — Métriques MetaBP-RTS :
+20:57:49 [INFO] run_phase4 —   T original       : 2299 chemins
+20:57:49 [INFO] run_phase4 —   T_sel            : 1502 chemins
+20:57:49 [INFO] run_phase4 —   EN (réduction)   : 34.7%
+20:57:49 [INFO] run_phase4 —   FCS (qualité)    : 93.3%  (4205/4506 mutants tués)
+20:57:49 [INFO] run_phase4 —   P_mr (conformité): 98.8%  (14988/15162 MR conformes)
+20:57:49 [INFO] run_phase4 —   MR non conformes : 174  (variabilite nominale + anomalies preexistantes)
+20:57:49 [INFO] run_phase4 —   F-measure        : 96.0%
+20:57:49 [INFO] run_phase4 — =======================================================
+20:57:49 [INFO] run_phase4 — P_mr = 98.8% : conformite des MR sur donnees nominales (le residuel reflete la variabilite attendue, non des regressions)
+
+
+########## ÉTAGE 1 : catalogue MR online (système sain) ##########
+Famille                | MR                     | résultat
+------------------------------------------------------------------------------
+idempotence            | MR01_idem_stations     | PASS  |src|=13 |follow|=13 diff=set()
+idempotence            | MR02_idem_trains       | PASS  |src|=6 |follow|=6 diff=set()
+idempotence            | MR03_idem_consigns     | PASS  |src|=215 |follow|=215 diff=set()
+cardinalité            | MR04_card_contacts     | PASS  |src|=2 |follow|=2
+cardinalité            | MR05_card_consigns     | PASS  |src|=215 |follow|=215
+auth                   | MR06_auth_contacts     | PASS  src=200 follow=403
+auth                   | MR08_auth_consigns     | PASS  src=200 follow=403
+équivalence            | MR09_equiv_name_id     | PASS  attendu=['shanghai', 'suzhou'] obt
+cohérence-inter-svc    | MR10_xsvc_contacts     | PASS  |A|=2 |B|=2 diff=set()
+------------------------------------------------------------------------------
+ÉTAGE 1 : 9/9 PASS | P_mr=100.0% | 5 familles : ['auth', 'cardinalité', 'cohérence-inter-svc', 'idempotence', 'équivalence']
+rapport -> etage1_report.json
+
+
+########## ÉTAGE 2a : détection (fautes niveau réponse) ##########
+Faute injectée                         | Famille              | détectée ?
+--------------------------------------------------------------------------------
+stations: gare supprimée               | idempotence/équivalence | ✅ OUI
+consigns(60): élément supprimé         | idempotence          | ✅ OUI
+contacts: id corrompu                  | idempotence          | ✅ OUI
+contacts: contournement auth           | auth                 | ✅ OUI
+stations idlist: mapping corrompu      | équivalence          | ✅ OUI
+xsvc contacts: désynchro               | cohérence-inter-svc  | ✅ OUI
+stations: réordonnancement (contrôle)  | idempotence          | ❌ NON
+--------------------------------------------------------------------------------
+Fautes détectées : 6/7  (taux = 85.7%)
+Note : le réordonnancement NE doit PAS être détecté (oracle ensembliste robuste à l'ordre).
+
+
+########## ÉTAGE 2b : détection (faute niveau service, proxy) ##########
+référence saine : 13 gares
+
+Mode faute     | gares vues | MR (vs référence) | attendu
+------------------------------------------------------------------
+none           |         13 | PASS              | PASS  ✅
+drop_one       |         12 | FAIL              | FAIL  ✅
+corrupt_id     |         13 | FAIL              | FAIL  ✅
+empty          |          0 | FAIL              | FAIL  ✅
+------------------------------------------------------------------
+Étage 2b : la faute vient du SERVICE (proxy), pas du runner.
+
+
+########## PARTIE C : sélection ↔ détection ##########
+======================================================================
+|T|     =  2299 tests | 46 endpoints distincts | 9 MR applicables
+|T_sel| =  1502 tests | 39 endpoints distincts | 9 MR applicables
+reduction (EN) = 34.7%
+======================================================================
+
+MR PERDUES par la reduction : AUCUNE
+MR conservees : 9/9 (100%)
+
+--- Scenario : faute injectee dans ts-station-service ---
+MR capables de detecter cette faute (etage 2b) : ['MR01_idem_stations', 'MR09_equiv_name_id']
+  -> presentes dans T_sel : ['MR01_idem_stations', 'MR09_equiv_name_id']
+
+======================================================================
+[OK] DETECTION PRESERVEE : T_sel (1502 tests, -35%)
+     conserve 100% des MR capables de detecter la faute dans ts-station-service.
+     => La reduction n'a PAS degrade la capacite de detection.
+======================================================================
+rapport -> partC_report.json
+
+
+=== FIN — journal : /home/spring-shogun/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts/run_20260715_205743.log ===

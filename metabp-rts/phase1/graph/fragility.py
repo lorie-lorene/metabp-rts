@@ -35,6 +35,34 @@ class FragilityCalculator:
         return normalized
 
 
+
+    def compute_from_spans(self, spans) -> Dict[str, float]:
+        """
+        F(si) = fragilite OPERATIONNELLE observee, calculee depuis les spans.
+
+        F_raw(si) = spans_en_erreur(si) / spans_totaux(si)
+        F(si)     = F_raw(si) / max(F_raw)
+
+        Contrairement a compute(edge_list), cette version capture AUSSI les
+        erreurs des spans racines (erreurs renvoyees directement au client),
+        qui ne produisent aucun arc inter-services. Sur un corpus ou les
+        erreurs surviennent majoritairement en entree de systeme, compute()
+        renvoie 0 partout et neutralise le critere F.
+        """
+        total: Dict[str, int] = defaultdict(int)
+        errors: Dict[str, int] = defaultdict(int)
+        for sp in spans:
+            total[sp.service_name] += 1
+            if sp.error:
+                errors[sp.service_name] += 1
+        raw = {svc: errors[svc] / total[svc] for svc in total}
+        norm = self._normalize(raw)
+        logger.info(
+            "FragilityCalculator (spans) → %d services | max F=%.4f | %d spans en erreur",
+            len(norm), max(norm.values(), default=0), sum(errors.values()),
+        )
+        return norm
+
     def _aggregate_errors(
         self,
         edge_list: List[RawEdge],

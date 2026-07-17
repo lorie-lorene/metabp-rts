@@ -1,10 +1,10 @@
 {
   "delta_s": "ts-station-service",
-  "n_T": 1459,
-  "n_T_sel": 998,
-  "EN_pct": 31.6,
+  "n_T": 2388,
+  "n_T_sel": 1530,
+  "EN_pct": 35.93,
   "endpoints_T": 46,
-  "endpoints_T_sel": 41,
+  "endpoints_T_sel": 39,
   "MR_applicables_T": [
     "MR01_idem_stations",
     "MR02_idem_trains",

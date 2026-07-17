@@ -134,6 +134,11 @@ def run_pipeline(config: dict, services_map: dict, base_dir: Path) -> None:
 
     # ── Étape 8 : Calcul F(si) ────────────────────────────
     logger.info("── Étape 8/12 : Calcul fragilité F(si)")
+    # F(si) = fragilite de propagation : erreurs sur les appels SORTANTS de si.
+    # Sur un corpus sans erreur inter-services, F=0 pour tous les services et
+    # la ponderation EWM-CRITIC lui attribue automatiquement un poids nul
+    # (variance nulle = information nulle). Voir FragilityCalculator.
+    # compute_from_spans() pour la formulation alternative (analyse de sensibilite).
     F_scores = FragilityCalculator().compute(edge_list)
 
     # ── Étape 9 : Classification Écho-Dormant ─────────────
