@@ -41,8 +41,14 @@ class TestScorer:
                     if svc not in seen:
                         seen.append(svc)
             return seen
-        # Formats alternatifs
-        return tp.get("services", tp.get("path", []))
+        # Test mono-service : il traverse quand meme son service d'entree.
+        # Sans ce fallback, les tests mono-service (chaine vide, pas de champ
+        # 'services' dans T) sont invisibles au tiering -> jamais en Tier 1
+        # meme s'ils exercent DIRECTEMENT le service modifie (viole la surete).
+        svc = tp.get("services") or tp.get("path") or []
+        if not svc and tp.get("entry_service"):
+            return [tp["entry_service"]]
+        return svc
 
     def score_and_select(
         self,
@@ -101,6 +107,9 @@ class TestScorer:
                 "in_s_echo":  in_s_echo,
                 "in_delta_s": in_delta,
                 "duration_us": tp.get("duration_us", 0),
+                "endpoint": tp.get("endpoint"),
+                "http_method": tp.get("http_method"),
+                "entry_service": tp.get("entry_service"),
             })
 
         # Tri stable : score desc, score_avg desc, test_id asc
