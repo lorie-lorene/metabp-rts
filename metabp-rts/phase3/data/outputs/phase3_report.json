@@ -1,60 +1,60 @@
 {
   "input": {
-    "n_tier1": 1512,
-    "n_tier2": 876,
+    "n_tier1": 1377,
+    "n_tier2": 1011,
     "n_total": 2388,
     "n_s_echo": 10,
     "n_services_cit": 27
   },
   "mrps": {
-    "n_input": 876,
-    "n_groups": 31,
-    "dedup_rate": 0.9646,
-    "dedup_pct": "96.5%",
-    "avg_group_size": 28.26,
-    "max_group_size": 216,
-    "singletons": 4,
-    "singleton_pct": "12.9%"
+    "n_input": 1011,
+    "n_groups": 1,
+    "dedup_rate": 0.999,
+    "dedup_pct": "99.9%",
+    "avg_group_size": 1011.0,
+    "max_group_size": 1011,
+    "singletons": 0,
+    "singleton_pct": "0.0%"
   },
   "pso": {
-    "n_input": 31,
-    "n_selected": 18,
-    "reduction_rate": 0.4194,
-    "reduction_pct": "41.9%",
-    "n_services_total": 31,
-    "n_services_covered": 18,
-    "coverage_rate": 0.5806,
-    "coverage_pct": "58.1%",
-    "gbest_fitness": 0.201983,
+    "n_input": 1,
+    "n_selected": 0,
+    "reduction_rate": 1.0,
+    "reduction_pct": "100.0%",
+    "n_services_total": 27,
+    "n_services_covered": 0,
+    "coverage_rate": 0.0,
+    "coverage_pct": "0.0%",
+    "gbest_fitness": 0.0,
     "n_iterations": 20,
     "converged": true
   },
   "et": {
     "TO_us": 228693224,
-    "TR_us": 194417739,
-    "TS_us": 7084500,
+    "TR_us": 189582586,
+    "TS_us": 7015500,
     "TO_s": 228.6932,
-    "TR_s": 194.4177,
-    "TS_s": 7.0845,
-    "ET": 11.89,
-    "EN": 35.93,
+    "TR_s": 189.5826,
+    "TS_s": 7.0155,
+    "ET": 14.03,
+    "EN": 42.34,
     "n_original": 2388,
-    "n_sel": 1530,
+    "n_sel": 1377,
     "n_with_duration": 2388,
     "coverage_duration": true,
     "note": "TS mesuré directement (Phase 1+2+3) ; TO/TR estimés via latences Jaeger (duration_us du span racine). Mode online = raffinement futur.",
     "TS_breakdown_s": {
       "phase1": 6.5574,
-      "phase2": 0.2607,
-      "phase3": 0.2664
+      "phase2": 0.2344,
+      "phase3": 0.2237
     },
     "note_breakdown": "Phase 1 est un coût amortissable (indépendant de ΔS, calculé une fois et réutilisé). Phase 2+3 se relancent à chaque cycle de régression."
   },
   "output": {
-    "n_tier1_conserved": 1512,
-    "n_tier2_selected": 18,
-    "n_t_sel": 1530,
-    "reduction_globale": 0.3593,
-    "reduction_pct": "35.9%"
+    "n_tier1_conserved": 1377,
+    "n_tier2_selected": 0,
+    "n_t_sel": 1377,
+    "reduction_globale": 0.4234,
+    "reduction_pct": "42.3%"
   }
 }

@@ -61,8 +61,6 @@ def main():
     parser.add_argument("--config", default="../config/phase4_config.yaml")
     parser.add_argument("--skip-4a", action="store_true")
     parser.add_argument("--skip-4b", action="store_true")
-    parser.add_argument("--delta-s", nargs="+", default=["ts-station-service"],
-                        help="services modifies : mutation ciblee -> Recall relatif a ΔS")
     args = parser.parse_args()
 
     config = load_config(args.config)
@@ -102,7 +100,7 @@ def main():
         )
         # Mutation sur T COMPLET : indispensable pour deriver l'ensemble
         # revelateur de fautes M et calculer le Recall (surete) de toute selection.
-        mutants = mutator.generate_mutants(test_suite, delta_s=args.delta_s)
+        mutants = mutator.generate_mutants(test_suite)
         mutator.save(mutants, str(base_dir / out_cfg["mutants"]))
 
         verifier_4a = MutationVerifier(mr_catalog_path=mr_catalog_path)
@@ -121,7 +119,6 @@ def main():
         save_fault_revealing(M, str(base_dir / "data/outputs/fault_revealing_tests.json"))
         rpf_tsel = recall_precision_f(t_sel, M)
         write_json(str(base_dir / "data/outputs/recall_t_sel.json"), rpf_tsel)
-        logger.info("ΔS mute : %s", args.delta_s)
         logger.info("Recall(T_sel) = %.2f%% | Precision = %.2f%% | F = %.4f "
                     "| |M|=%d tests revelateurs sur T",
                     rpf_tsel["recall"], rpf_tsel["precision"],

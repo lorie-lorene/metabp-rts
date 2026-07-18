@@ -303,7 +303,6 @@ def main():
         test_suite_path=str(base_dir / p1_cfg["test_suite"]),
         cit=cit_result["cit"],
         s_echo=cit_result["s_echo"],
-        delta_s=delta_s,
     )
     scorer.save(
         sel_result,

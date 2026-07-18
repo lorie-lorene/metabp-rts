@@ -66,34 +66,17 @@ class TraceMutator:
     def _svc_span_count(self, spans, svc):
         return sum(1 for s in spans if s["service"] == svc)
 
-    def generate_mutants(self, t_sel: List[Dict],
-                         delta_s: Optional[List[str]] = None) -> List[Dict]:
-        """
-        Si delta_s est fourni, on ne mute QUE les spans des services de ΔS.
-        M = tests detectant une regression DANS ΔS = definition correcte
-        de la surete RTS (une faute localisee dans le service modifie).
-        Sans delta_s : comportement historique (mutation sur toute la trace).
-        """
+    def generate_mutants(self, t_sel: List[Dict]) -> List[Dict]:
         index = self._load_trace_index()
-        delta_set = set(delta_s) if delta_s else None
         mutants = []
         skipped = 0
-        skipped_no_deltaS = 0
 
         for tp in t_sel:
             tid = tp.get("test_id", tp.get("trace_id"))
-            spans_all = index.get(tid)
-            if not spans_all or len(spans_all) < 1:
+            spans = index.get(tid)
+            if not spans or len(spans) < 1:
                 skipped += 1
                 continue
-            # Restreindre la mutation aux services de ΔS
-            if delta_set is not None:
-                spans = [sp for sp in spans_all if sp["service"] in delta_set]
-                if not spans:
-                    skipped_no_deltaS += 1
-                    continue
-            else:
-                spans = spans_all
 
             count = 0
             for operator in self.operators:
@@ -120,8 +103,8 @@ class TraceMutator:
                         continue
                     s = random.choice(sains)
                     svc = s["service"]
-                    tot = self._svc_span_count(spans_all, svc)
-                    err = sum(1 for x in spans_all if x["service"] == svc and x["error"])
+                    tot = self._svc_span_count(spans, svc)
+                    err = sum(1 for x in spans if x["service"] == svc and x["error"])
                     taux_mute = (err + 1) / tot if tot else 1.0
                     mutants.append({
                         "mutant_id": f"{tid}__err__{svc}",
@@ -135,7 +118,7 @@ class TraceMutator:
                 elif operator == "span_deletion":
                     s = random.choice(spans)
                     svc = s["service"]
-                    apres = self._svc_span_count(spans_all, svc) - 1
+                    apres = self._svc_span_count(spans, svc) - 1
                     mutants.append({
                         "mutant_id": f"{tid}__del__{svc}",
                         "test_id": tid, "operator": operator,
@@ -145,10 +128,9 @@ class TraceMutator:
                     })
                     count += 1
 
-        scope = f"ΔS={sorted(delta_set)}" if delta_set else "trace complete"
-        logger.info("TraceMutator — %d chemins → %d mutants reels | scope=%s "
-                    "(%d sans trace, %d ne touchant pas ΔS)",
-                    len(t_sel), len(mutants), scope, skipped, skipped_no_deltaS)
+        logger.info("TraceMutator — %d chemins T_sel → %d mutants reels "
+                    "(%d chemins sans trace, ignores)",
+                    len(t_sel), len(mutants), skipped)
         return mutants
 
     def save(self, mutants: List[Dict], output_path: str) -> None:

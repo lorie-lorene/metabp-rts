@@ -41,17 +41,15 @@ class TestScorer:
                     if svc not in seen:
                         seen.append(svc)
             return seen
-        # Test mono-service : il traverse quand meme son service d'entree
-        svc = tp.get("services") or tp.get("path") or []
-        if not svc and tp.get("entry_service"):
-            return [tp["entry_service"]]
-        return svc
+        # Formats alternatifs
+        return tp.get("services", tp.get("path", []))
 
     def score_and_select(
         self,
         test_suite_path: str,
         cit: Dict[str, float],
         s_echo: Optional[List[str]] = None,
+        delta_s: Optional[List[str]] = None,
     ) -> Dict:
         """
         Charge T, score chaque chemin, applique le tiering, et retourne T_sel.
@@ -60,6 +58,10 @@ class TestScorer:
             test_suite = json.load(f)
 
         s_echo_set: Set[str] = set(s_echo) if s_echo else set()
+        delta_set: Set[str] = set(delta_s) if delta_s else set()
+        # Modification-traversing (Rothermel & Harrold) :
+        # tout test exercant un service de ΔS est force en Tier 1.
+        tier1_set = s_echo_set | delta_set
 
         # Seuil p = min non-zero de la CIT (recommandation Chen et al.)
         non_zero = [v for v in cit.values() if v > 0]
@@ -85,7 +87,8 @@ class TestScorer:
 
             # Tiering : Tier 1 si au moins un service ∈ S_echo
             in_s_echo  = any(s in s_echo_set for s in services)
-            tier       = 1 if in_s_echo else 2
+            in_delta   = any(s in delta_set for s in services)
+            tier       = 1 if any(s in tier1_set for s in services) else 2
             test_scores.append({
                 "test_id":    tp.get("test_id", tp.get("trace_id", tp.get("path_id", "?"))),
                 "invocation_chain": tp.get("invocation_chain", []),
@@ -96,10 +99,8 @@ class TestScorer:
                 "n_services": len(services),
                 "tier":       tier,
                 "in_s_echo":  in_s_echo,
+                "in_delta_s": in_delta,
                 "duration_us": tp.get("duration_us", 0),
-                "endpoint": tp.get("endpoint"),
-                "http_method": tp.get("http_method"),
-                "entry_service": tp.get("entry_service"),
             })
 
         # Tri stable : score desc, score_avg desc, test_id asc
