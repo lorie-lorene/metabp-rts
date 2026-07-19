@@ -1,8 +1,8 @@
 {
-  "n_selection": 1609,
-  "n_fault_revealing_total": 1630,
-  "n_fault_revealing_selected": 1590,
-  "recall": 97.55,
-  "precision": 98.82,
-  "f_measure": 0.9818
+  "n_selection": 1925,
+  "n_fault_revealing_total": 1581,
+  "n_fault_revealing_selected": 1581,
+  "recall": 100.0,
+  "precision": 82.13,
+  "f_measure": 0.9019
 }

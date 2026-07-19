@@ -38785,6 +38785,96 @@
     "entry_service": "ts-order-other-service"
   },
   {
+    "test_id": "344aeea92326f0d3",
+    "invocation_chain": [],
+    "services": [
+      "ts-order-other-service"
+    ],
+    "score": 0.501429,
+    "score_avg": 0.501429,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 392173,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-order-other-service"
+  },
+  {
+    "test_id": "463b7c910c963ab9",
+    "invocation_chain": [],
+    "services": [
+      "ts-order-other-service"
+    ],
+    "score": 0.501429,
+    "score_avg": 0.501429,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 23601,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-order-other-service"
+  },
+  {
+    "test_id": "56f0c5e4b4bf501a",
+    "invocation_chain": [],
+    "services": [
+      "ts-order-other-service"
+    ],
+    "score": 0.501429,
+    "score_avg": 0.501429,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 28807,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-order-other-service"
+  },
+  {
+    "test_id": "77979f805fda74d1",
+    "invocation_chain": [],
+    "services": [
+      "ts-order-other-service"
+    ],
+    "score": 0.501429,
+    "score_avg": 0.501429,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 46899,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-order-other-service"
+  },
+  {
+    "test_id": "95ae33a422377eb1",
+    "invocation_chain": [],
+    "services": [
+      "ts-order-other-service"
+    ],
+    "score": 0.501429,
+    "score_avg": 0.501429,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 17916,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-order-other-service"
+  },
+  {
     "test_id": "3f82b0885a8750da",
     "invocation_chain": [
       [
@@ -38804,6 +38894,54 @@
     "in_s_echo": true,
     "in_delta_s": false,
     "duration_us": 41432,
+    "endpoint": "/api/v1/inside_pay_service/inside_payment",
+    "http_method": "POST",
+    "entry_service": "ts-inside-payment-service"
+  },
+  {
+    "test_id": "80f009ef75ec7a30",
+    "invocation_chain": [
+      [
+        "ts-inside-payment-service",
+        "ts-order-other-service"
+      ]
+    ],
+    "services": [
+      "ts-inside-payment-service",
+      "ts-order-other-service"
+    ],
+    "score": 0.501429,
+    "score_avg": 0.455543,
+    "n_above_p": 2,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 28198,
+    "endpoint": "/api/v1/inside_pay_service/inside_payment",
+    "http_method": "POST",
+    "entry_service": "ts-inside-payment-service"
+  },
+  {
+    "test_id": "d3c85c541d951f5d",
+    "invocation_chain": [
+      [
+        "ts-inside-payment-service",
+        "ts-order-other-service"
+      ]
+    ],
+    "services": [
+      "ts-inside-payment-service",
+      "ts-order-other-service"
+    ],
+    "score": 0.501429,
+    "score_avg": 0.455543,
+    "n_above_p": 2,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 297281,
     "endpoint": "/api/v1/inside_pay_service/inside_payment",
     "http_method": "POST",
     "entry_service": "ts-inside-payment-service"
@@ -38833,6 +38971,54 @@
     "entry_service": "ts-rebook-service"
   },
   {
+    "test_id": "7486bbadd3c82af4",
+    "invocation_chain": [
+      [
+        "ts-rebook-service",
+        "ts-order-other-service"
+      ]
+    ],
+    "services": [
+      "ts-rebook-service",
+      "ts-order-other-service"
+    ],
+    "score": 0.501429,
+    "score_avg": 0.445504,
+    "n_above_p": 2,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 771981,
+    "endpoint": "/api/v1/rebookservice/rebook",
+    "http_method": "POST",
+    "entry_service": "ts-rebook-service"
+  },
+  {
+    "test_id": "df2eb799878d85bc",
+    "invocation_chain": [
+      [
+        "ts-rebook-service",
+        "ts-order-other-service"
+      ]
+    ],
+    "services": [
+      "ts-rebook-service",
+      "ts-order-other-service"
+    ],
+    "score": 0.501429,
+    "score_avg": 0.445504,
+    "n_above_p": 2,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 46624,
+    "endpoint": "/api/v1/rebookservice/rebook",
+    "http_method": "POST",
+    "entry_service": "ts-rebook-service"
+  },
+  {
     "test_id": "0a9c6fd5835652c9",
     "invocation_chain": [],
     "services": [
@@ -38846,6 +39032,96 @@
     "in_s_echo": true,
     "in_delta_s": false,
     "duration_us": 14370,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-admin-basic-info-service"
+  },
+  {
+    "test_id": "1e6e452c472172dc",
+    "invocation_chain": [],
+    "services": [
+      "ts-admin-basic-info-service"
+    ],
+    "score": 0.500322,
+    "score_avg": 0.500322,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 42729,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-admin-basic-info-service"
+  },
+  {
+    "test_id": "53166e619fd7d231",
+    "invocation_chain": [],
+    "services": [
+      "ts-admin-basic-info-service"
+    ],
+    "score": 0.500322,
+    "score_avg": 0.500322,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 118794,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-admin-basic-info-service"
+  },
+  {
+    "test_id": "7aa6a46ae27192e6",
+    "invocation_chain": [],
+    "services": [
+      "ts-admin-basic-info-service"
+    ],
+    "score": 0.500322,
+    "score_avg": 0.500322,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 35388,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-admin-basic-info-service"
+  },
+  {
+    "test_id": "83ef7abd0a5fa4e5",
+    "invocation_chain": [],
+    "services": [
+      "ts-admin-basic-info-service"
+    ],
+    "score": 0.500322,
+    "score_avg": 0.500322,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 38841,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-admin-basic-info-service"
+  },
+  {
+    "test_id": "914e6c05088eca5f",
+    "invocation_chain": [],
+    "services": [
+      "ts-admin-basic-info-service"
+    ],
+    "score": 0.500322,
+    "score_avg": 0.500322,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 28824,
     "endpoint": "/v2/api-docs",
     "http_method": "GET",
     "entry_service": "ts-admin-basic-info-service"
@@ -38869,6 +39145,96 @@
     "entry_service": "ts-inside-payment-service"
   },
   {
+    "test_id": "1646e77302840a6b",
+    "invocation_chain": [],
+    "services": [
+      "ts-inside-payment-service"
+    ],
+    "score": 0.409658,
+    "score_avg": 0.409658,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 21727,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-inside-payment-service"
+  },
+  {
+    "test_id": "59f99bb5a368617c",
+    "invocation_chain": [],
+    "services": [
+      "ts-inside-payment-service"
+    ],
+    "score": 0.409658,
+    "score_avg": 0.409658,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 13827,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-inside-payment-service"
+  },
+  {
+    "test_id": "987e07a3af484a05",
+    "invocation_chain": [],
+    "services": [
+      "ts-inside-payment-service"
+    ],
+    "score": 0.409658,
+    "score_avg": 0.409658,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 47586,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-inside-payment-service"
+  },
+  {
+    "test_id": "cd4677d93a3eb848",
+    "invocation_chain": [],
+    "services": [
+      "ts-inside-payment-service"
+    ],
+    "score": 0.409658,
+    "score_avg": 0.409658,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 25741,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-inside-payment-service"
+  },
+  {
+    "test_id": "d51fa8045a05354a",
+    "invocation_chain": [],
+    "services": [
+      "ts-inside-payment-service"
+    ],
+    "score": 0.409658,
+    "score_avg": 0.409658,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 35755,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-inside-payment-service"
+  },
+  {
     "test_id": "067d30e7b7a61e63",
     "invocation_chain": [],
     "services": [
@@ -38882,6 +39248,168 @@
     "in_s_echo": true,
     "in_delta_s": false,
     "duration_us": 9180,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "07c6198e4e99bbb1",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 9167,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "09ebf2e23fa74e31",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 13510,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "1207968104b7a2f7",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 13279,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "1521c12f8be79814",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 10622,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "19f8ae8396776d5f",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 9267,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "1b9357eca8e6de7f",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 7076,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "21a1dd8a71a5333c",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 11204,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "22a165a0c146b7e6",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 7593,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "22d88d2411c38281",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 10913,
     "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
     "http_method": "GET",
     "entry_service": "ts-consign-service"
@@ -38901,6 +39429,1464 @@
     "in_delta_s": false,
     "duration_us": 29055,
     "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "2675a75846baf5df",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 11049,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "297af31ad056ddcd",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 7366,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "2ba02fc4fa6843a2",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 12119,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "2bd7b85c4500da74",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 14169,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "2e3e0ba7858b32e4",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 11708,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "3499315be91efb19",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 8370,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "355f947f8527e1c1",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 11475,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "39dc20e15876eca1",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 13224,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "46a4659336d0d1e8",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 12704,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "47c81b6c84f2d9c2",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 10033,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "47e4a30abb9f3848",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 14667,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "48ed5ce2a8226df2",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 10225,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "4d0005b2eeb684b3",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 11439,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "4dacfd332fae9437",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 17526,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "4e1f7c3d0349b43b",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 8396,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "4e65cad106d89b19",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 14701,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "51f41673c5e1d0c5",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 15638,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "52ba65b1da053a01",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 12283,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "5f73800da574cba3",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 8863,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "616ae5013d633688",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 11946,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "61860162fcaec2a6",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 41016,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "61d01b97b2bf0949",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 7882,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "635a991d943dc80d",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 35331,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "6530ec25373a11be",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 8999,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "65bbe395627c16a9",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 6040,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "6b909ab353eb269b",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 9956,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "6c82008a563541c8",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 13756,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "6e1278fdaaec7de6",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 8735,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "6ee1660d498fa84f",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 11541,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "71e9bd9ff57cd8be",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 35700,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "7224fb75c9457747",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 13598,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "72f23e1a54864640",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 13405,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "731054fd62451cb7",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 11925,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "76573ad9a24b214f",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 21027,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "77509ffa917b85a2",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 16463,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "7a880fe9214b0278",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 8364,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "7ca93831e6e5168b",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 12424,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "7ea2041196c68086",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 11308,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "7f4f1bc9f621e3e5",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 6857,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "846d9983716e3c8c",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 7197,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "85ca883b2bc7fbf6",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 26084,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "88244cf05bf8ee01",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 12324,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "88652740ec5e2185",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 8436,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "8bc9cadca9d4ba50",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 10676,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "8d1edae3de003aaa",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 9740,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "92646e7d3c6313be",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 13399,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "97258391eb1dafe0",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 7447,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "98689adc0d3d3834",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 402728,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "99c1b67bde637473",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 7979,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "9fd61a91c87673d2",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 14891,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "a8b53cf0a8a806fa",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 12211,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "a9064197af9960e6",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 14657,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "a9c9c1a593435078",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 6131,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "aa2fe966ce5878f4",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 131295,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "aa8cc9079b60d209",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 15797,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "ab65810280831d32",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 10534,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "b286825b48cd1f53",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 7576,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "b473ba36846902fb",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 14008,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "b4df7e8e08009663",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 10329,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "ba2cf3d9b4bb05e4",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 12408,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "bb45c77e7405ec30",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 15585,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "bc520a4b25e608b3",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 10299,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "be82ae719c17d04f",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 13535,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "bfcc79e986231a15",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 1902,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "c6dbcb9f37704d70",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 10694,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "cbe0e26a2e6b5b67",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 7563,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "cd09838bb26b0c42",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 26815,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "cd872f44070e50d5",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 15404,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "cdd353429125485a",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 9108,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "d1ada58e4b27ea68",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 11672,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "d9b95cbb9ad23973",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 11093,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "dbd5ad48aa2c4c62",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 14500,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "e218cbadf74800bf",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 1198,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "e4bd3ce68547255b",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 13377,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "eed4cbea88a8d822",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 22522,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "f1ed48ee9590234f",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 22308,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "f2c9178d060e39bc",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 14964,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "f3be8d911e73b395",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 14456,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "f71dca46f312d86c",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 12672,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "f9aadc500fcca120",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 14794,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "fa38c9398b108699",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 8680,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
     "http_method": "GET",
     "entry_service": "ts-consign-service"
   },
@@ -38929,6 +40915,3654 @@
     "entry_service": "ts-consign-service"
   },
   {
+    "test_id": "04937b410646b26a",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 20722,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "050cf2649d8854be",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 19488,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "0d18781e31328a94",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 16198,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "0d315976b5192fd7",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 24526,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "0d5bc5c22f065e4f",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 16876,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "1929a25512ed9abf",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 20243,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "196e3aaab8b899a8",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 36310,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "1a538016026df5ad",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 18213,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "1f571aea658f8323",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 18658,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "1fe8b384b7f998bc",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 16642,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "264963408b9f3200",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 40769,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "26c2653887801e9c",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 15209,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "2a0ec8f9d0491ed6",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 21108,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "2a30464451e7376e",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 30929,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "2c5813b147a1bdc6",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 27391,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "2d8b781f36a0427b",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 23649,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "2e4063ad1897cc39",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 24343,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "2eafb0972b699d26",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 22747,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "2f57ae70cb114e5f",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 15044,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "303e203d2441e33a",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 27122,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "315bb24dbb5e0042",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 18061,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "32cd10b8ec23c1da",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 17003,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "335fc9b03f43970c",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 23114,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "337a263ffef0b81d",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 16142,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "339ec7704d766f0e",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 21810,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "341addae2f36d651",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 22153,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "3515496d0831f5be",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 15638,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "393f9b47bca99626",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 24560,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "3a30fe1286f3b5bb",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 18623,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "3c3b38009028ab16",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 24746,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "3e2e290269f26bfe",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 13807,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "43b4b316b184d500",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 26815,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "44d9965be850acba",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 19925,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "45d265540ef48d69",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 21098,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "4706c8755a3e70a2",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 22343,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "481aebcc360eae28",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 20021,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "49a5ee4bde0d15d9",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 17570,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "4b234e41059bb06f",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 39533,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "4c556a7fec3c4ce6",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 14727,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "4f61911680f515ba",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 23924,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "4f94ac8c44f42a20",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 13780,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "53759d9a7d641dda",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 22274,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "53d05a9681f9916e",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 15698,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "551be172d96783fd",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 28279,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "55d62cb9fdc26cdd",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 16033,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "59fefda9633b82e1",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 17011,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "5ff04ce3ef59999a",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 27031,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "616454e563c908a9",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 25031,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "62b0e5c9fc9102a1",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 25455,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "65da860b8750bf75",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 30985,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "689606b46399db2c",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 52228,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "68a49d6008db8929",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 15342,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "69362209bc12b58d",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 20181,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "6995c0f8ffe41425",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 16791,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "6af4c7cb399dda08",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 27153,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "6c9f1af67e048971",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 20088,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "714762c0b6164dc2",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 17402,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "723c2c7a5f7ebc32",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 12992,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "73367e7456b506bc",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 29581,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "736d1d4ddb2bdc6d",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 21949,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "795706eb968028e3",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 24013,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "79f9e8383f641f9c",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 18675,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "7a93c05aa365cdd3",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 17527,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "7bcc12ab165c9fbb",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 16402,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "7be9ac19f5637a3a",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 22876,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "7c42ef3fd70fc1f5",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 21828,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "7c6a5c324b49c35f",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 1488042,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "7d60fc596230731b",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 70310,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "7df2dcaf496c8748",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 15569,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "7e7bac1f7d80db3c",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 18697,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "7e868139ff0530f5",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 14689,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "7eb7d15a2adb15d7",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 14543,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "7f3b847b79bfeb65",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 15301,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "8163ac7c27a116d0",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 20445,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "829fc8628a19eb77",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 14859,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "83360308c365c62f",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 20962,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "8366a31b0b96e424",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 14057,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "878bc8707029b464",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 19157,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "888583c59a04f794",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 16831,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "89112a5392b912c7",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 18628,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "893416ad8e6de4bc",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 21642,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "8b4cc9f2836317e4",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 19589,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "8bd3d0c367b3d795",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 26495,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "8e16943c451c22ac",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 14733,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "913f045ca481ec8d",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 22615,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "9185b1f5bab458d4",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 41130,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "91d536605973a326",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 16364,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "922fb6c95019cf18",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 19681,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "9429bc75eda2b4ce",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 40076,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "9501bd173348ceb5",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 18559,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "98ec97c81706245e",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 31541,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "9bd7fbc7dad240e7",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 22141,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "9c303669e63ebc2e",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 11916,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "9f675ea75d98bfd0",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 26432,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "9f924d14bffc9644",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 14683,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "a05a07be4537c6f8",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 23619,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "a32afaba134a5b80",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 17378,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "a4f44740c751cdd0",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 21436,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "a78a881843308c27",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 18203,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "a888c064a2dc16a4",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 17372,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "a8c87e8f16bf5b83",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 24438,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "ace89b1c4951d404",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 25015,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "ade652844f97d025",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 25475,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "afaf6be4ec3cddde",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 11381,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "b63d3431f44bf4bc",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 29914,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "b644c1791455c6cb",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 11955,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "b7ce75df54884342",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 26862,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "b84c25f0ac3d982c",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 21232,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "bc908baec17fc871",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 23491,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "bd66c83f2b851f89",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 41018,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "bde5237bad1f721a",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 21508,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "be7149166f904440",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 36339,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "be8302b979ec9396",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 25913,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "c08b875974724a4b",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 16954,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "c0afea092d4f82da",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 18316,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "c416bbf41814a28c",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 23098,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "c8139d8e67257735",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 17483,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "c884bb92ec706a66",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 34428,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "cbc39638809b119d",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 21742,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "ce2165ba47075581",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 22307,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "d2f16daee0af2539",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 14080,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "d44e709b3117f34b",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 17006,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "d5d1c9a4487bcc55",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 22293,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "d98b2e88caf9b3e1",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 15297,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "db082f107420ee30",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 17847,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "dce8bad071dbecfc",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 22302,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "e0520f5c182483e4",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 25169,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "e14fce6f0cc271a0",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 25554,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "e2fb7b21ef169bed",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 23083,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "e33230cee2eab9d5",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 22927,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "e3415e2d195213a8",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 25449,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "e624c9895e7d9cdc",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 11846,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "e6fe33ab1313232f",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 17376,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "e7514488981c44dc",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 22627,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "e7acf74a1d540576",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 16187,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "e8480104e7c3edce",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 14420,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "e896d526ae42baa2",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 11596,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "e92bca5b626fa22d",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 14472,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "eb6626761b6464f3",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 19035,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "ecc462e56e2a2612",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 25823,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "ee8665205ebfdeee",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 17608,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "ee93f60220366167",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 27716,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "eeab306f8eea68ee",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 11706,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "efdaefcdffdd20e9",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 13859,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "f2550d6ee612caf7",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 16304,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "f2e0d7ba390f2b36",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 54636,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "f4f022fe169080c1",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 16417,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "f611047730df6d69",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 27093,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "f742bfcf8d13fb2b",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 29736,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "f887ec7b77f20898",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 20790,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "faa3c69c46384ec9",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 18608,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "ff3c4f6f66233ff1",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 23138,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
     "test_id": "190eb01aa5ba641f",
     "invocation_chain": [],
     "services": [
@@ -38942,6 +44576,96 @@
     "in_s_echo": true,
     "in_delta_s": false,
     "duration_us": 18017,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "42717d7d4ab2a24f",
+    "invocation_chain": [],
+    "services": [
+      "ts-travel2-service"
+    ],
+    "score": 0.388025,
+    "score_avg": 0.388025,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 141002,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "4841a5ef0d78be1b",
+    "invocation_chain": [],
+    "services": [
+      "ts-travel2-service"
+    ],
+    "score": 0.388025,
+    "score_avg": 0.388025,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 16481,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "9e3d8da182e9ae5e",
+    "invocation_chain": [],
+    "services": [
+      "ts-travel2-service"
+    ],
+    "score": 0.388025,
+    "score_avg": 0.388025,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 41523,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "a5f1f9593d6ab812",
+    "invocation_chain": [],
+    "services": [
+      "ts-travel2-service"
+    ],
+    "score": 0.388025,
+    "score_avg": 0.388025,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 27032,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "c5f82e12d7bb6b31",
+    "invocation_chain": [],
+    "services": [
+      "ts-travel2-service"
+    ],
+    "score": 0.388025,
+    "score_avg": 0.388025,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 47188,
     "endpoint": "/v2/api-docs",
     "http_method": "GET",
     "entry_service": "ts-travel2-service"
@@ -38965,6 +44689,24 @@
     "entry_service": "ts-auth-service"
   },
   {
+    "test_id": "5c7fa21fe819468b",
+    "invocation_chain": [],
+    "services": [
+      "ts-auth-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.387594,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 1704,
+    "endpoint": "/v3/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-auth-service"
+  },
+  {
     "test_id": "5f9c361ffbfd92ae",
     "invocation_chain": [],
     "services": [
@@ -38979,6 +44721,168 @@
     "in_delta_s": false,
     "duration_us": 19013,
     "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "6118601bf2e320a4",
+    "invocation_chain": [],
+    "services": [
+      "ts-auth-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.387594,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 1410,
+    "endpoint": "/v3/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "a110cc34a263c71a",
+    "invocation_chain": [],
+    "services": [
+      "ts-auth-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.387594,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 13724,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "b9eb2b461fde4354",
+    "invocation_chain": [],
+    "services": [
+      "ts-auth-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.387594,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 11674,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "d9b8259a84c81094",
+    "invocation_chain": [],
+    "services": [
+      "ts-auth-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.387594,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 19071,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "db2233be5c889799",
+    "invocation_chain": [],
+    "services": [
+      "ts-auth-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.387594,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 921,
+    "endpoint": "/v3/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "dd0bfc2cfc80ddbf",
+    "invocation_chain": [],
+    "services": [
+      "ts-auth-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.387594,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 824,
+    "endpoint": "/v3/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "dd7acddd10afad04",
+    "invocation_chain": [],
+    "services": [
+      "ts-auth-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.387594,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 14646,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "de1f281b10899cb6",
+    "invocation_chain": [],
+    "services": [
+      "ts-auth-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.387594,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 16544,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "fb435bd3f1a57548",
+    "invocation_chain": [],
+    "services": [
+      "ts-auth-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.387594,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 2138,
+    "endpoint": "/v3/api-docs",
     "http_method": "GET",
     "entry_service": "ts-auth-service"
   },
@@ -39007,6 +44911,846 @@
     "entry_service": "ts-auth-service"
   },
   {
+    "test_id": "0c74b07734d9cc88",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 83190,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "1de675aa0378f31d",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 80387,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "22d7c37b91428065",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 132560,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "35781224810f9ea2",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 152729,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "3782b88f78868d06",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 76239,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "42d45c67a657f833",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 83900,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "46d42008855d9317",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 277063,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "4b11e433c76e4950",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 75341,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "4c45e433fafb8229",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 91774,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "631d83d7872270d0",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 82033,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "684babf5f7cf561e",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 70563,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "6fa2ec46ebbd195b",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 74228,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "75698f84f7b014f8",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 126650,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "937518fb441a9c31",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 124368,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "948ed9d54e4aab4e",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 32042,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "981efc2cb9517bc8",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 136151,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "9a83626b5069dc3d",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 74459,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "a61aa93e3ff46795",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 75051,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "b62f35a3f07bc3c0",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 81526,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "b67664ab522e5ace",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 77516,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "b979b173e7d35af3",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 141884,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "c4206d1177672302",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 122749,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "c79732ade6ed177f",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 82831,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "cbfd667be38d8795",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 80139,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "e8b448bc44e19c6d",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 85510,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "ea55249d417a086b",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 140176,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "f00d676912bc4f69",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 127735,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "f25573c900c9920f",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 127415,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "f43b40119ec66e5b",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 73346,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "f68638ca9b7555d8",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 75429,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "f723f6cbb6be7bcb",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 139995,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "f7316fb6f40ba410",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 72355,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "f88a81ee2cb2fd4f",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 74141,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "f9e5195a9204f8bb",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 564864,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "ff3f3c43eafb397e",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 72928,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
     "test_id": "01a72fb325b9f262",
     "invocation_chain": [],
     "services": [
@@ -39025,6 +45769,96 @@
     "entry_service": "ts-security-service"
   },
   {
+    "test_id": "27950a6e62eb0b67",
+    "invocation_chain": [],
+    "services": [
+      "ts-security-service"
+    ],
+    "score": 0.344553,
+    "score_avg": 0.344553,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 35823,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-security-service"
+  },
+  {
+    "test_id": "701d1f9e4ce79540",
+    "invocation_chain": [],
+    "services": [
+      "ts-security-service"
+    ],
+    "score": 0.344553,
+    "score_avg": 0.344553,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 51803,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-security-service"
+  },
+  {
+    "test_id": "e1bfff7bcf8478bb",
+    "invocation_chain": [],
+    "services": [
+      "ts-security-service"
+    ],
+    "score": 0.344553,
+    "score_avg": 0.344553,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 37903,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-security-service"
+  },
+  {
+    "test_id": "ef972fbb26bc488a",
+    "invocation_chain": [],
+    "services": [
+      "ts-security-service"
+    ],
+    "score": 0.344553,
+    "score_avg": 0.344553,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 368597,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-security-service"
+  },
+  {
+    "test_id": "fac8588cb77a0571",
+    "invocation_chain": [],
+    "services": [
+      "ts-security-service"
+    ],
+    "score": 0.344553,
+    "score_avg": 0.344553,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 17350,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-security-service"
+  },
+  {
     "test_id": "8be1f0987dc4164d",
     "invocation_chain": [],
     "services": [
@@ -39034,10 +45868,100 @@
     "score_avg": 0.234343,
     "n_above_p": 1,
     "n_services": 1,
-    "tier": 2,
-    "in_s_echo": false,
+    "tier": 1,
+    "in_s_echo": true,
     "in_delta_s": false,
     "duration_us": 16054,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-cancel-service"
+  },
+  {
+    "test_id": "9cdfe64e4c4fba09",
+    "invocation_chain": [],
+    "services": [
+      "ts-cancel-service"
+    ],
+    "score": 0.234343,
+    "score_avg": 0.234343,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 278728,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-cancel-service"
+  },
+  {
+    "test_id": "a0a89d64620553d3",
+    "invocation_chain": [],
+    "services": [
+      "ts-cancel-service"
+    ],
+    "score": 0.234343,
+    "score_avg": 0.234343,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 22639,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-cancel-service"
+  },
+  {
+    "test_id": "ac65c6a8da52d366",
+    "invocation_chain": [],
+    "services": [
+      "ts-cancel-service"
+    ],
+    "score": 0.234343,
+    "score_avg": 0.234343,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 17830,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-cancel-service"
+  },
+  {
+    "test_id": "f403055837eba660",
+    "invocation_chain": [],
+    "services": [
+      "ts-cancel-service"
+    ],
+    "score": 0.234343,
+    "score_avg": 0.234343,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 32495,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-cancel-service"
+  },
+  {
+    "test_id": "f5d318dee06fb15b",
+    "invocation_chain": [],
+    "services": [
+      "ts-cancel-service"
+    ],
+    "score": 0.234343,
+    "score_avg": 0.234343,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 46677,
     "endpoint": "/v2/api-docs",
     "http_method": "GET",
     "entry_service": "ts-cancel-service"
@@ -39052,10 +45976,100 @@
     "score_avg": 0.226067,
     "n_above_p": 1,
     "n_services": 1,
-    "tier": 2,
-    "in_s_echo": false,
+    "tier": 1,
+    "in_s_echo": true,
     "in_delta_s": false,
     "duration_us": 13792,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-preserve-service"
+  },
+  {
+    "test_id": "6c58ee1ad0186a8a",
+    "invocation_chain": [],
+    "services": [
+      "ts-preserve-service"
+    ],
+    "score": 0.226067,
+    "score_avg": 0.226067,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 38708,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-preserve-service"
+  },
+  {
+    "test_id": "8f178f81f98a0ed9",
+    "invocation_chain": [],
+    "services": [
+      "ts-preserve-service"
+    ],
+    "score": 0.226067,
+    "score_avg": 0.226067,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 430111,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-preserve-service"
+  },
+  {
+    "test_id": "a65e2ae7db729a7d",
+    "invocation_chain": [],
+    "services": [
+      "ts-preserve-service"
+    ],
+    "score": 0.226067,
+    "score_avg": 0.226067,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 42152,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-preserve-service"
+  },
+  {
+    "test_id": "b5dee1b7cea44292",
+    "invocation_chain": [],
+    "services": [
+      "ts-preserve-service"
+    ],
+    "score": 0.226067,
+    "score_avg": 0.226067,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 20479,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-preserve-service"
+  },
+  {
+    "test_id": "ed4b4e688039160c",
+    "invocation_chain": [],
+    "services": [
+      "ts-preserve-service"
+    ],
+    "score": 0.226067,
+    "score_avg": 0.226067,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 36183,
     "endpoint": "/v2/api-docs",
     "http_method": "GET",
     "entry_service": "ts-preserve-service"
@@ -39070,10 +46084,100 @@
     "score_avg": 0.155506,
     "n_above_p": 1,
     "n_services": 1,
-    "tier": 2,
-    "in_s_echo": false,
+    "tier": 1,
+    "in_s_echo": true,
     "in_delta_s": false,
     "duration_us": 12813,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-seat-service"
+  },
+  {
+    "test_id": "1592909ca5d9b6ac",
+    "invocation_chain": [],
+    "services": [
+      "ts-seat-service"
+    ],
+    "score": 0.155506,
+    "score_avg": 0.155506,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 340266,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-seat-service"
+  },
+  {
+    "test_id": "22407a77595315b7",
+    "invocation_chain": [],
+    "services": [
+      "ts-seat-service"
+    ],
+    "score": 0.155506,
+    "score_avg": 0.155506,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 39069,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-seat-service"
+  },
+  {
+    "test_id": "238b31054413c0d9",
+    "invocation_chain": [],
+    "services": [
+      "ts-seat-service"
+    ],
+    "score": 0.155506,
+    "score_avg": 0.155506,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 47172,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-seat-service"
+  },
+  {
+    "test_id": "b94ee30de6b6ba73",
+    "invocation_chain": [],
+    "services": [
+      "ts-seat-service"
+    ],
+    "score": 0.155506,
+    "score_avg": 0.155506,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 19319,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-seat-service"
+  },
+  {
+    "test_id": "feeaddfdfb1f25f7",
+    "invocation_chain": [],
+    "services": [
+      "ts-seat-service"
+    ],
+    "score": 0.155506,
+    "score_avg": 0.155506,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 26588,
     "endpoint": "/v2/api-docs",
     "http_method": "GET",
     "entry_service": "ts-seat-service"
