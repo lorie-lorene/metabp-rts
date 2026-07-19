@@ -1,22 +1,22 @@
 {
-  "n_tests": 1715,
-  "n_mr_verified": 15825,
-  "n_pass": 15652,
-  "n_fail": 173,
-  "pass_rate": 98.91,
+  "n_tests": 1327,
+  "n_mr_verified": 13596,
+  "n_pass": 13455,
+  "n_fail": 141,
+  "pass_rate": 98.96,
   "mode": "offline",
   "by_mr_type": {
     "Latence": {
-      "pass": 8425,
-      "fail": 90
+      "pass": 7511,
+      "fail": 77
     },
     "Erreur": {
-      "pass": 3605,
+      "pass": 2954,
       "fail": 50
     },
     "Completude": {
-      "pass": 3622,
-      "fail": 33
+      "pass": 2990,
+      "fail": 14
     }
   },
   "by_service": {
@@ -25,15 +25,15 @@
       "fail": 17
     },
     "ts-order-service": {
-      "pass": 2340,
-      "fail": 28
+      "pass": 2321,
+      "fail": 17
     },
     "ts-order-other-service": {
-      "pass": 1544,
-      "fail": 26
+      "pass": 1527,
+      "fail": 16
     },
     "ts-travel2-service": {
-      "pass": 411,
+      "pass": 396,
       "fail": 3
     },
     "ts-basic-service": {
@@ -77,7 +77,7 @@
       "fail": 1
     },
     "ts-contacts-service": {
-      "pass": 225,
+      "pass": 24,
       "fail": 0
     },
     "ts-user-service": {
@@ -89,12 +89,12 @@
       "fail": 1
     },
     "ts-consign-service": {
-      "pass": 894,
-      "fail": 5
+      "pass": 18,
+      "fail": 0
     },
     "ts-consign-price-service": {
-      "pass": 463,
-      "fail": 2
+      "pass": 9,
+      "fail": 0
     },
     "ts-assurance-service": {
       "pass": 11,
@@ -105,27 +105,27 @@
       "fail": 1
     },
     "ts-rebook-service": {
-      "pass": 35,
-      "fail": 1
+      "pass": 8,
+      "fail": 0
     },
     "ts-cancel-service": {
       "pass": 98,
       "fail": 1
     },
     "ts-inside-payment-service": {
-      "pass": 65,
+      "pass": 42,
       "fail": 1
     },
     "ts-admin-basic-info-service": {
-      "pass": 288,
-      "fail": 2
+      "pass": 7,
+      "fail": 0
     },
     "ts-auth-service": {
-      "pass": 191,
-      "fail": 1
+      "pass": 12,
+      "fail": 0
     },
     "ts-verification-code-service": {
-      "pass": 111,
+      "pass": 6,
       "fail": 0
     },
     "ts-food-service": {
