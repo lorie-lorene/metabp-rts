@@ -143,12 +143,6 @@ def main():
     tier1_paths = extract_tier1_paths(tier1_data)
     tier2_paths = extract_tier2_paths(tier2_data)
 
-    # Scission Tier1 : ΔS-strict (intégral, sûreté stricte) vs echo (déduplicable)
-    tier1_delta = [t for t in tier1_paths if t.get("in_delta_s")]
-    tier1_echo  = [t for t in tier1_paths if not t.get("in_delta_s")]
-    logger.info("Tier1 scindé : ΔS-strict=%d (intégral) | echo=%d (à dédupliquer)",
-                len(tier1_delta), len(tier1_echo))
-
     s_echo = echo_data.get("s_echo", []) if isinstance(echo_data, dict) else []
 
     logger.info(
@@ -210,25 +204,6 @@ def main():
     )
 
     tier2_sel = pso_result["selected_paths"]
-
-    # PathMR sur Tier1-echo (redondance des services impactés par propagation)
-    logger.info("── Étape 2bis : PathMR sur Tier1-echo")
-    if tier1_echo:
-        mrps_t1 = MRPS(
-            mode=mrps_cfg.get("mode", "enriched"),
-            representative=mrps_cfg.get("representative", "cit"),
-        )
-        t1echo_res = mrps_t1.deduplicate(
-            tier2_tests=tier1_echo,
-            mr_catalog_path=mr_catalog_path,
-            cit=cit,
-        )
-        tier1_echo_dedup = t1echo_res["representatives"]
-        logger.info("PathMR Tier1-echo : %d → %d représentants (réduction %s)",
-                    len(tier1_echo), len(tier1_echo_dedup),
-                    t1echo_res["stats"]["dedup_pct"])
-    else:
-        tier1_echo_dedup = []
     ps = pso_result["stats"]
     logger.info(
         "PSO terminé : %d/%d chemins sélectionnés | couverture=%s | "
@@ -240,10 +215,7 @@ def main():
 
     logger.info("── Étape 3/3 : Assemblage T_sel = Tier1 ∪ Tier2_sel")
 
-    # T_sel = Tier1-ΔS intégral + Tier1-echo dédupliqué + Tier2 sélectionné
-    t_sel = tier1_delta + tier1_echo_dedup + tier2_sel
-    logger.info("Assemblage T_sel : ΔS-strict=%d + echo-dedup=%d + tier2_sel=%d = %d",
-                len(tier1_delta), len(tier1_echo_dedup), len(tier2_sel), len(t_sel))
+    t_sel = tier1_paths + tier2_sel
 
     write_json(str(base_dir / out_cfg["t_sel"]), t_sel)
     logger.info("T_sel sauvegardé : %d chemins", len(t_sel))
