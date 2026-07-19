@@ -1,0 +1,8475 @@
+[
+  {
+    "test_id": "02de68eb79c1231d",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 78382,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "053f81bf0bf89564",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 36318,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "0895e9e174f24a3f",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 33301,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "1290f7cc26248989",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 122710,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "15738fa58c277282",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 34941,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "2685d018cf2e8997",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 46323,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "26c07f0abb7a8405",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 69681,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "26e959228d31998f",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 74124,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "26fd68c046f07773",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 35862,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "2a7ca3e5f40a4e65",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 71125,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "2d11791180bb7ffa",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 31871,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "2ee14b9d19aa7dc1",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 85443,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "3039257a6ba0a074",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 36890,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "34330de956d08a11",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 42853,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "3810f3d7cffc1953",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 62113,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "397e73e168ee7b58",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 40447,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "46e310d0e6118c22",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 25720,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "4f8e878477dfa863",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 38770,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "569548dd9d1e4516",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 44574,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "5c4156020499a31b",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 41439,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "5cfd1fb0d0d2ba51",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 39793,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "5da32bb67429e770",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 35086,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "5f4556727998038c",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 87920,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "6150d2a46a583804",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 53824,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "67483617e51e98d5",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 34928,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "698c296a375c4b98",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 30561,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "711f2e05ab60463d",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 33199,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "728e642c1fd1cc42",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 71926,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "73b09d990a59f46f",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 50473,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "7b1c67179dfb1059",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 35713,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "807bd6c242dcd2d1",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 66974,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "825856ef35996d7f",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 52135,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "87a36d68bfa857e8",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 29127,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "8ae2831920b99591",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 42142,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "8f5a84e5fb5a3e47",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 36640,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "933e471807ff8012",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 58992,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "945116d585a922c4",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 58623,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "946e5a03742eb299",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 46253,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "962a5eed549db846",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 575026,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "9da441092d294244",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 45870,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "9febf4dca66d5d10",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 22790,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "a5a7cd0420b78a6f",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 76568,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "a6b9407b250d0dcb",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 45485,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "a76ca0fd8052106b",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 34464,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "a990da1a35ddbfa9",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 33949,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "aac05461a3af9923",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 34986,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "acb630cd37ac961d",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 38616,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "b6c405e0dabfc8c0",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 44367,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "b718e5bb766016e8",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 47278,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "bacc24c6f5d4f030",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 46137,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "c1de672a57da6ae3",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 54780,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "c4dffe2682f32228",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 36108,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "cdb04964b5ea93a8",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 31545,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "d00b4109a8fe55ee",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 55649,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "d25ec98e91a8dd7c",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 61505,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "d2d9cb7f82c27739",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 38713,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "d2fe61f074d8794b",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 32222,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "d55e07b930c41b48",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 29695,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "d928e6750184f92c",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 60579,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "e23e3177406055bf",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 33424,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "e5ae585530e24bcc",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 260559,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "f6c468b1ba5390f3",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 39618,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "f9838e3153b429e7",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 560541,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "fa1a0a98ce54cdfd",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 43530,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "fd8b417a9344e521",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 31918,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "fdff237e1c5093c7",
+    "invocation_chain": [
+      [
+        "ts-travel2-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel2-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.472233,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 42605,
+    "endpoint": "/api/v1/travel2service/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "00c32e8e893cdea5",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 84542,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "0943c3404b5c9a11",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 530398,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "0c1dee1ab9aeba8b",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 64320,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "0c4ba3531c4814e5",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 56512,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "11c1735ca70e627a",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 125504,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "160da74c9b6f8905",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 46220,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "172c1dfd5f37af87",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 46632,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "1aeeedc7023711f1",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 152927,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "2059730f1500a9a7",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 56178,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "29b58ddd27be9bce",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 59766,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "2ceaf44ebfff8b82",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 62354,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "2e70b55f67eb33df",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 61426,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "3127aa5cf88b20b6",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 35867,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "36b2cc575a2ec57f",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 60629,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "3c085e40c0e32831",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 60090,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "46bbb1f765c27138",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 57088,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "472932a696849369",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 60896,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "49d29ab0e27a9f92",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 51929,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "49feed0209291143",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 49113,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "522ada83ef9e64aa",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 60814,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "5c84301373ec74e2",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 126569,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "5e918f42a6d75094",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 112840,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "6004275234f853a3",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 61003,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "6cb2462ef42c94da",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 47733,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "7e1ea158ac854be9",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 43398,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "84b08483985847d3",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 2117477,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "8af750c77de320e2",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 80882,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "8b9d1caea16d8b5c",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 573076,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "8bcf901bf94ff785",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 47761,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "94318c6b1dffc67e",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 51211,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "9a1bbb862cc86bc9",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 51656,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "a8810832e49f5fc6",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 59472,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "ac74d921eae54b02",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 46700,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "b2bb77e5824f824c",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 698832,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "b52de951954a4532",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 118962,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "bd0feb79f8e091e7",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 58549,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "bfe3b4086a87bd75",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 79848,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "cc2501468854df79",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 46965,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "ccfc7f0eb92f7766",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 45306,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "d21504f5774a3fa6",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 56960,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "d6ec2aacdfc1565a",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 132341,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "d786df70b4c7d70c",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 36125,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "da6cba8402862a02",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 68132,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "db12a208cee0409a",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 43352,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "e0e2e4d43c718e32",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 39115,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "e164713d216e1f3e",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 74117,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "e2900e32fe6a51c5",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 60921,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "edabded0f9261a0a",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 112221,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "f472f883ea28e9de",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.403893,
+    "n_above_p": 3,
+    "n_services": 4,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 73335,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "08b63cc25ebf6ed3",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 77162,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "12cf49f811897b79",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 95281,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "258d7d0db9f83731",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 77045,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "28cf9b5d82d7a8a1",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 72125,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "324d623486c1529a",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 73030,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "32909c89d87e5c8d",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 82957,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "38ef3220866a51fd",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 74278,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "3bbe7ec27ef55278",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 83686,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "3c0ed93ff190705d",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 74201,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "4315f98599c63132",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 71074,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "56f8c7bbc94d2599",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 78723,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "57d2ea167588ce4b",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 82863,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "5b1bc2e3a70d6919",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 67200,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "5dba85facea66abe",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 57584,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "5fcef3c8eaac996b",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 86883,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "66d8965f2cbc27b5",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 62352,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "700974e473600556",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 59462,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "73a244f7e4f9c963",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 101930,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "74136314b46f6b6e",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 65205,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "811f68d22aaf49a2",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 79060,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "848fd0dd894ddcb6",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 100373,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "90a59d7b7feeacaf",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 61781,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "990ed4deac169af0",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 73431,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "9b4edd3f6a890eaf",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 61101,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "a3858dc233d7839f",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 74502,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "a3c6564224680aab",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 84306,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "ae6c3ede5600702f",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 57594,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "b4c419af6fa0cef8",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 60266,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "c8a23de299487278",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 65244,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "d4e3e3fbdc4a571c",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 77303,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "d7f830d8c0da0c12",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 86069,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "ddfb1b23d551f2d3",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 70224,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "e1744b2dd97c7df9",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 83507,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "e5f14e69ea7d191e",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 72449,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "e63730b986655de2",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 84533,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "e6fa13ed6f601c6d",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 71197,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "e8bfb47719cb4c22",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 74056,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "ef25fff9fcb22844",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 73601,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "f0b19b81a26c5db6",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 75161,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "fecf3ca9074412dd",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.323115,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 77122,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "0594b65d4b3070b4",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-price-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-seat-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-travel-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-config-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service",
+      "ts-train-service",
+      "ts-price-service",
+      "ts-order-service",
+      "ts-seat-service",
+      "ts-config-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.225318,
+    "n_above_p": 5,
+    "n_services": 10,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 745212,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "131d8c776fa2d4d8",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-price-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-seat-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-travel-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-config-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service",
+      "ts-train-service",
+      "ts-price-service",
+      "ts-order-service",
+      "ts-seat-service",
+      "ts-config-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.225318,
+    "n_above_p": 5,
+    "n_services": 10,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 659809,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "3d9ffafd437997d1",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-price-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-seat-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-travel-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-config-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service",
+      "ts-train-service",
+      "ts-price-service",
+      "ts-order-service",
+      "ts-seat-service",
+      "ts-config-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.225318,
+    "n_above_p": 5,
+    "n_services": 10,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 2637731,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "4a79675222edfcdd",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-price-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-seat-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-travel-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-config-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service",
+      "ts-train-service",
+      "ts-price-service",
+      "ts-order-service",
+      "ts-seat-service",
+      "ts-config-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.225318,
+    "n_above_p": 5,
+    "n_services": 10,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 739062,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "4f4d770bb5e04895",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-price-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-seat-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-travel-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-config-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service",
+      "ts-train-service",
+      "ts-price-service",
+      "ts-order-service",
+      "ts-seat-service",
+      "ts-config-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.225318,
+    "n_above_p": 5,
+    "n_services": 10,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 567352,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "6152a9737c9c4f77",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-price-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-seat-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-travel-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-config-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service",
+      "ts-train-service",
+      "ts-price-service",
+      "ts-order-service",
+      "ts-seat-service",
+      "ts-config-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.225318,
+    "n_above_p": 5,
+    "n_services": 10,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 375878,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "750ab782fcd3c412",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-price-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-seat-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-travel-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-config-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service",
+      "ts-train-service",
+      "ts-price-service",
+      "ts-order-service",
+      "ts-seat-service",
+      "ts-config-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.225318,
+    "n_above_p": 5,
+    "n_services": 10,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 536572,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "815ebf678d24c151",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-price-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-seat-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-travel-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-config-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service",
+      "ts-train-service",
+      "ts-price-service",
+      "ts-order-service",
+      "ts-seat-service",
+      "ts-config-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.225318,
+    "n_above_p": 5,
+    "n_services": 10,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 610021,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "879f0029582dff56",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-price-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-seat-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-travel-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-config-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service",
+      "ts-train-service",
+      "ts-price-service",
+      "ts-order-service",
+      "ts-seat-service",
+      "ts-config-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.225318,
+    "n_above_p": 5,
+    "n_services": 10,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 450330,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "9a53c2b9ebb1309f",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-price-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-seat-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-travel-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-config-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service",
+      "ts-train-service",
+      "ts-price-service",
+      "ts-order-service",
+      "ts-seat-service",
+      "ts-config-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.225318,
+    "n_above_p": 5,
+    "n_services": 10,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 502798,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "a771e4d8d9e580cc",
+    "invocation_chain": [
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-price-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-seat-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-travel-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-config-service"
+      ]
+    ],
+    "services": [
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service",
+      "ts-train-service",
+      "ts-price-service",
+      "ts-order-service",
+      "ts-seat-service",
+      "ts-config-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.225318,
+    "n_above_p": 5,
+    "n_services": 10,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 478162,
+    "endpoint": "/api/v1/travelservice/trips/left",
+    "http_method": "POST",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "289c890d7bbdc9f2",
+    "invocation_chain": [
+      [
+        "ts-preserve-service",
+        "ts-security-service"
+      ],
+      [
+        "ts-security-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-security-service",
+        "ts-order-other-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-contacts-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-travel-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-price-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-seat-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-travel-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-config-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-seat-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-consign-service"
+      ],
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-user-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-notification-service"
+      ]
+    ],
+    "services": [
+      "ts-preserve-service",
+      "ts-security-service",
+      "ts-order-service",
+      "ts-order-other-service",
+      "ts-contacts-service",
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service",
+      "ts-train-service",
+      "ts-price-service",
+      "ts-seat-service",
+      "ts-config-service",
+      "ts-consign-service",
+      "ts-consign-price-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.190488,
+    "n_above_p": 9,
+    "n_services": 18,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 4809713,
+    "endpoint": "/api/v1/preserveservice/preserve",
+    "http_method": "POST",
+    "entry_service": "ts-preserve-service"
+  },
+  {
+    "test_id": "9cab6d9a81fe436f",
+    "invocation_chain": [
+      [
+        "ts-preserve-service",
+        "ts-security-service"
+      ],
+      [
+        "ts-security-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-security-service",
+        "ts-order-other-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-contacts-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-travel-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-price-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-seat-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-travel-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-config-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-seat-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-user-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-notification-service"
+      ]
+    ],
+    "services": [
+      "ts-preserve-service",
+      "ts-security-service",
+      "ts-order-service",
+      "ts-order-other-service",
+      "ts-contacts-service",
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service",
+      "ts-train-service",
+      "ts-price-service",
+      "ts-seat-service",
+      "ts-config-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.188709,
+    "n_above_p": 8,
+    "n_services": 16,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 4748644,
+    "endpoint": "/api/v1/preserveservice/preserve",
+    "http_method": "POST",
+    "entry_service": "ts-preserve-service"
+  },
+  {
+    "test_id": "ac30a9d52fcaa542",
+    "invocation_chain": [
+      [
+        "ts-preserve-service",
+        "ts-security-service"
+      ],
+      [
+        "ts-security-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-security-service",
+        "ts-order-other-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-contacts-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-travel-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-price-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-seat-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-travel-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-config-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-seat-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-user-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-notification-service"
+      ]
+    ],
+    "services": [
+      "ts-preserve-service",
+      "ts-security-service",
+      "ts-order-service",
+      "ts-order-other-service",
+      "ts-contacts-service",
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service",
+      "ts-train-service",
+      "ts-price-service",
+      "ts-seat-service",
+      "ts-config-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.188709,
+    "n_above_p": 8,
+    "n_services": 16,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 5139314,
+    "endpoint": "/api/v1/preserveservice/preserve",
+    "http_method": "POST",
+    "entry_service": "ts-preserve-service"
+  },
+  {
+    "test_id": "413102d914e8a5b2",
+    "invocation_chain": [
+      [
+        "ts-preserve-service",
+        "ts-security-service"
+      ],
+      [
+        "ts-security-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-security-service",
+        "ts-order-other-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-contacts-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-travel-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-price-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-seat-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-travel-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-config-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-seat-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-assurance-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-consign-service"
+      ],
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-user-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-notification-service"
+      ]
+    ],
+    "services": [
+      "ts-preserve-service",
+      "ts-security-service",
+      "ts-order-service",
+      "ts-order-other-service",
+      "ts-contacts-service",
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service",
+      "ts-train-service",
+      "ts-price-service",
+      "ts-seat-service",
+      "ts-config-service",
+      "ts-assurance-service",
+      "ts-consign-service",
+      "ts-consign-price-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.180462,
+    "n_above_p": 9,
+    "n_services": 19,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 5187729,
+    "endpoint": "/api/v1/preserveservice/preserve",
+    "http_method": "POST",
+    "entry_service": "ts-preserve-service"
+  },
+  {
+    "test_id": "23f3544c1703dd5e",
+    "invocation_chain": [
+      [
+        "ts-preserve-service",
+        "ts-security-service"
+      ],
+      [
+        "ts-security-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-security-service",
+        "ts-order-other-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-contacts-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-travel-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-price-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-seat-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-travel-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-config-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-seat-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-assurance-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-user-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-notification-service"
+      ]
+    ],
+    "services": [
+      "ts-preserve-service",
+      "ts-security-service",
+      "ts-order-service",
+      "ts-order-other-service",
+      "ts-contacts-service",
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service",
+      "ts-train-service",
+      "ts-price-service",
+      "ts-seat-service",
+      "ts-config-service",
+      "ts-assurance-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.177609,
+    "n_above_p": 8,
+    "n_services": 17,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 12225477,
+    "endpoint": "/api/v1/preserveservice/preserve",
+    "http_method": "POST",
+    "entry_service": "ts-preserve-service"
+  },
+  {
+    "test_id": "f2be39ce9897beb5",
+    "invocation_chain": [
+      [
+        "ts-preserve-service",
+        "ts-security-service"
+      ],
+      [
+        "ts-security-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-security-service",
+        "ts-order-other-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-contacts-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-travel-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-ticketinfo-service",
+        "ts-basic-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-route-service"
+      ],
+      [
+        "ts-basic-service",
+        "ts-price-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-seat-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-travel-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-travel-service",
+        "ts-train-service"
+      ],
+      [
+        "ts-seat-service",
+        "ts-config-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-station-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-ticketinfo-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-seat-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-assurance-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-user-service"
+      ],
+      [
+        "ts-preserve-service",
+        "ts-notification-service"
+      ]
+    ],
+    "services": [
+      "ts-preserve-service",
+      "ts-security-service",
+      "ts-order-service",
+      "ts-order-other-service",
+      "ts-contacts-service",
+      "ts-travel-service",
+      "ts-ticketinfo-service",
+      "ts-basic-service",
+      "ts-station-service",
+      "ts-route-service",
+      "ts-train-service",
+      "ts-price-service",
+      "ts-seat-service",
+      "ts-config-service",
+      "ts-assurance-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 1.0,
+    "score_avg": 0.177609,
+    "n_above_p": 8,
+    "n_services": 17,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": true,
+    "duration_us": 4982490,
+    "endpoint": "/api/v1/preserveservice/preserve",
+    "http_method": "POST",
+    "entry_service": "ts-preserve-service"
+  },
+  {
+    "test_id": "3cb0b66047d543e2",
+    "invocation_chain": [],
+    "services": [
+      "ts-order-service"
+    ],
+    "score": 0.539508,
+    "score_avg": 0.539508,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 321241,
+    "endpoint": "/api/v1/orderservice/order/refresh",
+    "http_method": "GET",
+    "entry_service": "ts-order-service"
+  },
+  {
+    "test_id": "56cba393f9d58b38",
+    "invocation_chain": [],
+    "services": [
+      "ts-order-service"
+    ],
+    "score": 0.539508,
+    "score_avg": 0.539508,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 11074,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-order-service"
+  },
+  {
+    "test_id": "6841233938c1151c",
+    "invocation_chain": [
+      [
+        "ts-execute-service",
+        "ts-order-service"
+      ]
+    ],
+    "services": [
+      "ts-execute-service",
+      "ts-order-service"
+    ],
+    "score": 0.539508,
+    "score_avg": 0.463709,
+    "n_above_p": 2,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 70721,
+    "endpoint": "/api/v1/executeservice/execute/collected/0bc3b348-f1cb-4a43-9b72-25408890572f",
+    "http_method": "GET",
+    "entry_service": "ts-execute-service"
+  },
+  {
+    "test_id": "73877a547f9d500c",
+    "invocation_chain": [
+      [
+        "ts-execute-service",
+        "ts-order-service"
+      ]
+    ],
+    "services": [
+      "ts-execute-service",
+      "ts-order-service"
+    ],
+    "score": 0.539508,
+    "score_avg": 0.463709,
+    "n_above_p": 2,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 765500,
+    "endpoint": "/api/v1/executeservice/execute/collected/afa2723c-71aa-46ba-81ca-9af286df4968",
+    "http_method": "GET",
+    "entry_service": "ts-execute-service"
+  },
+  {
+    "test_id": "8f8dd9240697549a",
+    "invocation_chain": [
+      [
+        "ts-execute-service",
+        "ts-order-service"
+      ]
+    ],
+    "services": [
+      "ts-execute-service",
+      "ts-order-service"
+    ],
+    "score": 0.539508,
+    "score_avg": 0.463709,
+    "n_above_p": 2,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 56370,
+    "endpoint": "/api/v1/executeservice/execute/collected/aec2af0b-6fca-490b-99a0-2d7ef779a132",
+    "http_method": "GET",
+    "entry_service": "ts-execute-service"
+  },
+  {
+    "test_id": "e44867e2d46c036d",
+    "invocation_chain": [
+      [
+        "ts-execute-service",
+        "ts-order-service"
+      ]
+    ],
+    "services": [
+      "ts-execute-service",
+      "ts-order-service"
+    ],
+    "score": 0.539508,
+    "score_avg": 0.463709,
+    "n_above_p": 2,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 36230,
+    "endpoint": "/api/v1/executeservice/execute/execute/608ec917-2664-454e-a557-5d3ab7efed7e",
+    "http_method": "GET",
+    "entry_service": "ts-execute-service"
+  },
+  {
+    "test_id": "edfb2c057f5b7542",
+    "invocation_chain": [
+      [
+        "ts-execute-service",
+        "ts-order-service"
+      ]
+    ],
+    "services": [
+      "ts-execute-service",
+      "ts-order-service"
+    ],
+    "score": 0.539508,
+    "score_avg": 0.463709,
+    "n_above_p": 2,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 38560,
+    "endpoint": "/api/v1/executeservice/execute/execute/14dbfd1a-f3bc-49ca-b770-5fd06212c88a",
+    "http_method": "GET",
+    "entry_service": "ts-execute-service"
+  },
+  {
+    "test_id": "f48c6c0b601fba21",
+    "invocation_chain": [
+      [
+        "ts-execute-service",
+        "ts-order-service"
+      ]
+    ],
+    "services": [
+      "ts-execute-service",
+      "ts-order-service"
+    ],
+    "score": 0.539508,
+    "score_avg": 0.463709,
+    "n_above_p": 2,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 35474,
+    "endpoint": "/api/v1/executeservice/execute/execute/aec2af0b-6fca-490b-99a0-2d7ef779a132",
+    "http_method": "GET",
+    "entry_service": "ts-execute-service"
+  },
+  {
+    "test_id": "5dd7a86f709d5007",
+    "invocation_chain": [
+      [
+        "ts-rebook-service",
+        "ts-order-service"
+      ]
+    ],
+    "services": [
+      "ts-rebook-service",
+      "ts-order-service"
+    ],
+    "score": 0.539508,
+    "score_avg": 0.390863,
+    "n_above_p": 2,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 33697,
+    "endpoint": "/api/v1/rebookservice/rebook",
+    "http_method": "POST",
+    "entry_service": "ts-rebook-service"
+  },
+  {
+    "test_id": "0009dcbeb055cf54",
+    "invocation_chain": [
+      [
+        "ts-order-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-order-service",
+      "ts-station-service"
+    ],
+    "score": 0.539508,
+    "score_avg": 0.269754,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 20466,
+    "endpoint": "/api/v1/orderservice/order/refresh",
+    "http_method": "POST",
+    "entry_service": "ts-order-service"
+  },
+  {
+    "test_id": "0db0e3edba7310b1",
+    "invocation_chain": [
+      [
+        "ts-cancel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-inside-payment-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-user-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-notification-service"
+      ]
+    ],
+    "services": [
+      "ts-cancel-service",
+      "ts-order-service",
+      "ts-inside-payment-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 0.539508,
+    "score_avg": 0.218984,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 4232886,
+    "endpoint": "/api/v1/cancelservice/cancel/7fa5d6ae-a58a-41db-86d6-8565d111296e/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-cancel-service"
+  },
+  {
+    "test_id": "1eb329be5fef7d5b",
+    "invocation_chain": [
+      [
+        "ts-cancel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-inside-payment-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-user-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-notification-service"
+      ]
+    ],
+    "services": [
+      "ts-cancel-service",
+      "ts-order-service",
+      "ts-inside-payment-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 0.539508,
+    "score_avg": 0.218984,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 3636359,
+    "endpoint": "/api/v1/cancelservice/cancel/905c2028-24e9-4804-9cbe-214a6d783c9e/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-cancel-service"
+  },
+  {
+    "test_id": "24c61b99dba406c6",
+    "invocation_chain": [
+      [
+        "ts-cancel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-inside-payment-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-user-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-notification-service"
+      ]
+    ],
+    "services": [
+      "ts-cancel-service",
+      "ts-order-service",
+      "ts-inside-payment-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 0.539508,
+    "score_avg": 0.218984,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 4048127,
+    "endpoint": "/api/v1/cancelservice/cancel/ed627101-c69c-4b11-962e-2d74b9c0abb4/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-cancel-service"
+  },
+  {
+    "test_id": "2fa55e92188633db",
+    "invocation_chain": [
+      [
+        "ts-cancel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-inside-payment-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-user-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-notification-service"
+      ]
+    ],
+    "services": [
+      "ts-cancel-service",
+      "ts-order-service",
+      "ts-inside-payment-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 0.539508,
+    "score_avg": 0.218984,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 3814332,
+    "endpoint": "/api/v1/cancelservice/cancel/824a5f4e-e200-47de-8bd8-85d59467811e/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-cancel-service"
+  },
+  {
+    "test_id": "30f2aac32afa3b81",
+    "invocation_chain": [
+      [
+        "ts-cancel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-inside-payment-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-user-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-notification-service"
+      ]
+    ],
+    "services": [
+      "ts-cancel-service",
+      "ts-order-service",
+      "ts-inside-payment-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 0.539508,
+    "score_avg": 0.218984,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 8471314,
+    "endpoint": "/api/v1/cancelservice/cancel/b10b92f7-26ce-4893-8d67-de46277cbb45/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-cancel-service"
+  },
+  {
+    "test_id": "5b52e7374f54020c",
+    "invocation_chain": [
+      [
+        "ts-cancel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-inside-payment-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-user-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-notification-service"
+      ]
+    ],
+    "services": [
+      "ts-cancel-service",
+      "ts-order-service",
+      "ts-inside-payment-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 0.539508,
+    "score_avg": 0.218984,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 7661621,
+    "endpoint": "/api/v1/cancelservice/cancel/81dd305d-130a-4cd4-99aa-c4b55c67f5e2/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-cancel-service"
+  },
+  {
+    "test_id": "6ae1edc6d5eb7196",
+    "invocation_chain": [
+      [
+        "ts-cancel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-inside-payment-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-user-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-notification-service"
+      ]
+    ],
+    "services": [
+      "ts-cancel-service",
+      "ts-order-service",
+      "ts-inside-payment-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 0.539508,
+    "score_avg": 0.218984,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 9661349,
+    "endpoint": "/api/v1/cancelservice/cancel/8687fdaa-0c40-4834-b5a8-7c6be638b033/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-cancel-service"
+  },
+  {
+    "test_id": "802d29756cfb1b17",
+    "invocation_chain": [
+      [
+        "ts-cancel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-inside-payment-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-user-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-notification-service"
+      ]
+    ],
+    "services": [
+      "ts-cancel-service",
+      "ts-order-service",
+      "ts-inside-payment-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 0.539508,
+    "score_avg": 0.218984,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 9208396,
+    "endpoint": "/api/v1/cancelservice/cancel/14dbfd1a-f3bc-49ca-b770-5fd06212c88a/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-cancel-service"
+  },
+  {
+    "test_id": "8adc36494a0e5d84",
+    "invocation_chain": [
+      [
+        "ts-cancel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-inside-payment-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-user-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-notification-service"
+      ]
+    ],
+    "services": [
+      "ts-cancel-service",
+      "ts-order-service",
+      "ts-inside-payment-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 0.539508,
+    "score_avg": 0.218984,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 3927072,
+    "endpoint": "/api/v1/cancelservice/cancel/80369e05-e69b-4d2a-a9bf-2767a5bbf0f0/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-cancel-service"
+  },
+  {
+    "test_id": "ae4f5e2100df63bd",
+    "invocation_chain": [
+      [
+        "ts-cancel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-inside-payment-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-user-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-notification-service"
+      ]
+    ],
+    "services": [
+      "ts-cancel-service",
+      "ts-order-service",
+      "ts-inside-payment-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 0.539508,
+    "score_avg": 0.218984,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 10630262,
+    "endpoint": "/api/v1/cancelservice/cancel/608ec917-2664-454e-a557-5d3ab7efed7e/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-cancel-service"
+  },
+  {
+    "test_id": "dc57be9c51683693",
+    "invocation_chain": [
+      [
+        "ts-cancel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-inside-payment-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-user-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-notification-service"
+      ]
+    ],
+    "services": [
+      "ts-cancel-service",
+      "ts-order-service",
+      "ts-inside-payment-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 0.539508,
+    "score_avg": 0.218984,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 3922926,
+    "endpoint": "/api/v1/cancelservice/cancel/4535c25f-7d0a-41b6-9b28-25dd40201b7f/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-cancel-service"
+  },
+  {
+    "test_id": "e99df2a0dd275239",
+    "invocation_chain": [
+      [
+        "ts-cancel-service",
+        "ts-order-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-inside-payment-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-user-service"
+      ],
+      [
+        "ts-cancel-service",
+        "ts-notification-service"
+      ]
+    ],
+    "services": [
+      "ts-cancel-service",
+      "ts-order-service",
+      "ts-inside-payment-service",
+      "ts-user-service",
+      "ts-notification-service"
+    ],
+    "score": 0.539508,
+    "score_avg": 0.218984,
+    "n_above_p": 3,
+    "n_services": 5,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 10327279,
+    "endpoint": "/api/v1/cancelservice/cancel/841b9847-2a42-4b45-8b1b-1cc3ca4612ff/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-cancel-service"
+  },
+  {
+    "test_id": "1cd9a55c4a223a17",
+    "invocation_chain": [],
+    "services": [
+      "ts-order-other-service"
+    ],
+    "score": 0.453213,
+    "score_avg": 0.453213,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 21729,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-order-other-service"
+  },
+  {
+    "test_id": "3f82b0885a8750da",
+    "invocation_chain": [
+      [
+        "ts-inside-payment-service",
+        "ts-order-other-service"
+      ]
+    ],
+    "services": [
+      "ts-inside-payment-service",
+      "ts-order-other-service"
+    ],
+    "score": 0.453213,
+    "score_avg": 0.431435,
+    "n_above_p": 2,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 41432,
+    "endpoint": "/api/v1/inside_pay_service/inside_payment",
+    "http_method": "POST",
+    "entry_service": "ts-inside-payment-service"
+  },
+  {
+    "test_id": "6278f60621610749",
+    "invocation_chain": [
+      [
+        "ts-rebook-service",
+        "ts-order-other-service"
+      ]
+    ],
+    "services": [
+      "ts-rebook-service",
+      "ts-order-other-service"
+    ],
+    "score": 0.453213,
+    "score_avg": 0.347715,
+    "n_above_p": 2,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 25623,
+    "endpoint": "/api/v1/rebookservice/rebook",
+    "http_method": "POST",
+    "entry_service": "ts-rebook-service"
+  },
+  {
+    "test_id": "00598c070e6ccb84",
+    "invocation_chain": [
+      [
+        "ts-order-other-service",
+        "ts-station-service"
+      ]
+    ],
+    "services": [
+      "ts-order-other-service",
+      "ts-station-service"
+    ],
+    "score": 0.453213,
+    "score_avg": 0.226606,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 14641,
+    "endpoint": "/api/v1/orderOtherService/orderOther/refresh",
+    "http_method": "POST",
+    "entry_service": "ts-order-other-service"
+  },
+  {
+    "test_id": "055088ed520550ca",
+    "invocation_chain": [],
+    "services": [
+      "ts-inside-payment-service"
+    ],
+    "score": 0.409658,
+    "score_avg": 0.409658,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 456930,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-inside-payment-service"
+  },
+  {
+    "test_id": "067d30e7b7a61e63",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 9180,
+    "endpoint": "/api/v1/consignservice/consigns/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "22e61f5e0088dee9",
+    "invocation_chain": [],
+    "services": [
+      "ts-consign-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.40943,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 29055,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "015ddb64e3f12ffb",
+    "invocation_chain": [
+      [
+        "ts-consign-service",
+        "ts-consign-price-service"
+      ]
+    ],
+    "services": [
+      "ts-consign-service",
+      "ts-consign-price-service"
+    ],
+    "score": 0.40943,
+    "score_avg": 0.204715,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 21828,
+    "endpoint": "/api/v1/consignservice/consigns",
+    "http_method": "PUT",
+    "entry_service": "ts-consign-service"
+  },
+  {
+    "test_id": "190eb01aa5ba641f",
+    "invocation_chain": [],
+    "services": [
+      "ts-travel2-service"
+    ],
+    "score": 0.388025,
+    "score_avg": 0.388025,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 18017,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-travel2-service"
+  },
+  {
+    "test_id": "0a9c6fd5835652c9",
+    "invocation_chain": [],
+    "services": [
+      "ts-admin-basic-info-service"
+    ],
+    "score": 0.387632,
+    "score_avg": 0.387632,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 14370,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-admin-basic-info-service"
+  },
+  {
+    "test_id": "047117fcafc1d4db",
+    "invocation_chain": [
+      [
+        "ts-admin-basic-info-service",
+        "ts-contacts-service"
+      ]
+    ],
+    "services": [
+      "ts-admin-basic-info-service",
+      "ts-contacts-service"
+    ],
+    "score": 0.387632,
+    "score_avg": 0.193816,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 15349,
+    "endpoint": "/api/v1/adminbasicservice/adminbasic/contacts",
+    "http_method": "GET",
+    "entry_service": "ts-admin-basic-info-service"
+  },
+  {
+    "test_id": "2860faa40cd7754a",
+    "invocation_chain": [],
+    "services": [
+      "ts-auth-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.387594,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 951,
+    "endpoint": "/v3/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "5f9c361ffbfd92ae",
+    "invocation_chain": [],
+    "services": [
+      "ts-auth-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.387594,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 19013,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "0503e1bae97668b4",
+    "invocation_chain": [
+      [
+        "ts-auth-service",
+        "ts-verification-code-service"
+      ]
+    ],
+    "services": [
+      "ts-auth-service",
+      "ts-verification-code-service"
+    ],
+    "score": 0.387594,
+    "score_avg": 0.193797,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 129015,
+    "endpoint": "/api/v1/users/login",
+    "http_method": "POST",
+    "entry_service": "ts-auth-service"
+  },
+  {
+    "test_id": "01a72fb325b9f262",
+    "invocation_chain": [],
+    "services": [
+      "ts-security-service"
+    ],
+    "score": 0.233282,
+    "score_avg": 0.233282,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 2,
+    "in_s_echo": false,
+    "in_delta_s": false,
+    "duration_us": 26414,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-security-service"
+  },
+  {
+    "test_id": "8be1f0987dc4164d",
+    "invocation_chain": [],
+    "services": [
+      "ts-cancel-service"
+    ],
+    "score": 0.145754,
+    "score_avg": 0.145754,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 2,
+    "in_s_echo": false,
+    "in_delta_s": false,
+    "duration_us": 16054,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-cancel-service"
+  },
+  {
+    "test_id": "24bbd015d9b5f111",
+    "invocation_chain": [],
+    "services": [
+      "ts-travel-service"
+    ],
+    "score": 0.114665,
+    "score_avg": 0.114665,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 2,
+    "in_s_echo": false,
+    "in_delta_s": false,
+    "duration_us": 30455,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-travel-service"
+  },
+  {
+    "test_id": "08d2a154fee34eba",
+    "invocation_chain": [],
+    "services": [
+      "ts-seat-service"
+    ],
+    "score": 0.098098,
+    "score_avg": 0.098098,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 2,
+    "in_s_echo": false,
+    "in_delta_s": false,
+    "duration_us": 12813,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-seat-service"
+  },
+  {
+    "test_id": "422d85f5e10803f8",
+    "invocation_chain": [],
+    "services": [
+      "ts-preserve-service"
+    ],
+    "score": 0.079675,
+    "score_avg": 0.079675,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 2,
+    "in_s_echo": false,
+    "in_delta_s": false,
+    "duration_us": 13792,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-preserve-service"
+  },
+  {
+    "test_id": "004111c202ef060a",
+    "invocation_chain": [],
+    "services": [
+      "ts-contacts-service"
+    ],
+    "score": 0.0,
+    "score_avg": 0.0,
+    "n_above_p": 0,
+    "n_services": 1,
+    "tier": 2,
+    "in_s_echo": false,
+    "in_delta_s": false,
+    "duration_us": 13721,
+    "endpoint": "/api/v1/contactservice/contacts/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "http_method": "GET",
+    "entry_service": "ts-contacts-service"
+  },
+  {
+    "test_id": "009511bca0d0f9c5",
+    "invocation_chain": [],
+    "services": [
+      "ts-assurance-service"
+    ],
+    "score": 0.0,
+    "score_avg": 0.0,
+    "n_above_p": 0,
+    "n_services": 1,
+    "tier": 2,
+    "in_s_echo": false,
+    "in_delta_s": false,
+    "duration_us": 3677,
+    "endpoint": "/api/v1/assuranceservice/assurances/types",
+    "http_method": "GET",
+    "entry_service": "ts-assurance-service"
+  },
+  {
+    "test_id": "021a60124f024ce7",
+    "invocation_chain": [],
+    "services": [
+      "ts-station-service"
+    ],
+    "score": 0.0,
+    "score_avg": 0.0,
+    "n_above_p": 0,
+    "n_services": 1,
+    "tier": 2,
+    "in_s_echo": false,
+    "in_delta_s": false,
+    "duration_us": 5588,
+    "endpoint": "/api/v1/stationservice/stations/idlist",
+    "http_method": "POST",
+    "entry_service": "ts-station-service"
+  },
+  {
+    "test_id": "02ba2e26aed1ac62",
+    "invocation_chain": [],
+    "services": [
+      "ts-config-service"
+    ],
+    "score": 0.0,
+    "score_avg": 0.0,
+    "n_above_p": 0,
+    "n_services": 1,
+    "tier": 2,
+    "in_s_echo": false,
+    "in_delta_s": false,
+    "duration_us": 6802,
+    "endpoint": "/api/v1/configservice/configs",
+    "http_method": "GET",
+    "entry_service": "ts-config-service"
+  },
+  {
+    "test_id": "039b48f4e9b6f022",
+    "invocation_chain": [],
+    "services": [
+      "ts-price-service"
+    ],
+    "score": 0.0,
+    "score_avg": 0.0,
+    "n_above_p": 0,
+    "n_services": 1,
+    "tier": 2,
+    "in_s_echo": false,
+    "in_delta_s": false,
+    "duration_us": 13887,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-price-service"
+  },
+  {
+    "test_id": "05e3adbce6d87d1e",
+    "invocation_chain": [],
+    "services": [
+      "ts-food-service"
+    ],
+    "score": 0.0,
+    "score_avg": 0.0,
+    "n_above_p": 0,
+    "n_services": 1,
+    "tier": 2,
+    "in_s_echo": false,
+    "in_delta_s": false,
+    "duration_us": 28598,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-food-service"
+  },
+  {
+    "test_id": "06c73d6260808826",
+    "invocation_chain": [],
+    "services": [
+      "ts-train-service"
+    ],
+    "score": 0.0,
+    "score_avg": 0.0,
+    "n_above_p": 0,
+    "n_services": 1,
+    "tier": 2,
+    "in_s_echo": false,
+    "in_delta_s": false,
+    "duration_us": 7434,
+    "endpoint": "/api/v1/trainservice/trains",
+    "http_method": "GET",
+    "entry_service": "ts-train-service"
+  },
+  {
+    "test_id": "085e172e136b6a74",
+    "invocation_chain": [],
+    "services": [
+      "ts-verification-code-service"
+    ],
+    "score": 0.0,
+    "score_avg": 0.0,
+    "n_above_p": 0,
+    "n_services": 1,
+    "tier": 2,
+    "in_s_echo": false,
+    "in_delta_s": false,
+    "duration_us": 5708,
+    "endpoint": "/api/v1/verifycode/generate",
+    "http_method": "GET",
+    "entry_service": "ts-verification-code-service"
+  },
+  {
+    "test_id": "1257e9e106ad65c0",
+    "invocation_chain": [],
+    "services": [
+      "ts-payment-service"
+    ],
+    "score": 0.0,
+    "score_avg": 0.0,
+    "n_above_p": 0,
+    "n_services": 1,
+    "tier": 2,
+    "in_s_echo": false,
+    "in_delta_s": false,
+    "duration_us": 12606,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-payment-service"
+  },
+  {
+    "test_id": "1909695a3400a9f9",
+    "invocation_chain": [],
+    "services": [
+      "ts-user-service"
+    ],
+    "score": 0.0,
+    "score_avg": 0.0,
+    "n_above_p": 0,
+    "n_services": 1,
+    "tier": 2,
+    "in_s_echo": false,
+    "in_delta_s": false,
+    "duration_us": 12320,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-user-service"
+  },
+  {
+    "test_id": "239f883d85404304",
+    "invocation_chain": [],
+    "services": [
+      "ts-route-service"
+    ],
+    "score": 0.0,
+    "score_avg": 0.0,
+    "n_above_p": 0,
+    "n_services": 1,
+    "tier": 2,
+    "in_s_echo": false,
+    "in_delta_s": false,
+    "duration_us": 27183,
+    "endpoint": "/v2/api-docs",
+    "http_method": "GET",
+    "entry_service": "ts-route-service"
+  },
+  {
+    "test_id": "5a4fde3fcdd5ef47",
+    "invocation_chain": [],
+    "services": [
+      "ts-admin-user-service"
+    ],
+    "score": 0.0,
+    "score_avg": 0.0,
+    "n_above_p": 0,
+    "n_services": 1,
+    "tier": 2,
+    "in_s_echo": false,
+    "in_delta_s": false,
+    "duration_us": 208749,
+    "endpoint": "/api/v1/adminuserservice/users",
+    "http_method": "GET",
+    "entry_service": "ts-admin-user-service"
+  },
+  {
+    "test_id": "c39981e41e12491c",
+    "invocation_chain": [],
+    "services": [
+      "ts-admin-route-service"
+    ],
+    "score": 0.0,
+    "score_avg": 0.0,
+    "n_above_p": 0,
+    "n_services": 1,
+    "tier": 2,
+    "in_s_echo": false,
+    "in_delta_s": false,
+    "duration_us": 174101,
+    "endpoint": "/api/v1/adminrouteservice/adminroute",
+    "http_method": "GET",
+    "entry_service": "ts-admin-route-service"
+  }
+]
