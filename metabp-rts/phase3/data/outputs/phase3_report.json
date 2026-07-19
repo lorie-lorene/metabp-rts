@@ -32,10 +32,10 @@
   "et": {
     "TO_us": 228693224,
     "TR_us": 184975330,
-    "TS_us": 6975700,
+    "TS_us": 6970900,
     "TO_s": 228.6932,
     "TR_s": 184.9753,
-    "TS_s": 6.9757,
+    "TS_s": 6.9709,
     "ET": 16.07,
     "EN": 32.62,
     "n_original": 2388,
@@ -45,8 +45,8 @@
     "note": "TS mesuré directement (Phase 1+2+3) ; TO/TR estimés via latences Jaeger (duration_us du span racine). Mode online = raffinement futur.",
     "TS_breakdown_s": {
       "phase1": 6.5574,
-      "phase2": 0.1797,
-      "phase3": 0.2386
+      "phase2": 0.18,
+      "phase3": 0.2335
     },
     "note_breakdown": "Phase 1 est un coût amortissable (indépendant de ΔS, calculé une fois et réutilisé). Phase 2+3 se relancent à chaque cycle de régression."
   },
