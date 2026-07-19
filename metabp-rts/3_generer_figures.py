@@ -57,33 +57,44 @@ print("✓ figures/fig_metabp_scenarios.png")
 # ─────────────────────────────────────────────────────────────
 try:
     comp = list(csv.DictReader(open("comparatif_baselines.csv")))
-    techs = ["Retest-All","Random-N×30","Firewall-0","Firewall-1","MetaBP-RTS"]
+    techs = ["Retest-All","Random-N×30","MRTS-BP*","Firewall-0","Firewall-1","MetaBP-RTS"]
     scen_ids = ["S1_station","S2_order","S3_basic","S4_multiple"]
     # Recall moyen par technique
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14,5.5))
-    colT = {"Retest-All":"#999999","Random-N×30":"#DD8452","Firewall-0":"#C44E52",
-            "Firewall-1":"#CCB974","MetaBP-RTS":"#4C72B0"}
+    fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(18,5.5))
+    colT = {"Retest-All":"#999999","Random-N×30":"#DD8452","MRTS-BP*":"#937860",
+            "Firewall-0":"#C44E52","Firewall-1":"#CCB974","MetaBP-RTS":"#4C72B0"}
 
     # Recall groupé par scénario
-    xs = np.arange(len(scen_ids)); wt = 0.15
+    xs = np.arange(len(scen_ids)); wt = 0.13
     for i,tech in enumerate(techs):
         vals = [next((float(r["Recall"]) for r in comp
                       if r["scenario"]==s and r["technique"]==tech), 0) for s in scen_ids]
-        ax1.bar(xs + (i-2)*wt, vals, wt, label=tech, color=colT[tech])
+        ax1.bar(xs + (i-2.5)*wt, vals, wt, label=tech, color=colT[tech])
     ax1.set_title("Recall (sûreté) par technique", fontweight="bold")
     ax1.set_ylabel("Recall (%)"); ax1.set_xticks(xs)
     ax1.set_xticklabels([s.replace("_","\n") for s in scen_ids], fontsize=9)
-    ax1.set_ylim(0,108); ax1.legend(fontsize=8, loc="lower left"); ax1.grid(axis="y", ls="--", alpha=0.4)
+    ax1.set_ylim(0,108); ax1.axhline(100, color="green", ls=":", alpha=0.4)
+    ax1.legend(fontsize=7, loc="lower left", ncol=2); ax1.grid(axis="y", ls="--", alpha=0.4)
 
     # EN groupé par scénario
     for i,tech in enumerate(techs):
         vals = [next((float(r["EN"]) for r in comp
                       if r["scenario"]==s and r["technique"]==tech), 0) for s in scen_ids]
-        ax2.bar(xs + (i-2)*wt, vals, wt, label=tech, color=colT[tech])
+        ax2.bar(xs + (i-2.5)*wt, vals, wt, label=tech, color=colT[tech])
     ax2.set_title("EN (réduction) par technique", fontweight="bold")
     ax2.set_ylabel("EN (%)"); ax2.set_xticks(xs)
     ax2.set_xticklabels([s.replace("_","\n") for s in scen_ids], fontsize=9)
     ax2.set_ylim(0,100); ax2.grid(axis="y", ls="--", alpha=0.4)
+
+    # Precision par technique (3e panneau)
+    for i,tech in enumerate(techs):
+        vals = [next((float(r["Precision"]) for r in comp
+                      if r["scenario"]==s and r["technique"]==tech), 0) for s in scen_ids]
+        ax3.bar(xs + (i-2.5)*wt, vals, wt, label=tech, color=colT[tech])
+    ax3.set_title("Précision par technique", fontweight="bold")
+    ax3.set_ylabel("Précision (%)"); ax3.set_xticks(xs)
+    ax3.set_xticklabels([s.replace("_","\n") for s in scen_ids], fontsize=9)
+    ax3.set_ylim(0,108); ax3.grid(axis="y", ls="--", alpha=0.4)
 
     plt.suptitle("Comparaison MetaBP-RTS vs baselines (Train-Ticket)", fontsize=13, fontweight="bold")
     plt.tight_layout(); plt.savefig("figures/fig_comparatif_baselines.png", dpi=200, bbox_inches="tight")

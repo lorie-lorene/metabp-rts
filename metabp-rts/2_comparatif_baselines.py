@@ -16,6 +16,16 @@ from pathlib import Path
 
 random.seed(42)
 BASE = Path.cwd()
+
+# MRTS-BP réimplémenté (Chen et al.) — comparateur central
+import sys as _sys
+_sys.path.insert(0, str(Path('phase2').resolve()))
+try:
+    from mrts_bp_baseline import mrts_bp_select
+    _HAS_MRTS = True
+except Exception as _e:
+    print(f'⚠ MRTS-BP indisponible : {_e}')
+    _HAS_MRTS = False
 CY="\033[96m"; GR="\033[92m"; YE="\033[93m"; BD="\033[1m"; RS="\033[0m"; DIM="\033[2m"
 
 T = json.load(open("phase1/data/outputs/test_suite_T.json"))
@@ -88,10 +98,24 @@ for name, delta in SCEN.items():
     show("Firewall-0", fw0, "graphe de code*")
     f1  = {tid(t) for t in T if svcs(t) & fw1}
     show("Firewall-1", f1, "graphe de code*")
+
+    # MRTS-BP* (Chen réimplémenté) — même graphe, p0=1/0, existent satisfaction
+    if _HAS_MRTS:
+        try:
+            mrts = mrts_bp_select(delta, ".")
+            mrts_ids = {tid(t) for t in mrts["t_sel"]}
+            show("MRTS-BP*", mrts_ids, "logs Gateway**")
+        except Exception as _e:
+            print(f"   {DIM}MRTS-BP* erreur : {_e}{RS}")
+
     show("MetaBP-RTS", sid, "traces seules", hl=True)
     print()
 
-print(f"{DIM}* Firewall/RTS-CFG requièrent le graphe de dépendances issu du code source,")
+print(f"{DIM}*  Firewall/RTS-CFG requièrent le graphe de dépendances issu du code source.")
+print(f"** MRTS-BP (Chen 2023) requiert des logs d'API Gateway ; réimplémenté ici sur le")
+print(f"   graphe reconstruit par observabilité (propagation + sélection fidèles, Formules 3-6).")
+print(f"   MRTS-BP* = MetaBP-RTS sans a priori Écho-Dormant ni PathMR/PSO = ablation.")
+print(f"{DIM}*  Firewall/RTS-CFG requièrent le graphe de dépendances issu du code source,")
 print(f"  indisponible en contexte boîte noire. Évalués ici sur le graphe reconstruit")
 print(f"  par observabilité, pour situer MetaBP-RTS à qualité de données égale.{RS}")
 print()
