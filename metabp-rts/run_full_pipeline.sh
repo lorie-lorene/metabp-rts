@@ -3,10 +3,11 @@
 set -o pipefail
 BASE=~/Bureau/MEMOIRE-2026/metabp-rts/metabp-rts
 LOG=$BASE/run_$(date +%Y%m%d_%H%M%S).log
-DELTA_S="ts-station-service ts-admin-basic-info-service  ts-contacts-service ts-order-other-service "
+DELTA_S="ts-order-service"
 
 echo "=== RUN COMPLET MetaBP-RTS — $(date) ===" | tee $LOG
 echo "ΔS = $DELTA_S" | tee -a $LOG
+
 
 echo -e "\n\n########## PHASE 1 : Observation → G, T, scores, MR ##########" | tee -a $LOG
 cd $BASE/phase1/scripts && python run_phase1.py --config ../config/system_config.yaml 2>&1 | tee -a $LOG

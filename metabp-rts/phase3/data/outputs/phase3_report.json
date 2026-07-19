@@ -1,60 +1,60 @@
 {
   "input": {
-    "n_tier1": 1698,
-    "n_tier2": 690,
+    "n_tier1": 1910,
+    "n_tier2": 478,
     "n_total": 2388,
-    "n_s_echo": 10,
+    "n_s_echo": 11,
     "n_services_cit": 27
   },
   "mrps": {
-    "n_input": 690,
-    "n_groups": 27,
-    "dedup_rate": 0.9609,
-    "dedup_pct": "96.1%",
-    "avg_group_size": 25.56,
+    "n_input": 478,
+    "n_groups": 23,
+    "dedup_rate": 0.9519,
+    "dedup_pct": "95.2%",
+    "avg_group_size": 20.78,
     "max_group_size": 216,
     "singletons": 4,
-    "singleton_pct": "14.8%"
+    "singleton_pct": "17.4%"
   },
   "pso": {
-    "n_input": 27,
-    "n_selected": 17,
-    "reduction_rate": 0.3704,
-    "reduction_pct": "37.0%",
+    "n_input": 23,
+    "n_selected": 15,
+    "reduction_rate": 0.3478,
+    "reduction_pct": "34.8%",
     "n_services_total": 31,
-    "n_services_covered": 17,
-    "coverage_rate": 0.5484,
-    "coverage_pct": "54.8%",
-    "gbest_fitness": 0.152072,
+    "n_services_covered": 15,
+    "coverage_rate": 0.4839,
+    "coverage_pct": "48.4%",
+    "gbest_fitness": 0.103274,
     "n_iterations": 20,
     "converged": true
   },
   "et": {
     "TO_us": 228693224,
-    "TR_us": 180791882,
-    "TS_us": 7241700,
+    "TR_us": 184975330,
+    "TS_us": 6975700,
     "TO_s": 228.6932,
-    "TR_s": 180.7919,
-    "TS_s": 7.2417,
-    "ET": 17.78,
-    "EN": 44.43,
+    "TR_s": 184.9753,
+    "TS_s": 6.9757,
+    "ET": 16.07,
+    "EN": 32.62,
     "n_original": 2388,
-    "n_sel": 1327,
+    "n_sel": 1609,
     "n_with_duration": 2388,
     "coverage_duration": true,
     "note": "TS mesuré directement (Phase 1+2+3) ; TO/TR estimés via latences Jaeger (duration_us du span racine). Mode online = raffinement futur.",
     "TS_breakdown_s": {
       "phase1": 6.5574,
-      "phase2": 0.2753,
-      "phase3": 0.409
+      "phase2": 0.1797,
+      "phase3": 0.2386
     },
     "note_breakdown": "Phase 1 est un coût amortissable (indépendant de ΔS, calculé une fois et réutilisé). Phase 2+3 se relancent à chaque cycle de régression."
   },
   "output": {
-    "n_tier1_conserved": 1698,
-    "n_tier2_selected": 17,
-    "n_t_sel": 1327,
-    "reduction_globale": 0.4443,
-    "reduction_pct": "44.4%"
+    "n_tier1_conserved": 1910,
+    "n_tier2_selected": 15,
+    "n_t_sel": 1609,
+    "reduction_globale": 0.3262,
+    "reduction_pct": "32.6%"
   }
 }

@@ -1,23 +1,23 @@
 {
   "mode": "enriched",
   "stats": {
-    "n_input": 690,
-    "n_groups": 27,
-    "dedup_rate": 0.9609,
-    "dedup_pct": "96.1%",
-    "avg_group_size": 25.56,
+    "n_input": 478,
+    "n_groups": 23,
+    "dedup_rate": 0.9519,
+    "dedup_pct": "95.2%",
+    "avg_group_size": 20.78,
     "max_group_size": 216,
     "singletons": 4,
-    "singleton_pct": "14.8%"
+    "singleton_pct": "17.4%"
   },
   "groups": {
-    "('ts-security-service',)": [
-      "01a72fb325b9f262",
-      "27950a6e62eb0b67",
-      "701d1f9e4ce79540",
-      "e1bfff7bcf8478bb",
-      "ef972fbb26bc488a",
-      "fac8588cb77a0571"
+    "('ts-cancel-service',)": [
+      "8be1f0987dc4164d",
+      "9cdfe64e4c4fba09",
+      "a0a89d64620553d3",
+      "ac65c6a8da52d366",
+      "f403055837eba660",
+      "f5d318dee06fb15b"
     ],
     "('ts-preserve-service',)": [
       "422d85f5e10803f8",
@@ -27,17 +27,6 @@
       "b5dee1b7cea44292",
       "ed4b4e688039160c"
     ],
-    "('ts-cancel-service',)": [
-      "8be1f0987dc4164d",
-      "9cdfe64e4c4fba09",
-      "a0a89d64620553d3",
-      "ac65c6a8da52d366",
-      "f403055837eba660",
-      "f5d318dee06fb15b"
-    ],
-    "('ts-travel-service',)": [
-      "651b09c7dde969c0"
-    ],
     "('ts-seat-service',)": [
       "08d2a154fee34eba",
       "1592909ca5d9b6ac",
@@ -46,13 +35,8 @@
       "b94ee30de6b6ba73",
       "feeaddfdfb1f25f7"
     ],
-    "('ts-contacts-service',)": [
-      "1fa9f29b4648b586",
-      "307f033b1a8b317c",
-      "84f269aa9eab7be8",
-      "ad01e6e757a2be10",
-      "c4f368193a9095a8",
-      "ebac6db1287262d0"
+    "('ts-travel-service',)": [
+      "651b09c7dde969c0"
     ],
     "('ts-assurance-service',)": [
       "1a2326f84f4032ea",

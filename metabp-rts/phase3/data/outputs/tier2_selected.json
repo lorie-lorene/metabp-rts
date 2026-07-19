@@ -1,48 +1,12 @@
 [
   {
-    "test_id": "01a72fb325b9f262",
-    "invocation_chain": [],
-    "services": [
-      "ts-security-service"
-    ],
-    "score": 0.243727,
-    "score_avg": 0.243727,
-    "n_above_p": 1,
-    "n_services": 1,
-    "tier": 2,
-    "in_s_echo": false,
-    "in_delta_s": false,
-    "duration_us": 26414,
-    "endpoint": "/v2/api-docs",
-    "http_method": "GET",
-    "entry_service": "ts-security-service"
-  },
-  {
-    "test_id": "422d85f5e10803f8",
-    "invocation_chain": [],
-    "services": [
-      "ts-preserve-service"
-    ],
-    "score": 0.162487,
-    "score_avg": 0.162487,
-    "n_above_p": 1,
-    "n_services": 1,
-    "tier": 2,
-    "in_s_echo": false,
-    "in_delta_s": false,
-    "duration_us": 13792,
-    "endpoint": "/v2/api-docs",
-    "http_method": "GET",
-    "entry_service": "ts-preserve-service"
-  },
-  {
     "test_id": "8be1f0987dc4164d",
     "invocation_chain": [],
     "services": [
       "ts-cancel-service"
     ],
-    "score": 0.145754,
-    "score_avg": 0.145754,
+    "score": 0.234343,
+    "score_avg": 0.234343,
     "n_above_p": 1,
     "n_services": 1,
     "tier": 2,
@@ -54,22 +18,22 @@
     "entry_service": "ts-cancel-service"
   },
   {
-    "test_id": "24bbd015d9b5f111",
+    "test_id": "422d85f5e10803f8",
     "invocation_chain": [],
     "services": [
-      "ts-travel-service"
+      "ts-preserve-service"
     ],
-    "score": 0.10451,
-    "score_avg": 0.10451,
+    "score": 0.226067,
+    "score_avg": 0.226067,
     "n_above_p": 1,
     "n_services": 1,
     "tier": 2,
     "in_s_echo": false,
     "in_delta_s": false,
-    "duration_us": 30455,
+    "duration_us": 13792,
     "endpoint": "/v2/api-docs",
     "http_method": "GET",
-    "entry_service": "ts-travel-service"
+    "entry_service": "ts-preserve-service"
   },
   {
     "test_id": "08d2a154fee34eba",
@@ -77,8 +41,8 @@
     "services": [
       "ts-seat-service"
     ],
-    "score": 0.095634,
-    "score_avg": 0.095634,
+    "score": 0.155506,
+    "score_avg": 0.155506,
     "n_above_p": 1,
     "n_services": 1,
     "tier": 2,
@@ -90,22 +54,22 @@
     "entry_service": "ts-seat-service"
   },
   {
-    "test_id": "004111c202ef060a",
+    "test_id": "24bbd015d9b5f111",
     "invocation_chain": [],
     "services": [
-      "ts-contacts-service"
+      "ts-travel-service"
     ],
-    "score": 0.0,
-    "score_avg": 0.0,
-    "n_above_p": 0,
+    "score": 0.11124,
+    "score_avg": 0.11124,
+    "n_above_p": 1,
     "n_services": 1,
     "tier": 2,
     "in_s_echo": false,
     "in_delta_s": false,
-    "duration_us": 13721,
-    "endpoint": "/api/v1/contactservice/contacts/account/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f",
+    "duration_us": 30455,
+    "endpoint": "/v2/api-docs",
     "http_method": "GET",
-    "entry_service": "ts-contacts-service"
+    "entry_service": "ts-travel-service"
   },
   {
     "test_id": "009511bca0d0f9c5",

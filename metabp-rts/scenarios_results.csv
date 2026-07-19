@@ -1,0 +1,5 @@
+scenario,delta_s,T_sel,EN,Recall,Precision,F,M
+S1_feuille,ts-station-service,1327,44.43,100.0,96.16,0.9804,1276
+S2_hub,ts-order-service,622,73.95,100.0,94.37,0.9711,587
+S3_intermediaire,ts-basic-service,226,90.54,100.0,76.11,0.8643,172
+S4_multiple,ts-station-service+ts-order-service+ts-contacts-service,1609,32.62,100.0,98.26,0.9912,1581

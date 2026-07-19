@@ -1,22 +1,22 @@
 {
-  "fcs": 95.06,
-  "n_total": 3828,
-  "n_killed": 3639,
-  "n_survived": 189,
+  "fcs": 95.3,
+  "n_total": 4743,
+  "n_killed": 4520,
+  "n_survived": 223,
   "by_operator": {
     "span_deletion": {
-      "n_killed": 1104,
-      "n_total": 1276,
-      "fcs": 86.52
+      "n_killed": 1371,
+      "n_total": 1581,
+      "fcs": 86.72
     },
     "error_injection": {
-      "n_killed": 1259,
-      "n_total": 1276,
-      "fcs": 98.67
+      "n_killed": 1568,
+      "n_total": 1581,
+      "fcs": 99.18
     },
     "latency_injection": {
-      "n_killed": 1276,
-      "n_total": 1276,
+      "n_killed": 1581,
+      "n_total": 1581,
       "fcs": 100.0
     }
   }
