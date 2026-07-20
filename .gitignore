@@ -4,7 +4,3 @@ metabp-rts/phase1/data/raw/traces_raw.json
 __pycache__/
 *.pyc
 benchmark/
-phase*/data/
-phase4/mutation/*.json
-phase4/latence/*.yaml
-phase4/metamorphic/*.json
