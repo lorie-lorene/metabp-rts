@@ -4,3 +4,4 @@ metabp-rts/phase1/data/raw/traces_raw.json
 __pycache__/
 *.pyc
 benchmark/
+doc.md
