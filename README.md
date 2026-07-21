@@ -54,3 +54,7 @@ Les **paramètres** (α=0,5 / β=0,3 / γ=0,2, params BPSO, k=3, δ, Λ) sont da
 En résumé, quatre fichiers de résultats à committer (`qr1_echo_dormant.csv`, `qr1_resonance.csv`, `qr3_validation.csv`, `qr2_et.csv`), le `mr_catalogue.json`, deux images (graphe G propre + Fig 4.2), et la config machine par message. Le reste, je l'ai ou je le lis.
 
 Veux-tu que je te prépare un petit script qui extrait ces quatre CSV depuis les sorties existantes de tes phases, pour t'éviter de les monter à la main ?
+
+appliquer PathMR (déduplication séman-
+tique) et BPSO sur les chemins ne traversant pas les services Écho-Impact, en
+maximisant la couverture des zones à fort impact// on n'a pas de metrique qui montre la couvertures des services a fort impact, qu'en pense tu ?ni de metrique qui exprime la qualite de test apres la verification metamorphique ?
