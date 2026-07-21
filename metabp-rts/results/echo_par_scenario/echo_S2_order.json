@@ -1,0 +1,120 @@
+{
+  "delta_s": [
+    "ts-order-service"
+  ],
+  "tau_impact": 0.284921,
+  "weighting_method": "ewm_critic",
+  "threshold_method": "auto",
+  "omega_theta": 0.48335589607651797,
+  "omega_B": 0.516644103923482,
+  "s_echo": [
+    "ts-execute-service",
+    "ts-order-other-service",
+    "ts-ticketinfo-service",
+    "ts-inside-payment-service",
+    "ts-consign-service",
+    "ts-travel2-service",
+    "ts-admin-basic-info-service",
+    "ts-auth-service",
+    "ts-rebook-service",
+    "ts-security-service"
+  ],
+  "echo_impact_services": [
+    {
+      "service_name": "ts-execute-service",
+      "cit_score": 0.500691,
+      "theta_phase1": 0.387911,
+      "theta_complet": 0.446178,
+      "was_dormant": true,
+      "resonance": true
+    },
+    {
+      "service_name": "ts-order-other-service",
+      "cit_score": 0.453213,
+      "theta_phase1": 0.453213,
+      "theta_complet": 0.453213,
+      "was_dormant": true,
+      "resonance": true
+    },
+    {
+      "service_name": "ts-ticketinfo-service",
+      "cit_score": 0.452818,
+      "theta_phase1": 0.452818,
+      "theta_complet": 0.452818,
+      "was_dormant": true,
+      "resonance": true
+    },
+    {
+      "service_name": "ts-inside-payment-service",
+      "cit_score": 0.409658,
+      "theta_phase1": 0.409658,
+      "theta_complet": 0.409658,
+      "was_dormant": true,
+      "resonance": true
+    },
+    {
+      "service_name": "ts-consign-service",
+      "cit_score": 0.40943,
+      "theta_phase1": 0.40943,
+      "theta_complet": 0.40943,
+      "was_dormant": true,
+      "resonance": true
+    },
+    {
+      "service_name": "ts-travel2-service",
+      "cit_score": 0.388025,
+      "theta_phase1": 0.388025,
+      "theta_complet": 0.388025,
+      "was_dormant": true,
+      "resonance": true
+    },
+    {
+      "service_name": "ts-admin-basic-info-service",
+      "cit_score": 0.387632,
+      "theta_phase1": 0.387632,
+      "theta_complet": 0.387632,
+      "was_dormant": true,
+      "resonance": true
+    },
+    {
+      "service_name": "ts-auth-service",
+      "cit_score": 0.387594,
+      "theta_phase1": 0.387594,
+      "theta_complet": 0.387594,
+      "was_dormant": true,
+      "resonance": true
+    },
+    {
+      "service_name": "ts-rebook-service",
+      "cit_score": 0.384201,
+      "theta_phase1": 0.206453,
+      "theta_complet": 0.298285,
+      "was_dormant": false,
+      "resonance": false
+    },
+    {
+      "service_name": "ts-security-service",
+      "cit_score": 0.3355,
+      "theta_phase1": 0.227971,
+      "theta_complet": 0.283525,
+      "was_dormant": false,
+      "resonance": false
+    }
+  ],
+  "stats": {
+    "n_services_total": 27,
+    "n_modified": 1,
+    "n_echo_impact": 10,
+    "n_resonant": 8,
+    "resonance_rate": 0.8,
+    "max_cit": 1.0,
+    "avg_cit_all": 0.2117,
+    "avg_cit_echo_impact": 0.4109,
+    "avg_theta_complet": 0.2078,
+    "weighting_method": "ewm_critic",
+    "threshold_method": "auto",
+    "omega_theta": 0.483356,
+    "omega_B": 0.516644,
+    "tau_impact": 0.284921
+  }
+}

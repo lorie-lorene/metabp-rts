@@ -1,0 +1,111 @@
+{
+  "delta_s": [
+    "ts-basic-service"
+  ],
+  "tau_impact": 0.314906,
+  "weighting_method": "ewm_critic",
+  "threshold_method": "auto",
+  "omega_theta": 0.4916241414575077,
+  "omega_B": 0.5083758585424922,
+  "s_echo": [
+    "ts-order-service",
+    "ts-ticketinfo-service",
+    "ts-order-other-service",
+    "ts-inside-payment-service",
+    "ts-consign-service",
+    "ts-travel2-service",
+    "ts-execute-service",
+    "ts-admin-basic-info-service",
+    "ts-auth-service"
+  ],
+  "echo_impact_services": [
+    {
+      "service_name": "ts-order-service",
+      "cit_score": 0.539508,
+      "theta_phase1": 0.539508,
+      "theta_complet": 0.539508,
+      "was_dormant": true,
+      "resonance": true
+    },
+    {
+      "service_name": "ts-ticketinfo-service",
+      "cit_score": 0.500908,
+      "theta_phase1": 0.452818,
+      "theta_complet": 0.477266,
+      "was_dormant": true,
+      "resonance": true
+    },
+    {
+      "service_name": "ts-order-other-service",
+      "cit_score": 0.453213,
+      "theta_phase1": 0.453213,
+      "theta_complet": 0.453213,
+      "was_dormant": true,
+      "resonance": true
+    },
+    {
+      "service_name": "ts-inside-payment-service",
+      "cit_score": 0.409658,
+      "theta_phase1": 0.409658,
+      "theta_complet": 0.409658,
+      "was_dormant": true,
+      "resonance": true
+    },
+    {
+      "service_name": "ts-consign-service",
+      "cit_score": 0.40943,
+      "theta_phase1": 0.40943,
+      "theta_complet": 0.40943,
+      "was_dormant": true,
+      "resonance": true
+    },
+    {
+      "service_name": "ts-travel2-service",
+      "cit_score": 0.388025,
+      "theta_phase1": 0.388025,
+      "theta_complet": 0.388025,
+      "was_dormant": true,
+      "resonance": true
+    },
+    {
+      "service_name": "ts-execute-service",
+      "cit_score": 0.387911,
+      "theta_phase1": 0.387911,
+      "theta_complet": 0.387911,
+      "was_dormant": true,
+      "resonance": true
+    },
+    {
+      "service_name": "ts-admin-basic-info-service",
+      "cit_score": 0.387632,
+      "theta_phase1": 0.387632,
+      "theta_complet": 0.387632,
+      "was_dormant": true,
+      "resonance": true
+    },
+    {
+      "service_name": "ts-auth-service",
+      "cit_score": 0.387594,
+      "theta_phase1": 0.387594,
+      "theta_complet": 0.387594,
+      "was_dormant": true,
+      "resonance": true
+    }
+  ],
+  "stats": {
+    "n_services_total": 27,
+    "n_modified": 1,
+    "n_echo_impact": 9,
+    "n_resonant": 9,
+    "resonance_rate": 1.0,
+    "max_cit": 1.0,
+    "avg_cit_all": 0.214,
+    "avg_cit_echo_impact": 0.4293,
+    "avg_theta_complet": 0.2089,
+    "weighting_method": "ewm_critic",
+    "threshold_method": "auto",
+    "omega_theta": 0.491624,
+    "omega_B": 0.508376,
+    "tau_impact": 0.314906
+  }
+}
