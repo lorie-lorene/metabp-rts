@@ -1,0 +1,54 @@
+{
+  "etage": "2a",
+  "niveau_faute": "reponse",
+  "sensibilite_pct": 100.0,
+  "specificite_pct": 100.0,
+  "n_vraies_fautes": 6,
+  "n_fautes_detectees": 6,
+  "n_controles": 1,
+  "n_controles_ok": 1,
+  "details": [
+    {
+      "faute": "stations: gare supprimée",
+      "famille": "idempotence/équivalence",
+      "detectee": true,
+      "is_control": false
+    },
+    {
+      "faute": "consigns(60): élément supprimé",
+      "famille": "idempotence",
+      "detectee": true,
+      "is_control": false
+    },
+    {
+      "faute": "contacts: id corrompu",
+      "famille": "idempotence",
+      "detectee": true,
+      "is_control": false
+    },
+    {
+      "faute": "contacts: contournement auth",
+      "famille": "auth",
+      "detectee": true,
+      "is_control": false
+    },
+    {
+      "faute": "stations idlist: mapping corrompu",
+      "famille": "équivalence",
+      "detectee": true,
+      "is_control": false
+    },
+    {
+      "faute": "xsvc contacts: désynchro",
+      "famille": "cohérence-inter-svc",
+      "detectee": true,
+      "is_control": false
+    },
+    {
+      "faute": "stations: réordonnancement (contrôle)",
+      "famille": "idempotence",
+      "detectee": false,
+      "is_control": true
+    }
+  ]
+}

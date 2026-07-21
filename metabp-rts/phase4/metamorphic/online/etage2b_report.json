@@ -1,0 +1,38 @@
+{
+  "etage": "2b",
+  "niveau_faute": "service",
+  "sensibilite_pct": 100.0,
+  "n_vraies_fautes": 3,
+  "n_detectees": 3,
+  "faux_positifs": 0,
+  "details": [
+    {
+      "mode": "none",
+      "gares_vues": 13,
+      "verdict": "PASS",
+      "attendu": "PASS",
+      "conforme": true
+    },
+    {
+      "mode": "drop_one",
+      "gares_vues": 12,
+      "verdict": "FAIL",
+      "attendu": "FAIL",
+      "conforme": true
+    },
+    {
+      "mode": "corrupt_id",
+      "gares_vues": 13,
+      "verdict": "FAIL",
+      "attendu": "FAIL",
+      "conforme": true
+    },
+    {
+      "mode": "empty",
+      "gares_vues": 0,
+      "verdict": "FAIL",
+      "attendu": "FAIL",
+      "conforme": true
+    }
+  ]
+}

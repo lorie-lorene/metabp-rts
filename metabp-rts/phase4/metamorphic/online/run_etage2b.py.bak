@@ -29,7 +29,6 @@ ref = requests.get(f"http://127.0.0.1:12345{STATIONS}", timeout=10).json()
 ref_ids = extract_station_ids(ref)
 print(f"référence saine : {len(ref_ids)} gares\n")
 
-_results = []
 print(f"{'Mode faute':14s} | gares vues | MR (vs référence) | attendu")
 print("-"*66)
 for mode, expect in [("none","PASS"),("drop_one","FAIL"),("corrupt_id","FAIL"),("empty","FAIL")]:
@@ -43,32 +42,8 @@ for mode, expect in [("none","PASS"),("drop_one","FAIL"),("corrupt_id","FAIL"),(
         verdict = "PASS" if ok else "FAIL"
         mark = "✅" if verdict == expect else "⚠️ INATTENDU"
         print(f"{mode:14s} | {len(served_ids):10d} | {verdict:17s} | {expect}  {mark}")
-        _results.append({"mode": mode, "gares_vues": len(served_ids),
-                         "verdict": verdict, "attendu": expect,
-                         "conforme": verdict == expect})
     finally:
         p.send_signal(signal.SIGTERM); p.wait()
 
 print("-"*66)
 print("Étage 2b : la faute vient du SERVICE (proxy), pas du runner.")
-
-# Sensibilité = fautes détectées / vraies fautes (tous les modes sauf 'none')
-import json
-fautes = [r for r in _results if r["mode"] != "none"]
-detectees = sum(1 for r in fautes if r["verdict"] == "FAIL")
-faux_positifs = sum(1 for r in _results if r["mode"] == "none" and r["verdict"] == "FAIL")
-sensibilite = 100*detectees/len(fautes) if fautes else 0
-print(f"\nSensibilité (fautes service détectées) : {detectees}/{len(fautes)} = {sensibilite:.0f}%")
-print(f"Fausses alarmes (mode sain)            : {faux_positifs}")
-
-report = {
-    "etage": "2b",
-    "niveau_faute": "service",
-    "sensibilite_pct": round(sensibilite, 1),
-    "n_vraies_fautes": len(fautes),
-    "n_detectees": detectees,
-    "faux_positifs": faux_positifs,
-    "details": _results,
-}
-json.dump(report, open("etage2b_report.json", "w"), ensure_ascii=False, indent=2)
-print("→ etage2b_report.json sauvegardé")

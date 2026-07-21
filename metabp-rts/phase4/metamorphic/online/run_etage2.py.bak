@@ -136,24 +136,5 @@ for name, fam, fn in scenarios:
     print(f"{name:38s} | {fam:20s} | {'✅ OUI' if detected else '❌ NON'}")
 
 print("-"*80)
-# Séparer vraies fautes et contrôles
-_res = []
-for _name, _fam, _fn in scenarios:
-    _det, _ = _fn()
-    _ctrl = "contrôle" in _name.lower() or "controle" in _name.lower()
-    _res.append({"faute": _name, "famille": _fam, "detectee": bool(_det), "is_control": _ctrl})
-_vraies = [r for r in _res if not r["is_control"]]
-_ctrls  = [r for r in _res if r["is_control"]]
-_nfd = sum(1 for r in _vraies if r["detectee"])
-_nco = sum(1 for r in _ctrls if not r["detectee"])
-_sens = 100*_nfd/len(_vraies) if _vraies else 0
-_spec = 100*_nco/len(_ctrls) if _ctrls else 0
-print(f"Sensibilité (vraies fautes détectées)  : {_nfd}/{len(_vraies)} = {_sens:.0f}%")
-print(f"Spécificité (contrôles non déclenchés) : {_nco}/{len(_ctrls)} = {_spec:.0f}%")
-import json as _json
-_json.dump({"etage":"2a","niveau_faute":"reponse","sensibilite_pct":round(_sens,1),
-            "specificite_pct":round(_spec,1),"n_vraies_fautes":len(_vraies),
-            "n_fautes_detectees":_nfd,"n_controles":len(_ctrls),"n_controles_ok":_nco,
-            "details":_res},
-           open("etage2a_report.json","w"), ensure_ascii=False, indent=2)
-print("→ etage2a_report.json sauvegardé")
+print(f"Fautes détectées : {n_det}/{len(scenarios)}  (taux = {round(100*n_det/len(scenarios),1)}%)")
+print("Note : le réordonnancement NE doit PAS être détecté (oracle ensembliste robuste à l'ordre).")
