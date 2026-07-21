@@ -1,0 +1,5 @@
+scenario,delta_s,n_s_echo,n_couverts,cov_impact_pct,services_non_couverts
+S1_station,ts-station-service,11,11,100.0,
+S2_order,ts-order-service,11,11,100.0,
+S3_basic,ts-basic-service,10,10,100.0,
+S4_multiple,ts-station-service+ts-order-service+ts-contacts-service,14,14,100.0,
