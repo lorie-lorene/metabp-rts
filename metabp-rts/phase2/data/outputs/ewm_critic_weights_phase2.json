@@ -1,27 +1,27 @@
 {
   "weighting": {
     "method": "ewm_critic",
-    "omega_theta": 0.493362,
-    "omega_B": 0.506638,
+    "omega_theta": 0.383984,
+    "omega_B": 0.616016,
     "details": {
       "method": "EWM-CRITIC combined",
-      "n_services": 27,
+      "n_services": 8,
       "n_criteria": 2,
       "criteria": [
         "Θ_dormant",
         "CIT"
       ],
       "weights_ewm": {
-        "Θ_dormant": 0.478013,
-        "CIT": 0.521987
+        "Θ_dormant": 0.346165,
+        "CIT": 0.653835
       },
       "weights_critic": {
-        "Θ_dormant": 0.515359,
-        "CIT": 0.484641
+        "Θ_dormant": 0.540727,
+        "CIT": 0.459273
       },
       "weights_combined": {
-        "Θ_dormant": 0.493362,
-        "CIT": 0.506638
+        "Θ_dormant": 0.383984,
+        "CIT": 0.616016
       },
       "references": [
         "Shannon, C.E. (1948). A Mathematical Theory of Communication.",
@@ -31,60 +31,60 @@
   },
   "threshold": {
     "method": "auto",
-    "tau_impact": 0.289448,
+    "tau_impact": 0.171709,
     "details": {
       "method": "kmeans_k3_auto_threshold",
       "k": 3,
-      "tau": 0.289448,
-      "n_dormant": 11,
-      "n_total": 24,
+      "tau": 0.171709,
+      "n_dormant": 3,
+      "n_total": 7,
       "cluster_high": {
-        "centroid": 0.429466,
-        "n_members": 11,
-        "min": 0.344553,
-        "max": 0.501429
+        "centroid": 0.433129,
+        "n_members": 3,
+        "min": 0.343419,
+        "max": 0.483233
       },
       "cluster_mid": {
-        "centroid": 0.181789,
+        "centroid": 0.0,
         "n_members": 4,
-        "min": 0.11124,
-        "max": 0.234343
+        "min": 0.0,
+        "max": 0.0
       },
-      "separation": 0.11021,
+      "separation": 0.343419,
       "formula": "τ = (min(Cluster_haut) + max(Cluster_intermédiaire)) / 2",
       "top_gaps": [
         {
-          "rank": 15,
-          "score_above": 0.11124,
-          "score_below": 0.0,
-          "gap": 0.11124
-        },
-        {
-          "rank": 11,
-          "score_above": 0.344553,
-          "score_below": 0.234343,
-          "gap": 0.11021
-        },
-        {
-          "rank": 13,
-          "score_above": 0.226067,
-          "score_below": 0.155506,
-          "gap": 0.070561
-        },
-        {
           "rank": 3,
-          "score_above": 0.500322,
-          "score_below": 0.452818,
-          "gap": 0.047504
+          "score_above": 0.343419,
+          "score_below": 0.0,
+          "gap": 0.343419
         },
         {
-          "rank": 14,
-          "score_above": 0.155506,
-          "score_below": 0.11124,
-          "gap": 0.044266
+          "rank": 2,
+          "score_above": 0.472736,
+          "score_below": 0.343419,
+          "gap": 0.129317
+        },
+        {
+          "rank": 1,
+          "score_above": 0.483233,
+          "score_below": 0.472736,
+          "gap": 0.010497
+        },
+        {
+          "rank": 4,
+          "score_above": 0.0,
+          "score_below": 0.0,
+          "gap": 0.0
+        },
+        {
+          "rank": 5,
+          "score_above": 0.0,
+          "score_below": 0.0,
+          "gap": 0.0
         }
       ],
-      "justification": "K-means k=3 identifie 11 services dans le cluster supérieur (centroïde=0.4295). Le seuil τ=0.2894 est la frontière naturelle entre ce cluster et le cluster intermédiaire (centroïde=0.1818). Le gap de séparation est 0.1102."
+      "justification": "K-means k=3 identifie 3 services dans le cluster supérieur (centroïde=0.4331). Le seuil τ=0.1717 est la frontière naturelle entre ce cluster et le cluster intermédiaire (centroïde=0.0000). Le gap de séparation est 0.3434."
     }
   }
 }

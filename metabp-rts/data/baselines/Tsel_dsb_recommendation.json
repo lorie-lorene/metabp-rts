@@ -1,0 +1,572 @@
+[
+  {
+    "test_id": "0024d10395a79ba1",
+    "invocation_chain": [],
+    "services": [
+      "reservation"
+    ],
+    "score": 0.496553,
+    "score_avg": 0.496553,
+    "n_above_p": 1,
+    "n_services": 1,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 3890,
+    "endpoint": "/reservation",
+    "http_method": "GET",
+    "entry_service": "reservation"
+  },
+  {
+    "test_id": "0072f696f1d72954",
+    "invocation_chain": [
+      [
+        "search",
+        "rate"
+      ],
+      [
+        "search",
+        "geo"
+      ],
+      [
+        "rate",
+        "memcached"
+      ],
+      [
+        "profile",
+        "memcached"
+      ],
+      [
+        "reservation",
+        "memcached"
+      ],
+      [
+        "reservation",
+        "memcached"
+      ]
+    ],
+    "services": [
+      "search",
+      "rate",
+      "geo",
+      "memcached",
+      "profile",
+      "reservation"
+    ],
+    "score": 0.496553,
+    "score_avg": 0.262791,
+    "n_above_p": 4,
+    "n_services": 6,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 36979,
+    "endpoint": "/hotels",
+    "http_method": "GET",
+    "entry_service": "reservation"
+  },
+  {
+    "test_id": "00d75c2dbf153f90",
+    "invocation_chain": [
+      [
+        "search",
+        "geo"
+      ],
+      [
+        "search",
+        "rate"
+      ],
+      [
+        "rate",
+        "memcached"
+      ],
+      [
+        "profile",
+        "memcached"
+      ],
+      [
+        "reservation",
+        "memcached"
+      ],
+      [
+        "reservation",
+        "memcached"
+      ]
+    ],
+    "services": [
+      "search",
+      "geo",
+      "rate",
+      "memcached",
+      "profile",
+      "reservation"
+    ],
+    "score": 0.496553,
+    "score_avg": 0.262791,
+    "n_above_p": 4,
+    "n_services": 6,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 10385,
+    "endpoint": "/hotels",
+    "http_method": "GET",
+    "entry_service": "reservation"
+  },
+  {
+    "test_id": "00f503f2c21c8345",
+    "invocation_chain": [
+      [
+        "rate",
+        "memcached"
+      ],
+      [
+        "profile",
+        "memcached"
+      ],
+      [
+        "reservation",
+        "memcached"
+      ],
+      [
+        "reservation",
+        "memcached"
+      ],
+      [
+        "search",
+        "geo"
+      ],
+      [
+        "search",
+        "rate"
+      ]
+    ],
+    "services": [
+      "rate",
+      "memcached",
+      "profile",
+      "reservation",
+      "search",
+      "geo"
+    ],
+    "score": 0.496553,
+    "score_avg": 0.262791,
+    "n_above_p": 4,
+    "n_services": 6,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 24211,
+    "endpoint": "/hotels",
+    "http_method": "GET",
+    "entry_service": "search"
+  },
+  {
+    "test_id": "01b33e1f39521155",
+    "invocation_chain": [
+      [
+        "profile",
+        "memcached"
+      ],
+      [
+        "reservation",
+        "memcached"
+      ],
+      [
+        "reservation",
+        "memcached"
+      ],
+      [
+        "search",
+        "rate"
+      ],
+      [
+        "search",
+        "geo"
+      ],
+      [
+        "rate",
+        "memcached"
+      ]
+    ],
+    "services": [
+      "profile",
+      "memcached",
+      "reservation",
+      "search",
+      "rate",
+      "geo"
+    ],
+    "score": 0.496553,
+    "score_avg": 0.262791,
+    "n_above_p": 4,
+    "n_services": 6,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 17532,
+    "endpoint": "/hotels",
+    "http_method": "GET",
+    "entry_service": "search"
+  },
+  {
+    "test_id": "028f3f24015b14d1",
+    "invocation_chain": [
+      [
+        "rate",
+        "memcached"
+      ],
+      [
+        "profile",
+        "memcached"
+      ],
+      [
+        "reservation",
+        "memcached"
+      ],
+      [
+        "reservation",
+        "memcached"
+      ],
+      [
+        "search",
+        "rate"
+      ],
+      [
+        "search",
+        "geo"
+      ]
+    ],
+    "services": [
+      "rate",
+      "memcached",
+      "profile",
+      "reservation",
+      "search",
+      "geo"
+    ],
+    "score": 0.496553,
+    "score_avg": 0.262791,
+    "n_above_p": 4,
+    "n_services": 6,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 37391,
+    "endpoint": "/hotels",
+    "http_method": "GET",
+    "entry_service": "search"
+  },
+  {
+    "test_id": "05bdbc4ab3a03a8c",
+    "invocation_chain": [
+      [
+        "reservation",
+        "memcached"
+      ],
+      [
+        "reservation",
+        "memcached"
+      ],
+      [
+        "search",
+        "geo"
+      ],
+      [
+        "search",
+        "rate"
+      ],
+      [
+        "rate",
+        "memcached"
+      ],
+      [
+        "profile",
+        "memcached"
+      ]
+    ],
+    "services": [
+      "reservation",
+      "memcached",
+      "search",
+      "geo",
+      "rate",
+      "profile"
+    ],
+    "score": 0.496553,
+    "score_avg": 0.262791,
+    "n_above_p": 4,
+    "n_services": 6,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 22344,
+    "endpoint": "/hotels",
+    "http_method": "GET",
+    "entry_service": "reservation"
+  },
+  {
+    "test_id": "0937b260019d877c",
+    "invocation_chain": [
+      [
+        "reservation",
+        "memcached"
+      ],
+      [
+        "search",
+        "geo"
+      ],
+      [
+        "search",
+        "rate"
+      ],
+      [
+        "rate",
+        "memcached"
+      ],
+      [
+        "profile",
+        "memcached"
+      ],
+      [
+        "reservation",
+        "memcached"
+      ]
+    ],
+    "services": [
+      "reservation",
+      "memcached",
+      "search",
+      "geo",
+      "rate",
+      "profile"
+    ],
+    "score": 0.496553,
+    "score_avg": 0.262791,
+    "n_above_p": 4,
+    "n_services": 6,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 27355,
+    "endpoint": "/hotels",
+    "http_method": "GET",
+    "entry_service": "reservation"
+  },
+  {
+    "test_id": "0b8171783f5ca83a",
+    "invocation_chain": [
+      [
+        "profile",
+        "memcached"
+      ],
+      [
+        "reservation",
+        "memcached"
+      ],
+      [
+        "reservation",
+        "memcached"
+      ],
+      [
+        "search",
+        "geo"
+      ],
+      [
+        "search",
+        "rate"
+      ],
+      [
+        "rate",
+        "memcached"
+      ]
+    ],
+    "services": [
+      "profile",
+      "memcached",
+      "reservation",
+      "search",
+      "geo",
+      "rate"
+    ],
+    "score": 0.496553,
+    "score_avg": 0.262791,
+    "n_above_p": 4,
+    "n_services": 6,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 14630,
+    "endpoint": "/hotels",
+    "http_method": "GET",
+    "entry_service": "search"
+  },
+  {
+    "test_id": "0bb8b27aeb6a7f78",
+    "invocation_chain": [
+      [
+        "search",
+        "geo"
+      ],
+      [
+        "rate",
+        "memcached"
+      ],
+      [
+        "profile",
+        "memcached"
+      ],
+      [
+        "reservation",
+        "memcached"
+      ],
+      [
+        "reservation",
+        "memcached"
+      ],
+      [
+        "search",
+        "rate"
+      ]
+    ],
+    "services": [
+      "search",
+      "geo",
+      "rate",
+      "memcached",
+      "profile",
+      "reservation"
+    ],
+    "score": 0.496553,
+    "score_avg": 0.262791,
+    "n_above_p": 4,
+    "n_services": 6,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 25477,
+    "endpoint": "/hotels",
+    "http_method": "GET",
+    "entry_service": "search"
+  },
+  {
+    "test_id": "0da9d3878aa36a88",
+    "invocation_chain": [
+      [
+        "reservation",
+        "memcached"
+      ],
+      [
+        "reservation",
+        "memcached"
+      ],
+      [
+        "search",
+        "rate"
+      ],
+      [
+        "search",
+        "geo"
+      ],
+      [
+        "rate",
+        "memcached"
+      ],
+      [
+        "profile",
+        "memcached"
+      ]
+    ],
+    "services": [
+      "reservation",
+      "memcached",
+      "search",
+      "rate",
+      "geo",
+      "profile"
+    ],
+    "score": 0.496553,
+    "score_avg": 0.262791,
+    "n_above_p": 4,
+    "n_services": 6,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 25251,
+    "endpoint": "/hotels",
+    "http_method": "GET",
+    "entry_service": "search"
+  },
+  {
+    "test_id": "5d2fdd8f0343cd07",
+    "invocation_chain": [
+      [
+        "reservation",
+        "memcached"
+      ],
+      [
+        "search",
+        "rate"
+      ],
+      [
+        "search",
+        "geo"
+      ],
+      [
+        "rate",
+        "memcached"
+      ],
+      [
+        "profile",
+        "memcached"
+      ],
+      [
+        "reservation",
+        "memcached"
+      ]
+    ],
+    "services": [
+      "reservation",
+      "memcached",
+      "search",
+      "rate",
+      "geo",
+      "profile"
+    ],
+    "score": 0.496553,
+    "score_avg": 0.262791,
+    "n_above_p": 4,
+    "n_services": 6,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 29819,
+    "endpoint": "/hotels",
+    "http_method": "GET",
+    "entry_service": "search"
+  },
+  {
+    "test_id": "00952494eff61606",
+    "invocation_chain": [
+      [
+        "profile",
+        "memcached"
+      ]
+    ],
+    "services": [
+      "profile",
+      "memcached"
+    ],
+    "score": 0.411688,
+    "score_avg": 0.205844,
+    "n_above_p": 1,
+    "n_services": 2,
+    "tier": 1,
+    "in_s_echo": true,
+    "in_delta_s": false,
+    "duration_us": 1746,
+    "endpoint": "/recommendations",
+    "http_method": "GET",
+    "entry_service": "recommendation"
+  }
+]

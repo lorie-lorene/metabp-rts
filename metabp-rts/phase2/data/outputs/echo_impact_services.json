@@ -1,131 +1,57 @@
 {
   "delta_s": [
-    "ts-station-service",
-    "ts-order-service",
-    "ts-contacts-service"
+    "profile"
   ],
-  "tau_impact": 0.289448,
+  "tau_impact": 0.171709,
   "weighting_method": "ewm_critic",
   "threshold_method": "auto",
-  "omega_theta": 0.4933624380715956,
-  "omega_B": 0.5066375619284044,
+  "omega_theta": 0.3839843905828988,
+  "omega_B": 0.6160156094171012,
   "s_echo": [
-    "ts-order-other-service",
-    "ts-execute-service",
-    "ts-admin-basic-info-service",
-    "ts-ticketinfo-service",
-    "ts-basic-service",
-    "ts-inside-payment-service",
-    "ts-consign-service",
-    "ts-rebook-service",
-    "ts-travel2-service",
-    "ts-auth-service",
-    "ts-security-service"
+    "reservation",
+    "rate",
+    "search"
   ],
   "echo_impact_services": [
     {
-      "service_name": "ts-order-other-service",
-      "cit_score": 0.501429,
-      "theta_phase1": 0.453213,
-      "theta_complet": 0.477641,
+      "service_name": "reservation",
+      "cit_score": 0.483233,
+      "theta_phase1": 0.483233,
+      "theta_complet": 0.483233,
       "was_dormant": true,
       "resonance": true
     },
     {
-      "service_name": "ts-execute-service",
-      "cit_score": 0.500691,
-      "theta_phase1": 0.387911,
-      "theta_complet": 0.44505,
+      "service_name": "rate",
+      "cit_score": 0.472736,
+      "theta_phase1": 0.472736,
+      "theta_complet": 0.472736,
       "was_dormant": true,
       "resonance": true
     },
     {
-      "service_name": "ts-admin-basic-info-service",
-      "cit_score": 0.500322,
-      "theta_phase1": 0.387632,
-      "theta_complet": 0.444725,
+      "service_name": "search",
+      "cit_score": 0.343419,
+      "theta_phase1": 0.343419,
+      "theta_complet": 0.343419,
       "was_dormant": true,
       "resonance": true
-    },
-    {
-      "service_name": "ts-ticketinfo-service",
-      "cit_score": 0.452818,
-      "theta_phase1": 0.452818,
-      "theta_complet": 0.452818,
-      "was_dormant": true,
-      "resonance": true
-    },
-    {
-      "service_name": "ts-basic-service",
-      "cit_score": 0.44003,
-      "theta_phase1": 0.149819,
-      "theta_complet": 0.296851,
-      "was_dormant": false,
-      "resonance": false
-    },
-    {
-      "service_name": "ts-inside-payment-service",
-      "cit_score": 0.409658,
-      "theta_phase1": 0.409658,
-      "theta_complet": 0.409658,
-      "was_dormant": true,
-      "resonance": true
-    },
-    {
-      "service_name": "ts-consign-service",
-      "cit_score": 0.40943,
-      "theta_phase1": 0.40943,
-      "theta_complet": 0.40943,
-      "was_dormant": true,
-      "resonance": true
-    },
-    {
-      "service_name": "ts-rebook-service",
-      "cit_score": 0.38958,
-      "theta_phase1": 0.206453,
-      "theta_complet": 0.299232,
-      "was_dormant": false,
-      "resonance": false
-    },
-    {
-      "service_name": "ts-travel2-service",
-      "cit_score": 0.388025,
-      "theta_phase1": 0.388025,
-      "theta_complet": 0.388025,
-      "was_dormant": true,
-      "resonance": true
-    },
-    {
-      "service_name": "ts-auth-service",
-      "cit_score": 0.387594,
-      "theta_phase1": 0.387594,
-      "theta_complet": 0.387594,
-      "was_dormant": true,
-      "resonance": true
-    },
-    {
-      "service_name": "ts-security-service",
-      "cit_score": 0.344553,
-      "theta_phase1": 0.227971,
-      "theta_complet": 0.287036,
-      "was_dormant": false,
-      "resonance": false
     }
   ],
   "stats": {
-    "n_services_total": 27,
-    "n_modified": 3,
-    "n_echo_impact": 11,
-    "n_resonant": 8,
-    "resonance_rate": 0.7273,
+    "n_services_total": 8,
+    "n_modified": 1,
+    "n_echo_impact": 3,
+    "n_resonant": 3,
+    "resonance_rate": 1.0,
     "max_cit": 1.0,
-    "avg_cit_all": 0.313,
-    "avg_cit_echo_impact": 0.4295,
-    "avg_theta_complet": 0.259,
+    "avg_cit_all": 0.2874,
+    "avg_cit_echo_impact": 0.4331,
+    "avg_theta_complet": 0.2718,
     "weighting_method": "ewm_critic",
     "threshold_method": "auto",
-    "omega_theta": 0.493362,
-    "omega_B": 0.506638,
-    "tau_impact": 0.289448
+    "omega_theta": 0.383984,
+    "omega_B": 0.616016,
+    "tau_impact": 0.171709
   }
 }

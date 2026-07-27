@@ -1,14 +1,4 @@
-"""
-Calcule F(si) = fragilité opérationnelle observée pour chaque service  automatique depuis les données Jaeger
-Formule :
-    err_out(si) = Σ erreurs(si→sj) / Σ freq(si→sj)pour tous sj successeurs de si
-    F(si) = norm(err_out(si))
-          = err_out(si) / max(err_out sur tous les services) Un service avec beaucoup d'erreurs sortantes est opérationnellement fragile → score F élevé.
-          Si un service n'a aucun arc sortant, F(si) = 0.0
-ENTREES   : Dict {(si,sj): EdgeWeight}  (sortie de weight_calculator)
-SORTIES   : Dict {service_name: float}  — scores F dans [0, 1]
 
-"""
 
 import logging
 from collections import defaultdict
@@ -37,18 +27,7 @@ class FragilityCalculator:
 
 
     def compute_from_spans(self, spans) -> Dict[str, float]:
-        """
-        F(si) = fragilite OPERATIONNELLE observee, calculee depuis les spans.
-
-        F_raw(si) = spans_en_erreur(si) / spans_totaux(si)
-        F(si)     = F_raw(si) / max(F_raw)
-
-        Contrairement a compute(edge_list), cette version capture AUSSI les
-        erreurs des spans racines (erreurs renvoyees directement au client),
-        qui ne produisent aucun arc inter-services. Sur un corpus ou les
-        erreurs surviennent majoritairement en entree de systeme, compute()
-        renvoie 0 partout et neutralise le critere F.
-        """
+       
         total: Dict[str, int] = defaultdict(int)
         errors: Dict[str, int] = defaultdict(int)
         for sp in spans:

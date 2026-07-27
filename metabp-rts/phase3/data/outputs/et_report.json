@@ -1,21 +1,21 @@
 {
-  "TO_us": 228693224,
-  "TR_us": 184975330,
-  "TS_us": 6962400,
-  "TO_s": 228.6932,
-  "TR_s": 184.9753,
-  "TS_s": 6.9624,
-  "ET": 16.07,
-  "EN": 32.62,
-  "n_original": 2388,
-  "n_sel": 1609,
-  "n_with_duration": 2388,
+  "TO_us": 28703417,
+  "TR_us": 26488544,
+  "TS_us": 7406400,
+  "TO_s": 28.7034,
+  "TR_s": 26.4885,
+  "TS_s": 7.4064,
+  "ET": -18.09,
+  "EN": 29.4,
+  "n_original": 2500,
+  "n_sel": 1765,
+  "n_with_duration": 2500,
   "coverage_duration": true,
   "note": "TS mesuré directement (Phase 1+2+3) ; TO/TR estimés via latences Jaeger (duration_us du span racine). Mode online = raffinement futur.",
   "TS_breakdown_s": {
     "phase1": 6.5574,
-    "phase2": 0.1725,
-    "phase3": 0.2325
+    "phase2": 0.4285,
+    "phase3": 0.4205
   },
   "note_breakdown": "Phase 1 est un coût amortissable (indépendant de ΔS, calculé une fois et réutilisé). Phase 2+3 se relancent à chaque cycle de régression."
 }

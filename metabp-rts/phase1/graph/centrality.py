@@ -17,15 +17,7 @@ logger = logging.getLogger(__name__)
 
 
 class CentralityCalculator:
-    """
-    Calcule C(si) = centralité structurelle pour chaque service.
-    Formule :C(si) = α × norm(fan_in(si)) + β × norm(fan_out(si))
-    avec les mêmes α, β que WeightCalculator (par défaut α=0.5, β=0.3,renormalisés sur α+β = 1 car on n'a pas γ ici).
-    pour le moment les valeurs des constantes sont definis de maniere temporaire, elles seront ajustés après les tests sur les données réelles.
-    Normalisation : norm(x) = x / max(x sur tous les services).
-    Si max = 0 (graphe sans arcs), tous les scores sont 0.
-    
-    """
+
 
     def __init__(self, alpha: float = 0.5, beta: float = 0.3):
         total = alpha + beta
