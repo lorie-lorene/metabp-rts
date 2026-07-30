@@ -18,13 +18,11 @@ from models.models import EdgeWeight
 
 logger = logging.getLogger(__name__)
 
-# Type alias pour la clarté
 Edge = Tuple[str, str]
 RawEdge = Tuple[str, str, int, bool]  
 
 
 class WeightCalculator:
-   # Invariant vérifié : α + β + γ = 1.0
    
     def __init__(self, alpha: float = 0.5, beta: float = 0.3, gamma: float = 0.2):
         assert abs(alpha + beta + gamma - 1.0) < 1e-9, (f"α+β+γ doit valoir 1.0, obtenu {alpha+beta+gamma}")

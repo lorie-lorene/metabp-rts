@@ -24,9 +24,6 @@ FORMULE :
     Θ_dormant(si) >= τ_dormant  →  Service Écho-Dormant
     Θ_dormant(si) <  τ_dormant  →  Service Non-Dormant
 
-RÉFÉRENCES :
-    [1] Shannon, C.E. (1948). A Mathematical Theory of Communication.
-    [2] Diakoulaki, D. et al. (1995). The CRITIC method. C&OR 22(7).
 """
 
 import json
@@ -53,16 +50,7 @@ class EchoDormantClassifier:
         threshold_method: str = "auto",
         k_clusters: int = 3,
     ):
-        """
-        Parameters
-        ----------
-        tau_dormant      : seuil fixe (utilisé si threshold_method="fixed")
-                           Si None et threshold_method="auto", dérivé des données.
-        omega_C/P/F      : poids fixes (fallback si weighting_method="fixed")
-        weighting_method : "ewm_critic" (défaut) ou "fixed"
-        threshold_method : "auto" (défaut, K-means) ou "fixed"
-        k_clusters       : nombre de clusters pour AutoThreshold (défaut 3)
-        """
+      
         self.tau_dormant_fixed = tau_dormant
         self.omega_C_fixed     = omega_C
         self.omega_P_fixed     = omega_P

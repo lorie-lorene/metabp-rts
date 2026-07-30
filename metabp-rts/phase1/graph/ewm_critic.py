@@ -195,7 +195,6 @@ class AutoThreshold:
     Dérive automatiquement le seuil τ depuis la distribution des scores
     par clustering K-means (k=3).
 
-    Justification du k=3 :
         Le concept d'Écho-Dormant vise à identifier un sous-ensemble
         RESTREINT de services à risque. Avec k=2, la partition sépare
         typiquement les services "feuilles" des services "non-feuilles",
@@ -239,19 +238,7 @@ class AutoThreshold:
         k: int = 3,
         min_cluster_size: int = 1,
     ) -> Tuple[float, Dict]:
-        """
-        Calcule τ automatiquement depuis les scores.
-
-        Parameters
-        ----------
-        scores : array 1D des Θ_dormant
-        k      : nombre de clusters (défaut 3)
-        min_cluster_size : taille minimale d'un cluster
-
-        Returns
-        -------
-        (tau, details) où tau est le seuil calculé
-        """
+      
         if len(scores) < k:
             # Pas assez de services pour k clusters
             tau = float(np.median(scores))

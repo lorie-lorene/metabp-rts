@@ -1,10 +1,3 @@
-"""
-Calcule P(si) = coefficient de propagation pour chaque service mesure la transmissivité logique vers les  successeurs directs :
-    P(si) = (1 / |Succ(si)|) × Σ w_ij   pour sj ∈ Succ(si)
-    Si |Succ(si)| = 0, alors P(si) = 0
-ENTREES   : NetworkX DiGraph G (avec attribut w_ij sur chaque arc)
-SORTIES   : Dict {service_name: float}  — scores P dans [0, 1]
-"""
 
 
 import logging
@@ -36,8 +29,7 @@ class PropagationCalculator:
         )
         return scores
 
-    # ── Méthode privée ────────────────────────────────────
-
+    
     def _successor_weights(self, graph: nx.DiGraph, node: str) -> List[float]:
         return [
             data.get("w_ij", 0.0)

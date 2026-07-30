@@ -23,7 +23,6 @@ Structure d'une trace Jaeger brute  dans le meilleur des cas:
     }
 """
 
-
 import logging
 from typing import List, Dict
 from models.models import SpanRecord
