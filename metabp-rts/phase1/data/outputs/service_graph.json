@@ -4,6 +4,9 @@
   "graph": {},
   "nodes": [
     {
+      "id": "frontend"
+    },
+    {
       "id": "geo"
     },
     {
@@ -30,49 +33,94 @@
   ],
   "links": [
     {
-      "source": "profile",
-      "target": "memcached",
-      "freq": 1763,
-      "rate_ij": 1.0,
-      "lat_norm": 0.021636,
-      "err_ij": 0.0,
-      "w_ij": 0.506491
-    },
-    {
       "source": "search",
       "target": "rate",
-      "freq": 982,
+      "freq": 1306,
       "rate_ij": 0.5,
-      "lat_norm": 0.512761,
+      "lat_norm": 0.499134,
       "err_ij": 0.0,
-      "w_ij": 0.403828
+      "w_ij": 0.39974
     },
     {
       "source": "search",
       "target": "geo",
-      "freq": 982,
+      "freq": 1306,
       "rate_ij": 0.5,
-      "lat_norm": 0.007508,
+      "lat_norm": 0.005654,
       "err_ij": 0.0,
-      "w_ij": 0.252252
+      "w_ij": 0.251696
+    },
+    {
+      "source": "profile",
+      "target": "memcached",
+      "freq": 2234,
+      "rate_ij": 1.0,
+      "lat_norm": 0.016959,
+      "err_ij": 0.0,
+      "w_ij": 0.505088
+    },
+    {
+      "source": "frontend",
+      "target": "search",
+      "freq": 1306,
+      "rate_ij": 0.178733,
+      "lat_norm": 0.708137,
+      "err_ij": 0.0,
+      "w_ij": 0.301808
+    },
+    {
+      "source": "frontend",
+      "target": "profile",
+      "freq": 2234,
+      "rate_ij": 0.305734,
+      "lat_norm": 0.025511,
+      "err_ij": 0.0,
+      "w_ij": 0.16052
+    },
+    {
+      "source": "frontend",
+      "target": "reservation",
+      "freq": 1784,
+      "rate_ij": 0.244149,
+      "lat_norm": 1.0,
+      "err_ij": 0.0,
+      "w_ij": 0.422075
     },
     {
       "source": "rate",
       "target": "memcached",
-      "freq": 982,
+      "freq": 1306,
       "rate_ij": 1.0,
-      "lat_norm": 0.03395,
+      "lat_norm": 0.026928,
       "err_ij": 0.0,
-      "w_ij": 0.510185
+      "w_ij": 0.508078
     },
     {
       "source": "reservation",
       "target": "memcached",
-      "freq": 1964,
+      "freq": 2542,
       "rate_ij": 1.0,
-      "lat_norm": 0.42414,
+      "lat_norm": 0.419854,
       "err_ij": 0.0,
-      "w_ij": 0.627242
+      "w_ij": 0.625956
+    },
+    {
+      "source": "frontend",
+      "target": "recommendation",
+      "freq": 954,
+      "rate_ij": 0.13056,
+      "lat_norm": 0.002856,
+      "err_ij": 0.0,
+      "w_ij": 0.066137
+    },
+    {
+      "source": "frontend",
+      "target": "user",
+      "freq": 1029,
+      "rate_ij": 0.140824,
+      "lat_norm": 0.001459,
+      "err_ij": 0.0,
+      "w_ij": 0.07085
     }
   ]
 }

@@ -1,0 +1,78 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "id": "geo"
+    },
+    {
+      "id": "memcached"
+    },
+    {
+      "id": "profile"
+    },
+    {
+      "id": "rate"
+    },
+    {
+      "id": "recommendation"
+    },
+    {
+      "id": "reservation"
+    },
+    {
+      "id": "search"
+    },
+    {
+      "id": "user"
+    }
+  ],
+  "links": [
+    {
+      "source": "profile",
+      "target": "memcached",
+      "freq": 1763,
+      "rate_ij": 1.0,
+      "lat_norm": 0.021636,
+      "err_ij": 0.0,
+      "w_ij": 0.506491
+    },
+    {
+      "source": "search",
+      "target": "rate",
+      "freq": 982,
+      "rate_ij": 0.5,
+      "lat_norm": 0.512761,
+      "err_ij": 0.0,
+      "w_ij": 0.403828
+    },
+    {
+      "source": "search",
+      "target": "geo",
+      "freq": 982,
+      "rate_ij": 0.5,
+      "lat_norm": 0.007508,
+      "err_ij": 0.0,
+      "w_ij": 0.252252
+    },
+    {
+      "source": "rate",
+      "target": "memcached",
+      "freq": 982,
+      "rate_ij": 1.0,
+      "lat_norm": 0.03395,
+      "err_ij": 0.0,
+      "w_ij": 0.510185
+    },
+    {
+      "source": "reservation",
+      "target": "memcached",
+      "freq": 1964,
+      "rate_ij": 1.0,
+      "lat_norm": 0.42414,
+      "err_ij": 0.0,
+      "w_ij": 0.627242
+    }
+  ]
+}

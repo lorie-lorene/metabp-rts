@@ -1,0 +1,184 @@
+benchmark: DeathStarBench-hotelReservation
+generated_from: phase1/data/raw/corpus_dsb_FINAL.json
+n_traces: 3300
+delta_error_margin: 0.1
+note: 'Catalogue COMPORTEMENTAL uniquement (seuils appris des traces). Les MR fonctionnelles
+  ne sont pas incluses : les regles de jaeger_fallback_mr.py sont specifiques au domaine
+  Train-Ticket. Suffisant pour MutationVerifier (Latence/Erreur/Completude).'
+mr_catalog:
+- mr_id: MR-BEH-LAT-frontend
+  type: Latence
+  service: frontend
+  threshold_us: 61785
+  rho: d(x) <= theta_lat(s)
+  n_observations: 10656
+  source: learned_from_traces
+- mr_id: MR-BEH-ERR-frontend
+  type: Erreur
+  service: frontend
+  threshold_error_rate: 0.1069
+  rho: r(s,t) <= theta_err(s)
+  nominal_error_rate: 0.0069
+  n_observations: 10656
+  source: learned_from_traces
+- mr_id: MR-BEH-CMP-frontend
+  type: Completude
+  service: frontend
+  threshold_min_spans: 2
+  rho: n_spans(s,t) >= theta_cmp(s)
+  n_traces: 3300
+  source: learned_from_traces
+- mr_id: MR-BEH-LAT-geo
+  type: Latence
+  service: geo
+  threshold_us: 396
+  rho: d(x) <= theta_lat(s)
+  n_observations: 1306
+  source: learned_from_traces
+- mr_id: MR-BEH-ERR-geo
+  type: Erreur
+  service: geo
+  threshold_error_rate: 0.1
+  rho: r(s,t) <= theta_err(s)
+  nominal_error_rate: 0.0
+  n_observations: 1306
+  source: learned_from_traces
+- mr_id: MR-BEH-CMP-geo
+  type: Completude
+  service: geo
+  threshold_min_spans: 1
+  rho: n_spans(s,t) >= theta_cmp(s)
+  n_traces: 1306
+  source: learned_from_traces
+- mr_id: MR-BEH-LAT-profile
+  type: Latence
+  service: profile
+  threshold_us: 1482
+  rho: d(x) <= theta_lat(s)
+  n_observations: 4498
+  source: learned_from_traces
+- mr_id: MR-BEH-ERR-profile
+  type: Erreur
+  service: profile
+  threshold_error_rate: 0.1
+  rho: r(s,t) <= theta_err(s)
+  nominal_error_rate: 0.0
+  n_observations: 4498
+  source: learned_from_traces
+- mr_id: MR-BEH-CMP-profile
+  type: Completude
+  service: profile
+  threshold_min_spans: 2
+  rho: n_spans(s,t) >= theta_cmp(s)
+  n_traces: 2234
+  source: learned_from_traces
+- mr_id: MR-BEH-LAT-rate
+  type: Latence
+  service: rate
+  threshold_us: 12750
+  rho: d(x) <= theta_lat(s)
+  n_observations: 2618
+  source: learned_from_traces
+- mr_id: MR-BEH-ERR-rate
+  type: Erreur
+  service: rate
+  threshold_error_rate: 0.1
+  rho: r(s,t) <= theta_err(s)
+  nominal_error_rate: 0.0
+  n_observations: 2618
+  source: learned_from_traces
+- mr_id: MR-BEH-CMP-rate
+  type: Completude
+  service: rate
+  threshold_min_spans: 2
+  rho: n_spans(s,t) >= theta_cmp(s)
+  n_traces: 1306
+  source: learned_from_traces
+- mr_id: MR-BEH-LAT-recommendation
+  type: Latence
+  service: recommendation
+  threshold_us: 175
+  rho: d(x) <= theta_lat(s)
+  n_observations: 954
+  source: learned_from_traces
+- mr_id: MR-BEH-ERR-recommendation
+  type: Erreur
+  service: recommendation
+  threshold_error_rate: 0.1
+  rho: r(s,t) <= theta_err(s)
+  nominal_error_rate: 0.0
+  n_observations: 954
+  source: learned_from_traces
+- mr_id: MR-BEH-CMP-recommendation
+  type: Completude
+  service: recommendation
+  threshold_min_spans: 1
+  rho: n_spans(s,t) >= theta_cmp(s)
+  n_traces: 954
+  source: learned_from_traces
+- mr_id: MR-BEH-LAT-reservation
+  type: Latence
+  service: reservation
+  threshold_us: 48321
+  rho: d(x) <= theta_lat(s)
+  n_observations: 4326
+  source: learned_from_traces
+- mr_id: MR-BEH-ERR-reservation
+  type: Erreur
+  service: reservation
+  threshold_error_rate: 0.1
+  rho: r(s,t) <= theta_err(s)
+  nominal_error_rate: 0.0
+  n_observations: 4326
+  source: learned_from_traces
+- mr_id: MR-BEH-CMP-reservation
+  type: Completude
+  service: reservation
+  threshold_min_spans: 1
+  rho: n_spans(s,t) >= theta_cmp(s)
+  n_traces: 1784
+  source: learned_from_traces
+- mr_id: MR-BEH-LAT-search
+  type: Latence
+  service: search
+  threshold_us: 17682
+  rho: d(x) <= theta_lat(s)
+  n_observations: 3918
+  source: learned_from_traces
+- mr_id: MR-BEH-ERR-search
+  type: Erreur
+  service: search
+  threshold_error_rate: 0.1
+  rho: r(s,t) <= theta_err(s)
+  nominal_error_rate: 0.0
+  n_observations: 3918
+  source: learned_from_traces
+- mr_id: MR-BEH-CMP-search
+  type: Completude
+  service: search
+  threshold_min_spans: 3
+  rho: n_spans(s,t) >= theta_cmp(s)
+  n_traces: 1306
+  source: learned_from_traces
+- mr_id: MR-BEH-LAT-user
+  type: Latence
+  service: user
+  threshold_us: 73
+  rho: d(x) <= theta_lat(s)
+  n_observations: 1029
+  source: learned_from_traces
+- mr_id: MR-BEH-ERR-user
+  type: Erreur
+  service: user
+  threshold_error_rate: 0.1
+  rho: r(s,t) <= theta_err(s)
+  nominal_error_rate: 0.0
+  n_observations: 1029
+  source: learned_from_traces
+- mr_id: MR-BEH-CMP-user
+  type: Completude
+  service: user
+  threshold_min_spans: 1
+  rho: n_spans(s,t) >= theta_cmp(s)
+  n_traces: 1029
+  source: learned_from_traces

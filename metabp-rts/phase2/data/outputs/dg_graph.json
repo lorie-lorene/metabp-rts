@@ -1,5 +1,6 @@
 {
   "nodes": [
+    "frontend",
     "geo",
     "memcached",
     "profile",
@@ -11,62 +12,113 @@
   ],
   "edges": [
     {
-      "source": "memcached",
-      "target": "profile",
-      "w_ij": 0.506491
-    },
-    {
       "source": "rate",
       "target": "search",
-      "w_ij": 0.403828
+      "w_ij": 0.39974
     },
     {
       "source": "geo",
       "target": "search",
-      "w_ij": 0.252252
+      "w_ij": 0.251696
+    },
+    {
+      "source": "memcached",
+      "target": "profile",
+      "w_ij": 0.505088
+    },
+    {
+      "source": "search",
+      "target": "frontend",
+      "w_ij": 0.301808
+    },
+    {
+      "source": "profile",
+      "target": "frontend",
+      "w_ij": 0.16052
+    },
+    {
+      "source": "reservation",
+      "target": "frontend",
+      "w_ij": 0.422075
     },
     {
       "source": "memcached",
       "target": "rate",
-      "w_ij": 0.510185
+      "w_ij": 0.508078
     },
     {
       "source": "memcached",
       "target": "reservation",
-      "w_ij": 0.627242
+      "w_ij": 0.625956
+    },
+    {
+      "source": "recommendation",
+      "target": "frontend",
+      "w_ij": 0.066137
+    },
+    {
+      "source": "user",
+      "target": "frontend",
+      "w_ij": 0.07085
     }
   ],
   "adjacency": {
+    "frontend": [],
     "geo": [
       {
         "neighbor": "search",
-        "w_ij": 0.252252
+        "w_ij": 0.251696
       }
     ],
     "memcached": [
       {
         "neighbor": "profile",
-        "w_ij": 0.506491
+        "w_ij": 0.505088
       },
       {
         "neighbor": "rate",
-        "w_ij": 0.510185
+        "w_ij": 0.508078
       },
       {
         "neighbor": "reservation",
-        "w_ij": 0.627242
+        "w_ij": 0.625956
       }
     ],
-    "profile": [],
+    "profile": [
+      {
+        "neighbor": "frontend",
+        "w_ij": 0.16052
+      }
+    ],
     "rate": [
       {
         "neighbor": "search",
-        "w_ij": 0.403828
+        "w_ij": 0.39974
       }
     ],
-    "recommendation": [],
-    "reservation": [],
-    "search": [],
-    "user": []
+    "recommendation": [
+      {
+        "neighbor": "frontend",
+        "w_ij": 0.066137
+      }
+    ],
+    "reservation": [
+      {
+        "neighbor": "frontend",
+        "w_ij": 0.422075
+      }
+    ],
+    "search": [
+      {
+        "neighbor": "frontend",
+        "w_ij": 0.301808
+      }
+    ],
+    "user": [
+      {
+        "neighbor": "frontend",
+        "w_ij": 0.07085
+      }
+    ]
   }
 }

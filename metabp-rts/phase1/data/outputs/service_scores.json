@@ -1,42 +1,50 @@
 [
   {
     "service_name": "reservation",
-    "C": 0.1875,
-    "P": 0.627242,
+    "C": 0.283333,
+    "P": 0.625956,
     "F": 0.0,
-    "theta_dormant": 0.483233,
+    "theta_dormant": 0.478318,
     "is_dormant": true
   },
   {
     "service_name": "rate",
-    "C": 0.395833,
-    "P": 0.510185,
+    "C": 0.283333,
+    "P": 0.508078,
     "F": 0.0,
-    "theta_dormant": 0.472736,
+    "theta_dormant": 0.411235,
     "is_dormant": true
   },
   {
     "service_name": "profile",
-    "C": 0.1875,
-    "P": 0.506491,
+    "C": 0.283333,
+    "P": 0.505088,
     "F": 0.0,
-    "theta_dormant": 0.402026,
+    "theta_dormant": 0.409533,
     "is_dormant": true
   },
   {
     "service_name": "search",
-    "C": 0.375,
-    "P": 0.32804,
+    "C": 0.358333,
+    "P": 0.325718,
     "F": 0.0,
-    "theta_dormant": 0.343419,
-    "is_dormant": true
+    "theta_dormant": 0.339772,
+    "is_dormant": false
+  },
+  {
+    "service_name": "frontend",
+    "C": 0.375,
+    "P": 0.204278,
+    "F": 0.0,
+    "theta_dormant": 0.277843,
+    "is_dormant": false
   },
   {
     "service_name": "memcached",
     "C": 0.625,
     "P": 0.0,
     "F": 0.0,
-    "theta_dormant": 0.204679,
+    "theta_dormant": 0.269315,
     "is_dormant": false
   },
   {
@@ -44,31 +52,23 @@
     "C": 0.208333,
     "P": 0.0,
     "F": 0.0,
-    "theta_dormant": 0.068226,
-    "is_dormant": false
-  },
-  {
-    "service_name": "frontend",
-    "C": 0.0,
-    "P": 0.0,
-    "F": 0.0,
-    "theta_dormant": 0.0,
+    "theta_dormant": 0.089772,
     "is_dormant": false
   },
   {
     "service_name": "recommendation",
-    "C": 0.0,
+    "C": 0.208333,
     "P": 0.0,
     "F": 0.0,
-    "theta_dormant": 0.0,
+    "theta_dormant": 0.089772,
     "is_dormant": false
   },
   {
     "service_name": "user",
-    "C": 0.0,
+    "C": 0.208333,
     "P": 0.0,
     "F": 0.0,
-    "theta_dormant": 0.0,
+    "theta_dormant": 0.089772,
     "is_dormant": false
   }
 ]

@@ -1,10 +1,11 @@
 {
-  "geo": 0.026198,
-  "memcached": 0.078594,
-  "profile": 0.770387,
-  "rate": 0.472736,
-  "recommendation": 0.0,
-  "reservation": 0.483233,
-  "search": 0.343419,
-  "user": 0.0
+  "frontend": 0.391639,
+  "geo": 0.039087,
+  "memcached": 0.11726,
+  "profile": 0.409533,
+  "rate": 0.411235,
+  "recommendation": 0.039087,
+  "reservation": 0.478318,
+  "search": 0.712537,
+  "user": 0.039087
 }

@@ -1,8 +1,8 @@
 {
   "weighting": {
     "method": "ewm_critic",
-    "omega_C": 0.327486,
-    "omega_P": 0.672514,
+    "omega_C": 0.430904,
+    "omega_P": 0.569096,
     "omega_F": 0.0,
     "details": {
       "method": "EWM-CRITIC combined",
@@ -14,18 +14,18 @@
         "F"
       ],
       "weights_ewm": {
-        "C": 0.380234,
-        "P": 0.619766,
+        "C": 0.496291,
+        "P": 0.503709,
         "F": 0.0
       },
       "weights_critic": {
-        "C": 0.4425,
-        "P": 0.5575,
+        "C": 0.434546,
+        "P": 0.565454,
         "F": 0.0
       },
       "weights_combined": {
-        "C": 0.327486,
-        "P": 0.672514,
+        "C": 0.430904,
+        "P": 0.569096,
         "F": 0.0
       },
       "references": [
@@ -36,60 +36,60 @@
   },
   "threshold": {
     "method": "auto",
-    "tau_dormant": 0.274049,
+    "tau_dormant": 0.374652,
     "details": {
       "method": "kmeans_k3_auto_threshold",
       "k": 3,
-      "tau": 0.274049,
-      "n_dormant": 4,
+      "tau": 0.374652,
+      "n_dormant": 3,
       "n_total": 9,
       "cluster_high": {
-        "centroid": 0.425353,
-        "n_members": 4,
-        "min": 0.343419,
-        "max": 0.483233
+        "centroid": 0.433029,
+        "n_members": 3,
+        "min": 0.409533,
+        "max": 0.478318
       },
       "cluster_mid": {
-        "centroid": 0.204679,
-        "n_members": 1,
-        "min": 0.204679,
-        "max": 0.204679
+        "centroid": 0.295643,
+        "n_members": 3,
+        "min": 0.269315,
+        "max": 0.339772
       },
-      "separation": 0.13874,
+      "separation": 0.069761,
       "formula": "τ = (min(Cluster_haut) + max(Cluster_intermédiaire)) / 2",
       "top_gaps": [
         {
-          "rank": 4,
-          "score_above": 0.343419,
-          "score_below": 0.204679,
-          "gap": 0.13874
-        },
-        {
-          "rank": 5,
-          "score_above": 0.204679,
-          "score_below": 0.068226,
-          "gap": 0.136453
-        },
-        {
-          "rank": 2,
-          "score_above": 0.472736,
-          "score_below": 0.402026,
-          "gap": 0.07071
-        },
-        {
           "rank": 6,
-          "score_above": 0.068226,
-          "score_below": 0.0,
-          "gap": 0.068226
+          "score_above": 0.269315,
+          "score_below": 0.089772,
+          "gap": 0.179543
         },
         {
           "rank": 3,
-          "score_above": 0.402026,
-          "score_below": 0.343419,
-          "gap": 0.058607
+          "score_above": 0.409533,
+          "score_below": 0.339772,
+          "gap": 0.069761
+        },
+        {
+          "rank": 1,
+          "score_above": 0.478318,
+          "score_below": 0.411235,
+          "gap": 0.067084
+        },
+        {
+          "rank": 4,
+          "score_above": 0.339772,
+          "score_below": 0.277843,
+          "gap": 0.061929
+        },
+        {
+          "rank": 5,
+          "score_above": 0.277843,
+          "score_below": 0.269315,
+          "gap": 0.008528
         }
       ],
-      "justification": "K-means k=3 identifie 4 services dans le cluster supérieur (centroïde=0.4254). Le seuil τ=0.2740 est la frontière naturelle entre ce cluster et le cluster intermédiaire (centroïde=0.2047). Le gap de séparation est 0.1387."
+      "justification": "K-means k=3 identifie 3 services dans le cluster supérieur (centroïde=0.4330). Le seuil τ=0.3747 est la frontière naturelle entre ce cluster et le cluster intermédiaire (centroïde=0.2956). Le gap de séparation est 0.0698."
     }
   }
 }

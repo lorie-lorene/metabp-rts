@@ -1,57 +1,66 @@
 {
   "delta_s": [
-    "profile"
+    "search"
   ],
-  "tau_impact": 0.171709,
+  "tau_impact": 0.2047665,
   "weighting_method": "ewm_critic",
   "threshold_method": "auto",
-  "omega_theta": 0.3839843905828988,
-  "omega_B": 0.6160156094171012,
+  "omega_theta": 0.4354003233053686,
+  "omega_B": 0.5645996766946315,
   "s_echo": [
+    "frontend",
     "reservation",
     "rate",
-    "search"
+    "profile"
   ],
   "echo_impact_services": [
     {
+      "service_name": "frontend",
+      "cit_score": 0.479395,
+      "theta_phase1": 0.277843,
+      "theta_complet": 0.391639,
+      "was_dormant": false,
+      "resonance": false
+    },
+    {
       "service_name": "reservation",
-      "cit_score": 0.483233,
-      "theta_phase1": 0.483233,
-      "theta_complet": 0.483233,
+      "cit_score": 0.478318,
+      "theta_phase1": 0.478318,
+      "theta_complet": 0.478318,
       "was_dormant": true,
       "resonance": true
     },
     {
       "service_name": "rate",
-      "cit_score": 0.472736,
-      "theta_phase1": 0.472736,
-      "theta_complet": 0.472736,
+      "cit_score": 0.411235,
+      "theta_phase1": 0.411235,
+      "theta_complet": 0.411235,
       "was_dormant": true,
       "resonance": true
     },
     {
-      "service_name": "search",
-      "cit_score": 0.343419,
-      "theta_phase1": 0.343419,
-      "theta_complet": 0.343419,
+      "service_name": "profile",
+      "cit_score": 0.409533,
+      "theta_phase1": 0.409533,
+      "theta_complet": 0.409533,
       "was_dormant": true,
       "resonance": true
     }
   ],
   "stats": {
-    "n_services_total": 8,
+    "n_services_total": 9,
     "n_modified": 1,
-    "n_echo_impact": 3,
+    "n_echo_impact": 4,
     "n_resonant": 3,
-    "resonance_rate": 1.0,
+    "resonance_rate": 0.75,
     "max_cit": 1.0,
-    "avg_cit_all": 0.2874,
-    "avg_cit_echo_impact": 0.4331,
-    "avg_theta_complet": 0.2718,
+    "avg_cit_all": 0.3087,
+    "avg_cit_echo_impact": 0.4446,
+    "avg_theta_complet": 0.2931,
     "weighting_method": "ewm_critic",
     "threshold_method": "auto",
-    "omega_theta": 0.383984,
-    "omega_B": 0.616016,
-    "tau_impact": 0.171709
+    "omega_theta": 0.4354,
+    "omega_B": 0.5646,
+    "tau_impact": 0.204766
   }
 }
