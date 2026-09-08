@@ -14,7 +14,7 @@ def line(c="─", n=78): print(c*n)
 
 print()
 print(f"{BD}{CY}╔{'═'*76}╗{RS}")
-print(f"{BD}{CY}║{'  MetaBP-RTS — RÉSULTATS EXPÉRIMENTAUX — Train-Ticket (FudanSELab)':<76}║{RS}")
+print(f"{BD}{CY}║{'  MetaBP-RTS — EXPERIMENTAL RESULTS — Train-Ticket (FudanSELab)':<76}║{RS}")
 print(f"{BD}{CY}╚{'═'*76}╝{RS}")
 print()
 
